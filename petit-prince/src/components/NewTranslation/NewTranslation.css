@@ -1,0 +1,44 @@
+.result {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.loaded-pdf {
+  color: black;
+  text-align: left;
+
+}
+
+.text-container {
+  display: flex
+}
+
+.pdf-to-text {
+  width: 50%;
+}
+
+.loaded-pdf::selection {
+  color:white;
+  background-color: #c23f30;
+  font-weight: bold;
+}
+
+.no-select {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+.preview-selected {
+  background-color: black;
+  color: white;
+  min-height: 80px;
+  font-weight: bold;
+  font-size: 17px;
+  margin: 20px 0px;
+}

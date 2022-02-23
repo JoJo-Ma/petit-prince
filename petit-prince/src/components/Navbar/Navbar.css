@@ -1,0 +1,45 @@
+.navbar {
+  list-style-type: none;
+  background-color: #c23f30;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  float: right;
+  padding: 0;
+  margin: 0;
+}
+
+p {
+  float: right;
+  padding: 0;
+  margin:0;
+}
+
+.li-logo {
+  float:left;
+}
+
+.navbar-el {
+  color: white;
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navbar-el-caption {
+  color: white;
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navbar-el:hover {
+  background-color: white;
+  color: #c23f30;
+  transition: background-color 0.5s;
+}
