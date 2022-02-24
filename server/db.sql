@@ -10,16 +10,27 @@ CREATE TABLE users (
 --manual entry
 INSERT INTO users (username, password, email, created_on) VALUES ('Jonathan','jojo','jojo@gmail.com',NOW());
 
---table for translation
-CREATE TABLE translations (
-  id uuid primary key default uuid_generate_v4(),
-  username_id uuid,
-  language_id integer,
-  trans_id int,
-  trans_text varchar,
+--tables for translation
+CREATE TABLE trans_text (
+  id SERIAL PRIMARY KEY,
+  data jsonb,
+  trans_desc_id INTEGER NOT NULL,
+  FOREIGN KEY (trans_desc_id) REFERENCES trans_desc (id)
+);
+
+CREATE TABLE trans_desc (
+  id SERIAL PRIMARY KEY,
+  username_id uuid NOT NULL,
+  language_id integer NOT NULL,
+  is_main_trans boolean not null,
+  name varchar(50) NOT NULL,
   FOREIGN KEY (username_id) REFERENCES users (id),
   FOREIGN KEY (language_id) REFERENCES languages (id),
-)
+  UNIQUE(language_id, is_main_trans),
+  UNIQUE(username_id, name)
+);
+
+INSERT INTO trans_desc (username_id, language_id, is_main_trans) VALUES ((SELECT id from users where username = 'JuNaShan'), 1, TRUE);
 
 CREATE TABLE languages (
   id SERIAL PRIMARY KEY,

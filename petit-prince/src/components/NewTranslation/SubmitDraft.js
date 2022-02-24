@@ -30,10 +30,10 @@ const SubmitDraft = ({data}) => {
       const body = { username, language, data, name }
       const response = await fetch("http://localhost:3005/translations/drafts", {
         method: "POST",
-        headers: { "Content-Type": "application/json"},
+        headers: { "Content-Type": "application/json",
+        token : localStorage.token },
         body: JSON.stringify(body)
       })
-
 
 
     } catch (error) {

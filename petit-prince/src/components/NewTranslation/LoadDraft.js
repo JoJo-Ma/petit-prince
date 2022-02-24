@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useStoreState } from 'easy-peasy';
 
-const LoadDraft = () => {
+const LoadDraft = ({ loadData }) => {
   const username = useStoreState(state => state.naming.name)
   const [ drafts, setDrafts ] = useState([])
   const [ selectedDraft, setSelectedDraft ] = useState("")
@@ -11,7 +11,10 @@ const LoadDraft = () => {
   }
 
   useEffect( async () => {
-    const response = await fetch (`http://localhost:3005/translations/${username}/drafts`)
+    const response = await fetch (`http://localhost:3005/translations/${username}/drafts`, {
+      method: "GET",
+      headers: {token : localStorage.token}
+    })
 
     const parseRes = await response.json()
 
@@ -21,13 +24,14 @@ const LoadDraft = () => {
   const onSubmitForm = async (e) => {
     e.preventDefault()
     try {
-      const body = { username, name: selectedDraft }
-      const response = await fetch("http://localhost:3005/translations/drafts", {
+      const response = await fetch(`http://localhost:3005/translations/${username}/drafts/${selectedDraft}`, {
         method: "GET",
-        headers: { "Content-Type": "application/json"},
-        body: JSON.stringify(body)
+        headers: {token : localStorage.token}
       })
 
+      const { urlInput, output, discardedList, lastAction, newTranslationList, newTranslationListId, selected } = await response.json()
+
+      loadData(urlInput, output, discardedList, lastAction, newTranslationList, newTranslationListId, selected)
 
 
     } catch (error) {
@@ -39,13 +43,13 @@ const LoadDraft = () => {
     <>
       <h3>Load Draft</h3>
       <form onSubmit={onSubmitForm}>
-
-      </form>
-      <select onChange={(e) => handleChange(e)}>
+        <select onChange={(e) => handleChange(e)}>
         {drafts.map((draft, index) => {
           return <option key={index} value={draft.name}>{draft.name}</option>
         })}
-      </select>
+        </select>
+        <button>Submit</button>
+      </form>
     </>
   )
 

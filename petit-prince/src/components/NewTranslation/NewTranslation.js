@@ -205,6 +205,16 @@ const NewTranslation = () => {
 
   }
 
+  const loadData = (urlInput, output, discardedList, lastAction, newTranslationList, newTranslationListId, selected) => {
+    setUrlInput(urlInput)
+    setOutput(output)
+    setDiscardedList(discardedList)
+    setLastAction(lastAction)
+    setNewTranslationList(newTranslationList)
+    setNewTranslationListId(newTranslationListId)
+    setSelected(selected)
+  }
+
   useEffect(() => {
     document.getElementById('file-selector').addEventListener('change', (e) => {
       try {
@@ -217,13 +227,7 @@ const NewTranslation = () => {
         readFile.onload = (e) => {
           const data = e.target.result
           const json = JSON.parse(data)
-          setUrlInput(json.urlInput)
-          setOutput(json.output)
-          setDiscardedList(json.discardedList)
-          setLastAction(json.lastAction)
-          setNewTranslationList(json.newTranslationList)
-          setNewTranslationListId(json.newTranslationListId)
-          setSelected(json.selected)
+          loadData(json.urlInput, json.output, json.discardedList, json.lastAction, json.newTranslationList, json.newTranslationListId, json.selected)
         }
         readFile.readAsText(file)
         document.getElementById('file-selector').value = ""
@@ -280,7 +284,7 @@ const NewTranslation = () => {
             discardedList,
             newTranslationListId,
             lastAction,}}/>
-      <LoadDraft />
+      <LoadDraft loadData={loadData} />
       <div className="preview-selected">{selected.text}</div>
       <div className="text-container">
       <div className="pdf-to-text" >
