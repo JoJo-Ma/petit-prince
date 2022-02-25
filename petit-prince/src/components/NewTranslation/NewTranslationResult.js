@@ -1,10 +1,10 @@
 import React from 'react';
+import "./NewTranslation.css"
+
 
 const NewTranslationResult = ({data}) => {
-
-
   return (
-    <div className="loaded-pdf">{data}</div>
+    <div className="pdf-to-text loaded-pdf">{data}</div>
   )
 }
 

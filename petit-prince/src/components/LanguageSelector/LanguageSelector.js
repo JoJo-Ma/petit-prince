@@ -1,6 +1,9 @@
-import React from 'react';
+import React, {useState } from 'react';
+import useFetchLanguages from './useFetchLanguages'
 
-const LanguageSelector = ({ selectLanguage, languages }) => {
+const LanguageSelector = ({ selectLanguage }) => {
+  const { languages } = useFetchLanguages()
+
 
   const handleChange = (e) => {
     selectLanguage(e.target.value)

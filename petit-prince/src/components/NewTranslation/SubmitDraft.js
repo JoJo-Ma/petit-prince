@@ -3,18 +3,10 @@ import LanguageSelector from '../LanguageSelector/LanguageSelector'
 import { useStoreState } from 'easy-peasy';
 
 const SubmitDraft = ({data}) => {
-  const [ languages, setLanguages] = useState([])
   const [ language, setLanguage] = useState("")
   const [ name, setName ] = useState("")
   const username = useStoreState(state => state.naming.name)
 
-  useEffect( async () => {
-    const response = await fetch ("http://localhost:3005/languages")
-
-    const parseRes = await response.json()
-
-    setLanguages(parseRes)
-  }, [])
 
   const handleLanguageSelect = (lang) => {
     setLanguage(lang)
@@ -51,7 +43,7 @@ const SubmitDraft = ({data}) => {
       </label>
       <label>
         <p>Language</p>
-        <LanguageSelector selectLanguage={handleLanguageSelect} languages={languages}/>
+        <LanguageSelector selectLanguage={handleLanguageSelect}/>
       </label>
       <div>
       <button>Submit</button>

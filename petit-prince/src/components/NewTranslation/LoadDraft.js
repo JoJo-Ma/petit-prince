@@ -1,55 +1,37 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useStoreState } from 'easy-peasy';
+import useFetchDrafts from './useFetchDrafts'
 
 const LoadDraft = ({ loadData }) => {
   const username = useStoreState(state => state.naming.name)
-  const [ drafts, setDrafts ] = useState([])
-  const [ selectedDraft, setSelectedDraft ] = useState("")
+  const [{loading : loadingDraftList, drafts : draftList, error : errorDraftList}, doFetchDrafts] = useFetchDrafts(username)
+  const [ selectedDraft, setSelectedDraft ] = useState(false)
+  const [{loading : loadingRetrievedDraft, drafts : retrievedDraft, errorRetrievedDRaft}, doFetchDraft] = useFetchDrafts(username, selectedDraft)
+  const isDrafts = draftList.length > 0 ? true : false
+  const isInitialMount = useRef(true);
 
   const handleChange = (e) => {
     setSelectedDraft(e.target.value)
   }
 
-  useEffect( async () => {
-    const response = await fetch (`http://localhost:3005/translations/${username}/drafts`, {
-      method: "GET",
-      headers: {token : localStorage.token}
-    })
-
-    const parseRes = await response.json()
-
-    setDrafts(parseRes)
-  }, [])
-
-  const onSubmitForm = async (e) => {
-    e.preventDefault()
-    try {
-      const response = await fetch(`http://localhost:3005/translations/${username}/drafts/${selectedDraft}`, {
-        method: "GET",
-        headers: {token : localStorage.token}
-      })
-
-      const { urlInput, output, discardedList, lastAction, newTranslationList, newTranslationListId, selected } = await response.json()
-
-      loadData(urlInput, output, discardedList, lastAction, newTranslationList, newTranslationListId, selected)
-
-
-    } catch (error) {
-      console.error(error.message);
+  useEffect(() => {
+    //will skip first render
+    if (isInitialMount.current) {
+      isInitialMount.current = false;
+    } else {
+        loadData(retrievedDraft)
     }
-  }
+  }, [retrievedDraft])
 
   return (
     <>
       <h3>Load Draft</h3>
-      <form onSubmit={onSubmitForm}>
-        <select onChange={(e) => handleChange(e)}>
-        {drafts.map((draft, index) => {
-          return <option key={index} value={draft.name}>{draft.name}</option>
-        })}
-        </select>
-        <button>Submit</button>
-      </form>
+      <select onChange={(e) => handleChange(e)}>
+      {draftList.map((draft, index) => {
+        return <option key={index} value={draft.name}>{draft.name}</option>
+      })}
+      </select>
+      { isDrafts ? <button onClick={doFetchDraft} disabled={!selectedDraft}>Load</button> : <p>No drafts saved yet</p>}
     </>
   )
 
