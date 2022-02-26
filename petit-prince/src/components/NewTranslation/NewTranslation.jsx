@@ -10,6 +10,10 @@ import NewTranslationDraft from './NewTranslationDraft'
 import SubmitDraft from './SubmitDraft'
 import LoadDraft from './LoadDraft'
 
+import ButtonSaveDraftFile from './Buttons/ButtonSaveDraftFile'
+import ButtonLoadDraftFile from './Buttons/ButtonLoadDraftFile'
+import ButtonLoadPdf from './Buttons/ButtonLoadPdf'
+
 import "./NewTranslation.css"
 
 const useEventListener = (eventName, handler, element = window) => {
@@ -33,52 +37,20 @@ const NewTranslation = () => {
 
   const [state, dispatch] = useReducer(reducer, initialState)
 
-  const onChangeURL = (e) => {
-    dispatch({type:'setUrlInput', payload: e.target.value})
+  const setInputURL = (data) => {
+    dispatch({type:'setUrlInput', payload: data})
   }
 
-  const handleClickPdf =  async (e) => {
-    e.preventDefault()
+  const handleClickPdf = (data) => {
     dispatch({type:'reset'})
     dispatch({type:'setOutput', payload: "Loading..."})
-    try {
-      const body = { url: state.urlInput }
-
-      const response = await fetch("http://localhost:3005/pdfparser", {
-        method: "POST",
-        headers: { "Content-Type": "application/json"},
-        body: JSON.stringify(body)
-      } )
-
-      const parseRes = await response.text()
-
-      dispatch({type:'setOutput', payload: parseRes.replace(/\s{2,}/g, ' ').trim()})
-      // setOutput(parseRes.replace(/\s{2,}/g, ' ').trim())
-    } catch (error) {
-      dispatch({type:'setOutput', payload: error.message})
-      console.error(error.message);
-      return
-    }
+    dispatch({type:'setOutput', payload: data})
   }
 
   // retrieves selected text from the imported pdf text along with useEffect right below
-  const handleSelection = () => {
-    const text = document.getSelection().toString()
-    const selection = {
-      text: text,
-      length: text.length
-
-    }
-    if (text === state.output.slice(0, selection.length)) {
-      dispatch({type:'setSelected', payload:selection})
-    }
+  const handleSelection = (selection) => {
+    dispatch({type:'setSelected', payload:selection})
   }
-  useEffect(() => {
-    document.addEventListener('selectionchange', handleSelection);
-    return () => {
-      document.removeEventListener('selectionchange', handleSelection);
-    };
-  })
 
   const handleClickAdd = () => {
     if (state.selected.length === 0) {
@@ -121,45 +93,9 @@ const NewTranslation = () => {
     }})
   }
 
-  const handleClickSaveJson = () => {
-    const json = state
-    const blob = new Blob([JSON.stringify(json, null, 2)], {type : 'application/json'})
-    const toSave = document.createElement('a');
-    toSave.download = "save.json"
-    toSave.href = URL.createObjectURL(blob)
-    toSave.addEventListener('click', (e) => {
-      setTimeout(() => URL.revokeObjectURL(toSave.href), 30 * 1000)
-    })
-    toSave.click()
-
-  }
-
   const loadData = (data) => {
     dispatch({ type:"load", payload:data})
   }
-
-  useEffect(() => {
-    document.getElementById('file-selector').addEventListener('change', (e) => {
-      try {
-        const file = e.target.files[0];
-        if(file.type !== "application/json") {
-          console.log("incorrect file format");
-          return
-        }
-        const readFile = new FileReader();
-        readFile.onload = (e) => {
-          const data = e.target.result
-          const json = JSON.parse(data)
-          console.log(json.urlInput);
-          loadData(json)
-        }
-        readFile.readAsText(file)
-        document.getElementById('file-selector').value = ""
-      } catch (error) {
-        console.log(error.message);
-      }
-    })
-  }, [])
 
   const keyPressHandle = ({ key }) => {
     switch (key) {
@@ -189,22 +125,20 @@ const NewTranslation = () => {
       <div>
         <h1>New Translation</h1>
         <div className="result">
-          <input type="text" name="url" placeholder="URL" onChange={e => onChangeURL(e)}/>
-          <button type="button" onClick={handleClickPdf}>Submit</button>
+          <ButtonLoadPdf setInputURL={setInputURL} handleClickPdf={handleClickPdf} urlInput={state.urlInput} />
           <button type="button" onClick={handleClickAdd}>Add Selection</button>
           <button type="button" onClick={handleClickAddBlank}>Add blank</button>
           <button type="button" onClick={handleClickUndo}>Undo</button>
           <button type="button" onClick={handleClickNextPunct}>Next sentence</button>
-          <button type="button" onClick={handleClickSaveJson}>Save file</button>
-          <p>Load file</p>
-          <input type="file" id="file-selector" accept=".json" />
+          <ButtonSaveDraftFile data={state} />
+          <ButtonLoadDraftFile loadData={ loadData } />
         </div>
       </div>
       <SubmitDraft data={state}/>
-      <LoadDraft loadData={loadData} />
+      <LoadDraft loadData={ loadData } />
       <div className="preview-selected">{state.selected.text}</div>
       <div className="text-container">
-        <NewTranslationResult data={state.output} />
+        <NewTranslationResult data={state.output} selection = { state.selection }  handleSelection = { handleSelection }/>
         <NewTranslationDraft data={state.newTranslationList} />
       </div>
     </>
