@@ -30,7 +30,15 @@ CREATE TABLE trans_desc (
   UNIQUE(username_id, name)
 );
 
-INSERT INTO trans_desc (username_id, language_id, is_main_trans) VALUES ((SELECT id from users where username = 'JuNaShan'), 1, TRUE);
+SELECT trans_text.data
+FROM trans_text
+LEFT JOIN trans_desc
+ON trans_text.trans_desc_id = trans_desc.id
+WHERE trans_desc.is_main_trans
+AND trans_desc.language_id =
+(SELECT id FROM languages WHERE name = 'French' );
+
+INSERT INTO trans_desc (username_id, language_id, is_main_trans, name) VALUES ((SELECT id from users where username = 'JuNaShan'), 1, TRUE, 'Original');
 
 CREATE TABLE languages (
   id SERIAL PRIMARY KEY,

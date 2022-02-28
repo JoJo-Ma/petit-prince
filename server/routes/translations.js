@@ -68,3 +68,18 @@ router.post('/', async (req, res) => {
     res.status(500).send("server error oops")
   }
 })
+
+router.get('/:language', async (req, res) => {
+  try {
+    const params = req.params
+
+    const translation = await db.query("SELECT trans_text.data FROM trans_text \
+    LEFT JOIN trans_desc ON trans_text.trans_desc_id = trans_desc.id \
+    WHERE trans_desc.is_main_trans AND trans_desc.language_id = \
+    (SELECT id FROM languages WHERE name = $1 );", [params.language])
+
+    res.json(translation.rows[0].data)
+  } catch (error) {
+    console.error(error.message);
+  }
+})

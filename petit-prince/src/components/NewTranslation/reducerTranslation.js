@@ -66,17 +66,20 @@ export const reducer = (state, action) => {
             output: state.discardedList[state.discardedList.length - 1] + " " + state.output,
             discardedList: state.discardedList.slice(0, -1),
             newTranslationList: state.newTranslationList.slice(0, -1),
-            newTranslationListId: state.newTranslationListId - 1
+            newTranslationListId: state.newTranslationListId - 1,
+            lastAction: state.lastAction.slice(0,-1)
           }
         case "Discard":
           return { ...state,
             output: state.discardedList[state.discardedList.length - 1] + " " + state.output,
             discardedList: state.discardedList.slice(0, -1),
+            lastAction: state.lastAction.slice(0,-1)
           }
         case "AddBlank" :
           return { ...state,
             newTranslationList: state.newTranslationList.slice(0, -1),
-            newTranslationListId: state.newTranslationListId - 1
+            newTranslationListId: state.newTranslationListId - 1,
+            lastAction: state.lastAction.slice(0,-1)
           }
         default :
           return state
