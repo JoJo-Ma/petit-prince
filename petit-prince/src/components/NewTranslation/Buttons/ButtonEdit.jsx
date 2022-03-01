@@ -40,7 +40,8 @@ const ButtonEdit = ({add, addBlank, discard, undo, nextPunct, selected, output }
 
   const handleClickNextPunct = () => {
     //regex to find next the punctuation character in text, support for other languages to be added when needed
-    const punctuationRegex = /[!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~﹒。“”‘’「」『』、·《》〈〉…！？（）]/
+    // const punctuationRegex = /[!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~﹒。“”‘’「」『』、·《》〈〉…！？（）]/
+    const punctuationRegex = /[!"#$%&'()*1+-./:;<=>?@[\]^_`{|}~﹒。“”‘’「」『』、·《》〈〉…！？（）]/
     if (selected.length > 0) {
       const offsetIndex = punctuationRegex.exec(output.slice(selected.length)).index
       nextPunct({

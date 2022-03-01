@@ -10,6 +10,7 @@ export default ({setInputURL, urlInput, handleClickPdf}) => {
 
   const handleClick =  async (e) => {
     e.preventDefault()
+    handleClickPdf('Loading...')
     try {
       const body = { url: urlInput }
       const response = await fetch("http://localhost:3005/pdfparser", {

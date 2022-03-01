@@ -78,7 +78,29 @@ router.get('/:language', async (req, res) => {
     WHERE trans_desc.is_main_trans AND trans_desc.language_id = \
     (SELECT id FROM languages WHERE name = $1 );", [params.language])
 
-    res.json(translation.rows[0].data)
+    res.json(translation.rows[0].data.newTranslationList)
+  } catch (error) {
+    console.error(error.message);
+  }
+})
+
+
+//todo retrieve both language 1 and 2
+router.get('/:language1/:language2', async (req, res) => {
+  try {
+    const params = req.params
+
+    const translation = await db.query("(SELECT trans_text.data as data, languages.name as language FROM trans_text \
+    LEFT JOIN trans_desc ON trans_text.trans_desc_id = trans_desc.id \
+    LEFT JOIN languages ON trans_desc.language_id = languages.id \
+    WHERE trans_desc.is_main_trans AND languages.name = $1) \
+    UNION ALL\
+    (SELECT trans_text.data as data, languages.name as language FROM trans_text \
+    LEFT JOIN trans_desc ON trans_text.trans_desc_id = trans_desc.id \
+    LEFT JOIN languages ON trans_desc.language_id = languages.id \
+    WHERE trans_desc.is_main_trans AND languages.name = $2);", [params.language1, params.language2])
+
+    res.json(translation.rows)
   } catch (error) {
     console.error(error.message);
   }

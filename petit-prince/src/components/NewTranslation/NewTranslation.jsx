@@ -1,7 +1,7 @@
 // will handle importing pdfs to temporary state, then trimming, breaking down into
 // individual strings and saving to db
 
-import React, { useState, useEffect, useRef, useReducer} from 'react';
+import React, { useReducer} from 'react';
 import {initialState, reducer} from './reducerTranslation'
 
 import Navbar from '../Navbar/Navbar'
@@ -10,6 +10,8 @@ import NewTranslationDraft from './NewTranslationDraft'
 import SubmitDraft from './SubmitDraft'
 import LoadDraft from './LoadDraft'
 import LoadTranslation from './LoadTranslation'
+import SubmitTranslation from './SubmitTranslation'
+
 
 import ButtonSaveDraftFile from './Buttons/ButtonSaveDraftFile'
 import ButtonLoadDraftFile from './Buttons/ButtonLoadDraftFile'
@@ -85,6 +87,7 @@ const NewTranslation = () => {
       </div>
       <SubmitDraft data={state}/>
       <LoadDraft loadData={ loadData } />
+      <SubmitTranslation data={{newTranslationList : state.newTranslationList}} />
       <LoadTranslation id={state.newTranslationListId} />
       <div className="preview-selected">{state.selected.text}</div>
       <div className="text-container">
