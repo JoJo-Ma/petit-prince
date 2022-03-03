@@ -56,3 +56,12 @@ CREATE TABLE drafts (
   FOREIGN KEY (username_id) REFERENCES users (id),
   FOREIGN KEY (language_id) REFERENCES languages (id)
 )
+
+CREATE TABLE trans_shaping (
+  id serial primary key,
+  data jsonb,
+  trans_desc_id integer,
+  language_id integer,
+  FOREIGN KEY (language_id) REFERENCES languages (id),
+  FOREIGN KEY (trans_desc_id) REFERENCES trans_desc (id)
+);

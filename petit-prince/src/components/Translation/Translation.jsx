@@ -1,9 +1,17 @@
 import React, { useState } from 'react';
-import DisplayText from './DisplayText'
-import LoadTranslations from './LoadTranslations'
 
-export default () => {
-  const [data, setData] = useState({})
+import "./Translation.css"
+
+
+import Navbar from '../Navbar/Navbar'
+import LoadTranslations from './LoadTranslations'
+import DisplayText from './DisplayText'
+import AudioPlayer from './AudioPlayer'
+
+
+
+const Translation = () => {
+  const [data, setData] = useState(null)
 
 
   const loadData = (input) => {
@@ -14,8 +22,14 @@ export default () => {
   return (
     <>
       <Navbar />
+      <h1>Translation</h1>
       <LoadTranslations loadData={loadData} />
-      <DisplayText data={data} />
+      <div className="translation-container">
+        <DisplayText data={data} />
+      </div>
+      <AudioPlayer data={data} />
     </>
   )
 }
+
+export default Translation;

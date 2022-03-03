@@ -98,9 +98,38 @@ router.get('/:language1/:language2', async (req, res) => {
     (SELECT trans_text.data as data, languages.name as language FROM trans_text \
     LEFT JOIN trans_desc ON trans_text.trans_desc_id = trans_desc.id \
     LEFT JOIN languages ON trans_desc.language_id = languages.id \
-    WHERE trans_desc.is_main_trans AND languages.name = $2);", [params.language1, params.language2])
+    WHERE trans_desc.is_main_trans AND languages.name = $2) \
+    UNION ALL\
+    (SELECT trans_shaping.data as data, languages.name as language FROM trans_shaping\
+    LEFT JOIN languages on trans_shaping.language_id = languages.id\
+    WHERE languages.name = \
+    ((SELECT languages.name FROM trans_shaping LEFT JOIN languages ON trans_shaping.language_id = languages.id WHERE languages.name=$1)\
+    UNION ALL\
+    (SELECT 'French') \
+    LIMIT 1));", [params.language1, params.language2])
 
-    res.json(translation.rows)
+    console.log(translation.rows[2].language);
+
+    const data = {
+      data: [],
+      languageOne: translation.rows[0].language,
+      languageTwo: translation.rows[1].language,
+      languageStyling: translation.rows[2].language,
+    }
+
+
+    for (var i = 0; i < translation.rows[0].data.newTranslationList.length; i++) {
+      data.data.push({
+        id: translation.rows[0].data.newTranslationList[i].id,
+        languageOne: translation.rows[0].data.newTranslationList[i].text,
+        languageTwo: translation.rows[1].data.newTranslationList[i].text,
+        style: translation.rows[2].data.data[i].type
+      })
+    }
+
+
+
+    res.json(data)
   } catch (error) {
     console.error(error.message);
   }

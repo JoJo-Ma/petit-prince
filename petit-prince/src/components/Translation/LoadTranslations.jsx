@@ -2,9 +2,10 @@ import React, { useState, useEffect } from 'react';
 import LanguageSelector from '../LanguageSelector/LanguageSelector';
 
 
-export default () => {
+const LoadTranslation = ({ loadData }) => {
   const [languageOne, setLanguageOne] = useState('')
   const [languageTwo, setLanguageTwo] = useState('')
+
 
   const selectLanguageOne = (lang) => {
     setLanguageOne(lang)
@@ -16,8 +17,17 @@ export default () => {
 
   const handleClick = async (e) => {
     e.preventDefault()
-
-    
+    try {
+      console.log(`http://localhost:3005/translations/${languageOne}/${languageTwo}`);
+      const response = await fetch (`http://localhost:3005/translations/${languageOne}/${languageTwo}`, {
+        method: "GET",
+        headers: {token : localStorage.token}
+      })
+      const parseRes = await response.json()
+      loadData(parseRes)
+    } catch (error) {
+      console.error(error.message);
+    }
   }
 
   return (
@@ -29,3 +39,5 @@ export default () => {
   )
 
 }
+
+export default LoadTranslation;

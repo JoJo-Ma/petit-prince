@@ -1,0 +1,4673 @@
+{ "data" : [{
+  "id": 0,
+  "text": "À LÉON WERTH",
+  "type": "dedication"
+}, {
+  "id": 1,
+  "text": "Je demande pardon aux enfants d’avoir dédié ce livre à une grande personne. ",
+  "type": "paragraph beginning"
+}, {
+  "id": 2,
+  "text": "J’ai une excuse sérieuse : cette grande personne est le meilleur ami que j’ai au monde.",
+  "type": "paragraph"
+}, {
+  "id": 3,
+  "text": "J’ai une autre excuse : cette grande personne peut tout comprendre, même les livres pour enfants.",
+  "type": "paragraph"
+}, {
+  "id": 4,
+  "text": "J’ai une troisième excuse : cette grande personne habite la France où elle a faim et froid.",
+  "type": "paragraph"
+}, {
+  "id": 5,
+  "text": "Elle a bien besoin d’être consolée.",
+  "type": "paragraph"
+}, {
+  "id": 6,
+  "text": "Si toutes ces excuses ne suffisent pas, je veux bien dédier ce livre à l’enfant qu’a été autrefois cette grande personne.",
+  "type": "paragraph"
+}, {
+  "id": 7,
+  "text": "Toutes les grandes personnes ont d’abord été des enfants.",
+  "type": "paragraph"
+}, {
+  "id": 8,
+  "text": "(Mais peu d’entre elles s’en souviennent.)",
+  "type": "paragraph end"
+}, {
+  "id": 9,
+  "text": "Je corrige donc ma dédicace : À LÉON WERTH QUAND IL ÉTAIT PETIT GARÇON",
+  "type": "dedication"
+}, {
+  "id": 10,
+  "text": "PREMIER CHAPITRE",
+  "type": "chapter"
+}, {
+  "id": 11,
+  "text": "Lorsque j’avais six ans j’ai vu, une fois, une magnifique image, dans un livre sur la Forêt Vierge qui s’appelait « Histoires Vécues ».",
+  "type": "paragraph beginning"
+}, {
+  "id": 12,
+  "text": "Ça représentait un serpent boa qui avalait un fauve.",
+  "type": "paragraph"
+}, {
+  "id": 13,
+  "text": "Voilà la copie du dessin.",
+  "type": "paragraph end"
+}, {
+  "id": 14,
+  "text": "On disait dans le livre : « Les serpents boas avalent leur proie tout entière, sans la mâcher.",
+  "type": "paragraph beginning"
+}, {
+  "id": 15,
+  "text": "Ensuite ils ne peuvent plus bouger et ils dorment pendant les six mois de leur digestion. »",
+  "type": "paragraph end"
+}, {
+  "id": 16,
+  "text": "J’ai alors beaucoup réfléchi sur les aventures de la jungle et, à mon tour, j’ai réussi, avec un crayon de couleur, à tracer mon premier dessin.",
+  "type": "paragraph beginning"
+}, {
+  "id": 17,
+  "text": "Mon dessin numéro 1. Il était comme ça :",
+  "type": "paragraph end"
+}, {
+  "id": 18,
+  "text": "J’ai montré mon chef-d’œuvre aux grandes personnes et je leur ai demandé si mon dessin leur faisait peur.",
+  "type": "paragraph beginning end"
+}, {
+  "id": 19,
+  "text": "Elles m’ont répondu : « Pourquoi un chapeau ferait-il peur ? »",
+  "type": "paragraph beginning end"
+}, {
+  "id": 20,
+  "text": "Mon dessin ne représentait pas un chapeau. ",
+  "type": "paragraph beginning"
+}, {
+  "id": 21,
+  "text": "Il représentait un serpent boa qui digérait un éléphant. ",
+  "type": "paragraph"
+}, {
+  "id": 22,
+  "text": "J’ai alors dessiné l’intérieur du serpent boa, afin que les grandes personnes puissent comprendre.",
+  "type": "paragraph"
+}, {
+  "id": 23,
+  "text": "Elles ont toujours besoin d’explications.",
+  "type": "paragraph"
+}, {
+  "id": 24,
+  "text": "Mon dessin numéro 2 était comme ça :",
+  "type": "paragraph end"
+}, {
+  "id": 25,
+  "text": "Les grandes personnes m’ont conseillé de laisser de côté les dessins de serpents boas ouverts ou fermés, et de m’intéresser plutôt à la géographie, à l’histoire, au calcul et à la grammaire.",
+  "type": "paragraph beginning"
+}, {
+  "id": 26,
+  "text": "C’est ainsi que j’ai abandonné, à l’âge de six ans, une magnifique carrière de peintre.",
+  "type": "paragraph"
+}, {
+  "id": 27,
+  "text": "J’avais été découragé par l’insuccès de mon dessin numéro 1 et de mon dessin numéro 2.",
+  "type": "paragraph"
+}, {
+  "id": 28,
+  "text": "Les grandes personnes ne comprennent jamais rien toutes seules, et c’est fatigant, pour les enfants, de toujours et toujours leur donner des explications.",
+  "type": "paragraph end"
+}, {
+  "id": 29,
+  "text": "J’ai donc dû choisir un autre métier et j’ai appris à piloter des avions.",
+  "type": "paragraph beginning"
+}, {
+  "id": 30,
+  "text": "J’ai volé un peu partout dans le monde.",
+  "type": "paragraph"
+}, {
+  "id": 31,
+  "text": "Et la géographie, c’est exact, m’a beaucoup servi.",
+  "type": "paragraph"
+}, {
+  "id": 32,
+  "text": "Je savais reconnaître, du premier coup d’œil, la Chine de l’Arizona.",
+  "type": "paragraph"
+}, {
+  "id": 33,
+  "text": "C’est très utile, si l’on est égaré pendant la nuit.",
+  "type": "paragraph end"
+}, {
+  "id": 34,
+  "text": "J’ai ainsi eu, au cours de ma vie, des tas de contacts avec des tas de gens sérieux.",
+  "type": "paragraph beginning"
+}, {
+  "id": 35,
+  "text": "J’ai beaucoup vécu chez les grandes personnes.",
+  "type": "paragraph"
+}, {
+  "id": 36,
+  "text": "Je les ai vues de très près.",
+  "type": "paragraph"
+}, {
+  "id": 37,
+  "text": "Ça n’a pas trop amélioré mon opinion.",
+  "type": "paragraph end"
+}, {
+  "id": 38,
+  "text": "Quand j’en rencontrais une qui me paraissait un peu lucide, je faisais l’expérience sur elle de mon dessin numéro 1 que j’ai toujours conservé.",
+  "type": "paragraph beginning"
+}, {
+  "id": 39,
+  "text": "Je voulais savoir si elle était vraiment compréhensive.",
+  "type": "paragraph"
+}, {
+  "id": 40,
+  "text": "Mais toujours elle me répondait : « C’est un chapeau. »",
+  "type": "paragraph"
+}, {
+  "id": 41,
+  "text": "Alors je ne lui parlais ni de serpents boas, ni de forêts vierges, ni d’étoiles.",
+  "type": "paragraph"
+}, {
+  "id": 42,
+  "text": "Je me mettais à sa portée.",
+  "type": "paragraph"
+}, {
+  "id": 43,
+  "text": "Je lui parlais de bridge, de golf, de politique et de cravates.",
+  "type": "paragraph"
+}, {
+  "id": 44,
+  "text": "Et la grande personne était bien contente de connaître un homme aussi raisonnable.",
+  "type": "paragraph end"
+}, {
+  "id": 45,
+  "text": "CHAPITRE II",
+  "type": "chapter"
+}, {
+  "id": 46,
+  "text": "J’ai ainsi vécu seul, sans personne avec qui parler véritablement, jusqu’à une panne dans le désert du Sahara, il y a six ans.",
+  "type": "paragraph beginning"
+}, {
+  "id": 47,
+  "text": "Quelque chose s’était cassé dans mon moteur.",
+  "type": "paragraph"
+}, {
+  "id": 48,
+  "text": "Et comme je n’avais avec moi ni mécanicien, ni passagers, je me préparai à essayer de réussir, tout seul, une réparation difficile.",
+  "type": "paragraph"
+}, {
+  "id": 49,
+  "text": "C’était pour moi une question de vie ou de mort.",
+  "type": "paragraph"
+}, {
+  "id": 50,
+  "text": "J’avais à peine de l’eau à boire pour huit jours.",
+  "type": "paragraph end"
+}, {
+  "id": 51,
+  "text": "Le premier soir je me suis donc endormi sur le sable à mille milles de toute terre habitée.",
+  "type": "paragraph beginning"
+}, {
+  "id": 52,
+  "text": "J’étais bien plus isolé qu’un naufragé sur un radeau au milieu de l’Océan.",
+  "type": "paragraph"
+}, {
+  "id": 53,
+  "text": "Alors vous imaginez ma surprise, au lever du jour, quand une drôle de petite voix m’a réveillé.",
+  "type": "paragraph"
+}, {
+  "id": 54,
+  "text": "Elle disait :",
+  "type": "paragraph end"
+}, {
+  "id": 55,
+  "text": "– S’il vous plaît... dessine-moi un mouton !",
+  "type": "dialogue beginning end"
+}, {
+  "id": 56,
+  "text": "– Hein !",
+  "type": "dialogue beginning end"
+}, {
+  "id": 57,
+  "text": "– Dessine-moi un mouton... ",
+  "type": "dialogue beginning end"
+}, {
+  "id": 58,
+  "text": "J’ai sauté sur mes pieds comme si j’avais été frappé par la foudre.",
+  "type": "paragraph beginning"
+}, {
+  "id": 59,
+  "text": "J’ai bien frotté mes yeux. ",
+  "type": "paragraph"
+}, {
+  "id": 60,
+  "text": "J’ai bien regardé.",
+  "type": "paragraph"
+}, {
+  "id": 61,
+  "text": "Et j’ai vu un petit bonhomme tout à fait extraordinaire qui me considérait gravement.",
+  "type": "paragraph"
+}, {
+  "id": 62,
+  "text": "Voilà le meilleur portrait que, plus tard, j’ai réussi à faire de lui.",
+  "type": "paragraph"
+}, {
+  "id": 63,
+  "text": "Mais mon dessin, bien sûr, est beaucoup moins ravissant que le modèle.",
+  "type": "paragraph"
+}, {
+  "id": 64,
+  "text": "Ce n’est pas ma faute.",
+  "type": "paragraph"
+}, {
+  "id": 65,
+  "text": "J’avais été découragé dans ma carrière de peintre par les grandes personnes, à l’âge de six ans, et je n’avais rien appris à dessiner, sauf les boas fermés et les boas ouverts.",
+  "type": "paragraph end"
+}, {
+  "id": 66,
+  "text": "Je regardai donc cette apparition avec des yeux tout ronds d’étonnement.",
+  "type": "paragraph beginning"
+}, {
+  "id": 67,
+  "text": "N’oubliez pas que je me trouvais à mille milles de toute région habitée.",
+  "type": "paragraph"
+}, {
+  "id": 68,
+  "text": "Or mon petit bonhomme ne me semblait ni égaré, ni mort de fatigue, ni mort de faim, ni mort de soif, ni mort de peur.",
+  "type": "paragraph"
+}, {
+  "id": 69,
+  "text": "Il n’avait en rien l’apparence d’un enfant perdu au milieu du désert, à mille milles de toute région habitée.",
+  "type": "paragraph"
+}, {
+  "id": 70,
+  "text": "Quand je réussis enfin à parler, je lui dis :",
+  "type": "paragraph end"
+}, {
+  "id": 71,
+  "text": "– Mais... qu’est-ce que tu fais là ?",
+  "type": "dialogue beginning end"
+}, {
+  "id": 72,
+  "text": "Et il me répéta alors, tout doucement, comme une chose très sérieuse :",
+  "type": "paragraph beginning end"
+}, {
+  "id": 73,
+  "text": "– S’il vous plaît... dessine-moi un mouton...",
+  "type": "dialogue beginning end"
+}, {
+  "id": 74,
+  "text": "Quand le mystère est trop impressionnant, on n’ose pas désobéir.",
+  "type": "paragraph beginning"
+}, {
+  "id": 75,
+  "text": "Aussi absurde que cela me semblât à mille milles de tous les endroits habités et en danger de mort, je sortis de ma poche une feuille de papier et un stylographe.",
+  "type": "paragraph"
+}, {
+  "id": 76,
+  "text": "Mais je me rappelai alors que j’avais surtout étudié la géographie, l’histoire, le calcul et la grammaire et je dis au petit bonhomme (avec un peu de mauvaise humeur) que je ne savais pas dessiner.",
+  "type": "paragraph"
+}, {
+  "id": 77,
+  "text": "Il me répondit :",
+  "type": "paragraph end"
+}, {
+  "id": 78,
+  "text": "– Ça ne fait rien.Dessine-moi un mouton.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 79,
+  "text": "Comme je n’avais jamais dessiné un mouton je refis, pour lui, l’un des deux seuls dessins dont j’étais capable.",
+  "type": "paragraph beginning"
+}, {
+  "id": 80,
+  "text": "Celui du boa fermé.",
+  "type": "paragraph"
+}, {
+  "id": 81,
+  "text": "Et je fus stupéfait d’entendre le petit bonhomme me répondre :",
+  "type": "paragraph end"
+}, {
+  "id": 82,
+  "text": "– Non ! Non ! Je ne veux pas d’un éléphant dans un boa.Un boa c’est très dangereux, et un éléphant c’est très encombrant.",
+  "type": "dialogue beginning"
+}, {
+  "id": 83,
+  "text": "Chez moi c’est tout petit.J’ai besoin d’un mouton.Dessine-moi un mouton.",
+  "type": "dialogue end"
+}, {
+  "id": 84,
+  "text": "Alors j’ai dessiné.",
+  "type": "paragraph beginning end"
+}, {
+  "id": 85,
+  "text": "Il regarda attentivement, puis :",
+  "type": "paragraph beginning end"
+}, {
+  "id": 86,
+  "text": "– Non ! Celui-là est déjà très malade.Fais-en un autre.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 87,
+  "text": "Je dessinai : ",
+  "type": "paragraph beginning end"
+}, {
+  "id": 88,
+  "text": "Mon ami sourit gentiment, avec indulgence :",
+  "type": "paragraph beginning end"
+}, {
+  "id": 89,
+  "text": "– Tu vois bien... ce n’est pas un mouton, c’est un bélier.Il a des cornes...",
+  "type": "dialogue beginning end"
+}, {
+  "id": 90,
+  "text": "Je refis donc encore mon dessin : ",
+  "type": "paragraph beginning end"
+}, {
+  "id": 91,
+  "text": "Mais il fut refusé, comme les précédents : ",
+  "type": "paragraph beginning end"
+}, {
+  "id": 92,
+  "text": "– Celui-là est trop vieux. Je veux un mouton qui vive longtemps. ",
+  "type": "dialogue beginning end"
+}, {
+  "id": 93,
+  "text": "Alors, faute de patience, comme j’avais hâte de commencer le démontage de mon moteur, je griffonnai ce dessin-ci. ",
+  "type": "paragraph beginning end"
+}, {
+  "id": 94,
+  "text": "Et je lançai :",
+  "type": "paragraph beginning end"
+}, {
+  "id": 95,
+  "text": "– Ça c’est la caisse. Le mouton que tu veux est dedans.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 96,
+  "text": "Mais je fus bien surpris de voir s’illuminer le visage de mon jeune juge :",
+  "type": "paragraph beginning end"
+}, {
+  "id": 97,
+  "text": "– C’est tout à fait comme ça que je le voulais ! Crois-tu qu’il faille beaucoup d’herbe à ce mouton ?",
+  "type": "dialogue beginning end"
+}, {
+  "id": 98,
+  "text": "– Pourquoi ?",
+  "type": "dialogue beginning end"
+}, {
+  "id": 99,
+  "text": "– Parce que chez moi c’est tout petit...",
+  "type": "dialogue beginning end"
+}, {
+  "id": 100,
+  "text": "– Ça suffira sûrement. Je t’ai donné un tout petit mouton.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 101,
+  "text": "Il pencha la tête vers le dessin :",
+  "type": "paragraph beginning end"
+}, {
+  "id": 102,
+  "text": "– Pas si petit que ça... Tiens ! Il s’est endormi...",
+  "type": "dialogue beginning end"
+}, {
+  "id": 103,
+  "text": "Et c’est ainsi que je fis la connaissance du petit prince.",
+  "type": "paragraph beginning end"
+}, {
+  "id": 104,
+  "text": "Voilà le meilleur portrait que, plus tard, j’ai réussi à faire de lui",
+  "type": "note"
+}, {
+  "id": 105,
+  "text": "CHAPITRE III",
+  "type": "chapter"
+}, {
+  "id": 106,
+  "text": "Il me fallut longtemps pour comprendre d’où il venait.",
+  "type": "paragraph beginning"
+}, {
+  "id": 107,
+  "text": "Le petit prince, qui me posait beaucoup de questions, ne semblait jamais entendre les miennes.",
+  "type": "paragraph"
+}, {
+  "id": 108,
+  "text": "Ce sont des mots prononcés par hasard qui, peu à peu, m’ont tout révélé.",
+  "type": "paragraph"
+}, {
+  "id": 109,
+  "text": "Ainsi, quand il aperçut pour la première fois mon avion (je ne dessinerai pas mon avion, c’est un dessin beaucoup trop compliqué pour moi) il me demanda : ",
+  "type": "paragraph end"
+}, {
+  "id": 110,
+  "text": "– Qu’est-ce que c’est que cette chose-là ?",
+  "type": "dialogue beginning end"
+}, {
+  "id": 111,
+  "text": "– Ce n’est pas une chose. Ça vole. C’est un avion. C’est mon avion.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 112,
+  "text": "Et j’étais fier de lui apprendre que je volais.",
+  "type": "paragraph beginning"
+}, {
+  "id": 113,
+  "text": "Alors il s’écria :",
+  "type": "paragraph end"
+}, {
+  "id": 114,
+  "text": "– Comment ! tu es tombé du ciel ?",
+  "type": "dialogue beginning end"
+}, {
+  "id": 115,
+  "text": "– Oui, fis-je modestement. ",
+  "type": "dialogue beginning end"
+}, {
+  "id": 116,
+  "text": "– Ah ! ça c’est drôle... ",
+  "type": "dialogue beginning end"
+}, {
+  "id": 117,
+  "text": "Et le petit prince eut un très joli éclat de rire qui m’irrita beaucoup.",
+  "type": "paragraph beginning"
+}, {
+  "id": 118,
+  "text": "Je désire que l’on prenne mes malheurs au sérieux.",
+  "type": "paragraph"
+}, {
+  "id": 119,
+  "text": "Puis il ajouta :",
+  "type": "paragraph end"
+}, {
+  "id": 120,
+  "text": "– Alors, toi aussi tu viens du ciel ! De quelle planète es-tu ?",
+  "type": "dialogue beginning end"
+}, {
+  "id": 121,
+  "text": "J’entrevis aussitôt une lueur, dans le mystère de sa présence, et j’interrogeai brusquement :",
+  "type": "paragraph beginning end"
+}, {
+  "id": 122,
+  "text": "– Tu viens donc d’une autre planète ?",
+  "type": "dialogue beginning end"
+}, {
+  "id": 123,
+  "text": "Mais il ne me répondit pas.",
+  "type": "paragraph beginning"
+}, {
+  "id": 124,
+  "text": "Il hochait la tête doucement tout en regardant mon avion : ",
+  "type": "paragraph end"
+}, {
+  "id": 125,
+  "text": "– C’est vrai que, là-dessus, tu ne peux pas venir de bien loin...",
+  "type": "dialogue beginning end"
+}, {
+  "id": 126,
+  "text": "Et il s’enfonça dans une rêverie qui dura longtemps.",
+  "type": "paragraph beginning"
+}, {
+  "id": 127,
+  "text": "Puis, sortant mon mouton de sa poche, il se plongea dans la contemplation de son trésor.",
+  "type": "paragraph end"
+}, {
+  "id": 128,
+  "text": "Vous imaginez combien j’avais pu être intrigué par cette demi-confidence sur « les autres planètes ».",
+  "type": "paragraph beginning"
+}, {
+  "id": 129,
+  "text": "Je m’efforçai donc d’en savoir plus long :",
+  "type": "paragraph end"
+}, {
+  "id": 130,
+  "text": "– D’où viens-tu, mon petit bonhomme ? Où est-ce « chez toi » ? Où veux-tu emporter mon mouton ?",
+  "type": "dialogue beginning end"
+}, {
+  "id": 131,
+  "text": "Il me répondit après un silence méditatif :",
+  "type": "paragraph beginning end"
+}, {
+  "id": 132,
+  "text": "– Ce qui est bien, avec la caisse que tu m’as donnée, c’est que, la nuit, ça lui servira de maison.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 133,
+  "text": "– Bien sûr. Et si tu es gentil, je te donnerai aussi une corde pour l’attacher pendant le jour. Et un piquet.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 134,
+  "text": "La proposition parut choquer le petit prince :",
+  "type": "paragraph beginning end"
+}, {
+  "id": 135,
+  "text": "– L’attacher ? Quelle drôle d’idée !",
+  "type": "dialogue beginning end"
+}, {
+  "id": 136,
+  "text": "– Mais si tu ne l’attaches pas, il ira n’importe où, et il se perdra...",
+  "type": "dialogue beginning end"
+}, {
+  "id": 137,
+  "text": "Et mon ami eut un nouvel éclat de rire :",
+  "type": "paragraph beginning end"
+}, {
+  "id": 138,
+  "text": "– Mais où veux-tu qu’il aille !",
+  "type": "dialogue beginning end"
+}, {
+  "id": 139,
+  "text": "– N’importe où. Droit devant lui...",
+  "type": "dialogue beginning end"
+}, {
+  "id": 140,
+  "text": "Alors le petit prince remarqua gravement :",
+  "type": "paragraph beginning end"
+}, {
+  "id": 141,
+  "text": "– Ça ne fait rien, c’est tellement petit, chez moi !",
+  "type": "dialogue beginning end"
+}, {
+  "id": 142,
+  "text": "Et, avec un peu de mélancolie, peut-être, il ajouta :",
+  "type": "paragraph beginning end"
+}, {
+  "id": 143,
+  "text": "– Droit devant soi on ne peut pas aller bien loin...",
+  "type": "dialogue beginning end"
+}, {
+  "id": 144,
+  "text": "CHAPITRE IV",
+  "type": "chapter"
+}, {
+  "id": 145,
+  "text": "J’avais ainsi appris une seconde chose très importante :",
+  "type": "paragraph beginning"
+}, {
+  "id": 146,
+  "text": "C’est que sa planète d’origine était à peine plus grande qu’une maison !",
+  "type": "paragraph end"
+}, {
+  "id": 147,
+  "text": "Ça ne pouvait pas m’étonner beaucoup.",
+  "type": "paragraph beginning"
+}, {
+  "id": 148,
+  "text": "Je savais bien qu’en dehors des grosses planètes comme la Terre, Jupiter, Mars, Vénus, auxquelles on a donné des noms, il y en a des centaines d’autres qui sont quelquefois si petites qu’on a beaucoup de mal à les apercevoir au télescope.",
+  "type": "paragraph"
+}, {
+  "id": 149,
+  "text": "Quand un astronome découvre l’une d’elles, il lui donne pour nom un numéro.",
+  "type": "paragraph"
+}, {
+  "id": 150,
+  "text": "Il l’appelle par exemple : « l’astéroïde 3251. »",
+  "type": "paragraph end"
+}, {
+  "id": 151,
+  "text": "J’ai de sérieuses raisons de croire que la planète d’où venait le petit prince est l’astéroïde B 612.",
+  "type": "paragraph beginning"
+}, {
+  "id": 152,
+  "text": "Cet astéroïde n’a été aperçu qu’une fois au télescope, en 1909, par un astronome turc.",
+  "type": "paragraph end"
+}, {
+  "id": 153,
+  "text": "Il avait fait alors une grande démonstration de sa découverte à un Congrès International d’Astronomie.",
+  "type": "paragraph beginning"
+}, {
+  "id": 154,
+  "text": "Mais personne ne l’avait cru à cause de son costume.",
+  "type": "paragraph"
+}, {
+  "id": 155,
+  "text": "Les grandes personnes sont comme ça.",
+  "type": "paragraph end"
+}, {
+  "id": 156,
+  "text": "Heureusement pour la réputation de l’astéroïde B 612 un dictateur turc imposa à son peuple, sous peine de mort, de s’habiller à l’Européenne.",
+  "type": "paragraph beginning"
+}, {
+  "id": 157,
+  "text": "L’astronome refit sa démonstration en 1920, dans un habit très élégant.",
+  "type": "paragraph"
+}, {
+  "id": 158,
+  "text": "Et cette fois-ci tout le monde fut de son avis.",
+  "type": "paragraph end"
+}, {
+  "id": 159,
+  "text": "Si je vous ai raconté ces détails sur l’astéroïde B 612 et si je vous ai confié son numéro, c’est à cause des grandes personnes.",
+  "type": "paragraph beginning"
+}, {
+  "id": 160,
+  "text": "Les grandes personnes aiment les chiffres.",
+  "type": "paragraph"
+}, {
+  "id": 161,
+  "text": "Quand vous leur parlez d’un nouvel ami, elles ne vous questionnent jamais sur l’essentiel.",
+  "type": "paragraph"
+}, {
+  "id": 162,
+  "text": "Elles ne vous disent jamais :",
+  "type": "paragraph"
+}, {
+  "id": 163,
+  "text": "« Quel est le son de sa voix ? Quels sont les jeux qu’il préfère ? Est-ce qu’il collectionne les papillons ? »",
+  "type": "paragraph"
+}, {
+  "id": 164,
+  "text": "Elles vous demandent : ",
+  "type": "paragraph"
+}, {
+  "id": 165,
+  "text": "« Quel âge a-t-il ? Combien a-t-il de frères ? Combien pèse-t-il ? Combien gagne son père ? »",
+  "type": "paragraph"
+}, {
+  "id": 166,
+  "text": "Alors seulement elles croient le connaître. ",
+  "type": "paragraph"
+}, {
+  "id": 167,
+  "text": "Si vous dites aux grandes personnes : ",
+  "type": "paragraph"
+}, {
+  "id": 168,
+  "text": "« J’ai vu une belle maison en briques roses, avec des géraniums aux fenêtres et des colombes sur le toit... »",
+  "type": "paragraph"
+}, {
+  "id": 169,
+  "text": "elles ne parviennent pas à s’imaginer cette maison.",
+  "type": "paragraph"
+}, {
+  "id": 170,
+  "text": "Il faut leur dire :",
+  "type": "paragraph"
+}, {
+  "id": 171,
+  "text": "« J’ai vu une maison de cent mille francs. »",
+  "type": "paragraph"
+}, {
+  "id": 172,
+  "text": "Alors elles s’écrient : ",
+  "type": "paragraph"
+}, {
+  "id": 173,
+  "text": "« Comme c’est joli ! »",
+  "type": "paragraph end"
+}, {
+  "id": 174,
+  "text": "Ainsi, si vous leur dites :",
+  "type": "paragraph beginning"
+}, {
+  "id": 175,
+  "text": "« La preuve que le petit prince a existé c’est qu’il était ravissant, qu’il riait, et qu’il voulait un mouton. Quand on veut un mouton, c’est la preuve qu’on existe »",
+  "type": "paragraph"
+}, {
+  "id": 176,
+  "text": "elles hausseront les épaules et vous traiteront d’enfant !",
+  "type": "paragraph"
+}, {
+  "id": 177,
+  "text": "Mais si vous leur dites : ",
+  "type": "paragraph"
+}, {
+  "id": 178,
+  "text": "« La planète d’où il venait est l’astéroïde B 612 »",
+  "type": "paragraph"
+}, {
+  "id": 179,
+  "text": "alors elles seront convaincues, et elles vous laisseront tranquille avec leurs questions.",
+  "type": "paragraph"
+}, {
+  "id": 180,
+  "text": "Elles sont comme ça.",
+  "type": "paragraph"
+}, {
+  "id": 181,
+  "text": "Il ne faut pas leur en vouloir.",
+  "type": "paragraph"
+}, {
+  "id": 182,
+  "text": "Les enfants doivent être très indulgents envers les grandes personnes.",
+  "type": "paragraph end"
+}, {
+  "id": 183,
+  "text": "Mais, bien sûr, nous qui comprenons la vie, nous nous moquons bien des numéros !",
+  "type": "paragraph beginning"
+}, {
+  "id": 184,
+  "text": "J’aurais aimé commencer cette histoire à la façon des contes de fées.",
+  "type": "paragraph"
+}, {
+  "id": 185,
+  "text": "J’aurais aimé dire :",
+  "type": "paragraph end"
+}, {
+  "id": 186,
+  "text": "« Il était une fois un petit prince qui habitait une planète à peine plus grande que lui, et qui avait besoin d’un ami... »",
+  "type": "paragraph beginning"
+}, {
+  "id": 187,
+  "text": "Pour ceux qui comprennent la vie, ça aurait eu l’air beaucoup plus vrai.",
+  "type": "paragraph end"
+}, {
+  "id": 188,
+  "text": "Car je n’aime pas qu’on lise mon livre à la légère.",
+  "type": "paragraph beginning"
+}, {
+  "id": 189,
+  "text": "J’éprouve tant de chagrin à raconter ces souvenirs. ",
+  "type": "paragraph"
+}, {
+  "id": 190,
+  "text": "Il y a six ans déjà que mon ami s’en est allé avec son mouton.",
+  "type": "paragraph"
+}, {
+  "id": 191,
+  "text": "Si j’essaie ici de le décrire, c’est afin de ne pas l’oublier.",
+  "type": "paragraph"
+}, {
+  "id": 192,
+  "text": "C’est triste d’oublier un ami.",
+  "type": "paragraph"
+}, {
+  "id": 193,
+  "text": "Tout le monde n’a pas eu un ami. ",
+  "type": "paragraph"
+}, {
+  "id": 194,
+  "text": "Et je puis devenir comme les grandes personnes qui ne s’intéressent plus qu’aux chiffres.",
+  "type": "paragraph"
+}, {
+  "id": 195,
+  "text": "C’est donc pour ça encore que j’ai acheté une boîte de couleurs et des crayons.",
+  "type": "paragraph"
+}, {
+  "id": 196,
+  "text": "C’est dur de se remettre au dessin, à mon âge, quand on n’a jamais fait d’autres tentatives que celle d’un boa fermé et celle d’un boa ouvert, à l’âge de six ans !",
+  "type": "paragraph"
+}, {
+  "id": 197,
+  "text": "J’essaierai, bien sûr, de faire des portraits le plus ressemblants possible.",
+  "type": "paragraph"
+}, {
+  "id": 198,
+  "text": "Mais je ne suis pas tout à fait certain de réussir.",
+  "type": "paragraph"
+}, {
+  "id": 199,
+  "text": "Un dessin va, et l’autre ne ressemble plus. ",
+  "type": "paragraph"
+}, {
+  "id": 200,
+  "text": "Je me trompe un peu aussi sur la taille.",
+  "type": "paragraph"
+}, {
+  "id": 201,
+  "text": "Ici le petit prince est trop grand. ",
+  "type": "paragraph"
+}, {
+  "id": 202,
+  "text": "Là il est trop petit. ",
+  "type": "paragraph"
+}, {
+  "id": 203,
+  "text": "J’hésite aussi sur la couleur de son costume.",
+  "type": "paragraph"
+}, {
+  "id": 204,
+  "text": "Alors je tâtonne comme ci et comme ça, tant bien que mal.",
+  "type": "paragraph"
+}, {
+  "id": 205,
+  "text": "Je me tromperai enfin sur certains détails plus importants.",
+  "type": "paragraph"
+}, {
+  "id": 206,
+  "text": "Mais ça, il faudra me le pardonner.",
+  "type": "paragraph"
+}, {
+  "id": 207,
+  "text": "Mon ami ne donnait jamais d’explications.",
+  "type": "paragraph"
+}, {
+  "id": 208,
+  "text": "Il me croyait peut-être semblable à lui.",
+  "type": "paragraph"
+}, {
+  "id": 209,
+  "text": "Mais moi, malheureusement, je ne sais pas voir les moutons à travers les caisses.",
+  "type": "paragraph"
+}, {
+  "id": 210,
+  "text": "Je suis peutêtre un peu comme les grandes personnes.",
+  "type": "paragraph"
+}, {
+  "id": 211,
+  "text": "J’ai dû vieillir.",
+  "type": "paragraph end"
+}, {
+  "id": 212,
+  "text": "CHAPITRE V",
+  "type": "chapter"
+}, {
+  "id": 213,
+  "text": "Chaque jour j’apprenais quelque chose sur la planète, sur le départ, sur le voyage.",
+  "type": "paragraph beginning"
+}, {
+  "id": 214,
+  "text": "Ça venait tout doucement, au hasard des réflexions.",
+  "type": "paragraph"
+}, {
+  "id": 215,
+  "text": "C’est ainsi que, le troisième jour, je connus le drame des baobabs.",
+  "type": "paragraph end"
+}, {
+  "id": 216,
+  "text": "Cette fois-ci encore ce fut grâce au mouton, car brusquement le petit prince m’interrogea, comme pris d’un doute grave :",
+  "type": "paragraph beginning end"
+}, {
+  "id": 217,
+  "text": "– C’est bien vrai, n’est-ce pas, que les moutons mangent les arbustes ?",
+  "type": "dialogue beginning end"
+}, {
+  "id": 218,
+  "text": "– Oui. C’est vrai.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 219,
+  "text": "– Ah ! Je suis content.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 220,
+  "text": "Je ne compris pas pourquoi il était si important que les moutons mangeassent les arbustes.",
+  "type": "paragraph beginning"
+}, {
+  "id": 221,
+  "text": "Mais le petit prince ajouta :",
+  "type": "paragraph end"
+}, {
+  "id": 222,
+  "text": "– Par conséquent ils mangent aussi les baobabs ?",
+  "type": "dialogue beginning end"
+}, {
+  "id": 223,
+  "text": "Je fis remarquer au petit prince que les baobabs ne sont pas des arbustes, mais des arbres grands comme des églises et que, si même il emportait avec lui tout un troupeau d’éléphants, ce troupeau ne viendrait pas à bout d’un seul baobab.",
+  "type": "paragraph beginning end"
+}, {
+  "id": 224,
+  "text": "L’idée du troupeau d’éléphants fit rire le petit prince :",
+  "type": "paragraph beginning end"
+}, {
+  "id": 225,
+  "text": "– Il faudrait les mettre les uns sur les autres. ..",
+  "type": "dialogue beginning end"
+}, {
+  "id": 226,
+  "text": "Mais il remarqua avec sagesse :",
+  "type": "paragraph beginning end"
+}, {
+  "id": 227,
+  "text": "– Les baobabs, avant de grandir, ça commence par être petit.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 228,
+  "text": "– C’est exact ! Mais pourquoi veux-tu que tes moutons mangent les petits baobabs ?",
+  "type": "dialogue beginning end"
+}, {
+  "id": 229,
+  "text": "Il me répondit :",
+  "type": "paragraph beginning"
+}, {
+  "id": 230,
+  "text": "« Ben ! Voyons ! » comme s’il s’agissait là d’une évidence.",
+  "type": "paragraph"
+}, {
+  "id": 231,
+  "text": "Et il me fallut un grand effort d’intelligence pour comprendre à moi seul ce problème.",
+  "type": "paragraph end"
+}, {
+  "id": 232,
+  "text": "Et en effet, sur la planète du petit prince, il y avait comme sur toutes les planètes, de bonnes herbes et de mauvaises herbes.",
+  "type": "paragraph beginning"
+}, {
+  "id": 233,
+  "text": "Par conséquent de bonnes graines de bonnes herbes et de mauvaises graines de mauvaises herbes.",
+  "type": "paragraph"
+}, {
+  "id": 234,
+  "text": "Mais les graines sont invisibles.",
+  "type": "paragraph"
+}, {
+  "id": 235,
+  "text": "Elles dorment dans le secret de la terre jusqu’à ce qu’il prenne fantaisie à l’une d’elles de se réveiller.",
+  "type": "paragraph"
+}, {
+  "id": 236,
+  "text": "Alors elle s’étire, et pousse d’abord timidement vers le soleil une ravissante petite brindille inoffensive.",
+  "type": "paragraph"
+}, {
+  "id": 237,
+  "text": "S’il s’agit d’une brindille de radis ou de rosier, on peut la laisser pousser comme elle veut.",
+  "type": "paragraph"
+}, {
+  "id": 238,
+  "text": "Mais s’il s’agit d’une mauvaise plante, il faut arracher la plante aussitôt, dès qu’on a su la reconnaître.",
+  "type": "paragraph"
+}, {
+  "id": 239,
+  "text": "Or il y avait des graines terribles sur la planète du petit prince... c’étaient les graines de baobabs.",
+  "type": "paragraph"
+}, {
+  "id": 240,
+  "text": "Le sol de la planète en était infesté.",
+  "type": "paragraph"
+}, {
+  "id": 241,
+  "text": "Or un baobab, si l’on s’y prend trop tard, on ne peut jamais plus s’en débarrasser.",
+  "type": "paragraph"
+}, {
+  "id": 242,
+  "text": "Il encombre toute la planète.",
+  "type": "paragraph"
+}, {
+  "id": 243,
+  "text": "Il la perfore de ses racines.",
+  "type": "paragraph"
+}, {
+  "id": 244,
+  "text": "Et si la planète est trop petite, et si les baobabs sont trop nombreux, ils la font éclater.",
+  "type": "paragraph end"
+}, {
+  "id": 245,
+  "text": "« C’est une question de discipline, me disait plus tard le petit prince.",
+  "type": "paragraph beginning"
+}, {
+  "id": 246,
+  "text": "Quand on a terminé sa toilette du matin, il faut faire soigneusement la toilette de la planète.",
+  "type": "paragraph"
+}, {
+  "id": 247,
+  "text": "Il faut s’astreindre régulièrement à arracher les baobabs dès qu’on les distingue d’avec les rosiers auxquels ils ressemblent beaucoup quand ils sont très jeunes.",
+  "type": "paragraph"
+}, {
+  "id": 248,
+  "text": "C’est un travail très ennuyeux, mais très facile. »",
+  "type": "paragraph end"
+}, {
+  "id": 249,
+  "text": "Et un jour il me conseilla de m’appliquer à réussir un beau dessin, pour bien faire entrer ça dans la tête des enfants de chez moi.",
+  "type": "paragraph beginning"
+}, {
+  "id": 250,
+  "text": "« S’ils voyagent un jour, me disait-il, ça pourra leur servir.",
+  "type": "paragraph"
+}, {
+  "id": 251,
+  "text": "Il est quelquefois sans inconvénient de remettre à plus tard son travail.",
+  "type": "paragraph"
+}, {
+  "id": 252,
+  "text": "Mais, s’il s’agit des baobabs, c’est toujours une catastrophe.",
+  "type": "paragraph"
+}, {
+  "id": 253,
+  "text": "J’ai connu une planète, habitée par un paresseux.",
+  "type": "paragraph"
+}, {
+  "id": 254,
+  "text": "Il avait négligé trois arbustes... »",
+  "type": "paragraph end"
+}, {
+  "id": 255,
+  "text": "Et, sur les indications du petit prince, j’ai dessiné cette planète-là.",
+  "type": "paragraph beginning"
+}, {
+  "id": 256,
+  "text": "Je n’aime guère prendre le ton d’un moraliste.",
+  "type": "paragraph"
+}, {
+  "id": 257,
+  "text": "Mais le danger des baobabs est si peu connu, et les risques courus par celui qui s’égarerait dans un astéroïde sont si considérables, que, pour une fois, je fais exception à ma réserve.",
+  "type": "paragraph"
+}, {
+  "id": 258,
+  "text": "Je dis :",
+  "type": "paragraph"
+}, {
+  "id": 259,
+  "text": "« Enfants ! Faites attention aux baobabs ! »",
+  "type": "paragraph"
+}, {
+  "id": 260,
+  "text": "C’est pour avertir mes amis d’un danger qu’ils frôlaient depuis longtemps, comme moi-même, sans le connaître, que j’ai tant travaillé ce dessin-là.",
+  "type": "paragraph"
+}, {
+  "id": 261,
+  "text": "La leçon que je donnais en valait la peine.",
+  "type": "paragraph"
+}, {
+  "id": 262,
+  "text": "Vous vous demanderez peut-être :",
+  "type": "paragraph"
+}, {
+  "id": 263,
+  "text": "Pourquoi n’y a-t-il pas, dans ce livre, d’autres dessins aussi grandioses que le dessin des baobabs ?",
+  "type": "paragraph"
+}, {
+  "id": 264,
+  "text": "La réponse est bien simple : J’ai essayé mais je n’ai pas pu réussir.",
+  "type": "paragraph"
+}, {
+  "id": 265,
+  "text": "Quand j’ai dessiné les baobabs j’ai été animé par le sentiment de l’urgence.",
+  "type": "paragraph end"
+}, {
+  "id": 266,
+  "text": "CHAPITRE VI",
+  "type": "chapter"
+}, {
+  "id": 267,
+  "text": "Ah ! petit prince, j’ai compris, peu à peu, ainsi, ta petite vie mélancolique.",
+  "type": "paragraph beginning"
+}, {
+  "id": 268,
+  "text": "Tu n’avais eu longtemps pour distraction que la douceur des couchers de soleil.",
+  "type": "paragraph"
+}, {
+  "id": 269,
+  "text": "J’ai appris ce détail nouveau, le quatrième jour au matin, quand tu m’as dit :",
+  "type": "paragraph end"
+}, {
+  "id": 270,
+  "text": "– J’aime bien les couchers de soleil. Allons voir un coucher de soleil...",
+  "type": "dialogue beginning end"
+}, {
+  "id": 271,
+  "text": "– Mais il faut attendre...",
+  "type": "dialogue beginning end"
+}, {
+  "id": 272,
+  "text": "– Attendre quoi ?",
+  "type": "dialogue beginning end"
+}, {
+  "id": 273,
+  "text": "– Attendre que le soleil se couche.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 274,
+  "text": "Tu as eu l’air très surpris d’abord, et puis tu as ri de toimême.",
+  "type": "paragraph beginning"
+}, {
+  "id": 275,
+  "text": "Et tu m’as dit :",
+  "type": "paragraph end"
+}, {
+  "id": 276,
+  "text": "– Je me crois toujours chez moi !",
+  "type": "dialogue beginning end"
+}, {
+  "id": 277,
+  "text": "En effet.",
+  "type": "paragraph beginning"
+}, {
+  "id": 278,
+  "text": "Quand il est midi aux États-Unis, le soleil, tout le monde le sait, se couche sur la France.",
+  "type": "paragraph"
+}, {
+  "id": 279,
+  "text": "Il suffirait de pouvoir aller en France en une minute pour assister au coucher de soleil.",
+  "type": "paragraph"
+}, {
+  "id": 280,
+  "text": "Malheureusement la France est bien trop éloignée.",
+  "type": "paragraph"
+}, {
+  "id": 281,
+  "text": "Mais, sur ta si petite planète, il te suffisait de tirer ta chaise de quelques pas.",
+  "type": "paragraph"
+}, {
+  "id": 282,
+  "text": "Et tu regardais le crépuscule chaque fois que tu le désirais...",
+  "type": "paragraph end"
+}, {
+  "id": 283,
+  "text": "– Un jour, j’ai vu le soleil se coucher quarante-trois fois !",
+  "type": "dialogue beginning end"
+}, {
+  "id": 284,
+  "text": "Et un peu plus tard tu ajoutais :",
+  "type": "paragraph beginning end"
+}, {
+  "id": 285,
+  "text": "– Tu sais... quand on est tellement triste on aime les couchers de soleil...",
+  "type": "dialogue beginning end"
+}, {
+  "id": 286,
+  "text": "– Le jour des quarante-trois fois tu étais donc tellement triste ?",
+  "type": "dialogue beginning end"
+}, {
+  "id": 287,
+  "text": "Mais le petit prince ne répondit pas.",
+  "type": "paragraph beginning end"
+}, {
+  "id": 288,
+  "text": "CHAPITRE VII",
+  "type": "chapter"
+}, {
+  "id": 289,
+  "text": "Le cinquième jour, toujours grâce au mouton, ce secret de la vie du petit prince me fut révélé.",
+  "type": "paragraph beginning"
+}, {
+  "id": 290,
+  "text": "Il me demanda avec brusquerie, sans préambule, comme le fruit d’un problème longtemps médité en silence :",
+  "type": "paragraph end"
+}, {
+  "id": 291,
+  "text": "– Un mouton, s’il mange les arbustes, il mange aussi les fleurs ?",
+  "type": "dialogue beginning end"
+}, {
+  "id": 292,
+  "text": "– Un mouton mange tout ce qu’il rencontre.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 293,
+  "text": "– Même les fleurs qui ont des épines ?",
+  "type": "dialogue beginning end"
+}, {
+  "id": 294,
+  "text": "– Oui. Même les fleurs qui ont des épines.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 295,
+  "text": "– Alors les épines, à quoi servent-elles ?",
+  "type": "dialogue beginning end"
+}, {
+  "id": 296,
+  "text": "Je ne le savais pas.",
+  "type": "paragraph beginning"
+}, {
+  "id": 297,
+  "text": "J’étais alors très occupé à essayer de dévisser un boulon trop serré de mon moteur.",
+  "type": "paragraph"
+}, {
+  "id": 298,
+  "text": "J’étais très soucieux car ma panne commençait de m’apparaître comme très grave, et l’eau à boire qui s’épuisait me faisait craindre le pire.",
+  "type": "paragraph end"
+}, {
+  "id": 299,
+  "text": "– Les épines, à quoi servent-elles ?",
+  "type": "dialogue beginning end"
+}, {
+  "id": 300,
+  "text": "Le petit prince ne renonçait jamais à une question, une fois qu’il l’avait posée.",
+  "type": "paragraph beginning"
+}, {
+  "id": 301,
+  "text": "J’étais irrité par mon boulon et je répondis n’importe quoi :",
+  "type": "paragraph end"
+}, {
+  "id": 302,
+  "text": "– Les épines, ça ne sert à rien, c’est de la pure méchanceté de la part des fleurs !",
+  "type": "dialogue beginning end"
+}, {
+  "id": 303,
+  "text": "– Oh !",
+  "type": "dialogue beginning end"
+}, {
+  "id": 304,
+  "text": "Mais après un silence il me lança, avec une sorte de rancune :",
+  "type": "paragraph beginning end"
+}, {
+  "id": 305,
+  "text": "– Je ne te crois pas ! Les fleurs sont faibles. Elles sont naïves. Elles se rassurent comme elles peuvent. Elles se croient terribles avec leurs épines...",
+  "type": "dialogue beginning end"
+}, {
+  "id": 306,
+  "text": "Je ne répondis rien.",
+  "type": "paragraph beginning"
+}, {
+  "id": 307,
+  "text": "À cet instant-là je me disais :",
+  "type": "paragraph"
+}, {
+  "id": 308,
+  "text": "« Si ce boulon résiste encore, je le ferai sauter d’un coup de marteau. »",
+  "type": "paragraph"
+}, {
+  "id": 309,
+  "text": "Le petit prince dérangea de nouveau mes réflexions :",
+  "type": "paragraph end"
+}, {
+  "id": 310,
+  "text": "– Et tu crois, toi, que les fleurs...",
+  "type": "dialogue beginning end"
+}, {
+  "id": 311,
+  "text": "– Mais non ! Mais non ! Je ne crois rien ! J’ai répondu n’importe quoi. Je m’occupe, moi, de choses sérieuses !",
+  "type": "dialogue beginning end"
+}, {
+  "id": 312,
+  "text": "Il me regarda stupéfait.",
+  "type": "paragraph beginning end"
+}, {
+  "id": 313,
+  "text": "– De choses sérieuses !",
+  "type": "dialogue beginning end"
+}, {
+  "id": 314,
+  "text": "Il me voyait, mon marteau à la main, et les doigts noirs de cambouis, penché sur un objet qui lui semblait très laid.",
+  "type": "paragraph beginning end"
+}, {
+  "id": 315,
+  "text": "– Tu parles comme les grandes personnes !",
+  "type": "dialogue beginning end"
+}, {
+  "id": 316,
+  "text": "Ça me fit un peu honte.",
+  "type": "paragraph beginning"
+}, {
+  "id": 317,
+  "text": "Mais, impitoyable, il ajouta :",
+  "type": "paragraph end"
+}, {
+  "id": 318,
+  "text": "– Tu confonds tout... tu mélanges tout !",
+  "type": "dialogue beginning end"
+}, {
+  "id": 319,
+  "text": "Il était vraiment très irrité.",
+  "type": "paragraph beginning"
+}, {
+  "id": 320,
+  "text": "Il secouait au vent des cheveux tout dorés :",
+  "type": "paragraph end"
+}, {
+  "id": 321,
+  "text": "– Je connais une planète où il y a un Monsieur cramoisi. Il n’a jamais respiré une fleur. Il n’a jamais regardé une étoile. Il n’a jamais aimé personne. Il n’a jamais rien fait d’autre que des additions. Et toute la journée il répète comme toi : « Je suis un homme sérieux ! Je suis un homme sérieux ! » et ça le fait gonfler d’orgueil. Mais ce n’est pas un homme, c’est un champignon !",
+  "type": "dialogue beginning end"
+}, {
+  "id": 322,
+  "text": "– Un quoi ?",
+  "type": "dialogue beginning end"
+}, {
+  "id": 323,
+  "text": "– Un champignon !",
+  "type": "dialogue beginning end"
+}, {
+  "id": 324,
+  "text": "Le petit prince était maintenant tout pâle de colère.",
+  "type": "paragraph beginning end"
+}, {
+  "id": 325,
+  "text": "– Il y a des millions d’années que les fleurs fabriquent des épines. Il y a des millions d’années que les moutons mangent quand même les fleurs.",
+  "type": "dialogue beginning"
+}, {
+  "id": 326,
+  "text": "Et ce n’est pas sérieux de chercher à comprendre pourquoi elles se donnent tant de mal pour se fabriquer des épines qui ne servent jamais à rien ?",
+  "type": "dialogue"
+}, {
+  "id": 327,
+  "text": "Ce n’est pas important la guerre des moutons et des fleurs ?",
+  "type": "dialogue"
+}, {
+  "id": 328,
+  "text": "Ce n’est pas plus sérieux et plus important que les additions d’un gros Monsieur rouge ?",
+  "type": "dialogue"
+}, {
+  "id": 329,
+  "text": "Et si je connais, moi, une fleur unique au monde, qui n’existe nulle part, sauf dans ma planète, et qu’un petit mouton peut anéantir d’un seul coup, comme ça, un matin, sans se rendre compte de ce qu’il fait, ce n’est pas important ça !",
+  "type": "dialogue end"
+}, {
+  "id": 330,
+  "text": "Il rougit, puis reprit :",
+  "type": "paragraph beginning end"
+}, {
+  "id": 331,
+  "text": "– Si quelqu’un aime une fleur qui n’existe qu’à un exemplaire dans les millions et les millions d’étoiles, ça suffit pour qu’il soit heureux quand il les regarde.",
+  "type": "dialogue beginning"
+}, {
+  "id": 332,
+  "text": "Il se dit :",
+  "type": "dialogue"
+}, {
+  "id": 333,
+  "text": "« Ma fleur est là quelque part... » Mais si le mouton mange la fleur, c’est pour lui comme si, brusquement, toutes les étoiles s’éteignaient ! Et ce n’est pas important ça !",
+  "type": "dialogue end"
+}, {
+  "id": 334,
+  "text": "Il ne put rien dire de plus.",
+  "type": "paragraph beginning"
+}, {
+  "id": 335,
+  "text": "Il éclata brusquement en sanglots.",
+  "type": "paragraph"
+}, {
+  "id": 336,
+  "text": "La nuit était tombée.",
+  "type": "paragraph"
+}, {
+  "id": 337,
+  "text": "J’avais lâché mes outils.",
+  "type": "paragraph"
+}, {
+  "id": 338,
+  "text": "Je me moquais bien de mon marteau, de mon boulon, de la soif et de la mort.",
+  "type": "paragraph"
+}, {
+  "id": 339,
+  "text": "Il y avait, sur une étoile, une planète, la mienne, la Terre, un petit prince à consoler !",
+  "type": "paragraph"
+}, {
+  "id": 340,
+  "text": "Je le pris dans les bras.",
+  "type": "paragraph"
+}, {
+  "id": 341,
+  "text": "Je le berçai.",
+  "type": "paragraph"
+}, {
+  "id": 342,
+  "text": "Je lui disais :",
+  "type": "paragraph"
+}, {
+  "id": 343,
+  "text": "« La fleur que tu aimes n’est pas en danger... Je lui dessinerai une muselière, à ton mouton... Je te dessinerai une armure pour ta fleur... Je... »",
+  "type": "paragraph"
+}, {
+  "id": 344,
+  "text": "Je ne savais pas trop quoi dire.",
+  "type": "paragraph"
+}, {
+  "id": 345,
+  "text": "Je me sentais très maladroit.",
+  "type": "paragraph"
+}, {
+  "id": 346,
+  "text": "Je ne savais comment l’atteindre, où le rejoindre... C’est tellement mystérieux, le pays des larmes.",
+  "type": "paragraph end"
+}, {
+  "id": 347,
+  "text": "CHAPITRE VIII",
+  "type": "chapter"
+}, {
+  "id": 348,
+  "text": "J’appris bien vite à mieux connaître cette fleur.",
+  "type": "paragraph beginning"
+}, {
+  "id": 349,
+  "text": "Il y avait toujours eu, sur la planète du petit prince, des fleurs très simples, ornées d’un seul rang de pétales, et qui ne tenaient point de place, et qui ne dérangeaient personne.",
+  "type": "paragraph"
+}, {
+  "id": 350,
+  "text": "Elles apparaissaient un matin dans l’herbe, et puis elles s’éteignaient le soir.",
+  "type": "paragraph"
+}, {
+  "id": 351,
+  "text": "Mais celle-là avait germé un jour, d’une graine apportée d’on ne sait où, et le petit prince avait surveillé de très près cette brindille qui ne ressemblait pas aux autres brindilles.",
+  "type": "paragraph"
+}, {
+  "id": 352,
+  "text": "Ça pouvait être un nouveau genre de baobab.",
+  "type": "paragraph"
+}, {
+  "id": 353,
+  "text": "Mais l’arbuste cessa vite de croître, et commença de préparer une fleur.",
+  "type": "paragraph"
+}, {
+  "id": 354,
+  "text": "Le petit prince, qui assistait à l’installation d’un bouton énorme, sentait bien qu’il en sortirait une apparition miraculeuse, mais la fleur n’en finissait pas de se préparer à être belle, à l’abri de sa chambre verte.",
+  "type": "paragraph"
+}, {
+  "id": 355,
+  "text": "Elle choisissait avec soin ses couleurs.",
+  "type": "paragraph"
+}, {
+  "id": 356,
+  "text": "Elle s’habillait lentement, elle ajustait un à un ses pétales.",
+  "type": "paragraph"
+}, {
+  "id": 357,
+  "text": "Elle ne voulait pas sortir toute fripée comme les coquelicots.",
+  "type": "paragraph"
+}, {
+  "id": 358,
+  "text": "Elle ne voulait apparaître que dans le plein rayonnement de sa beauté.",
+  "type": "paragraph"
+}, {
+  "id": 359,
+  "text": "Eh ! oui. Elle était très coquette !",
+  "type": "paragraph"
+}, {
+  "id": 360,
+  "text": "Sa toilette mystérieuse avait donc duré des jours et des jours.",
+  "type": "paragraph"
+}, {
+  "id": 361,
+  "text": "Et puis voici qu’un matin, justement à l’heure du lever du soleil, elle s’était montrée.",
+  "type": "paragraph end"
+}, {
+  "id": 362,
+  "text": "Et elle, qui avait travaillé avec tant de précision, dit en bâillant :",
+  "type": "paragraph beginning end"
+}, {
+  "id": 363,
+  "text": "– Ah ! Je me réveille à peine... Je vous demande pardon... Je suis encore toute décoiffée...",
+  "type": "dialogue beginning end"
+}, {
+  "id": 364,
+  "text": "Le petit prince, alors, ne put contenir son admiration :",
+  "type": "paragraph beginning end"
+}, {
+  "id": 365,
+  "text": "– Que vous êtes belle !",
+  "type": "dialogue beginning end"
+}, {
+  "id": 366,
+  "text": "– N’est-ce pas, répondit doucement la fleur. Et je suis née en même temps que le soleil. .. ",
+  "type": "dialogue beginning end"
+}, {
+  "id": 367,
+  "text": "Le petit prince devina bien qu’elle n’était pas trop modeste, mais elle était si émouvante !",
+  "type": "paragraph beginning end"
+}, {
+  "id": 368,
+  "text": "– C’est l’heure, je crois, du petit déjeuner, avait-elle bientôt ajouté, auriez-vous la bonté de penser à moi...",
+  "type": "dialogue beginning end"
+}, {
+  "id": 369,
+  "text": "Et le petit prince, tout confus, ayant été chercher un arrosoir d’eau fraîche, avait servi la fleur.",
+  "type": "paragraph beginning end"
+}, {
+  "id": 370,
+  "text": "Ainsi l’avait-elle bien vite tourmenté par sa vanité un peu ombrageuse.",
+  "type": "paragraph beginning"
+}, {
+  "id": 371,
+  "text": "Un jour, par exemple, parlant de ses quatre épines, elle avait dit au petit prince :",
+  "type": "paragraph end"
+}, {
+  "id": 372,
+  "text": "– Ils peuvent venir, les tigres, avec leurs griffes !",
+  "type": "dialogue beginning end"
+}, {
+  "id": 373,
+  "text": "– Il n’y a pas de tigres sur ma planète, avait objecté le petit prince, et puis les tigres ne mangent pas l’herbe.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 374,
+  "text": "– Je ne suis pas une herbe, avait doucement répondu la fleur.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 375,
+  "text": "– Pardonnez-moi...",
+  "type": "dialogue beginning end"
+}, {
+  "id": 376,
+  "text": "– Je ne crains rien des tigres, mais j’ai horreur des courants d’air. Vous n’auriez pas un paravent ?",
+  "type": "dialogue beginning end"
+}, {
+  "id": 377,
+  "text": "« Horreur des courants d’air... ce n’est pas de chance, pour une plante, avait remarqué le petit prince. Cette fleur est bien compliquée... » ",
+  "type": "paragraph beginning end"
+}, {
+  "id": 378,
+  "text": "– Le soir vous me mettrez sous globe. Il fait très froid chez vous. C’est mal installé. Là d’où je viens...",
+  "type": "dialogue beginning end"
+}, {
+  "id": 379,
+  "text": "Mais elle s’était interrompue.",
+  "type": "paragraph beginning"
+}, {
+  "id": 380,
+  "text": "Elle était venue sous forme de graine.",
+  "type": "paragraph"
+}, {
+  "id": 381,
+  "text": "Elle n’avait rien pu connaître des autres mondes.",
+  "type": "paragraph"
+}, {
+  "id": 382,
+  "text": "Humiliée de s’être laissé surprendre à préparer un mensonge aussi naïf, elle avait toussé deux ou trois fois, pour mettre le petit prince dans son tort :",
+  "type": "paragraph end"
+}, {
+  "id": 383,
+  "text": "– Ce paravent ?...",
+  "type": "dialogue beginning end"
+}, {
+  "id": 384,
+  "text": "– J’allais le chercher mais vous me parliez !",
+  "type": "dialogue beginning end"
+}, {
+  "id": 385,
+  "text": "Alors elle avait forcé sa toux pour lui infliger quand même des remords.",
+  "type": "paragraph beginning end"
+}, {
+  "id": 386,
+  "text": "Ainsi le petit prince, malgré la bonne volonté de son amour, avait vite douté d’elle.",
+  "type": "paragraph beginning"
+}, {
+  "id": 387,
+  "text": "Il avait pris au sérieux des mots sans importance, et était devenu très malheureux.",
+  "type": "paragraph end"
+}, {
+  "id": 388,
+  "text": "« J’aurais dû ne pas l’écouter, me confia-t-il un jour, il ne faut jamais écouter les fleurs. Il faut les regarder et les respirer. La mienne embaumait ma planète, mais je ne savais pas m’en réjouir. Cette histoire de griffes, qui m’avait tellement agacé, eût dû m’attendrir... »",
+  "type": "paragraph beginning end"
+}, {
+  "id": 389,
+  "text": "Il me confia encore :",
+  "type": "paragraph beginning end"
+}, {
+  "id": 390,
+  "text": "« Je n’ai alors rien su comprendre ! J’aurais dû la juger sur les actes et non sur les mots. Elle m’embaumait et m’éclairait. Je n’aurais jamais dû m’enfuir ! J’aurais dû deviner sa tendresse derrière ses pauvres ruses. Les fleurs sont si contradictoires ! Mais j’étais trop jeune pour savoir l’aimer. »",
+  "type": "paragraph beginning end"
+}, {
+  "id": 391,
+  "text": "CHAPITRE IX",
+  "type": "chapter"
+}, {
+  "id": 392,
+  "text": "Je crois qu’il profita, pour son évasion, d’une migration d’oiseaux sauvages.",
+  "type": "paragraph beginning"
+}, {
+  "id": 393,
+  "text": "Au matin du départ il mit sa planète bien en ordre.",
+  "type": "paragraph"
+}, {
+  "id": 394,
+  "text": "Il ramona soigneusement ses volcans en activité.",
+  "type": "paragraph"
+}, {
+  "id": 395,
+  "text": "Il possédait deux volcans en activité.",
+  "type": "paragraph"
+}, {
+  "id": 396,
+  "text": "Et c’était bien commode pour faire chauffer le petit déjeuner du matin.",
+  "type": "paragraph"
+}, {
+  "id": 397,
+  "text": "Il possédait aussi un volcan éteint.",
+  "type": "paragraph"
+}, {
+  "id": 398,
+  "text": "Mais, comme il disait, « On ne sait jamais ! » Il ramona donc également le volcan éteint.",
+  "type": "paragraph"
+}, {
+  "id": 399,
+  "text": "S’ils sont bien ramonés, les volcans brûlent doucement et régulièrement, sans éruptions.",
+  "type": "paragraph"
+}, {
+  "id": 400,
+  "text": "Les éruptions volcaniques sont comme des feux de cheminée.",
+  "type": "paragraph"
+}, {
+  "id": 401,
+  "text": "Évidemment sur notre terre nous sommes beaucoup trop petits pour ramoner nos volcans.",
+  "type": "paragraph"
+}, {
+  "id": 402,
+  "text": "C’est pourquoi ils nous causent des tas d’ennuis.",
+  "type": "paragraph end"
+}, {
+  "id": 403,
+  "text": "Le petit prince arracha aussi, avec un peu de mélancolie, les dernières pousses de baobabs.",
+  "type": "paragraph beginning"
+}, {
+  "id": 404,
+  "text": "Il croyait ne jamais devoir revenir.",
+  "type": "paragraph"
+}, {
+  "id": 405,
+  "text": "Mais tous ces travaux familiers lui parurent, ce matinlà, extrêmement doux.",
+  "type": "paragraph"
+}, {
+  "id": 406,
+  "text": "Et, quand il arrosa une dernière fois la fleur, et se prépara à la mettre à l’abri sous son globe, il se découvrit l’envie de pleurer.",
+  "type": "paragraph end"
+}, {
+  "id": 407,
+  "text": "– Adieu, dit-il à la fleur.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 408,
+  "text": "Mais elle ne lui répondit pas.",
+  "type": "paragraph beginning end"
+}, {
+  "id": 409,
+  "text": "– Adieu, répéta-t-il.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 410,
+  "text": "La fleur toussa.",
+  "type": "paragraph beginning"
+}, {
+  "id": 411,
+  "text": "Mais ce n’était pas à cause de son rhume.",
+  "type": "paragraph end"
+}, {
+  "id": 412,
+  "text": "– J’ai été sotte, lui dit-elle enfin. Je te demande pardon. Tâche d’être heureux.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 413,
+  "text": "Il fut surpris par l’absence de reproches.",
+  "type": "paragraph beginning"
+}, {
+  "id": 414,
+  "text": "Il restait là tout déconcerté, le globe en l’air.",
+  "type": "paragraph"
+}, {
+  "id": 415,
+  "text": "Il ne comprenait pas cette douceur calme.",
+  "type": "paragraph end"
+}, {
+  "id": 416,
+  "text": "– Mais oui, je t’aime, lui dit la fleur. Tu n’en as rien su, par ma faute. Cela n’a aucune importance. Mais tu as été aussi sot que moi. Tâche d’être heureux... Laisse ce globe tranquille. Je n’en veux plus.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 417,
+  "text": "– Mais le vent...",
+  "type": "dialogue beginning end"
+}, {
+  "id": 418,
+  "text": "– Je ne suis pas si enrhumée que ça... L’air frais de la nuit me fera du bien. Je suis une fleur.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 419,
+  "text": "– Mais les bêtes...",
+  "type": "dialogue beginning end"
+}, {
+  "id": 420,
+  "text": "– Il faut bien que je supporte deux ou trois chenilles si je veux connaître les papillons. Il paraît que c’est tellement beau. Sinon qui me rendra visite ? Tu seras loin, toi. Quant aux grosses bêtes, je ne crains rien. J’ai mes griffes.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 421,
+  "text": "Et elle montrait naïvement ses quatre épines.",
+  "type": "paragraph beginning"
+}, {
+  "id": 422,
+  "text": "Puis elle ajouta :",
+  "type": "paragraph end"
+}, {
+  "id": 423,
+  "text": "– Ne traîne pas comme ça, c’est agaçant. Tu as décidé de partir. Va-t’en.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 424,
+  "text": "Car elle ne voulait pas qu’il la vît pleurer.",
+  "type": "paragraph beginning"
+}, {
+  "id": 425,
+  "text": "C’était une fleur tellement orgueilleuse...",
+  "type": "paragraph end"
+}, {
+  "id": 426,
+  "text": "CHAPITRE X",
+  "type": "chapter"
+}, {
+  "id": 427,
+  "text": "Il se trouvait dans la région des astéroïdes 325, 326, 327, 328, 329 et 330.",
+  "type": "paragraph beginning"
+}, {
+  "id": 428,
+  "text": "Il commença donc par les visiter pour y chercher une occupation et pour s’instruire.",
+  "type": "paragraph end"
+}, {
+  "id": 429,
+  "text": "La première était habitée par un roi.",
+  "type": "paragraph beginning"
+}, {
+  "id": 430,
+  "text": "Le roi siégeait, habillé de pourpre et d’hermine, sur un trône très simple et cependant majestueux.",
+  "type": "paragraph end"
+}, {
+  "id": 431,
+  "text": "– Ah ! Voilà un sujet, s’écria le roi quand il aperçut le petit prince.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 432,
+  "text": "Et le petit prince se demanda :",
+  "type": "paragraph beginning end"
+}, {
+  "id": 433,
+  "text": "« Comment peut-il me reconnaître puisqu’il ne m’a encore jamais vu ! »",
+  "type": "paragraph beginning end"
+}, {
+  "id": 434,
+  "text": "Il ne savait pas que, pour les rois, le monde est très simplifié.",
+  "type": "paragraph beginning"
+}, {
+  "id": 435,
+  "text": "Tous les hommes sont des sujets.",
+  "type": "paragraph end"
+}, {
+  "id": 436,
+  "text": "– Approche-toi que je te voie mieux, lui dit le roi qui était tout fier d’être roi pour quelqu’un.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 437,
+  "text": "Le petit prince chercha des yeux où s’asseoir, mais la planète était toute encombrée par le magnifique manteau d’hermine.",
+  "type": "paragraph beginning"
+}, {
+  "id": 438,
+  "text": "Il resta donc debout, et, comme il était fatigué, il bâilla.",
+  "type": "paragraph end"
+}, {
+  "id": 439,
+  "text": "– Il est contraire à l’étiquette de bâiller en présence d’un roi, lui dit le monarque. Je te l’interdis.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 440,
+  "text": "– Je ne peux pas m’en empêcher, répondit le petit prince tout confus. J’ai fait un long voyage et je n’ai pas dormi...",
+  "type": "dialogue beginning end"
+}, {
+  "id": 441,
+  "text": "– Alors, lui dit le roi, je t’ordonne de bâiller. Je n’ai vu personne bâiller depuis des années. Les bâillements sont pour moi des curiosités. Allons ! bâille encore. C’est un ordre.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 442,
+  "text": "– Ça m’intimide... je ne peux plus... fit le petit prince tout rougissant.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 443,
+  "text": "– Hum ! Hum ! répondit le roi. Alors je... je t’ordonne tantôt de bâiller et tantôt de... Il bredouillait un peu et paraissait vexé.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 444,
+  "text": "Car le roi tenait essentiellement à ce que son autorité fût respectée.",
+  "type": "paragraph beginning"
+}, {
+  "id": 445,
+  "text": "Il ne tolérait pas la désobéissance.",
+  "type": "paragraph"
+}, {
+  "id": 446,
+  "text": "C’était un monarque absolu.",
+  "type": "paragraph"
+}, {
+  "id": 447,
+  "text": "Mais, comme il était très bon, il donnait des ordres raisonnables.",
+  "type": "paragraph end"
+}, {
+  "id": 448,
+  "text": "« Si j’ordonnais, disait-il couramment, si j’ordonnais à un général de se changer en oiseau de mer, et si le général n’obéissait pas, ce ne serait pas la faute du général. Ce serait ma faute. »",
+  "type": "paragraph beginning end"
+}, {
+  "id": 449,
+  "text": "– Puis-je m’asseoir ? s’enquit timidement le petit prince.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 450,
+  "text": "– Je t’ordonne de t’asseoir, lui répondit le roi, qui ramena majestueusement un pan de son manteau d’hermine.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 451,
+  "text": "Mais le petit prince s’étonnait.",
+  "type": "paragraph beginning"
+}, {
+  "id": 452,
+  "text": "La planète était minuscule.",
+  "type": "paragraph"
+}, {
+  "id": 453,
+  "text": "Sur quoi le roi pouvait-il bien régner ?",
+  "type": "paragraph end"
+}, {
+  "id": 454,
+  "text": "– Sire, lui dit-il... je vous demande pardon de vous interroger...",
+  "type": "dialogue beginning end"
+}, {
+  "id": 455,
+  "text": "– Je t’ordonne de m’interroger, se hâta de dire le roi.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 456,
+  "text": "– Sire... sur quoi régnez-vous ?",
+  "type": "dialogue beginning end"
+}, {
+  "id": 457,
+  "text": "– Sur tout, répondit le roi, avec une grande simplicité.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 458,
+  "text": "– Sur tout ?",
+  "type": "dialogue beginning end"
+}, {
+  "id": 459,
+  "text": "Le roi d’un geste discret désigna sa planète, les autres planètes et les étoiles.",
+  "type": "paragraph beginning end"
+}, {
+  "id": 460,
+  "text": "– Sur tout ça ? dit le petit prince.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 461,
+  "text": "– Sur tout ça... répondit le roi.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 462,
+  "text": "Car non seulement c’était un monarque absolu mais c’était un monarque universel.",
+  "type": "paragraph beginning end"
+}, {
+  "id": 463,
+  "text": "– Et les étoiles vous obéissent ?",
+  "type": "dialogue beginning end"
+}, {
+  "id": 464,
+  "text": "– Bien sûr, lui dit le roi. Elles obéissent aussitôt. Je ne tolère pas l’indiscipline.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 465,
+  "text": "Un tel pouvoir émerveilla le petit prince.",
+  "type": "paragraph beginning"
+}, {
+  "id": 466,
+  "text": "S’il l’avait détenu lui-même, il aurait pu assister, non pas à quarante-quatre, mais à soixante-douze, ou même à cent, ou même à deux cents couchers de soleil dans la même journée, sans avoir jamais à tirer sa chaise !",
+  "type": "paragraph"
+}, {
+  "id": 467,
+  "text": "Et comme il se sentait un peu triste à cause du souvenir de sa petite planète abandonnée, il s’enhardit à solliciter une grâce du roi :",
+  "type": "paragraph end"
+}, {
+  "id": 468,
+  "text": "– Je voudrais voir un coucher de soleil... Faites-moi plaisir... Ordonnez au soleil de se coucher...",
+  "type": "dialogue beginning end"
+}, {
+  "id": 469,
+  "text": "– Si j’ordonnais à un général de voler d’une fleur à l’autre à la façon d’un papillon, ou d’écrire une tragédie, ou de se changer en oiseau de mer, et si le général n’exécutait pas l’ordre reçu, qui, de lui ou de moi, serait dans son tort ?",
+  "type": "dialogue beginning end"
+}, {
+  "id": 470,
+  "text": "– Ce serait vous, dit fermement le petit prince.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 471,
+  "text": "– Exact. Il faut exiger de chacun ce que chacun peut donner, reprit le roi. L’autorité repose d’abord sur la raison. Si tu ordonnes à ton peuple d’aller se jeter à la mer, il fera la révolution. J’ai le droit d’exiger l’obéissance parce que mes ordres sont raisonnables.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 472,
+  "text": "– Alors mon coucher de soleil ? rappela le petit prince qui jamais n’oubliait une question une fois qu’il l’avait posée.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 473,
+  "text": "– Ton coucher de soleil, tu l’auras. Je l’exigerai. Mais j’attendrai, dans ma science du gouvernement, que les conditions soient favorables.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 474,
+  "text": "– Quand ça sera-t-il ? s’informa le petit prince.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 475,
+  "text": "– Hem ! hem ! lui répondit le roi, qui consulta d’abord un gros calendrier, hem ! hem ! ce sera, vers... vers... ce sera ce soir vers sept heures quarante ! Et tu verras comme je suis bien obéi.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 476,
+  "text": "Le petit prince bâilla.",
+  "type": "paragraph beginning"
+}, {
+  "id": 477,
+  "text": "Il regrettait son coucher de soleil manqué.",
+  "type": "paragraph"
+}, {
+  "id": 478,
+  "text": "Et puis il s’ennuyait déjà un peu :",
+  "type": "paragraph end"
+}, {
+  "id": 479,
+  "text": "– Je n’ai plus rien à faire ici, dit-il au roi. Je vais repartir !",
+  "type": "dialogue beginning end"
+}, {
+  "id": 480,
+  "text": "– Ne pars pas, répondit le roi qui était si fier d’avoir un sujet. Ne pars pas, je te fais ministre !",
+  "type": "dialogue beginning end"
+}, {
+  "id": 481,
+  "text": "– Ministre de quoi ?",
+  "type": "dialogue beginning end"
+}, {
+  "id": 482,
+  "text": "– De... de la justice !",
+  "type": "dialogue beginning end"
+}, {
+  "id": 483,
+  "text": "– Mais il n’y a personne à juger !",
+  "type": "dialogue beginning end"
+}, {
+  "id": 484,
+  "text": "– On ne sait pas, lui dit le roi. Je n’ai pas fait encore le tour de mon royaume. Je suis très vieux, je n’ai pas de place pour un carrosse, et ça me fatigue de marcher.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 485,
+  "text": "– Oh ! Mais j’ai déjà vu, dit le petit prince qui se pencha pour jeter encore un coup d’œil sur l’autre côté de la planète. Il n’y a personne là-bas non plus...",
+  "type": "dialogue beginning end"
+}, {
+  "id": 486,
+  "text": "– Tu te jugeras donc toi-même, lui répondit le roi. C’est le plus difficile. Il est bien plus difficile de se juger soi-même que de juger autrui. Si tu réussis à bien te juger, c’est que tu es un véritable sage.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 487,
+  "text": "– Moi, dit le petit prince, je puis me juger moi-même n’importe où. Je n’ai pas besoin d’habiter ici.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 488,
+  "text": "– Hem ! Hem ! dit le roi, je crois bien que sur ma planète il y a quelque part un vieux rat. Je l’entends la nuit. Tu pourras juger ce vieux rat. Tu le condamneras à mort de temps en temps. Ainsi sa vie dépendra de ta justice. Mais tu le gracieras chaque fois pour l’économiser. Il n’y en a qu’un.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 489,
+  "text": "– Moi, répondit le petit prince, je n’aime pas condamner à mort, et je crois bien que je m’en vais.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 490,
+  "text": "– Non, dit le roi.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 491,
+  "text": "Mais le petit prince, ayant achevé ses préparatifs, ne voulut point peiner le vieux monarque :",
+  "type": "paragraph beginning end"
+}, {
+  "id": 492,
+  "text": "– Si Votre Majesté désirait être obéie ponctuellement, elle pourrait me donner un ordre raisonnable. Elle pourrait m’ordonner, par exemple, de partir avant une minute. Il me semble que les conditions sont favorables...",
+  "type": "dialogue beginning end"
+}, {
+  "id": 493,
+  "text": "Le roi n’ayant rien répondu, le petit prince hésita d’abord, puis, avec un soupir, prit le départ.",
+  "type": "paragraph beginning end"
+}, {
+  "id": 494,
+  "text": "– Je te fais mon ambassadeur, se hâta alors de crier le roi.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 495,
+  "text": "Il avait un grand air d’autorité.",
+  "type": "paragraph beginning end"
+}, {
+  "id": 496,
+  "text": "« Les grandes personnes sont bien étranges », se dit le petit prince, en lui-même, durant son voyage.",
+  "type": "paragraph beginning end"
+}, {
+  "id": 497,
+  "text": "CHAPITRE XI",
+  "type": "chapter"
+}, {
+  "id": 498,
+  "text": "La seconde planète était habitée par un vaniteux :",
+  "type": "paragraph beginning end"
+}, {
+  "id": 499,
+  "text": "– Ah ! Ah ! Voilà la visite d’un admirateur ! s’écria de loin le vaniteux dès qu’il aperçut le petit prince.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 500,
+  "text": "Car, pour les vaniteux, les autres hommes sont des admirateurs.",
+  "type": "paragraph beginning end"
+}, {
+  "id": 501,
+  "text": "– Bonjour, dit le petit prince. Vous avez un drôle de chapeau.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 502,
+  "text": "– C’est pour saluer, lui répondit le vaniteux. C’est pour saluer quand on m’acclame. Malheureusement il ne passe jamais personne par ici.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 503,
+  "text": "– Ah oui ? dit le petit prince qui ne comprit pas.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 504,
+  "text": "– Frappe tes mains l’une contre l’autre, conseilla donc le vaniteux.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 505,
+  "text": "Le petit prince frappa ses mains l’une contre l’autre.",
+  "type": "paragraph beginning"
+}, {
+  "id": 506,
+  "text": "Le vaniteux salua modestement en soulevant son chapeau.",
+  "type": "paragraph end"
+}, {
+  "id": 507,
+  "text": "« Ça c’est plus amusant que la visite au roi », se dit en luimême le petit prince.",
+  "type": "paragraph beginning"
+}, {
+  "id": 508,
+  "text": "Et il recommença de frapper ses mains l’une contre l’autre.",
+  "type": "paragraph"
+}, {
+  "id": 509,
+  "text": "Le vaniteux recommença de saluer en soulevant son chapeau.",
+  "type": "paragraph"
+}, {
+  "id": 510,
+  "text": "Après cinq minutes d’exercice le petit prince se fatigua de la monotonie du jeu :",
+  "type": "paragraph end"
+}, {
+  "id": 511,
+  "text": "– Et, pour que le chapeau tombe, demanda-t-il, que faut-il faire ?",
+  "type": "dialogue beginning end"
+}, {
+  "id": 512,
+  "text": "Mais le vaniteux ne l’entendit pas.",
+  "type": "paragraph beginning"
+}, {
+  "id": 513,
+  "text": "Les vaniteux n’entendent jamais que les louanges.",
+  "type": "paragraph end"
+}, {
+  "id": 514,
+  "text": "– Est-ce que tu m’admires vraiment beaucoup ? demanda-t-il au petit prince.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 515,
+  "text": "– Qu’est-ce que signifie admirer ?",
+  "type": "dialogue beginning end"
+}, {
+  "id": 516,
+  "text": "– Admirer signifie reconnaître que je suis l’homme le plus beau, le mieux habillé, le plus riche et le plus intelligent de la planète.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 517,
+  "text": "– Mais tu es seul sur ta planète !",
+  "type": "dialogue beginning end"
+}, {
+  "id": 518,
+  "text": "– Fais-moi ce plaisir. Admire-moi quand même !",
+  "type": "dialogue beginning end"
+}, {
+  "id": 519,
+  "text": "– Je t’admire, dit le petit prince, en haussant un peu les épaules, mais en quoi cela peut-il bien t’intéresser ?",
+  "type": "dialogue beginning end"
+}, {
+  "id": 520,
+  "text": "Et le petit prince s’en fut.",
+  "type": "paragraph beginning end"
+}, {
+  "id": 521,
+  "text": "« Les grandes personnes sont décidément bien bizarres », se dit-il simplement en lui-même durant son voyage. ",
+  "type": "paragraph beginning end"
+}, {
+  "id": 522,
+  "text": "CHAPITRE XII",
+  "type": "chapter"
+}, {
+  "id": 523,
+  "text": "La planète suivante était habitée par un buveur.",
+  "type": "paragraph beginning"
+}, {
+  "id": 524,
+  "text": "Cette visite fut très courte, mais elle plongea le petit prince dans une grande mélancolie :",
+  "type": "paragraph end"
+}, {
+  "id": 525,
+  "text": "– Que fais-tu là ? dit-il au buveur, qu’il trouva installé en silence devant une collection de bouteilles vides et une collection de bouteilles pleines.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 526,
+  "text": "– Je bois, répondit le buveur, d’un air lugubre.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 527,
+  "text": "– Pourquoi bois-tu ? lui demanda le petit prince.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 528,
+  "text": "– Pour oublier, répondit le buveur.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 529,
+  "text": "– Pour oublier quoi ? s’enquit le petit prince qui déjà le plaignait.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 530,
+  "text": "– Pour oublier que j’ai honte, avoua le buveur en baissant la tête.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 531,
+  "text": "– Honte de quoi ? s’informa le petit prince qui désirait le secourir.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 532,
+  "text": "– Honte de boire ! acheva le buveur qui s’enferma définitivement dans le silence.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 533,
+  "text": "Et le petit prince s’en fut, perplexe.",
+  "type": "paragraph beginning end"
+}, {
+  "id": 534,
+  "text": "« Les grandes personnes sont décidément très très bizarres », se disait-il en lui-même durant le voyage.",
+  "type": "paragraph beginning end"
+}, {
+  "id": 535,
+  "text": "CHAPITRE XIII",
+  "type": "chapter"
+}, {
+  "id": 536,
+  "text": "La quatrième planète était celle du businessman.",
+  "type": "paragraph beginning"
+}, {
+  "id": 537,
+  "text": "Cet homme était si occupé qu’il ne leva même pas la tête à l’arrivée du petit prince.",
+  "type": "paragraph end"
+}, {
+  "id": 538,
+  "text": "– Bonjour, lui dit celui-ci. Votre cigarette est éteinte.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 539,
+  "text": "– Trois et deux font cinq. Cinq et sept douze. Douze et trois quinze. Bonjour. Quinze et sept vingt-deux. Vingt-deux et six vingt-huit. Pas le temps de la rallumer. Vingt-six et cinq trente et un. Ouf ! Ça fait donc cinq cent un millions six cent vingtdeux mille sept cent trente et un.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 540,
+  "text": "– Cinq cents millions de quoi ?",
+  "type": "dialogue beginning end"
+}, {
+  "id": 541,
+  "text": "– Hein ? Tu es toujours là ? Cinq cent un millions de... je ne sais plus... J’ai tellement de travail ! Je suis sérieux, moi, je ne m’amuse pas à des balivernes ! Deux et cinq sept...",
+  "type": "dialogue beginning end"
+}, {
+  "id": 542,
+  "text": "– Cinq cent un millions de quoi ? répéta le petit prince qui jamais de sa vie, n’avait renoncé à une question, une fois qu’il l’avait posée.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 543,
+  "text": "Le businessman leva la tête :",
+  "type": "paragraph beginning end"
+}, {
+  "id": 544,
+  "text": "– Depuis cinquante-quatre ans que j’habite cette planèteci, je n’ai été dérangé que trois fois. La première fois ç’a été, il y a vingt-deux ans, par un hanneton qui était tombé Dieu sait d’où. Il répandait un bruit épouvantable, et j’ai fait quatre erreurs dans une addition. La seconde fois ç’a été, il y a onze ans, par une crise de rhumatisme. Je manque d’exercice. Je n’ai pas le temps de flâner. Je suis sérieux, moi. La troisième fois... la voici ! Je disais donc cinq cent un millions...",
+  "type": "dialogue beginning end"
+}, {
+  "id": 545,
+  "text": "– Millions de quoi ?",
+  "type": "dialogue beginning end"
+}, {
+  "id": 546,
+  "text": "Le businessman comprit qu’il n’était point d’espoir de paix :",
+  "type": "paragraph beginning end"
+}, {
+  "id": 547,
+  "text": "– Millions de ces petites choses que l’on voit quelquefois dans le ciel.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 548,
+  "text": "– Des mouches ?",
+  "type": "dialogue beginning end"
+}, {
+  "id": 549,
+  "text": "– Mais non, des petites choses qui brillent.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 550,
+  "text": "– Des abeilles ?",
+  "type": "dialogue beginning end"
+}, {
+  "id": 551,
+  "text": "– Mais non. Des petites choses dorées qui font rêvasser les fainéants. Mais je suis sérieux, moi ! Je n’ai pas le temps de rêvasser.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 552,
+  "text": "– Ah ! des étoiles ?",
+  "type": "dialogue beginning end"
+}, {
+  "id": 553,
+  "text": "– C’est bien ça. Des étoiles.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 554,
+  "text": "– Et que fais-tu de cinq cents millions d’étoiles ?",
+  "type": "dialogue beginning end"
+}, {
+  "id": 555,
+  "text": "– Cinq cent un millions six cent vingt-deux mille sept cent trente et un. Je suis sérieux, moi, je suis précis.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 556,
+  "text": "– Et que fais-tu de ces étoiles ?",
+  "type": "dialogue beginning end"
+}, {
+  "id": 557,
+  "text": "– Ce que j’en fais ?",
+  "type": "dialogue beginning end"
+}, {
+  "id": 558,
+  "text": "– Oui.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 559,
+  "text": "– Rien. Je les possède.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 560,
+  "text": "– Tu possèdes les étoiles ?",
+  "type": "dialogue beginning end"
+}, {
+  "id": 561,
+  "text": "– Oui.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 562,
+  "text": "– Mais j’ai déjà vu un roi qui...",
+  "type": "dialogue beginning end"
+}, {
+  "id": 563,
+  "text": "– Les rois ne possèdent pas. Ils « règnent » sur. C’est très différent.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 564,
+  "text": "– Et à quoi cela te sert-il de posséder les étoiles ?",
+  "type": "dialogue beginning end"
+}, {
+  "id": 565,
+  "text": "– Ça me sert à être riche.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 566,
+  "text": "– Et à quoi cela te sert-il d’être riche ?",
+  "type": "dialogue beginning end"
+}, {
+  "id": 567,
+  "text": "– À acheter d’autres étoiles, si quelqu’un en trouve.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 568,
+  "text": "« Celui-là, se dit en lui-même le petit prince, il raisonne un peu comme mon ivrogne. »",
+  "type": "paragraph beginning end"
+}, {
+  "id": 569,
+  "text": "Cependant il posa encore des questions :",
+  "type": "paragraph beginning end"
+}, {
+  "id": 570,
+  "text": "– Comment peut-on posséder les étoiles ?",
+  "type": "dialogue beginning end"
+}, {
+  "id": 571,
+  "text": "– À qui sont-elles ? riposta, grincheux, le businessman.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 572,
+  "text": "– Je ne sais pas. À personne.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 573,
+  "text": "– Alors elles sont à moi, car j’y ai pensé le premier.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 574,
+  "text": "– Ça suffit ?",
+  "type": "dialogue beginning end"
+}, {
+  "id": 575,
+  "text": "– Bien sûr. Quand tu trouves un diamant qui n’est à personne, il est à toi. Quand tu trouves une île qui n’est à personne, elle est à toi. Quand tu as une idée le premier, tu la fais breveter : elle est à toi. Et moi je possède les étoiles, puisque jamais personne avant moi n’a songé à les posséder.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 576,
+  "text": "– Ça c’est vrai, dit le petit prince. Et qu’en fais-tu ?",
+  "type": "dialogue beginning end"
+}, {
+  "id": 577,
+  "text": "– Je les gère. Je les compte et je les recompte, dit le businessman. C’est difficile. Mais je suis un homme sérieux !",
+  "type": "dialogue beginning end"
+}, {
+  "id": 578,
+  "text": "Le petit prince n’était pas satisfait encore.",
+  "type": "paragraph beginning end"
+}, {
+  "id": 579,
+  "text": "– Moi, si je possède un foulard, je puis le mettre autour de mon cou et l’emporter. Moi, si je possède une fleur, je puis cueillir ma fleur et l’emporter. Mais tu ne peux pas cueillir les étoiles !",
+  "type": "dialogue beginning end"
+}, {
+  "id": 580,
+  "text": "– Non, mais je puis les placer en banque.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 581,
+  "text": "– Qu’est-ce que ça veut dire ?",
+  "type": "dialogue beginning end"
+}, {
+  "id": 582,
+  "text": "– Ça veut dire que j’écris sur un petit papier le nombre de mes étoiles. Et puis j’enferme à clef ce papier-là dans un tiroir.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 583,
+  "text": "– Et c’ est tout ?",
+  "type": "dialogue beginning end"
+}, {
+  "id": 584,
+  "text": "– Ça suffit !",
+  "type": "dialogue beginning end"
+}, {
+  "id": 585,
+  "text": "« C’est amusant, pensa le petit prince. C’est assez poétique. Mais ce n’est pas très sérieux. »",
+  "type": "paragraph beginning end"
+}, {
+  "id": 586,
+  "text": "Le petit prince avait sur les choses sérieuses des idées très différentes des idées des grandes personnes.",
+  "type": "paragraph beginning end"
+}, {
+  "id": 587,
+  "text": "– Moi, dit-il encore, je possède une fleur que j’arrose tous les jours. Je possède trois volcans que je ramone toutes les semaines. Car je ramone aussi celui qui est éteint. On ne sait jamais. C’est utile à mes volcans, et c’est utile à ma fleur, que je les possède. Mais tu n’es pas utile aux étoiles...",
+  "type": "dialogue beginning end"
+}, {
+  "id": 588,
+  "text": "Le businessman ouvrit la bouche mais ne trouva rien à répondre, et le petit prince s’en fut.",
+  "type": "paragraph beginning end"
+}, {
+  "id": 589,
+  "text": "« Les grandes personnes sont décidément tout à fait extraordinaires », se disait-il simplement en lui-même durant le voyage.",
+  "type": "paragraph beginning end"
+}, {
+  "id": 590,
+  "text": "CHAPITRE XIV",
+  "type": "chapter"
+}, {
+  "id": 591,
+  "text": "La cinquième planète était très curieuse.",
+  "type": "paragraph beginning"
+}, {
+  "id": 592,
+  "text": "C’était la plus petite de toutes.",
+  "type": "paragraph"
+}, {
+  "id": 593,
+  "text": "Il y avait là juste assez de place pour loger un réverbère et un allumeur de réverbères.",
+  "type": "paragraph"
+}, {
+  "id": 594,
+  "text": "Le petit prince ne parvenait pas à s’expliquer à quoi pouvaient servir, quelque part dans le ciel, sur une planète sans maison, ni population, un réverbère et un allumeur de réverbères.",
+  "type": "paragraph"
+}, {
+  "id": 595,
+  "text": "Cependant il se dit en lui-même :",
+  "type": "paragraph end"
+}, {
+  "id": 596,
+  "text": "« Peut-être bien que cet homme est absurde. Cependant il est moins absurde que le roi, que le vaniteux, que le businessman et que le buveur.",
+  "type": "paragraph beginning"
+}, {
+  "id": 597,
+  "text": "Au moins son travail a-t-il un sens.",
+  "type": "paragraph"
+}, {
+  "id": 598,
+  "text": "Quand il allume son réverbère, c’est comme s’il faisait naître une étoile de plus, ou une fleur.",
+  "type": "paragraph"
+}, {
+  "id": 599,
+  "text": "Quand il éteint son réverbère, ça endort la fleur ou l’étoile.",
+  "type": "paragraph"
+}, {
+  "id": 600,
+  "text": "C’est une occupation très jolie.",
+  "type": "paragraph"
+}, {
+  "id": 601,
+  "text": "C’est véritablement utile puisque c’est joli. »",
+  "type": "paragraph end"
+}, {
+  "id": 602,
+  "text": "Lorsqu’il aborda la planète il salua respectueusement l’allumeur :",
+  "type": "paragraph beginning end"
+}, {
+  "id": 603,
+  "text": "– Bonjour. Pourquoi viens-tu d’éteindre ton réverbère ?",
+  "type": "dialogue beginning end"
+}, {
+  "id": 604,
+  "text": "– C’est la consigne, répondit l’allumeur. Bonjour.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 605,
+  "text": "– Qu’est-ce que la consigne ?",
+  "type": "dialogue beginning end"
+}, {
+  "id": 606,
+  "text": "– C’est d’éteindre mon réverbère. Bonsoir. Et il le ralluma.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 607,
+  "text": "– Mais pourquoi viens-tu de le rallumer ?",
+  "type": "dialogue beginning end"
+}, {
+  "id": 608,
+  "text": "– C’est la consigne, répondit l’allumeur.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 609,
+  "text": "– Je ne comprends pas, dit le petit prince.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 610,
+  "text": "– Il n’y a rien à comprendre, dit l’allumeur. La consigne c’est la consigne. Bonjour.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 611,
+  "text": "Et il éteignit son réverbère.",
+  "type": "paragraph beginning end"
+}, {
+  "id": 612,
+  "text": "Puis il s’épongea le front avec un mouchoir à carreaux rouges.",
+  "type": "paragraph beginning end"
+}, {
+  "id": 613,
+  "text": "– Je fais là un métier terrible. C’était raisonnable autrefois. J’éteignais le matin et j’allumais le soir. J’avais le reste du jour pour me reposer, et le reste de la nuit pour dormir. ..",
+  "type": "dialogue beginning end"
+}, {
+  "id": 614,
+  "text": "– Et, depuis cette époque, la consigne a changé ?",
+  "type": "dialogue beginning end"
+}, {
+  "id": 615,
+  "text": "– La consigne n’a pas changé, dit l’allumeur. C’est bien là le drame ! La planète d’année en année a tourné de plus en plus vite, et la consigne n’a pas changé !",
+  "type": "dialogue beginning end"
+}, {
+  "id": 616,
+  "text": "– Alors ? dit le petit prince.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 617,
+  "text": "– Alors maintenant qu’elle fait un tour par minute, je n’ai plus une seconde de repos. J’allume et j’éteins une fois par minute !",
+  "type": "dialogue beginning end"
+}, {
+  "id": 618,
+  "text": "– Ça c’est drôle ! Les jours chez toi durent une minute !",
+  "type": "dialogue beginning end"
+}, {
+  "id": 619,
+  "text": "– Ce n’est pas drôle du tout, dit l’allumeur. Ça fait déjà un mois que nous parlons ensemble.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 620,
+  "text": "– Un mois ?",
+  "type": "dialogue beginning end"
+}, {
+  "id": 621,
+  "text": "– Oui. Trente minutes. Trente jours ! Bonsoir.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 622,
+  "text": "Et il ralluma son réverbère.",
+  "type": "paragraph beginning end"
+}, {
+  "id": 623,
+  "text": "Le petit prince le regarda et il aima cet allumeur qui était tellement fidèle à la consigne.",
+  "type": "paragraph beginning"
+}, {
+  "id": 624,
+  "text": "Il se souvint des couchers de soleil que lui-même allait autrefois chercher, en tirant sa chaise.",
+  "type": "paragraph"
+}, {
+  "id": 625,
+  "text": "Il voulut aider son ami :",
+  "type": "paragraph end"
+}, {
+  "id": 626,
+  "text": "– Tu sais... je connais un moyen de te reposer quand tu voudras...",
+  "type": "dialogue beginning end"
+}, {
+  "id": 627,
+  "text": "– Je veux toujours, dit l’allumeur. Car on peut être, à la fois, fidèle et paresseux.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 628,
+  "text": "Le petit prince poursuivit :",
+  "type": "paragraph beginning end"
+}, {
+  "id": 629,
+  "text": "– Ta planète est tellement petite que tu en fais le tour en trois enjambées. Tu n’as qu’à marcher assez lentement pour rester toujours au soleil. Quand tu voudras te reposer tu marcheras... et le jour durera aussi longtemps que tu voudras.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 630,
+  "text": "– Ça ne m’avance pas à grand’chose, dit l’allumeur. Ce que j’aime dans la vie, c’est dormir.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 631,
+  "text": "– Ce n’est pas de chance, dit le petit prince.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 632,
+  "text": "– Ce n’est pas de chance, dit l’allumeur. Bonjour.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 633,
+  "text": "Et il éteignit son réverbère.",
+  "type": "paragraph beginning end"
+}, {
+  "id": 634,
+  "text": "« Celui-là, se dit le petit prince, tandis qu’il poursuivait plus loin son voyage, celui-là serait méprisé par tous les autres, par le roi, par le vaniteux, par le buveur, par le businessman. Cependant c’est le seul qui ne me paraisse pas ridicule. C’est, peut-être, parce qu’il s’occupe d’autre chose que de soi-même. »",
+  "type": "paragraph beginning end"
+}, {
+  "id": 635,
+  "text": "Il eut un soupir de regret et se dit encore :",
+  "type": "paragraph beginning end"
+}, {
+  "id": 636,
+  "text": "« Celui-là est le seul dont j’eusse pu faire mon ami. Mais sa planète est vraiment trop petite. Il n’y a pas de place pour deux... »",
+  "type": "paragraph beginning end"
+}, {
+  "id": 637,
+  "text": "Ce que le petit prince n’osait pas s’avouer, c’est qu’il regrettait cette planète bénie à cause, surtout, des mille quatre cent quarante couchers de soleil par vingt-quatre heures !",
+  "type": "paragraph beginning end"
+}, {
+  "id": 638,
+  "text": "CHAPITRE XV",
+  "type": "chapter"
+}, {
+  "id": 639,
+  "text": "La sixième planète était une planète dix fois plus vaste.",
+  "type": "paragraph beginning"
+}, {
+  "id": 640,
+  "text": "Elle était habitée par un vieux Monsieur qui écrivait d’énormes livres.",
+  "type": "paragraph end"
+}, {
+  "id": 641,
+  "text": "– Tiens ! voilà un explorateur ! s’écria-t-il, quand il aperçut le petit prince.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 642,
+  "text": "Le petit prince s’assit sur la table et souffla un peu.",
+  "type": "paragraph beginning"
+}, {
+  "id": 643,
+  "text": "Il avait déjà tant voyagé !",
+  "type": "paragraph end"
+}, {
+  "id": 644,
+  "text": "– D’où viens-tu ? lui dit le vieux Monsieur.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 645,
+  "text": "– Quel est ce gros livre ? dit le petit prince. Que faites-vous ici ?",
+  "type": "dialogue beginning end"
+}, {
+  "id": 646,
+  "text": "– Je suis géographe, dit le vieux Monsieur.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 647,
+  "text": "– Qu’est-ce qu’un géographe ?",
+  "type": "dialogue beginning end"
+}, {
+  "id": 648,
+  "text": "– C’est un savant qui connaît où se trouvent les mers, les fleuves, les villes, les montagnes et les déserts.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 649,
+  "text": "– Ça c’est bien intéressant, dit le petit prince. Ça c’est enfin un véritable métier !",
+  "type": "dialogue beginning"
+}, {
+  "id": 650,
+  "text": "Et il jeta un coup d’œil autour de lui sur la planète du géographe.",
+  "type": "dialogue"
+}, {
+  "id": 651,
+  "text": "Il n’avait jamais vu encore une planète aussi majestueuse.",
+  "type": "dialogue end"
+}, {
+  "id": 652,
+  "text": "– Elle est bien belle, votre planète. Est-ce qu’il y a des océans ?",
+  "type": "dialogue beginning end"
+}, {
+  "id": 653,
+  "text": "– Je ne puis pas le savoir, dit le géographe.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 654,
+  "text": "– Ah ! (Le petit prince était déçu.) Et des montagnes ?",
+  "type": "dialogue beginning end"
+}, {
+  "id": 655,
+  "text": "– Je ne puis pas le savoir, dit le géographe.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 656,
+  "text": "– Et des villes et des fleuves et des déserts ?",
+  "type": "dialogue beginning end"
+}, {
+  "id": 657,
+  "text": "– Je ne puis pas le savoir non plus, dit le géographe.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 658,
+  "text": "– Mais vous êtes géographe !",
+  "type": "dialogue beginning end"
+}, {
+  "id": 659,
+  "text": "– C’est exact, dit le géographe, mais je ne suis pas explorateur. Je manque absolument d’explorateurs. Ce n’est pas le géographe qui va faire le compte des villes, des fleuves, des montagnes, des mers, des océans et des déserts. Le géographe est trop important pour flâner. Il ne quitte pas son bureau. Mais il y reçoit les explorateurs. Il les interroge, et il prend en note leurs souvenirs. Et si les souvenirs de l’un d’entre eux lui paraissent intéressants, le géographe fait faire une enquête sur la moralité de l’explorateur.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 660,
+  "text": "– Pourquoi ça ?",
+  "type": "dialogue beginning end"
+}, {
+  "id": 661,
+  "text": "– Parce qu’un explorateur qui mentirait entraînerait des catastrophes dans les livres de géographie. Et aussi un explorateur qui boirait trop.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 662,
+  "text": "– Pourquoi ça ? fit le petit prince.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 663,
+  "text": "– Parce que les ivrognes voient double. Alors le géographe noterait deux montagnes, là où il n’y en a qu’une seule.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 664,
+  "text": "– Je connais quelqu’un, dit le petit prince, qui serait mauvais explorateur.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 665,
+  "text": "– C’est possible. Donc, quand la moralité de l’explorateur paraît bonne, on fait une enquête sur sa découverte.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 666,
+  "text": "– On va voir ?",
+  "type": "dialogue beginning end"
+}, {
+  "id": 667,
+  "text": "– Non. C’est trop compliqué. Mais on exige de l’explorateur qu’il fournisse des preuves. S’il s’agit par exemple de la découverte d’une grosse montagne, on exige qu’il en rapporte de grosses pierres. Le géographe soudain s’émut.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 668,
+  "text": "– Mais toi, tu viens de loin ! Tu es explorateur ! Tu vas me décrire ta planète !",
+  "type": "dialogue beginning end"
+}, {
+  "id": 669,
+  "text": "Et le géographe, ayant ouvert son registre, tailla son crayon.",
+  "type": "paragraph beginning"
+}, {
+  "id": 670,
+  "text": "On note d’abord au crayon les récits des explorateurs.",
+  "type": "paragraph"
+}, {
+  "id": 671,
+  "text": "On attend, pour noter à l’encre, que l’explorateur ait fourni des preuves.",
+  "type": "paragraph end"
+}, {
+  "id": 672,
+  "text": "– Alors ? interrogea le géographe.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 673,
+  "text": "– Oh ! chez moi, dit le petit prince, ce n’est pas très intéressant, c’est tout petit. J’ai trois volcans. Deux volcans en activité, et un volcan éteint. Mais on ne sait jamais.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 674,
+  "text": "– On ne sait jamais, dit le géographe.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 675,
+  "text": "– J’ai aussi une fleur.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 676,
+  "text": "– Nous ne notons pas les fleurs, dit le géographe.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 677,
+  "text": "– Pourquoi ça ! c’est le plus joli !",
+  "type": "dialogue beginning end"
+}, {
+  "id": 678,
+  "text": "– Parce que les fleurs sont éphémères.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 679,
+  "text": "– Qu’est-ce que signifie : « éphémère » ?",
+  "type": "dialogue beginning end"
+}, {
+  "id": 680,
+  "text": "– Les géographies, dit le géographe, sont les livres les plus précieux de tous les livres. Elles ne se démodent jamais. Il est très rare qu’une montagne change de place. Il est très rare qu’un océan se vide de son eau. Nous écrivons des choses éternelles.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 681,
+  "text": "– Mais les volcans éteints peuvent se réveiller, interrompit le petit prince. Qu’est-ce que signifie « éphémère » ?",
+  "type": "dialogue beginning end"
+}, {
+  "id": 682,
+  "text": "– Que les volcans soient éteints ou soient éveillés, ça revient au même pour nous autres, dit le géographe. Ce qui compte pour nous, c’est la montagne. Elle ne change pas.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 683,
+  "text": "– Mais qu’est-ce que signifie « éphémère » ? répéta le petit prince qui, de sa vie, n’avait renoncé à une question, une fois qu’il l’avait posée.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 684,
+  "text": "– Ça signifie « qui est menacé de disparition prochaine ».",
+  "type": "dialogue beginning end"
+}, {
+  "id": 685,
+  "text": "– Ma fleur est menacée de disparition prochaine ?",
+  "type": "dialogue beginning end"
+}, {
+  "id": 686,
+  "text": "– Bien sûr.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 687,
+  "text": "Ma fleur est éphémère, se dit le petit prince, et elle n’a que quatre épines pour se défendre contre le monde ! Et je l’ai laissée toute seule chez moi !",
+  "type": "paragraph beginning end"
+}, {
+  "id": 688,
+  "text": "Ce fut là son premier mouvement de regret.",
+  "type": "paragraph beginning"
+}, {
+  "id": 689,
+  "text": "Mais il reprit courage :",
+  "type": "paragraph end"
+}, {
+  "id": 690,
+  "text": "– Que me conseillez-vous d’aller visiter ? demanda-t-il.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 691,
+  "text": "– La planète Terre, lui répondit le géographe. Elle a une bonne réputation...",
+  "type": "dialogue beginning end"
+}, {
+  "id": 692,
+  "text": "Et le petit prince s’en fut, songeant à sa fleur.",
+  "type": "paragraph beginning end"
+}, {
+  "id": 693,
+  "text": "CHAPITRE XVI",
+  "type": "chapter"
+}, {
+  "id": 694,
+  "text": "La septième planète fut donc la Terre.",
+  "type": "paragraph beginning end"
+}, {
+  "id": 695,
+  "text": "La Terre n’est pas une planète quelconque !",
+  "type": "paragraph beginning"
+}, {
+  "id": 696,
+  "text": "On y compte cent onze rois (en n’oubliant pas, bien sûr, les rois nègres), sept mille géographes, neuf cent mille businessmen, sept millions et demi d’ivrognes, trois cent onze millions de vaniteux, c’est-àdire environ deux milliards de grandes personnes.",
+  "type": "paragraph beginning end"
+}, {
+  "id": 697,
+  "text": "Pour vous donner une idée des dimensions de la Terre je vous dirai qu’avant l’invention de l’électricité on y devait entretenir, sur l’ensemble des six continents, une véritable armée de quatre cent soixante-deux mille cinq cent onze allumeurs de réverbères.",
+  "type": "paragraph beginning end"
+}, {
+  "id": 698,
+  "text": "Vu d’un peu loin ça faisait un effet splendide.",
+  "type": "paragraph beginning"
+}, {
+  "id": 699,
+  "text": "Les mouvements de cette armée étaient réglés comme ceux d’un ballet d’opéra.",
+  "type": "paragraph"
+}, {
+  "id": 700,
+  "text": "D’abord venait le tour des allumeurs de réverbères de Nouvelle-Zélande et d’Australie.",
+  "type": "paragraph"
+}, {
+  "id": 701,
+  "text": "Puis ceux-ci, ayant allumé leurs lampions, s’en allaient dormir.",
+  "type": "paragraph"
+}, {
+  "id": 702,
+  "text": "Alors entraient à leur tour dans la danse les allumeurs de réverbères de Chine et de Sibérie.",
+  "type": "paragraph"
+}, {
+  "id": 703,
+  "text": "Puis eux aussi s’escamotaient dans les coulisses.",
+  "type": "paragraph"
+}, {
+  "id": 704,
+  "text": "Alors venait le tour des allumeurs de réverbères de Russie et des Indes.",
+  "type": "paragraph"
+}, {
+  "id": 705,
+  "text": "Puis de ceux d’Afrique et d’Europe.",
+  "type": "paragraph"
+}, {
+  "id": 706,
+  "text": "Puis de ceux d’Amérique du Sud.",
+  "type": "paragraph"
+}, {
+  "id": 707,
+  "text": "Puis de ceux d’Amérique du Nord.",
+  "type": "paragraph"
+}, {
+  "id": 708,
+  "text": "Et jamais ils ne se trompaient dans leur ordre d’entrée en scène.",
+  "type": "paragraph"
+}, {
+  "id": 709,
+  "text": "C’était grandiose.",
+  "type": "paragraph end"
+}, {
+  "id": 710,
+  "text": "Seuls, l’allumeur de l’unique réverbère du pôle Nord, et son confrère de l’unique réverbère du pôle Sud, menaient des vies d’oisiveté et de nonchalance : ils travaillaient deux fois par an.",
+  "type": "paragraph beginning end"
+}, {
+  "id": 711,
+  "text": "CHAPITRE XVII",
+  "type": "chapter"
+}, {
+  "id": 712,
+  "text": "Quand on veut faire de l’esprit, il arrive que l’on mente un peu.",
+  "type": "paragraph beginning"
+}, {
+  "id": 713,
+  "text": "Je n’ai pas été très honnête en vous parlant des allumeurs de réverbères.",
+  "type": "paragraph"
+}, {
+  "id": 714,
+  "text": "Je risque de donner une fausse idée de notre planète à ceux qui ne la connaissent pas.",
+  "type": "paragraph"
+}, {
+  "id": 715,
+  "text": "Les hommes occupent très peu de place sur la terre.",
+  "type": "paragraph"
+}, {
+  "id": 716,
+  "text": "Si les deux milliards d’habitants qui peuplent la terre se tenaient debout et un peu serrés, comme pour un meeting, ils logeraient aisément sur une place publique de vingt milles de long sur vingt milles de large.",
+  "type": "paragraph"
+}, {
+  "id": 717,
+  "text": "On pourrait entasser l’humanité sur le moindre petit îlot du Pacifique.",
+  "type": "paragraph end"
+}, {
+  "id": 718,
+  "text": "Les grandes personnes, bien sûr, ne vous croiront pas.",
+  "type": "paragraph beginning"
+}, {
+  "id": 719,
+  "text": "Elles s’imaginent tenir beaucoup de place.",
+  "type": "paragraph"
+}, {
+  "id": 720,
+  "text": "Elles se voient importantes comme des baobabs.",
+  "type": "paragraph"
+}, {
+  "id": 721,
+  "text": "Vous leur conseillerez donc de faire le calcul.",
+  "type": "paragraph"
+}, {
+  "id": 722,
+  "text": "Elles adorent les chiffres : ça leur plaira.",
+  "type": "paragraph"
+}, {
+  "id": 723,
+  "text": "Mais ne perdez pas votre temps à ce pensum.",
+  "type": "paragraph"
+}, {
+  "id": 724,
+  "text": "C’est inutile.",
+  "type": "paragraph"
+}, {
+  "id": 725,
+  "text": "Vous avez confiance en moi.",
+  "type": "paragraph end"
+}, {
+  "id": 726,
+  "text": "Le petit prince, une fois sur terre, fut donc bien surpris de ne voir personne.",
+  "type": "paragraph beginning"
+}, {
+  "id": 727,
+  "text": "Il avait déjà peur de s’être trompé de planète, quand un anneau couleur de lune remua dans le sable.",
+  "type": "paragraph end"
+}, {
+  "id": 728,
+  "text": "– Bonne nuit, fit le petit prince à tout hasard.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 729,
+  "text": "– Bonne nuit, fit le serpent.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 730,
+  "text": "– Sur quelle planète suis-je tombé ? demanda le petit prince.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 731,
+  "text": "– Sur la Terre, en Afrique, répondit le serpent.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 732,
+  "text": "– Ah !... Il n’y a donc personne sur la Terre ?",
+  "type": "dialogue beginning end"
+}, {
+  "id": 733,
+  "text": "– Ici c’est le désert. Il n’y a personne dans les déserts. La Terre est grande, dit le serpent.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 734,
+  "text": "Le petit prince s’assit sur une pierre et leva les yeux vers le ciel :",
+  "type": "paragraph beginning end"
+}, {
+  "id": 735,
+  "text": "– Je me demande, dit-il, si les étoiles sont éclairées afin que chacun puisse un jour retrouver la sienne. Regarde ma planète. Elle est juste au-dessus de nous... Mais comme elle est loin !",
+  "type": "dialogue beginning end"
+}, {
+  "id": 736,
+  "text": "– Elle est belle, dit le serpent. Que viens-tu faire ici ?",
+  "type": "dialogue beginning end"
+}, {
+  "id": 737,
+  "text": "– J’ai des difficultés avec une fleur, dit le petit prince.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 738,
+  "text": "– Ah ! fit le serpent.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 739,
+  "text": "Et ils se turent.",
+  "type": "paragraph beginning end"
+}, {
+  "id": 740,
+  "text": "– Où sont les hommes ? reprit enfin le petit prince. On est un peu seul dans le désert...",
+  "type": "dialogue beginning end"
+}, {
+  "id": 741,
+  "text": "– On est seul aussi chez les hommes, dit le serpent.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 742,
+  "text": "Le petit prince le regarda longtemps :",
+  "type": "paragraph beginning end"
+}, {
+  "id": 743,
+  "text": "– Tu es une drôle de bête, lui dit-il enfin, mince comme un doigt...",
+  "type": "dialogue beginning end"
+}, {
+  "id": 744,
+  "text": "– Mais je suis plus puissant que le doigt d’un roi, dit le serpent.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 745,
+  "text": "Le petit prince eut un sourire :",
+  "type": "paragraph beginning end"
+}, {
+  "id": 746,
+  "text": "– Tu n’es pas bien puissant... tu n’as même pas de pattes... tu ne peux même pas voyager...",
+  "type": "dialogue beginning end"
+}, {
+  "id": 747,
+  "text": "– Je puis t’emporter plus loin qu’un navire, dit le serpent.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 748,
+  "text": "Il s’enroula autour de la cheville du petit prince, comme un bracelet d’or :",
+  "type": "paragraph beginning end"
+}, {
+  "id": 749,
+  "text": "– Celui que je touche, je le rends à la terre dont il est sorti, dit-il encore. Mais tu es pur et tu viens d’une étoile...",
+  "type": "dialogue beginning end"
+}, {
+  "id": 750,
+  "text": "Le petit prince ne répondit rien.",
+  "type": "paragraph beginning end"
+}, {
+  "id": 751,
+  "text": "– Tu me fais pitié, toi si faible, sur cette Terre de granit. Je puis t’aider un jour si tu regrettes trop ta planète. Je puis...",
+  "type": "dialogue beginning end"
+}, {
+  "id": 752,
+  "text": "– Oh ! J’ai très bien compris, fit le petit prince, mais pourquoi parles-tu toujours par énigmes ?",
+  "type": "dialogue beginning end"
+}, {
+  "id": 753,
+  "text": "– Je les résous toutes, dit le serpent.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 754,
+  "text": "Et ils se turent.",
+  "type": "paragraph beginning end"
+}, {
+  "id": 755,
+  "text": "CHAPITRE XVIII",
+  "type": "chapter"
+}, {
+  "id": 756,
+  "text": "Le petit prince traversa le désert et ne rencontra qu’une fleur.",
+  "type": "paragraph beginning"
+}, {
+  "id": 757,
+  "text": "Une fleur à trois pétales, une fleur de rien du tout...",
+  "type": "paragraph end"
+}, {
+  "id": 758,
+  "text": "– Bonjour, dit le petit prince.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 759,
+  "text": "– Bonjour, dit la fleur.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 760,
+  "text": "– Où sont les hommes ? demanda poliment le petit prince.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 761,
+  "text": "La fleur, un jour, avait vu passer une caravane :",
+  "type": "paragraph beginning end"
+}, {
+  "id": 762,
+  "text": "– Les hommes ? Il en existe, je crois, six ou sept. Je les ai aperçus il y a des années. Mais on ne sait jamais où les trouver. Le vent les promène. Ils manquent de racines, ça les gêne beaucoup.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 763,
+  "text": "– Adieu, fit le petit prince.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 764,
+  "text": "– Adieu, dit la fleur.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 765,
+  "text": "CHAPITRE XIX",
+  "type": "chapter"
+}, {
+  "id": 766,
+  "text": "Le petit prince fit l’ascension d’une haute montagne.",
+  "type": "paragraph beginning"
+}, {
+  "id": 767,
+  "text": "Les seules montagnes qu’il eût jamais connues étaient les trois volcans qui lui arrivaient au genou.",
+  "type": "paragraph"
+}, {
+  "id": 768,
+  "text": "Et il se servait du volcan éteint comme d’un tabouret.",
+  "type": "paragraph"
+}, {
+  "id": 769,
+  "text": "« D’une montagne haute comme celle-ci, se dit-il donc, j’apercevrai d’un coup toute la planète et tous les hommes... »",
+  "type": "paragraph"
+}, {
+  "id": 770,
+  "text": "Mais il n’aperçut rien que des aiguilles de roc bien aiguisées.",
+  "type": "paragraph end"
+}, {
+  "id": 771,
+  "text": "– Bonjour, dit-il à tout hasard.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 772,
+  "text": "– Bonjour... Bonjour... Bonjour... répondit l’écho.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 773,
+  "text": "– Qui êtes-vous ? dit le petit prince.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 774,
+  "text": "– Qui êtes-vous... qui êtes-vous... qui êtes-vous... répondit l’écho.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 775,
+  "text": "– Soyez mes amis, je suis seul, dit-il.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 776,
+  "text": "– Je suis seul... je suis seul... je suis seul... répondit l’écho.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 777,
+  "text": "« Quelle drôle de planète ! pensa-t-il alors. Elle est toute sèche, et toute pointue et toute salée. Et les hommes manquent d’imagination. Ils répètent ce qu’on leur dit... Chez moi j’avais une fleur : elle parlait toujours la première... »",
+  "type": "paragraph beginning end"
+}, {
+  "id": 778,
+  "text": "CHAPITRE XX",
+  "type": "chapter"
+}, {
+  "id": 779,
+  "text": "Mais il arriva que le petit prince, ayant longtemps marché à travers les sables, les rocs et les neiges, découvrit enfin une route.",
+  "type": "paragraph beginning"
+}, {
+  "id": 780,
+  "text": "Et les routes vont toutes chez les hommes.",
+  "type": "paragraph end"
+}, {
+  "id": 781,
+  "text": "– Bonjour, dit-il.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 782,
+  "text": "C’était un jardin fleuri de roses.",
+  "type": "paragraph beginning end"
+}, {
+  "id": 783,
+  "text": "– Bonjour, dirent les roses.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 784,
+  "text": "Le petit prince les regarda.",
+  "type": "paragraph beginning"
+}, {
+  "id": 785,
+  "text": "Elles ressemblaient toutes à sa fleur.",
+  "type": "paragraph end"
+}, {
+  "id": 786,
+  "text": "– Qui êtes-vous ? leur demanda-t-il, stupéfait.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 787,
+  "text": "– Nous sommes des roses, dirent les roses.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 788,
+  "text": "– Ah ! fit le petit prince...",
+  "type": "dialogue beginning end"
+}, {
+  "id": 789,
+  "text": "Et il se sentit très malheureux.",
+  "type": "paragraph beginning"
+}, {
+  "id": 790,
+  "text": "Sa fleur lui avait raconté qu’elle était seule de son espèce dans l’univers.",
+  "type": "paragraph"
+}, {
+  "id": 791,
+  "text": "Et voici qu’il en était cinq mille, toutes semblables, dans un seul jardin !",
+  "type": "paragraph end"
+}, {
+  "id": 792,
+  "text": "« Elle serait bien vexée, se dit-il, si elle voyait ça... elle tousserait énormément et ferait semblant de mourir pour échapper au ridicule. Et je serais bien obligé de faire semblant de la soigner, car, sinon, pour m’humilier moi aussi, elle se laisserait vraiment mourir... »",
+  "type": "paragraph beginning end"
+}, {
+  "id": 793,
+  "text": "Puis il se dit encore :",
+  "type": "paragraph beginning"
+}, {
+  "id": 794,
+  "text": "« Je me croyais riche d’une fleur unique, et je ne possède qu’une rose ordinaire. Ça et mes trois volcans qui m’arrivent au genou, et dont l’un, peut-être, est éteint pour toujours, ça ne fait pas de moi un bien grand prince... »",
+  "type": "paragraph"
+}, {
+  "id": 795,
+  "text": "Et, couché dans l’herbe, il pleura.",
+  "type": "paragraph end"
+}, {
+  "id": 796,
+  "text": "CHAPITRE XXI",
+  "type": "chapter"
+}, {
+  "id": 797,
+  "text": "C’est alors qu’apparut le renard.",
+  "type": "paragraph beginning end"
+}, {
+  "id": 798,
+  "text": "– Bonjour, dit le renard.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 799,
+  "text": "– Bonjour, répondit poliment le petit prince, qui se retourna mais ne vit rien.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 800,
+  "text": "– Je suis là, dit la voix, sous le pommier.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 801,
+  "text": "– Qui es-tu ? dit le petit prince. Tu es bien joli...",
+  "type": "dialogue beginning end"
+}, {
+  "id": 802,
+  "text": "– Je suis un renard, dit le renard.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 803,
+  "text": "– Viens jouer avec moi, lui proposa le petit prince. Je suis tellement triste...",
+  "type": "dialogue beginning end"
+}, {
+  "id": 804,
+  "text": "– Je ne puis pas jouer avec toi, dit le renard. Je ne suis pas apprivoisé.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 805,
+  "text": "– Ah ! pardon, fit le petit prince.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 806,
+  "text": "Mais, après réflexion, il ajouta :",
+  "type": "paragraph beginning end"
+}, {
+  "id": 807,
+  "text": "– Qu’est-ce que signifie « apprivoiser » ?",
+  "type": "dialogue beginning end"
+}, {
+  "id": 808,
+  "text": "– Tu n’es pas d’ici, dit le renard, que cherches-tu ?",
+  "type": "dialogue beginning end"
+}, {
+  "id": 809,
+  "text": "– Je cherche les hommes, dit le petit prince. Qu’est-ce que signifie « apprivoiser » ? ",
+  "type": "dialogue beginning end"
+}, {
+  "id": 810,
+  "text": "– Les hommes, dit le renard, ils ont des fusils et ils chassent. C’est bien gênant ! Ils élèvent aussi des poules. C’est leur seul intérêt. Tu cherches des poules ?",
+  "type": "dialogue beginning end"
+}, {
+  "id": 811,
+  "text": "– Non, dit le petit prince. Je cherche des amis. Qu’est-ce que signifie « apprivoiser » ?",
+  "type": "dialogue beginning end"
+}, {
+  "id": 812,
+  "text": "– C’est une chose trop oubliée, dit le renard. Ça signifie « créer des liens... »",
+  "type": "dialogue beginning end"
+}, {
+  "id": 813,
+  "text": "– Créer des liens ?",
+  "type": "dialogue beginning end"
+}, {
+  "id": 814,
+  "text": "– Bien sûr, dit le renard. Tu n’es encore pour moi qu’un petit garçon tout semblable à cent mille petits garçons. Et je n’ai pas besoin de toi. Et tu n’as pas besoin de moi non plus. Je ne suis pour toi qu’un renard semblable à cent mille renards. Mais, si tu m’apprivoises, nous aurons besoin l’un de l’autre. Tu seras pour moi unique au monde. Je serai pour toi unique au monde...",
+  "type": "dialogue beginning end"
+}, {
+  "id": 815,
+  "text": "– Je commence à comprendre, dit le petit prince. Il y a une fleur... je crois qu’elle m’a apprivoisé...",
+  "type": "dialogue beginning end"
+}, {
+  "id": 816,
+  "text": "– C’est possible, dit le renard. On voit sur la Terre toutes sortes de choses...",
+  "type": "dialogue beginning end"
+}, {
+  "id": 817,
+  "text": "– Oh ! ce n’est pas sur la Terre, dit le petit prince.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 818,
+  "text": "Le renard parut très intrigué :",
+  "type": "paragraph beginning end"
+}, {
+  "id": 819,
+  "text": "– Sur une autre planète ?",
+  "type": "dialogue beginning end"
+}, {
+  "id": 820,
+  "text": "– Oui.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 821,
+  "text": "– Il y a des chasseurs, sur cette planète-là ?",
+  "type": "dialogue beginning end"
+}, {
+  "id": 822,
+  "text": "– Non.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 823,
+  "text": "– Ça, c’est intéressant ! Et des poules ?",
+  "type": "dialogue beginning end"
+}, {
+  "id": 824,
+  "text": "– Non.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 825,
+  "text": "– Rien n’est parfait, soupira le renard.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 826,
+  "text": "Mais le renard revint à son idée :",
+  "type": "paragraph beginning end"
+}, {
+  "id": 827,
+  "text": "– Ma vie est monotone. Je chasse les poules, les hommes me chassent. Toutes les poules se ressemblent, et tous les hommes se ressemblent.",
+  "type": "dialogue beginning"
+}, {
+  "id": 828,
+  "text": "Je m’ennuie donc un peu. Mais, si tu m’apprivoises, ma vie sera comme ensoleillée. Je connaîtrai un bruit de pas qui sera différent de tous les autres. Les autres pas me font rentrer sous terre. Le tien m’appellera hors du terrier, comme une musique.",
+  "type": "dialogue"
+}, {
+  "id": 829,
+  "text": "Et puis regarde ! Tu vois, là-bas, les champs de blé ? Je ne mange pas de pain.",
+  "type": "dialogue"
+}, {
+  "id": 830,
+  "text": "Le blé pour moi est inutile. Les champs de blé ne me rappellent rien.",
+  "type": "dialogue"
+}, {
+  "id": 831,
+  "text": "Et ça, c’est triste ! Mais tu as des cheveux couleur d’or. Alors ce sera merveilleux quand tu m’auras apprivoisé !",
+  "type": "dialogue"
+}, {
+  "id": 832,
+  "text": "Le blé, qui est doré, me fera souvenir de toi. Et j’aimerai le bruit du vent dans le blé...",
+  "type": "dialogue end"
+}, {
+  "id": 833,
+  "text": "Le renard se tut et regarda longtemps le petit prince :",
+  "type": "paragraph beginning end"
+}, {
+  "id": 834,
+  "text": "– S’il te plaît... apprivoise-moi ! dit-il.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 835,
+  "text": "– Je veux bien, répondit le petit prince, mais je n’ai pas beaucoup de temps. J’ai des amis à découvrir et beaucoup de choses à connaître.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 836,
+  "text": "– On ne connaît que les choses que l’on apprivoise, dit le renard. Les hommes n’ont plus le temps de rien connaître. Ils achètent des choses toutes faites chez les marchands. Mais comme il n’existe point de marchands d’amis, les hommes n’ont plus d’amis. Si tu veux un ami, apprivoise-moi !",
+  "type": "dialogue beginning end"
+}, {
+  "id": 837,
+  "text": "– Que faut-il faire ? dit le petit prince.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 838,
+  "text": "– Il faut être très patient, répondit le renard. Tu t’assoiras d’abord un peu loin de moi, comme ça, dans l’herbe. Je te regarderai du coin de l’œil et tu ne diras rien. Le langage est source de malentendus. Mais, chaque jour, tu pourras t’asseoir un peu plus près...",
+  "type": "dialogue beginning end"
+}, {
+  "id": 839,
+  "text": "Le lendemain revint le petit prince.",
+  "type": "paragraph beginning end"
+}, {
+  "id": 840,
+  "text": "– Il eût mieux valu revenir à la même heure, dit le renard. Si tu viens, par exemple, à quatre heures de l’après-midi, dès trois heures je commencerai d’être heureux. Plus l’heure avancera, plus je me sentirai heureux. À quatre heures, déjà, je m’agiterai et m’inquiéterai ; je découvrirai le prix du bonheur ! Mais si tu viens n’importe quand, je ne saurai jamais à quelle heure m’habiller le cœur... Il faut des rites.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 841,
+  "text": "– Qu’est-ce qu’un rite ? dit le petit prince.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 842,
+  "text": "– C’est aussi quelque chose de trop oublié, dit le renard. C’est ce qui fait qu’un jour est différent des autres jours, une heure, des autres heures. Il y a un rite, par exemple, chez mes chasseurs. Ils dansent le jeudi avec les filles du village. Alors le jeudi est jour merveilleux ! Je vais me promener jusqu’à la vigne. Si les chasseurs dansaient n’importe quand, les jours se ressembleraient tous, et je n’aurais point de vacances.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 843,
+  "text": "Ainsi le petit prince apprivoisa le renard.",
+  "type": "paragraph beginning"
+}, {
+  "id": 844,
+  "text": "Et quand l’heure du départ fut proche :",
+  "type": "paragraph end"
+}, {
+  "id": 845,
+  "text": "– Ah ! dit le renard... Je pleurerai.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 846,
+  "text": "– C’est ta faute, dit le petit prince, je ne te souhaitais point de mal, mais tu as voulu que je t’apprivoise...",
+  "type": "dialogue beginning end"
+}, {
+  "id": 847,
+  "text": "– Bien sûr, dit le renard.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 848,
+  "text": "– Mais tu vas pleurer ! dit le petit prince.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 849,
+  "text": "– Bien sûr, dit le renard.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 850,
+  "text": "– Alors tu n’y gagnes rien !",
+  "type": "dialogue beginning end"
+}, {
+  "id": 851,
+  "text": "– J’y gagne, dit le renard, à cause de la couleur du blé.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 852,
+  "text": "Puis il ajouta :",
+  "type": "paragraph beginning end"
+}, {
+  "id": 853,
+  "text": "– Va revoir les roses. Tu comprendras que la tienne est unique au monde. Tu reviendras me dire adieu, et je te ferai cadeau d’un secret.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 854,
+  "text": "Le petit prince s’en fut revoir les roses.",
+  "type": "paragraph beginning end"
+}, {
+  "id": 855,
+  "text": "– Vous n’êtes pas du tout semblables à ma rose, vous n’êtes rien encore, leur dit-il. Personne ne vous a apprivoisées et vous n’avez apprivoisé personne. Vous êtes comme était mon renard. Ce n’était qu’un renard semblable à cent mille autres. Mais j’en ai fait mon ami, et il est maintenant unique au monde.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 856,
+  "text": "Et les roses étaient bien gênées.",
+  "type": "paragraph beginning end"
+}, {
+  "id": 857,
+  "text": "– Vous êtes belles, mais vous êtes vides, leur dit-il encore. On ne peut pas mourir pour vous. Bien sûr, ma rose à moi, un passant ordinaire croirait qu’elle vous ressemble. Mais à elle seule elle est plus importante que vous toutes, puisque c’est elle que j’ai arrosée. Puisque c’est elle que j’ai mise sous globe. Puisque c’est elle que j’ai abritée par le paravent. Puisque c’est elle dont j’ai tué les chenilles (sauf les deux ou trois pour les papillons). Puisque c’est elle que j’ai écoutée se plaindre, ou se vanter, ou même quelquefois se taire. Puisque c’est ma rose.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 858,
+  "text": "Et il revint vers le renard :",
+  "type": "paragraph beginning end"
+}, {
+  "id": 859,
+  "text": "– Adieu, dit-il...",
+  "type": "dialogue beginning end"
+}, {
+  "id": 860,
+  "text": "– Adieu, dit le renard. Voici mon secret. Il est très simple : on ne voit bien qu’avec le cœur. L’essentiel est invisible pour les yeux.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 861,
+  "text": "– L’essentiel est invisible pour les yeux, répéta le petit prince, afin de se souvenir.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 862,
+  "text": "– C’est le temps que tu as perdu pour ta rose qui fait ta rose si importante.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 863,
+  "text": "– C’est le temps que j’ai perdu pour ma rose... fit le petit prince, afin de se souvenir.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 864,
+  "text": "– Les hommes ont oublié cette vérité, dit le renard. Mais tu ne dois pas l’oublier. Tu deviens responsable pour toujours de ce que tu as apprivoisé. Tu es responsable de ta rose...",
+  "type": "dialogue beginning end"
+}, {
+  "id": 865,
+  "text": "– Je suis responsable de ma rose... répéta le petit prince, afin de se souvenir.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 866,
+  "text": "CHAPITRE XXII",
+  "type": "chapter"
+}, {
+  "id": 867,
+  "text": "– Bonjour, dit le petit prince.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 868,
+  "text": "– Bonjour, dit l’aiguilleur.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 869,
+  "text": "– Que fais-tu ici ? dit le petit prince.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 870,
+  "text": "– Je trie les voyageurs, par paquets de mille, dit l’aiguilleur. J’expédie les trains qui les emportent, tantôt vers la droite, tantôt vers la gauche. Et un rapide illuminé, grondant comme le tonnerre, fit trembler la cabine d’aiguillage.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 871,
+  "text": "– Ils sont bien pressés, dit le petit prince. Que cherchentils ?",
+  "type": "dialogue beginning end"
+}, {
+  "id": 872,
+  "text": "– L’homme de la locomotive l’ignore lui-même, dit l’aiguilleur.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 873,
+  "text": "Et gronda, en sens inverse, un second rapide illuminé.",
+  "type": "paragraph beginning end"
+}, {
+  "id": 874,
+  "text": "– Ils reviennent déjà ? demanda le petit prince...",
+  "type": "dialogue beginning end"
+}, {
+  "id": 875,
+  "text": "– Ce ne sont pas les mêmes, dit l’aiguilleur. C’est un échange.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 876,
+  "text": "– Ils n’étaient pas contents, là où ils étaient ?",
+  "type": "dialogue beginning end"
+}, {
+  "id": 877,
+  "text": "– On n’est jamais content là où l’on est, dit l’aiguilleur.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 878,
+  "text": "Et gronda le tonnerre d’un troisième rapide illuminé.",
+  "type": "paragraph beginning end"
+}, {
+  "id": 879,
+  "text": "– Ils poursuivent les premiers voyageurs ? demanda le petit prince.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 880,
+  "text": "– Ils ne poursuivent rien du tout, dit l’aiguilleur. Ils dorment là-dedans, ou bien ils bâillent. Les enfants seuls écrasent leur nez contre les vitres.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 881,
+  "text": "– Les enfants seuls savent ce qu’ils cherchent, fit le petit prince. Ils perdent du temps pour une poupée de chiffons, et elle devient très importante, et si on la leur enlève, ils pleurent...",
+  "type": "dialogue beginning end"
+}, {
+  "id": 882,
+  "text": "– Ils ont de la chance, dit l’aiguilleur.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 883,
+  "text": "CHAPITRE XXIII",
+  "type": "chapter"
+}, {
+  "id": 884,
+  "text": "– Bonjour, dit le petit prince.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 885,
+  "text": "– Bonjour, dit le marchand.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 886,
+  "text": "C’était un marchand de pilules perfectionnées qui apaisent la soif.",
+  "type": "paragraph beginning"
+}, {
+  "id": 887,
+  "text": "On en avale une par semaine et l’on n’éprouve plus le besoin de boire.",
+  "type": "paragraph end"
+}, {
+  "id": 888,
+  "text": "– Pourquoi vends-tu ça ? dit le petit prince.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 889,
+  "text": "– C’est une grosse économie de temps, dit le marchand. Les experts ont fait des calculs. On épargne cinquante-trois minutes par semaine.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 890,
+  "text": "– Et que fait-on de ces cinquante-trois minutes ?",
+  "type": "dialogue beginning end"
+}, {
+  "id": 891,
+  "text": "– On en fait ce que l’on veut...",
+  "type": "dialogue beginning end"
+}, {
+  "id": 892,
+  "text": "« Moi, se dit le petit prince, si j’avais cinquante-trois minutes à dépenser, je marcherais tout doucement vers une fontaine... »",
+  "type": "paragraph beginning end"
+}, {
+  "id": 893,
+  "text": "CHAPITRE XXIV",
+  "type": "chapter"
+}, {
+  "id": 894,
+  "text": "Nous en étions au huitième jour de ma panne dans le désert, et j’avais écouté l’histoire du marchand en buvant la dernière goutte de ma provision d’eau :",
+  "type": "paragraph beginning end"
+}, {
+  "id": 895,
+  "text": "– Ah ! dis-je au petit prince, ils sont bien jolis, tes souvenirs, mais je n’ai pas encore réparé mon avion, je n’ai plus rien à boire, et je serais heureux, moi aussi, si je pouvais marcher tout doucement vers une fontaine !",
+  "type": "dialogue beginning end"
+}, {
+  "id": 896,
+  "text": "– Mon ami le renard, me dit-il...",
+  "type": "dialogue beginning end"
+}, {
+  "id": 897,
+  "text": "– Mon petit bonhomme, il ne s’agit plus du renard ! ",
+  "type": "dialogue beginning end"
+}, {
+  "id": 898,
+  "text": "– Pourquoi ? ",
+  "type": "dialogue beginning end"
+}, {
+  "id": 899,
+  "text": "– Parce qu’on va mourir de soif...",
+  "type": "dialogue beginning end"
+}, {
+  "id": 900,
+  "text": "Il ne comprit pas mon raisonnement, il me répondit :",
+  "type": "paragraph beginning end"
+}, {
+  "id": 901,
+  "text": "– C’est bien d’avoir eu un ami, même si l’on va mourir. Moi, je suis bien content d’avoir eu un ami renard... ",
+  "type": "dialogue beginning end"
+}, {
+  "id": 902,
+  "text": "« Il ne mesure pas le danger, me dis-je. Il n’a jamais ni faim ni soif. Un peu de soleil lui suffit... »",
+  "type": "paragraph beginning end"
+}, {
+  "id": 903,
+  "text": "Mais il me regarda et répondit à ma pensée : ",
+  "type": "paragraph beginning end"
+}, {
+  "id": 904,
+  "text": "– J’ai soif aussi... cherchons un puits...",
+  "type": "dialogue beginning end"
+}, {
+  "id": 905,
+  "text": "J’eus un geste de lassitude : il est absurde de chercher un puits, au hasard, dans l’immensité du désert.",
+  "type": "paragraph beginning"
+}, {
+  "id": 906,
+  "text": "Cependant nous nous mîmes en marche.",
+  "type": "paragraph end"
+}, {
+  "id": 907,
+  "text": "Quand nous eûmes marché, des heures, en silence, la nuit tomba, et les étoiles commencèrent de s’éclairer.",
+  "type": "paragraph beginning"
+}, {
+  "id": 908,
+  "text": "Je les apercevais comme en rêve, ayant un peu de fièvre, à cause de ma soif.",
+  "type": "paragraph"
+}, {
+  "id": 909,
+  "text": "Les mots du petit prince dansaient dans ma mémoire :",
+  "type": "paragraph end"
+}, {
+  "id": 910,
+  "text": "– Tu as donc soif, toi aussi ? lui demandai-je.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 911,
+  "text": "Mais il ne répondit pas à ma question.",
+  "type": "paragraph beginning"
+}, {
+  "id": 912,
+  "text": "Il me dit simplement :",
+  "type": "paragraph end"
+}, {
+  "id": 913,
+  "text": "– L’eau peut aussi être bonne pour le cœur...",
+  "type": "dialogue beginning end"
+}, {
+  "id": 914,
+  "text": "Je ne compris pas sa réponse mais je me tus...",
+  "type": "paragraph beginning"
+}, {
+  "id": 915,
+  "text": "Je savais bien qu’il ne fallait pas l’interroger.",
+  "type": "paragraph end"
+}, {
+  "id": 916,
+  "text": "Il était fatigué. Il s’assit.",
+  "type": "paragraph beginning"
+}, {
+  "id": 917,
+  "text": "Je m’assis auprès de lui.",
+  "type": "paragraph"
+}, {
+  "id": 918,
+  "text": "Et, après un silence, il dit encore :",
+  "type": "paragraph end"
+}, {
+  "id": 919,
+  "text": "– Les étoiles sont belles, à cause d’une fleur que l’on ne voit pas...",
+  "type": "dialogue beginning end"
+}, {
+  "id": 920,
+  "text": "Je répondis « bien sûr » et je regardai, sans parler, les plis du sable sous la lune.",
+  "type": "paragraph beginning end"
+}, {
+  "id": 921,
+  "text": "– Le désert est beau, ajouta-t-il...",
+  "type": "dialogue beginning end"
+}, {
+  "id": 922,
+  "text": "Et c’était vrai.",
+  "type": "paragraph beginning"
+}, {
+  "id": 923,
+  "text": "J’ai toujours aimé le désert.",
+  "type": "paragraph"
+}, {
+  "id": 924,
+  "text": "On s’assoit sur une dune de sable.",
+  "type": "paragraph"
+}, {
+  "id": 925,
+  "text": "On ne voit rien.",
+  "type": "paragraph"
+}, {
+  "id": 926,
+  "text": "On n’entend rien.",
+  "type": "paragraph"
+}, {
+  "id": 927,
+  "text": "Et cependant quelque chose rayonne en silence...",
+  "type": "paragraph end"
+}, {
+  "id": 928,
+  "text": "– Ce qui embellit le désert, dit le petit prince, c’est qu’il cache un puits quelque part...",
+  "type": "dialogue beginning end"
+}, {
+  "id": 929,
+  "text": "Je fus surpris de comprendre soudain ce mystérieux rayonnement du sable.",
+  "type": "paragraph beginning"
+}, {
+  "id": 930,
+  "text": "Lorsque j’étais petit garçon j’habitais une maison ancienne, et la légende racontait qu’un trésor y était enfoui.",
+  "type": "paragraph"
+}, {
+  "id": 931,
+  "text": "Bien sûr, jamais personne n’a su le découvrir, ni peutêtre même ne l’a cherché.",
+  "type": "paragraph"
+}, {
+  "id": 932,
+  "text": "Mais il enchantait toute cette maison.",
+  "type": "paragraph"
+}, {
+  "id": 933,
+  "text": "Ma maison cachait un secret au fond de son cœur...",
+  "type": "paragraph end"
+}, {
+  "id": 934,
+  "text": "– Oui, dis-je au petit prince, qu’il s’agisse de la maison, des étoiles ou du désert, ce qui fait leur beauté est invisible !",
+  "type": "dialogue beginning end"
+}, {
+  "id": 935,
+  "text": "– Je suis content, dit-il, que tu sois d’accord avec mon renard.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 936,
+  "text": "Comme le petit prince s’endormait, je le pris dans mes bras, et me remis en route.",
+  "type": "paragraph beginning"
+}, {
+  "id": 937,
+  "text": "J’étais ému.",
+  "type": "paragraph"
+}, {
+  "id": 938,
+  "text": "Il me semblait porter un trésor fragile.",
+  "type": "paragraph"
+}, {
+  "id": 939,
+  "text": "Il me semblait même qu’il n’y eût rien de plus fragile sur la Terre.",
+  "type": "paragraph"
+}, {
+  "id": 940,
+  "text": "Je regardais, à la lumière de la lune, ce front pâle, ces yeux clos, ces mèches de cheveux qui tremblaient au vent, et je me disais :",
+  "type": "paragraph"
+}, {
+  "id": 941,
+  "text": "« Ce que je vois là n’est qu’une écorce. Le plus important est invisible... » ",
+  "type": "paragraph end"
+}, {
+  "id": 942,
+  "text": "Comme ses lèvres entr’ouvertes ébauchaient un demisourire je me dis encore :",
+  "type": "paragraph beginning"
+}, {
+  "id": 943,
+  "text": "« Ce qui m’émeut si fort de ce petit prince endormi, c’est sa fidélité pour une fleur, c’est l’image d’une rose qui rayonne en lui comme la flamme d’une lampe, même quand il dort... »",
+  "type": "paragraph"
+}, {
+  "id": 944,
+  "text": "Et je le devinai plus fragile encore.",
+  "type": "paragraph"
+}, {
+  "id": 945,
+  "text": "Il faut bien protéger les lampes : un coup de vent peut les éteindre...",
+  "type": "paragraph end"
+}, {
+  "id": 946,
+  "text": "Et, marchant ainsi, je découvris le puits au lever du jour.",
+  "type": "paragraph beginning end"
+}, {
+  "id": 947,
+  "text": "CHAPITRE XXV",
+  "type": "chapter"
+}, {
+  "id": 948,
+  "text": "– Les hommes, dit le petit prince, ils s’enfournent dans les rapides, mais ils ne savent plus ce qu’ils cherchent. Alors ils s’agitent et tournent en rond...",
+  "type": "dialogue beginning end"
+}, {
+  "id": 949,
+  "text": "Et il ajouta :",
+  "type": "paragraph beginning end"
+}, {
+  "id": 950,
+  "text": "– Ce n’est pas la peine... Le puits que nous avions atteint ne ressemblait pas aux puits sahariens. Les puits sahariens sont de simples trous creusés dans le sable. Celui-là ressemblait à un puits de village. Mais il n’y avait là aucun village, et je croyais rêver.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 951,
+  "text": "– C’est étrange, dis-je au petit prince, tout est prêt : la poulie, le seau et la corde...",
+  "type": "dialogue beginning end"
+}, {
+  "id": 952,
+  "text": "Il rit, toucha la corde, fit jouer la poulie.",
+  "type": "paragraph beginning"
+}, {
+  "id": 953,
+  "text": "Et la poulie gémit comme gémit une vieille girouette quand le vent a longtemps dormi.",
+  "type": "paragraph end"
+}, {
+  "id": 954,
+  "text": "– Tu entends, dit le petit prince, nous réveillons ce puits et il chante...",
+  "type": "dialogue beginning end"
+}, {
+  "id": 955,
+  "text": "Je ne voulais pas qu’il fît un effort :",
+  "type": "paragraph beginning end"
+}, {
+  "id": 956,
+  "text": "– Laisse-moi faire, lui dis-je, c’est trop lourd pour toi.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 957,
+  "text": "Lentement je hissai le seau jusqu’à la margelle.",
+  "type": "paragraph beginning"
+}, {
+  "id": 958,
+  "text": "Je l’y installai bien d’aplomb.",
+  "type": "paragraph"
+}, {
+  "id": 959,
+  "text": "Dans mes oreilles durait le chant de la poulie et, dans l’eau qui tremblait encore, je voyais trembler le soleil.",
+  "type": "paragraph end"
+}, {
+  "id": 960,
+  "text": "– J’ai soif de cette eau-là, dit le petit prince, donne-moi à boire...",
+  "type": "dialogue beginning end"
+}, {
+  "id": 961,
+  "text": "Et je compris ce qu’il avait cherché !",
+  "type": "paragraph beginning end"
+}, {
+  "id": 962,
+  "text": "Je soulevai le seau jusqu’à ses lèvres.",
+  "type": "paragraph beginning"
+}, {
+  "id": 963,
+  "text": "Il but, les yeux fermés.",
+  "type": "paragraph"
+}, {
+  "id": 964,
+  "text": "C’était doux comme une fête.",
+  "type": "paragraph"
+}, {
+  "id": 965,
+  "text": "Cette eau était bien autre chose qu’un aliment.",
+  "type": "paragraph"
+}, {
+  "id": 966,
+  "text": "Elle était née de la marche sous les étoiles, du chant de la poulie, de l’effort de mes bras.",
+  "type": "paragraph"
+}, {
+  "id": 967,
+  "text": "Elle était bonne pour le cœur, comme un cadeau.",
+  "type": "paragraph"
+}, {
+  "id": 968,
+  "text": "Lorsque j’étais petit garçon, la lumière de l’arbre de Noël, la musique de la messe de minuit, la douceur des sourires faisaient ainsi tout le rayonnement du cadeau de Noël que je recevais.",
+  "type": "paragraph end"
+}, {
+  "id": 969,
+  "text": "– Les hommes de chez toi, dit le petit prince, cultivent cinq mille roses dans un même jardin... et ils n’y trouvent pas ce qu’ils cherchent...",
+  "type": "dialogue beginning end"
+}, {
+  "id": 970,
+  "text": "– Ils ne le trouvent pas, répondis-je...",
+  "type": "dialogue beginning end"
+}, {
+  "id": 971,
+  "text": "– Et cependant ce qu’ils cherchent pourrait être trouvé dans une seule rose ou un peu d’eau...",
+  "type": "dialogue beginning end"
+}, {
+  "id": 972,
+  "text": "– Bien sûr, répondis-je.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 973,
+  "text": "Et le petit prince ajouta :",
+  "type": "paragraph beginning end"
+}, {
+  "id": 974,
+  "text": "– Mais les yeux sont aveugles. Il faut chercher avec le cœur.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 975,
+  "text": "J’avais bu.",
+  "type": "paragraph beginning"
+}, {
+  "id": 976,
+  "text": "Je respirais bien.",
+  "type": "paragraph"
+}, {
+  "id": 977,
+  "text": "Le sable, au lever du jour, est couleur de miel.",
+  "type": "paragraph"
+}, {
+  "id": 978,
+  "text": "J’étais heureux aussi de cette couleur de miel.",
+  "type": "paragraph"
+}, {
+  "id": 979,
+  "text": "Pourquoi fallait-il que j’eusse de la peine...",
+  "type": "paragraph end"
+}, {
+  "id": 980,
+  "text": "– Il faut que tu tiennes ta promesse, me dit doucement le petit prince, qui, de nouveau, s’était assis auprès de moi.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 981,
+  "text": "– Quelle promesse ?",
+  "type": "dialogue beginning end"
+}, {
+  "id": 982,
+  "text": "– Tu sais... une muselière pour mon mouton... je suis responsable de cette fleur !",
+  "type": "dialogue beginning end"
+}, {
+  "id": 983,
+  "text": "Je sortis de ma poche mes ébauches de dessin.",
+  "type": "paragraph beginning"
+}, {
+  "id": 984,
+  "text": "Le petit prince les aperçut et dit en riant :",
+  "type": "paragraph end"
+}, {
+  "id": 985,
+  "text": "– Tes baobabs, ils ressemblent un peu à des choux...",
+  "type": "dialogue beginning end"
+}, {
+  "id": 986,
+  "text": "– Oh ! Moi qui étais si fier des baobabs !",
+  "type": "dialogue beginning end"
+}, {
+  "id": 987,
+  "text": "– Ton renard... ses oreilles... elles ressemblent un peu à des cornes... et elles sont trop longues !",
+  "type": "dialogue beginning end"
+}, {
+  "id": 988,
+  "text": "Et il rit encore.",
+  "type": "paragraph beginning end"
+}, {
+  "id": 989,
+  "text": "– Tu es injuste, petit bonhomme, je ne savais rien dessiner que les boas fermés et les boas ouverts.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 990,
+  "text": "– Oh ! ça ira, dit-il, les enfants savent.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 991,
+  "text": "Je crayonnai donc une muselière.",
+  "type": "paragraph beginning"
+}, {
+  "id": 992,
+  "text": "Et j’eus le cœur serré en la lui donnant :",
+  "type": "paragraph end"
+}, {
+  "id": 993,
+  "text": "– Tu as des projets que j’ignore...",
+  "type": "dialogue beginning end"
+}, {
+  "id": 994,
+  "text": "Mais il ne me répondit pas.",
+  "type": "paragraph beginning"
+}, {
+  "id": 995,
+  "text": "Il me dit :",
+  "type": "paragraph end"
+}, {
+  "id": 996,
+  "text": "– Tu sais, ma chute sur la Terre... c’en sera demain l’anniversaire...",
+  "type": "dialogue beginning end"
+}, {
+  "id": 997,
+  "text": "Puis, après un silence il dit encore :",
+  "type": "paragraph beginning end"
+}, {
+  "id": 998,
+  "text": "– J’étais tombé tout près d’ici...",
+  "type": "dialogue beginning end"
+}, {
+  "id": 999,
+  "text": "Et il rougit.",
+  "type": "paragraph beginning end"
+}, {
+  "id": 1000,
+  "text": "Et de nouveau, sans comprendre pourquoi, j’éprouvai un chagrin bizarre.",
+  "type": "paragraph beginning"
+}, {
+  "id": 1001,
+  "text": "Cependant une question me vint :",
+  "type": "paragraph end"
+}, {
+  "id": 1002,
+  "text": "– Alors ce n’est pas par hasard que, le matin où je t’ai connu, il y a huit jours, tu te promenais comme ça, tout seul, à mille milles de toutes les régions habitées ! Tu retournais vers le point de ta chute ?",
+  "type": "dialogue beginning end"
+}, {
+  "id": 1003,
+  "text": "Le petit prince rougit encore.",
+  "type": "paragraph beginning end"
+}, {
+  "id": 1004,
+  "text": "Et j’ajoutai, en hésitant :",
+  "type": "paragraph beginning end"
+}, {
+  "id": 1005,
+  "text": "– À cause, peut-être, de l’anniversaire ?...",
+  "type": "dialogue beginning end"
+}, {
+  "id": 1006,
+  "text": "Le petit prince rougit de nouveau.",
+  "type": "paragraph beginning"
+}, {
+  "id": 1007,
+  "text": "Il ne répondait jamais aux questions, mais, quand on rougit, ça signifie « oui », n’estce pas ?",
+  "type": "paragraph end"
+}, {
+  "id": 1008,
+  "text": "– Ah ! lui dis-je, j’ai peur...",
+  "type": "dialogue beginning end"
+}, {
+  "id": 1009,
+  "text": "Mais il me répondit :",
+  "type": "paragraph beginning end"
+}, {
+  "id": 1010,
+  "text": "– Tu dois maintenant travailler. Tu dois repartir vers ta machine. Je t’attends ici. Reviens demain soir...",
+  "type": "dialogue beginning end"
+}, {
+  "id": 1011,
+  "text": "Mais je n’étais pas rassuré.",
+  "type": "paragraph beginning"
+}, {
+  "id": 1012,
+  "text": "Je me souvenais du renard.",
+  "type": "paragraph"
+}, {
+  "id": 1013,
+  "text": "On risque de pleurer un peu si l’on s’est laissé apprivoiser...",
+  "type": "paragraph end"
+}, {
+  "id": 1014,
+  "text": "CHAPITRE XXVI",
+  "type": "chapter"
+}, {
+  "id": 1015,
+  "text": "Il y avait, à côté du puits, une ruine de vieux mur de pierre.",
+  "type": "paragraph beginning"
+}, {
+  "id": 1016,
+  "text": "Lorsque je revins de mon travail, le lendemain soir, j’aperçus de loin mon petit prince assis là-haut, les jambes pendantes.",
+  "type": "paragraph"
+}, {
+  "id": 1017,
+  "text": "Et je l’entendis qui parlait :",
+  "type": "paragraph end"
+}, {
+  "id": 1018,
+  "text": "– Tu ne t’en souviens donc pas ? disait-il. Ce n’est pas tout à fait ici !",
+  "type": "dialogue beginning end"
+}, {
+  "id": 1019,
+  "text": "Une autre voix lui répondit sans doute, puisqu’il répliqua :",
+  "type": "paragraph beginning end"
+}, {
+  "id": 1020,
+  "text": "– Si ! Si ! c’est bien le jour, mais ce n’est pas ici l’endroit...",
+  "type": "dialogue beginning end"
+}, {
+  "id": 1021,
+  "text": "Je poursuivis ma marche vers le mur.",
+  "type": "paragraph beginning"
+}, {
+  "id": 1022,
+  "text": "Je ne voyais ni n’entendais toujours personne.",
+  "type": "paragraph"
+}, {
+  "id": 1023,
+  "text": "Pourtant le petit prince répliqua de nouveau :",
+  "type": "paragraph end"
+}, {
+  "id": 1024,
+  "text": "– ... Bien sûr. Tu verras où commence ma trace dans le sable. Tu n’as qu’à m’y attendre. J’y serai cette nuit.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 1025,
+  "text": "J’étais à vingt mètres du mur et je ne voyais toujours rien.",
+  "type": "paragraph beginning end"
+}, {
+  "id": 1026,
+  "text": "Le petit prince dit encore, après un silence :",
+  "type": "paragraph beginning end"
+}, {
+  "id": 1027,
+  "text": "– Tu as du bon venin ? Tu es sûr de ne pas me faire souffrir longtemps ?",
+  "type": "dialogue beginning end"
+}, {
+  "id": 1028,
+  "text": "Je fis halte, le cœur serré, mais je ne comprenais toujours pas.",
+  "type": "paragraph beginning end"
+}, {
+  "id": 1029,
+  "text": "– Maintenant va-t’en, dit-il... je veux redescendre !",
+  "type": "dialogue beginning end"
+}, {
+  "id": 1030,
+  "text": "Alors j’abaissai moi-même les yeux vers le pied du mur, et je fis un bond !",
+  "type": "paragraph beginning"
+}, {
+  "id": 1031,
+  "text": "Il était là, dressé vers le petit prince, un de ces serpents jaunes qui vous exécutent en trente secondes.",
+  "type": "paragraph"
+}, {
+  "id": 1032,
+  "text": "Tout en fouillant ma poche pour en tirer mon revolver, je pris le pas de course, mais, au bruit que je fis, le serpent se laissa doucement couler dans le sable, comme un jet d’eau qui meurt, et, sans trop se presser, se faufila entre les pierres avec un léger bruit de métal.",
+  "type": "paragraph end"
+}, {
+  "id": 1033,
+  "text": "Je parvins au mur juste à temps pour y recevoir dans les bras mon petit bonhomme de prince, pâle comme la neige.",
+  "type": "paragraph beginning end"
+}, {
+  "id": 1034,
+  "text": "– Quelle est cette histoire-là ! Tu parles maintenant avec les serpents !",
+  "type": "dialogue beginning end"
+}, {
+  "id": 1035,
+  "text": "J’avais défait son éternel cache-nez d’or.",
+  "type": "paragraph beginning"
+}, {
+  "id": 1036,
+  "text": "Je lui avais mouillé les tempes et l’avais fait boire.",
+  "type": "paragraph"
+}, {
+  "id": 1037,
+  "text": "Et maintenant je n’osais plus rien lui demander.",
+  "type": "paragraph"
+}, {
+  "id": 1038,
+  "text": "Il me regarda gravement et m’entoura le cou de ses bras.",
+  "type": "paragraph"
+}, {
+  "id": 1039,
+  "text": "Je sentais battre son cœur comme celui d’un oiseau qui meurt, quand on l’a tiré à la carabine.",
+  "type": "paragraph"
+}, {
+  "id": 1040,
+  "text": "Il me dit :",
+  "type": "paragraph end"
+}, {
+  "id": 1041,
+  "text": "– Je suis content que tu aies trouvé ce qui manquait à ta machine. Tu vas pouvoir rentrer chez toi...",
+  "type": "dialogue beginning end"
+}, {
+  "id": 1042,
+  "text": "– Comment sais-tu !",
+  "type": "dialogue beginning end"
+}, {
+  "id": 1043,
+  "text": "Je venais justement lui annoncer que, contre toute espérance, j’avais réussi mon travail !",
+  "type": "paragraph beginning end"
+}, {
+  "id": 1044,
+  "text": "Il ne répondit rien à ma question, mais il ajouta :",
+  "type": "paragraph beginning end"
+}, {
+  "id": 1045,
+  "text": "– Moi aussi, aujourd’hui, je rentre chez moi...",
+  "type": "dialogue beginning end"
+}, {
+  "id": 1046,
+  "text": "Puis, mélancolique :",
+  "type": "paragraph beginning end"
+}, {
+  "id": 1047,
+  "text": "– C’est bien plus loin... c’est bien plus difficile...",
+  "type": "dialogue beginning end"
+}, {
+  "id": 1048,
+  "text": "Je sentais bien qu’il se passait quelque chose d’extraordinaire.",
+  "type": "paragraph beginning"
+}, {
+  "id": 1049,
+  "text": "Je le serrais dans les bras comme un petit enfant, et cependant il me semblait qu’il coulait verticalement dans un abîme sans que je pusse rien pour le retenir. ..",
+  "type": "paragraph end"
+}, {
+  "id": 1050,
+  "text": "Il avait le regard sérieux, perdu très loin :",
+  "type": "paragraph beginning end"
+}, {
+  "id": 1051,
+  "text": "– J’ai ton mouton. Et j’ai la caisse pour le mouton. Et j’ai la muselière...",
+  "type": "dialogue beginning end"
+}, {
+  "id": 1052,
+  "text": "Et il sourit avec mélancolie.",
+  "type": "paragraph beginning end"
+}, {
+  "id": 1053,
+  "text": "J’attendis longtemps.",
+  "type": "paragraph beginning"
+}, {
+  "id": 1054,
+  "text": "Je sentais qu’il se réchauffait peu à peu :",
+  "type": "paragraph end"
+}, {
+  "id": 1055,
+  "text": "– Petit bonhomme, tu as eu peur...",
+  "type": "dialogue beginning end"
+}, {
+  "id": 1056,
+  "text": "Il avait eu peur, bien sûr !",
+  "type": "paragraph beginning"
+}, {
+  "id": 1057,
+  "text": "Mais il rit doucement :",
+  "type": "paragraph end"
+}, {
+  "id": 1058,
+  "text": "– J’aurai bien plus peur ce soir...",
+  "type": "dialogue beginning end"
+}, {
+  "id": 1059,
+  "text": "De nouveau je me sentis glacé par le sentiment de l’irréparable.",
+  "type": "paragraph beginning"
+}, {
+  "id": 1060,
+  "text": "Et je compris que je ne supportais pas l’idée de ne plus jamais entendre ce rire.",
+  "type": "paragraph"
+}, {
+  "id": 1061,
+  "text": "C’était pour moi comme une fontaine dans le désert.",
+  "type": "paragraph end"
+}, {
+  "id": 1062,
+  "text": "– Petit bonhomme, je veux encore t’entendre rire...",
+  "type": "dialogue beginning end"
+}, {
+  "id": 1063,
+  "text": "Mais il me dit :",
+  "type": "paragraph beginning end"
+}, {
+  "id": 1064,
+  "text": "– Cette nuit, ça fera un an. Mon étoile se trouvera juste audessus de l’endroit où je suis tombé l’année dernière...",
+  "type": "dialogue beginning end"
+}, {
+  "id": 1065,
+  "text": "– Petit bonhomme, n’est-ce pas que c’est un mauvais rêve cette histoire de serpent et de rendez-vous et d’étoile...",
+  "type": "dialogue beginning end"
+}, {
+  "id": 1066,
+  "text": "Mais il ne répondit pas à ma question.",
+  "type": "paragraph beginning"
+}, {
+  "id": 1067,
+  "text": "Il me dit :",
+  "type": "paragraph end"
+}, {
+  "id": 1068,
+  "text": "– Ce qui est important, ça ne se voit pas...",
+  "type": "dialogue beginning end"
+}, {
+  "id": 1069,
+  "text": "– Bien sûr...",
+  "type": "dialogue beginning end"
+}, {
+  "id": 1070,
+  "text": "– C’est comme pour la fleur. Si tu aimes une fleur qui se trouve dans une étoile, c’est doux, la nuit, de regarder le ciel. Toutes les étoiles sont fleuries.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 1071,
+  "text": "– Bien sûr...",
+  "type": "dialogue beginning end"
+}, {
+  "id": 1072,
+  "text": "– C’est comme pour l’eau. Celle que tu m’as donnée à boire était comme une musique, à cause de la poulie et de la corde... tu te rappelles... elle était bonne. ",
+  "type": "dialogue beginning end"
+}, {
+  "id": 1073,
+  "text": "– Bien sûr...",
+  "type": "dialogue beginning end"
+}, {
+  "id": 1074,
+  "text": "– Tu regarderas, la nuit, les étoiles. C’est trop petit chez moi pour que je te montre où se trouve la mienne. C’est mieux comme ça. Mon étoile, ça sera pour toi une des étoiles. Alors, toutes les étoiles, tu aimeras les regarder... Elles seront toutes tes amies. Et puis je vais te faire un cadeau...",
+  "type": "dialogue beginning end"
+}, {
+  "id": 1075,
+  "text": "Il rit encore.",
+  "type": "paragraph beginning end"
+}, {
+  "id": 1076,
+  "text": "– Ah ! petit bonhomme, petit bonhomme j’aime entendre ce rire !",
+  "type": "dialogue beginning end"
+}, {
+  "id": 1077,
+  "text": "– Justement ce sera mon cadeau... ce sera comme pour l’eau...",
+  "type": "dialogue beginning end"
+}, {
+  "id": 1078,
+  "text": "– Que veux-tu dire ?",
+  "type": "dialogue beginning end"
+}, {
+  "id": 1079,
+  "text": "– Les gens ont des étoiles qui ne sont pas les mêmes. Pour les uns, qui voyagent, les étoiles sont des guides. Pour d’autres elles ne sont rien que de petites lumières. Pour d’autres, qui sont savants, elles sont des problèmes. Pour mon businessman elles étaient de l’or. Mais toutes ces étoiles-là se taisent. Toi, tu auras des étoiles comme personne n’en a...",
+  "type": "dialogue beginning end"
+}, {
+  "id": 1080,
+  "text": "– Que veux-tu dire ?",
+  "type": "dialogue beginning end"
+}, {
+  "id": 1081,
+  "text": "– Quand tu regarderas le ciel, la nuit, puisque j’habiterai dans l’une d’elles, puisque je rirai dans l’une d’elles, alors ce sera pour toi comme si riaient toutes les étoiles. Tu auras, toi, des étoiles qui savent rire !",
+  "type": "dialogue beginning end"
+}, {
+  "id": 1082,
+  "text": "Et il rit encore.",
+  "type": "paragraph beginning end"
+}, {
+  "id": 1083,
+  "text": "– Et quand tu seras consolé (on se console toujours) tu seras content de m’avoir connu. Tu seras toujours mon ami. Tu auras envie de rire avec moi. Et tu ouvriras parfois ta fenêtre, comme ça, pour le plaisir... Et tes amis seront bien étonnés de te voir rire en regardant le ciel. Alors tu leur diras : « Oui, les étoiles, ça me fait toujours rire ! » Et ils te croiront fou. Je t’aurai joué un bien vilain tour...",
+  "type": "dialogue beginning end"
+}, {
+  "id": 1084,
+  "text": "Et il rit encore.",
+  "type": "paragraph beginning end"
+}, {
+  "id": 1085,
+  "text": "– Ce sera comme si je t’avais donné, au lieu d’étoiles, des tas de petits grelots qui savent rire...",
+  "type": "dialogue beginning end"
+}, {
+  "id": 1086,
+  "text": "Et il rit encore.",
+  "type": "paragraph beginning end"
+}, {
+  "id": 1087,
+  "text": "Puis il redevint sérieux :",
+  "type": "paragraph beginning end"
+}, {
+  "id": 1088,
+  "text": "– Cette nuit... tu sais... ne viens pas.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 1089,
+  "text": "– Je ne te quitterai pas.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 1090,
+  "text": "– J’aurai l’air d’avoir mal... j’aurai un peu l’air de mourir. C’est comme ça. Ne viens pas voir ça, ce n’est pas la peine...",
+  "type": "dialogue beginning end"
+}, {
+  "id": 1091,
+  "text": "– Je ne te quitterai pas.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 1092,
+  "text": "Mais il était soucieux.",
+  "type": "paragraph beginning end"
+}, {
+  "id": 1093,
+  "text": "– Je te dis ça... c’est à cause aussi du serpent. Il ne faut pas qu’il te morde... Les serpents, c’est méchant. Ça peut mordre pour le plaisir...",
+  "type": "dialogue beginning end"
+}, {
+  "id": 1094,
+  "text": "– Je ne te quitterai pas.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 1095,
+  "text": "Mais quelque chose le rassura :",
+  "type": "paragraph beginning end"
+}, {
+  "id": 1096,
+  "text": "– C’est vrai qu’ils n’ont plus de venin pour la seconde morsure...",
+  "type": "dialogue beginning end"
+}, {
+  "id": 1097,
+  "text": "Cette nuit-là je ne le vis pas se mettre en route.",
+  "type": "paragraph beginning"
+}, {
+  "id": 1098,
+  "text": "Il s’était évadé sans bruit.",
+  "type": "paragraph"
+}, {
+  "id": 1099,
+  "text": "Quand je réussis à le rejoindre il marchait décidé, d’un pas rapide.",
+  "type": "paragraph"
+}, {
+  "id": 1100,
+  "text": "Il me dit seulement :",
+  "type": "paragraph end"
+}, {
+  "id": 1101,
+  "text": "– Ah ! tu es là...",
+  "type": "dialogue beginning end"
+}, {
+  "id": 1102,
+  "text": "Et il me prit par la main.",
+  "type": "paragraph beginning"
+}, {
+  "id": 1103,
+  "text": "Mais il se tourmenta encore :",
+  "type": "paragraph end"
+}, {
+  "id": 1104,
+  "text": "– Tu as eu tort. Tu auras de la peine. J’aurai l’air d’être mort et ce ne sera pas vrai...",
+  "type": "dialogue beginning end"
+}, {
+  "id": 1105,
+  "text": "Moi je me taisais.",
+  "type": "paragraph beginning end"
+}, {
+  "id": 1106,
+  "text": "– Tu comprends. C’est trop loin. Je ne peux pas emporter ce corps-là. C’est trop lourd.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 1107,
+  "text": "Moi je me taisais.",
+  "type": "paragraph beginning end"
+}, {
+  "id": 1108,
+  "text": "– Mais ce sera comme une vieille écorce abandonnée. Ce n’est pas triste les vieilles écorces...",
+  "type": "dialogue beginning end"
+}, {
+  "id": 1109,
+  "text": "Moi je me taisais.",
+  "type": "paragraph beginning end"
+}, {
+  "id": 1110,
+  "text": "Il se découragea un peu.",
+  "type": "paragraph beginning"
+}, {
+  "id": 1111,
+  "text": "Mais il fit encore un effort :",
+  "type": "paragraph end"
+}, {
+  "id": 1112,
+  "text": "– Ce sera gentil, tu sais. Moi aussi je regarderai les étoiles. Toutes les étoiles seront des puits avec une poulie rouillée. Toutes les étoiles me verseront à boire...",
+  "type": "dialogue beginning end"
+}, {
+  "id": 1113,
+  "text": "Moi je me taisais.",
+  "type": "paragraph beginning end"
+}, {
+  "id": 1114,
+  "text": "– Ce sera tellement amusant ! Tu auras cinq cents millions de grelots, j’aurai cinq cents millions de fontaines...",
+  "type": "dialogue beginning end"
+}, {
+  "id": 1115,
+  "text": "Et il se tut aussi, parce qu’il pleurait...",
+  "type": "paragraph beginning end"
+}, {
+  "id": 1116,
+  "text": "– C’est là. Laisse-moi faire un pas tout seul.",
+  "type": "dialogue beginning end"
+}, {
+  "id": 1117,
+  "text": "Et il s’assit parce qu’il avait peur.",
+  "type": "paragraph beginning end"
+}, {
+  "id": 1118,
+  "text": "Il dit encore :",
+  "type": "paragraph beginning end"
+}, {
+  "id": 1119,
+  "text": "– Tu sais... ma fleur... j’en suis responsable ! Et elle est tellement faible ! Et elle est tellement naïve. Elle a quatre épines de rien du tout pour la protéger contre le monde...",
+  "type": "dialogue beginning end"
+}, {
+  "id": 1120,
+  "text": "Moi je m’assis parce que je ne pouvais plus me tenir debout.",
+  "type": "paragraph beginning"
+}, {
+  "id": 1121,
+  "text": "Il dit :",
+  "type": "paragraph end"
+}, {
+  "id": 1122,
+  "text": "– Voilà... C’est tout...",
+  "type": "dialogue beginning end"
+}, {
+  "id": 1123,
+  "text": "Il hésita encore un peu, puis il se releva.",
+  "type": "paragraph beginning"
+}, {
+  "id": 1124,
+  "text": "Il fit un pas.",
+  "type": "paragraph"
+}, {
+  "id": 1125,
+  "text": "Moi je ne pouvais pas bouger.",
+  "type": "paragraph end"
+}, {
+  "id": 1126,
+  "text": "Il n’y eut rien qu’un éclair jaune près de sa cheville.",
+  "type": "paragraph beginning"
+}, {
+  "id": 1127,
+  "text": "Il demeura un instant immobile.",
+  "type": "paragraph"
+}, {
+  "id": 1128,
+  "text": "Il ne cria pas.",
+  "type": "paragraph"
+}, {
+  "id": 1129,
+  "text": "Il tomba doucement comme tombe un arbre.",
+  "type": "paragraph"
+}, {
+  "id": 1130,
+  "text": "Ça ne fit même pas de bruit, à cause du sable.",
+  "type": "paragraph end"
+}, {
+  "id": 1131,
+  "text": "CHAPITRE XXVII",
+  "type": "chapter"
+}, {
+  "id": 1132,
+  "text": "Et maintenant, bien sûr, ça fait six ans déjà...",
+  "type": "paragraph beginning"
+}, {
+  "id": 1133,
+  "text": "Je n’ai jamais encore raconté cette histoire.",
+  "type": "paragraph"
+}, {
+  "id": 1134,
+  "text": "Les camarades qui m’ont revu ont été bien contents de me revoir vivant.",
+  "type": "paragraph"
+}, {
+  "id": 1135,
+  "text": "J’étais triste mais je leur disais :",
+  "type": "paragraph"
+}, {
+  "id": 1136,
+  "text": "« C’est la fatigue... »",
+  "type": "paragraph end"
+}, {
+  "id": 1137,
+  "text": "Maintenant je me suis un peu consolé.",
+  "type": "paragraph beginning"
+}, {
+  "id": 1138,
+  "text": "C’est-à-dire... pas tout à fait.",
+  "type": "paragraph"
+}, {
+  "id": 1139,
+  "text": "Mais je sais bien qu’il est revenu à sa planète, car, au lever du jour, je n’ai pas retrouvé son corps.",
+  "type": "paragraph"
+}, {
+  "id": 1140,
+  "text": "Ce n’était pas un corps tellement lourd...",
+  "type": "paragraph"
+}, {
+  "id": 1141,
+  "text": "Et j’aime la nuit écouter les étoiles.",
+  "type": "paragraph"
+}, {
+  "id": 1142,
+  "text": "C’est comme cinq cent millions de grelots...",
+  "type": "paragraph end"
+}, {
+  "id": 1143,
+  "text": "Mais voilà qu’il se passe quelque chose d’extraordinaire.",
+  "type": "paragraph beginning"
+}, {
+  "id": 1144,
+  "text": "La muselière que j’ai dessinée pour le petit prince, j’ai oublié d’y ajouter la courroie de cuir !",
+  "type": "paragraph"
+}, {
+  "id": 1145,
+  "text": "Il n’aura jamais pu l’attacher au mouton.",
+  "type": "paragraph"
+}, {
+  "id": 1146,
+  "text": "Alors je me demande :",
+  "type": "paragraph"
+}, {
+  "id": 1147,
+  "text": "« Que s’est-il passé sur sa planète ? Peut-être bien que le mouton a mangé la fleur... »",
+  "type": "paragraph end"
+}, {
+  "id": 1148,
+  "text": "Tantôt je me dis :",
+  "type": "paragraph beginning"
+}, {
+  "id": 1149,
+  "text": "« Sûrement non ! Le petit prince enferme sa fleur toutes les nuits sous son globe de verre, et il surveille bien son mouton... »",
+  "type": "paragraph"
+}, {
+  "id": 1150,
+  "text": "Alors je suis heureux.",
+  "type": "paragraph"
+}, {
+  "id": 1151,
+  "text": "Et toutes les étoiles rient doucement.",
+  "type": "paragraph end"
+}, {
+  "id": 1152,
+  "text": "Tantôt je me dis :",
+  "type": "paragraph beginning"
+}, {
+  "id": 1153,
+  "text": "« On est distrait une fois ou l’autre, et ça suffit ! Il a oublié, un soir, le globe de verre, ou bien le mouton est sorti sans bruit pendant la nuit... »",
+  "type": "paragraph"
+}, {
+  "id": 1154,
+  "text": "Alors les grelots se changent tous en larmes !...",
+  "type": "paragraph end"
+}, {
+  "id": 1155,
+  "text": "C’est là un bien grand mystère.",
+  "type": "paragraph beginning"
+}, {
+  "id": 1156,
+  "text": "Pour vous qui aimez aussi le petit prince, comme pour moi, rien de l’univers n’est semblable si quelque part, on ne sait où, un mouton que nous ne connaissons pas a, oui ou non, mangé une rose...",
+  "type": "paragraph end"
+}, {
+  "id": 1157,
+  "text": "Regardez le ciel.",
+  "type": "paragraph beginning"
+}, {
+  "id": 1158,
+  "text": "Demandez-vous : le mouton oui ou non a-t-il mangé la fleur ?",
+  "type": "paragraph"
+}, {
+  "id": 1159,
+  "text": "Et vous verrez comme tout change. ..",
+  "type": "paragraph end"
+}, {
+  "id": 1160,
+  "text": "Et aucune grande personne ne comprendra jamais que ça a tellement d’importance !",
+  "type": "paragraph beginning end"
+}, {
+  "id": 1161,
+  "text": "Ça c’est, pour moi, le plus beau et le plus triste paysage du monde.",
+  "type": "paragraph beginning"
+}, {
+  "id": 1162,
+  "text": "C’est le même paysage que celui de la page précédente, mais je l’ai dessiné une fois encore pour bien vous le montrer.",
+  "type": "paragraph"
+}, {
+  "id": 1163,
+  "text": "C’est ici que le petit prince a apparu sur terre, puis disparu.",
+  "type": "paragraph end"
+}, {
+  "id": 1164,
+  "text": "Regardez attentivement ce paysage afin d’être sûrs de le reconnaître, si vous voyagez un jour en Afrique, dans le désert.",
+  "type": "paragraph beginning"
+}, {
+  "id": 1165,
+  "text": "Et, s’il vous arrive de passer par là, je vous en supplie, ne vous pressez pas, attendez un peu juste sous l’étoile !",
+  "type": "paragraph"
+}, {
+  "id": 1166,
+  "text": "Si alors un enfant vient à vous, s’il rit, s’il a des cheveux d’or, s’il ne répond pas quand on l’interroge, vous devinerez bien qui il est.",
+  "type": "paragraph"
+}, {
+  "id": 1167,
+  "text": "Alors soyez gentils ! Ne me laissez pas tellement triste : écrivez-moi vite qu’il est revenu...",
+  "type": "paragraph end"
+}] }
