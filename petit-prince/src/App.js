@@ -6,6 +6,9 @@ import Register from './components/Register/Register'
 import Dashboard from './components/Dashboard/Dashboard'
 import NewTranslation from './components/NewTranslation/NewTranslation'
 import Translation from './components/Translation/Translation'
+import Record from './components/Record/Record'
+
+
 import {
   BrowserRouter as Router,
   Routes,
@@ -50,6 +53,8 @@ function App() {
           <Route path="/dashboard" element={ isLoggedIn ? <Dashboard setAuth={setAuth} /> : <Navigate to="/login" />}/>
           <Route path="/newtranslation" element={ isLoggedIn ? <NewTranslation setAuth={setAuth} /> : <Navigate to="/login" />}/>
           <Route path="/translation" element={ isLoggedIn ? <Translation setAuth={setAuth} /> : <Navigate to="/login" />} />
+          <Route path="/record" element={ isLoggedIn ? <Record setAuth={setAuth} /> : <Navigate to="/login" />} />
+
           </Routes>
         </div>
       </Router>

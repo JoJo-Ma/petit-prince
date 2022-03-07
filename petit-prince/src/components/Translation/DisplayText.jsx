@@ -31,13 +31,13 @@ const DisplayText =  ({data}) => {
 
   const handleBeginning = (style) => {
     if (style.includes('beginning')) {
-      return <div class="clear"></div>
+      return <div className="clear"></div>
     }
     return ''
   }
   const handleEnd = (style) => {
     if (style.includes('end')) {
-      return <div class="clear"></div>
+      return <div className="clear"></div>
     }
     return ''
   }
