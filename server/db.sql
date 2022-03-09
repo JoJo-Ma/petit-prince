@@ -65,3 +65,9 @@ CREATE TABLE trans_shaping (
   FOREIGN KEY (language_id) REFERENCES languages (id),
   FOREIGN KEY (trans_desc_id) REFERENCES trans_desc (id)
 );
+
+
+CREATE TABLE blobtest (
+  id serial primary key,
+  data bytea
+);

@@ -11,18 +11,7 @@ const setupMic = () => {
   return getMedia()
 }
 
-const start = () => {
-  setupMic()
-}
-
-const stopMic = (stream = window.localStream) => {
-  stream.getTracks().forEach(track => {
-    track.stop()
-    track.enabled = false;
-    stream.removeTrack(track);
-  } )
-  stream = null
-}
 
 
-export {setupMic, stopMic};
+
+export {setupMic};

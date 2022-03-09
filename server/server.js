@@ -24,6 +24,8 @@ app.use("/pdfparser", require("./routes/pdfparser"))
 app.use("/languages", require("./routes/languages"))
 app.use("/translations", require("./routes/translations"))
 
+app.use("/blobtesting", require('./routes/blobtest'))
+
 app.listen(port, () =>{
   console.log(`server is up and listening on port ${port}`)
 })
