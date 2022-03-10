@@ -2,7 +2,9 @@ import React, { useState, useEffect, useRef } from 'react';
 import { setupMic } from './record_util'
 import {Buffer} from 'buffer'
 
-const Recorder = () => {
+import "./Recorder.css"
+
+const Recorder = ({ setNext }) => {
   const [isRecording, setIsRecording] = useState(false)
   const mediaRecorder = useRef(null);
   const mediaChunks = useRef([])
@@ -135,17 +137,21 @@ const Recorder = () => {
     }
 
 
+    const handleClickNext = () => {
+      setNext()
+    }
 
   return (
-    <>
+    <div className="audioplayer">
       <h1>recorder</h1>
       <button type="button" onClick={startRecording}>Start</button>
       <button type="button" onClick={onRecordingStop}>Stop</button>
       <button type="button" onClick={saveToDb}>Save to db</button>
+      <button type="button" onClick={handleClickNext}>Next</button>
       <input type="text" name="loadId" onChange={e => onChangeId(e)}/>
       <button type="button" onClick={loadFromDb}>Load db</button>
       <button type="button" onClick={playSound}>play sound</button>
-    </>
+    </div>
   )
 }
 

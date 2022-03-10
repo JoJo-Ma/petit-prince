@@ -11,7 +11,7 @@ const LanguageSelector = ({ selectLanguage }) => {
 
   return (
     <select onChange={(e) => handleChange(e)}>
-      <option value="" defaultValue disabled hidden>Choose here</option>
+      <option value="" defaultValue hidden>Choose here</option>
       {languages.map((language) => {
         return <option key={language.id} value={language.name}>{language.name}</option>
       })}

@@ -1,9 +1,9 @@
 import React, {useState, useEffect, useRef} from 'react';
 
-import "./Translation.css"
+import "./Recorder.css"
 
 
-const DisplayText =  ({data}) => {
+const DisplayText =  ({data, currentId}) => {
   const [isHidden, setIsHidden] = useState([])
   const isInitialMount = useRef(true);
 
@@ -52,17 +52,14 @@ const DisplayText =  ({data}) => {
           const addEnd = handleEnd(el.style)
           return ( <>
             {addBeginning}
-            { isHidden[el.id]
-                ?
-                <p key={el.id} className={el.style + " languageOne"} onClick={() => toggle(el.id)}>
-                  {addSpace + el.languageOne}
-                </p>
-                :
-                <p key={el.id} className={el.style + " languageTwo"} onClick={() => toggle(el.id)}>
-                  {addSpace + el.languageTwo}
-                </p>
-              }
-              {addEnd}
+            <p key={el.id}
+              className={el.style + " languageOne"}
+              onClick={() => toggle(el.id)}
+              id={el.id === currentId && "current"}
+              >
+              {addSpace + el.languageOne}
+            </p>
+            {addEnd}
           </>)
         }) : <p>toto</p>
       }

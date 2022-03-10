@@ -90,18 +90,19 @@ router.get('/:language1/:language2', async (req, res) => {
   try {
     const params = req.params
 
-    const translation = await db.query("(SELECT trans_text.data as data, languages.name as language FROM trans_text \
+    const translation = await db.query("(SELECT trans_text.data as data, languages.name as language, trans_desc.id as id FROM trans_text \
     LEFT JOIN trans_desc ON trans_text.trans_desc_id = trans_desc.id \
     LEFT JOIN languages ON trans_desc.language_id = languages.id \
     WHERE trans_desc.is_main_trans AND languages.name = $1) \
     UNION ALL\
-    (SELECT trans_text.data as data, languages.name as language FROM trans_text \
+    (SELECT trans_text.data as data, languages.name as language, trans_desc.id as id FROM trans_text \
     LEFT JOIN trans_desc ON trans_text.trans_desc_id = trans_desc.id \
     LEFT JOIN languages ON trans_desc.language_id = languages.id \
     WHERE trans_desc.is_main_trans AND languages.name = $2) \
     UNION ALL\
-    (SELECT trans_shaping.data as data, languages.name as language FROM trans_shaping\
+    (SELECT trans_shaping.data as data, languages.name as language, trans_desc.id as id FROM trans_shaping\
     LEFT JOIN languages on trans_shaping.language_id = languages.id\
+    LEFT JOIN trans_desc ON trans_shaping.trans_desc_id = trans_desc.id \
     WHERE languages.name = \
     ((SELECT languages.name FROM trans_shaping LEFT JOIN languages ON trans_shaping.language_id = languages.id WHERE languages.name=$1)\
     UNION ALL\
@@ -115,6 +116,8 @@ router.get('/:language1/:language2', async (req, res) => {
       languageOne: translation.rows[0].language,
       languageTwo: translation.rows[1].language,
       languageStyling: translation.rows[2].language,
+      idLanguageOne: translation.rows[0].id,
+      idLanguageTwo: translation.rows[1].id
     }
 
 

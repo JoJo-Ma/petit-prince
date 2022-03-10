@@ -4,22 +4,17 @@ import LanguageSelector from '../LanguageSelector/LanguageSelector';
 
 const LoadTranslation = ({ loadData }) => {
   const [languageOne, setLanguageOne] = useState(false)
-  const [languageTwo, setLanguageTwo] = useState(false)
 
 
   const selectLanguageOne = (lang) => {
     setLanguageOne(lang)
   }
 
-  const selectLanguageTwo = (lang) => {
-    setLanguageTwo(lang)
-  }
-
   const handleClick = async (e) => {
     e.preventDefault()
     try {
-      console.log(`http://localhost:3005/translations/${languageOne}/${languageTwo}`);
-      const response = await fetch (`http://localhost:3005/translations/${languageOne}/${languageTwo}`, {
+      console.log(`http://localhost:3005/translations/${languageOne}/${languageOne}`);
+      const response = await fetch (`http://localhost:3005/translations/${languageOne}/${languageOne}`, {
         method: "GET",
         headers: {token : localStorage.token}
       })
@@ -33,8 +28,7 @@ const LoadTranslation = ({ loadData }) => {
   return (
     <>
       <LanguageSelector selectLanguage={selectLanguageOne} />
-      <LanguageSelector selectLanguage={selectLanguageTwo} />
-      <button type="button" disabled={!languageOne || !languageTwo && true } onClick={(e)=>handleClick(e)}>Load</button>
+      <button type="button" disabled={!languageOne && true } onClick={(e)=>handleClick(e)}>Load</button>
     </>
   )
 

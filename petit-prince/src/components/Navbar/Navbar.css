@@ -12,9 +12,8 @@ li {
   margin: 0;
 }
 
-p {
+.navbar p {
   float: right;
-  padding: 0;
   margin:0;
 }
 

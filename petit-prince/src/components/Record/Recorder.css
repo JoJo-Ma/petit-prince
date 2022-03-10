@@ -1,0 +1,72 @@
+.translation-container {
+  display: flex;
+  align-content: center;
+}
+
+.translation-container p {
+  float: none;
+  font-size: 20px;
+  padding: 10px 5px;
+  line-height: 55px;
+}
+
+.translation {
+  /* border: 2px solid #c23f30; */
+  margin: auto;
+  max-width: 60%;
+  text-align: justify;
+  display:inline;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.dialogue, .paragraph {
+  display: inline;
+}
+
+.dedication {
+  text-align: center;
+}
+
+.chapter {
+  text-align: center;
+  margin: 20px 0px;
+  font-size: 50px;
+}
+
+.languageOne {
+  background-color: #c23f30;
+  color: white;
+  border: 2px solid white;
+}
+
+.languageOne:hover {
+  border: 2px solid #c23f30;
+}
+
+
+.languageOne,{
+  border-radius: 10px;
+}
+
+.clear{
+  clear: both;
+  display: block;
+  padding: 5px 0px;
+  content: "";
+  width: 100%;
+}
+
+
+.audioplayer {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  bottom: 0;
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(194,63,48,1) 61%, rgba(194,119,48,1) 100%);
+  height: 100px;
+}
+
+#current {
+  background-color: black;
+}
