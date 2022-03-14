@@ -69,5 +69,11 @@ CREATE TABLE trans_shaping (
 
 CREATE TABLE blobtest (
   id serial primary key,
-  data bytea
+  sentence_id integer,
+  data bytea,
+  trans_desc_id integer,
+  username_id uuid NOT NULL,
+  FOREIGN KEY (trans_desc_id) REFERENCES trans_desc (id),
+  FOREIGN KEY (username_id) REFERENCES users (id),
+  UNIQUE(trans_desc_id, sentence_id, username_id)
 );

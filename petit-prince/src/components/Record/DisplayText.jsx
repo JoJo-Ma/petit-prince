@@ -1,11 +1,14 @@
 import React, {useState, useEffect, useRef} from 'react';
 
+
 import "./Recorder.css"
 
 
-const DisplayText =  ({data, currentId}) => {
+const DisplayText =  ({data, currentId, changeCurrentId, statusRecorder}) => {
   const [isHidden, setIsHidden] = useState([])
   const isInitialMount = useRef(true);
+
+
 
   useEffect(() => {
     if (isInitialMount.current) {
@@ -16,9 +19,7 @@ const DisplayText =  ({data, currentId}) => {
   }, [data])
 
   const toggle = (id) => {
-    setIsHidden(isHidden.map((el, index) => {
-      return index === id ? !el : el
-    }))
+    changeCurrentId(id)
   }
 
   const handleWhiteSpace = (style) => {
@@ -41,6 +42,16 @@ const DisplayText =  ({data, currentId}) => {
     }
     return ''
   }
+  const handleStyleSentences = (id) => {
+    let style = undefined
+    if (statusRecorder.recorded.includes(id)) {
+      return "recorded"
+    }
+    if (statusRecorder.recordedAndInDb.includes(id)) {
+      return "recordedAndInDb"
+    }
+    return style
+  }
 
   return (
     <div className="translation">
@@ -53,9 +64,9 @@ const DisplayText =  ({data, currentId}) => {
           return ( <>
             {addBeginning}
             <p key={el.id}
-              className={el.style + " languageOne"}
+              className={el.id === currentId ? el.style + " languageOne current" : el.style + " languageOne"}
               onClick={() => toggle(el.id)}
-              id={el.id === currentId && "current"}
+              id={handleStyleSentences(el.id)}
               >
               {addSpace + el.languageOne}
             </p>

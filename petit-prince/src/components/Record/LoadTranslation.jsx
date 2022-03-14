@@ -1,19 +1,37 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext, useRef } from 'react';
 import LanguageSelector from '../LanguageSelector/LanguageSelector';
+import {UserContext} from './Record'
 
-
-const LoadTranslation = ({ loadData }) => {
+const LoadTranslation = ({ loadData, updateStatus }) => {
   const [languageOne, setLanguageOne] = useState(false)
-
+  const username = useContext(UserContext)
+  const isInitialMount = useRef(true);
 
   const selectLanguageOne = (lang) => {
     setLanguageOne(lang)
   }
 
+  useEffect(async () => {
+    if (isInitialMount.current) {
+      isInitialMount.current = false;
+      return
+    }
+    try {
+      const response = await fetch(`http://localhost:3005/blobtesting/statusRecording/${username}/${languageOne}`, {
+        method: "GET",
+        headers: {token : localStorage.token}
+      })
+      const parseRes = await response.json()
+      const data = parseRes.map(el => { return el.sentence_id})
+      updateStatus(data, 'NewRecordedAndInDb')
+    } catch (error) {
+      console.error(error.message);
+    }
+  }, [languageOne])
+
   const handleClick = async (e) => {
     e.preventDefault()
     try {
-      console.log(`http://localhost:3005/translations/${languageOne}/${languageOne}`);
       const response = await fetch (`http://localhost:3005/translations/${languageOne}/${languageOne}`, {
         method: "GET",
         headers: {token : localStorage.token}

@@ -41,7 +41,7 @@
 }
 
 .languageOne:hover {
-  border: 2px solid #c23f30;
+  border: 3px solid #c23f30;
 }
 
 
@@ -67,6 +67,15 @@
   height: 100px;
 }
 
-#current {
+.current {
   background-color: black;
+  border: 3px solid black;
+}
+
+#recorded {
+  background-color: orange;
+}
+
+#recordedAndInDb {
+  background-color: green;
 }

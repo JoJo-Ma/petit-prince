@@ -1,17 +1,19 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useContext } from 'react';
 import { setupMic } from './record_util'
 import {Buffer} from 'buffer'
+import {UserContext} from './Record'
 
 import "./Recorder.css"
 
-const Recorder = ({ setNext }) => {
+const Recorder = ({ setNext, currentId, languageId }) => {
+  const [audioToDb, setAudioToDb] = useState([])
   const [isRecording, setIsRecording] = useState(false)
   const mediaRecorder = useRef(null);
   const mediaChunks = useRef([])
   const mediaStream = useRef(null)
-  const [audioBlob, setAudioBlob] = useState(null)
   const [newBlob, setNewBlob] = useState(null)
   const [id, setId] = useState('0')
+  const username = useContext(UserContext)
 
   const startRecording = async (e) => {
     e.preventDefault()
@@ -42,13 +44,15 @@ const Recorder = ({ setNext }) => {
   }
 
   const onRecordingActive = ({ data }) => {
-    mediaChunks.current.push(data);
+    mediaChunks.current.push(data)
   };
 
   const onRecordingStop = () => {
-    const [chunk] = mediaChunks.current;
     const blob = new Blob(mediaChunks.current, { type: "audio/wav" });
-    setAudioBlob(blob)
+    setAudioToDb([...audioToDb, {
+      audioblob: blob,
+      sentenceId: currentId
+    }])
     setIsRecording(false)
     if (mediaStream.current) {
         const tracks = mediaStream.current.getTracks();
@@ -60,7 +64,12 @@ const Recorder = ({ setNext }) => {
     e.preventDefault()
     try {
       const formData = new FormData()
-      formData.append("audio", audioBlob)
+      for (let el of audioToDb) {
+        formData.append("audio", el.audioblob)
+        formData.append("sentence_id", el.sentenceId)
+      }
+      formData.append("language_id", languageId)
+      formData.append("username", username)
       const response = await fetch("http://localhost:3005/blobtesting", {
         method: "POST",
         body: formData
@@ -87,18 +96,18 @@ const Recorder = ({ setNext }) => {
   }
 
   function readFileAsync(file) {
-  return new Promise((resolve, reject) => {
-    let reader = new FileReader();
+    return new Promise((resolve, reject) => {
+      let reader = new FileReader();
 
-    reader.onload = () => {
-      resolve(reader.result);
-    };
+      reader.onload = () => {
+        resolve(reader.result);
+      };
 
-    reader.onerror = reject;
+      reader.onerror = reject;
 
-    reader.readAsArrayBuffer(file);
-  })
-}
+      reader.readAsArrayBuffer(file);
+    })
+  }
 
   const onChangeId = (e) => {
     setId(e.target.value)
@@ -143,7 +152,7 @@ const Recorder = ({ setNext }) => {
 
   return (
     <div className="audioplayer">
-      <h1>recorder</h1>
+      <h1>{isRecording ? 'Recording' : 'Not recording'}</h1>
       <button type="button" onClick={startRecording}>Start</button>
       <button type="button" onClick={onRecordingStop}>Stop</button>
       <button type="button" onClick={saveToDb}>Save to db</button>
