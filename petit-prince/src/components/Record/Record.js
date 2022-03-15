@@ -1,4 +1,4 @@
-import React, { useState, createContext } from 'react';
+import React, { useState, useEffect, createContext } from 'react';
 import { useStoreState } from 'easy-peasy';
 import Navbar from '../Navbar/Navbar'
 import LoadTranslation from './LoadTranslation'
@@ -7,7 +7,7 @@ import DisplayText from './DisplayText'
 
 import Recorder from './Recorder'
 
-const UserContext = createContext()
+const RecorderContext = createContext()
 
 const Record = () => {
   const username = useStoreState(state => state.naming.name)
@@ -69,16 +69,16 @@ const Record = () => {
       <Navbar />
       <h1>Record</h1>
       <p>Choose language to record</p>
-      <UserContext.Provider value={username} >
+      <RecorderContext.Provider value={{username}} >
         <LoadTranslation loadData={loadData} updateStatus={updateStatus}/>
         <div className="translation-container">
           <DisplayText data={data} currentId={currentId} changeCurrentId={changeCurrentId} statusRecorder={statusRecorder}/>
         </div>
-        <Recorder setNext={setNext} currentId={currentId} languageId={data.idLanguageOne}/>
-      </UserContext.Provider>
+        <Recorder setNext={setNext} currentId={currentId} languageId={data.idLanguageOne} statusRecorder={statusRecorder}/>
+      </RecorderContext.Provider>
     </>
   )
 }
 
 export default Record;
-export {UserContext};
+export {RecorderContext};

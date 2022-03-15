@@ -19,20 +19,7 @@ let upload = multer().fields([
     maxCount: 10
   }])
 
-router.get('/:id', async (req, res) => {
-  try {
-    const params = req.params
-
-    const data = await pool.query("SELECT data FROM blobtest where id = $1", [params.id])
-
-    console.log(data.rows[0].data);
-    res.json(data.rows[0].data)
-  } catch (e) {
-    console.error(e.message);
-    res.status(500).json("server error")
-  }
-})
-
+//get list of sentence id recorded for the username-language pair
 router.get('/statusRecording/:username/:language', async (req, res) => {
   try {
     const { username, language } = req.params
@@ -48,6 +35,26 @@ router.get('/statusRecording/:username/:language', async (req, res) => {
     res.json(data.rows)
   } catch (error) {
     console.error(error.message);
+    res.status(500).json("server error")
+  }
+})
+
+
+//get specific recording for a sentence on a username-language pair
+router.get('/sentence-audio/:sentenceId/:username/:language_id', async (req, res) => {
+  try {
+    const { sentenceId, username, language_id } = req.params
+
+    const data = await pool.query("SELECT blobtest.data FROM blobtest \
+    LEFT JOIN users ON users.id = blobtest.username_id \
+    WHERE blobtest.sentence_id = $1 AND users.username = $2 AND blobtest.trans_desc_id = $3", [sentenceId, username, language_id])
+
+    console.log(data.rows[0].data);
+    res.json(data.rows[0].data)
+
+  } catch (error) {
+    console.error(error.message);
+    res.status(500).json("server error")
   }
 })
 
@@ -96,6 +103,26 @@ router.post('/', upload, async (req, res) => {
   } catch (error) {
     console.error(error.message);
     res.status(500).send("server error oops")
+  }
+})
+
+router.put('/', upload, async (req,res) => {
+  try {
+    const audio = req.files.audio[0].buffer
+    const sentenceId = req.body.sentence_id
+    const languageId = req.body.language_id
+    const username = req.body.username
+
+    console.log(req.files.audio[0].buffer);
+
+    const updatedEntry = await pool.query(`WITH sel as (SELECT id FROM users WHERE username = $4 ) \
+    UPDATE blobtest SET data = $1 WHERE sentence_id = $2 AND trans_desc_id = $3 and username_id = (SELECT id FROM sel) RETURNING sentence_id;`, [audio, sentenceId, languageId, username])
+
+    res.send(updatedEntry.rows[0])
+
+  } catch (error) {
+    console.error(error.message);
+    res.status(500).send('server error oops')
   }
 })
 

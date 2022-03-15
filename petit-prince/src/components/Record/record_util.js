@@ -1,4 +1,4 @@
-const getMedia = async (constraints = { audio : true }) => {
+const setupMic = async (constraints = { audio : true }) => {
     try {
       return await navigator.mediaDevices.getUserMedia(constraints);
     } catch(err) {
@@ -6,12 +6,31 @@ const getMedia = async (constraints = { audio : true }) => {
     }
   }
 
+const convertBlobToAudioBuffer = (blob, context) => {
+    return new Promise((resolve, reject) => {
+      let fileReader = new FileReader()
+      fileReader.onload = () => {
+        const arrayBuffer = fileReader.result
+        context.decodeAudioData(arrayBuffer, (audioBuffer) => {
+          resolve(audioBuffer)
+        })
 
-const setupMic = () => {
-  return getMedia()
+      }
+
+      fileReader.onerror = reject
+
+      fileReader.readAsArrayBuffer(blob)
+    })
+  }
+
+
+
+const play = (buffer, audioContext) => {
+  let sourceNode = audioContext.createBufferSource();
+  sourceNode.buffer = buffer
+  sourceNode.connect(audioContext.destination)
+  sourceNode.start(0)
 }
 
 
-
-
-export {setupMic};
+export {setupMic, convertBlobToAudioBuffer, play};

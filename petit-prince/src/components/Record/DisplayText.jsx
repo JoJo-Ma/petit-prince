@@ -1,24 +1,39 @@
-import React, {useState, useEffect, useRef} from 'react';
-
+import React, {useState, useEffect, useRef, useContext} from 'react';
+import { setupMic, convertBlobToAudioBuffer, play } from './record_util'
+import {RecorderContext} from './Record'
+import {Buffer} from 'buffer'
 
 import "./Recorder.css"
 
-
-const DisplayText =  ({data, currentId, changeCurrentId, statusRecorder}) => {
-  const [isHidden, setIsHidden] = useState([])
-  const isInitialMount = useRef(true);
-
-
+export function useOnScreen(ref) {
+  const [isOnScreen, setIsOnScreen] = useState(false);
+  const observerRef = useRef(null);
 
   useEffect(() => {
-    if (isInitialMount.current) {
-      isInitialMount.current = false;
-    } else {
-        setIsHidden(new Array(data.data.length).fill(true,0))
-    }
-  }, [data])
+    observerRef.current = new IntersectionObserver(([entry]) =>
+      setIsOnScreen(entry.isIntersecting)
+    , {rootMargin:'0px 0px -50% 0px'});
+  }, []);
 
-  const toggle = (id) => {
+  useEffect(() => {
+    if (ref.current === null) return
+    observerRef.current.observe(ref.current);
+    return () => {
+      observerRef.current.disconnect();
+    };
+  }, [ref.current]);
+
+  return isOnScreen;
+}
+
+const DisplayText =  ({data, currentId, changeCurrentId, statusRecorder}) => {
+  const isInitialMount = useRef(true);
+  const {username} = useContext(RecorderContext)
+  const currentEl = useRef(null)
+  const isOnScreen = useOnScreen(currentEl)
+
+
+  const handleClick = async (id) => {
     changeCurrentId(id)
   }
 
@@ -42,19 +57,27 @@ const DisplayText =  ({data, currentId, changeCurrentId, statusRecorder}) => {
     }
     return ''
   }
-  const handleStyleSentences = (id) => {
-    let style = undefined
+  const handleStyleSentences = (style, id) => {
     if (statusRecorder.recorded.includes(id)) {
-      return "recorded"
+      return `${style} languageOne recorded`
     }
     if (statusRecorder.recordedAndInDb.includes(id)) {
-      return "recordedAndInDb"
+      return `${style} languageOne recordedAndInDb`
     }
-    return style
+    return `${style} languageOne`
   }
 
+
+  // keep the current sentence visible in window, at around 1/3 to 1/2
+  useEffect(() => {
+    if (!currentEl.current) return
+    if (!isOnScreen) {
+      window.scrollTo({top:currentEl.current.offsetTop - window.innerHeight / 3, behavior:'smooth'})
+    }
+  },[currentId])
+
   return (
-    <div className="translation">
+    <div className="translation" ref={undefined}>
       {
         data ?
         data.data.map((el, index) => {
@@ -64,9 +87,10 @@ const DisplayText =  ({data, currentId, changeCurrentId, statusRecorder}) => {
           return ( <>
             {addBeginning}
             <p key={el.id}
-              className={el.id === currentId ? el.style + " languageOne current" : el.style + " languageOne"}
-              onClick={() => toggle(el.id)}
-              id={handleStyleSentences(el.id)}
+              className={handleStyleSentences(el.style, el.id)}
+              onClick={() => handleClick(el.id)}
+              id={el.id === currentId ? 'current' : undefined}
+              ref={el.id === currentId ? currentEl : undefined}
               >
               {addSpace + el.languageOne}
             </p>

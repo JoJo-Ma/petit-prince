@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useContext, useRef } from 'react';
 import LanguageSelector from '../LanguageSelector/LanguageSelector';
-import {UserContext} from './Record'
+import {RecorderContext} from './Record'
 
 const LoadTranslation = ({ loadData, updateStatus }) => {
   const [languageOne, setLanguageOne] = useState(false)
-  const username = useContext(UserContext)
+  const {username} = useContext(RecorderContext)
   const isInitialMount = useRef(true);
 
   const selectLanguageOne = (lang) => {

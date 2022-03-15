@@ -1,19 +1,18 @@
 import React, { useState, useEffect, useRef, useContext } from 'react';
-import { setupMic } from './record_util'
+import { setupMic, convertBlobToAudioBuffer, play } from './record_util'
 import {Buffer} from 'buffer'
-import {UserContext} from './Record'
+import {RecorderContext} from './Record'
 
 import "./Recorder.css"
 
-const Recorder = ({ setNext, currentId, languageId }) => {
+const Recorder = ({ setNext, currentId, languageId, statusRecorder }) => {
   const [audioToDb, setAudioToDb] = useState([])
   const [isRecording, setIsRecording] = useState(false)
   const mediaRecorder = useRef(null);
   const mediaChunks = useRef([])
   const mediaStream = useRef(null)
   const [newBlob, setNewBlob] = useState(null)
-  const [id, setId] = useState('0')
-  const username = useContext(UserContext)
+  const {username} = useContext(RecorderContext)
 
   const startRecording = async (e) => {
     e.preventDefault()
@@ -27,13 +26,12 @@ const Recorder = ({ setNext, currentId, languageId }) => {
       if (isStreamEnded) {
         mediaStream.current = await setupMic()
         }
-
         // User blocked the permissions (getMediaStream errored out)
        if (!mediaStream.current.active) {
          return;
        }
        mediaRecorder.current = new MediaRecorder(mediaStream.current, {
-            audioBitsPerSecond : 32000,
+            audioBitsPerSecond : 64000,
             mimeType: 'audio/webm;codecs=pcm',
         });
        mediaRecorder.current.ondataavailable = onRecordingActive;
@@ -47,6 +45,7 @@ const Recorder = ({ setNext, currentId, languageId }) => {
     mediaChunks.current.push(data)
   };
 
+  //TODO refactor to handle both post and put :)
   const onRecordingStop = () => {
     const blob = new Blob(mediaChunks.current, { type: "audio/wav" });
     setAudioToDb([...audioToDb, {
@@ -76,22 +75,8 @@ const Recorder = ({ setNext, currentId, languageId }) => {
       })
 
       const parseRes = await response.json()
-      setNewBlob(new Blob([Buffer.from(parseRes.data)],{ type: "audio/wav" }))
     } catch (error) {
       console.error(error.message);
-    }
-  }
-
-  const loadFromDb = async (e) => {
-    e.preventDefault()
-    try {
-      const response = await fetch (`http://localhost:3005/blobtesting/${id}`, {
-        method: "GET",
-        headers: {token : localStorage.token}
-      })
-      const parseRes = await response.json()
-      setNewBlob(new Blob([Buffer.from(parseRes, "7bit")],{ type: "audio/wav" }))
-    } catch (e) {
     }
   }
 
@@ -109,41 +94,48 @@ const Recorder = ({ setNext, currentId, languageId }) => {
     })
   }
 
-  const onChangeId = (e) => {
-    setId(e.target.value)
-  }
-
-  const convertBlobToAudioBuffer = (blob, context) => {
-    return new Promise((resolve, reject) => {
-      let fileReader = new FileReader()
-      fileReader.onload = () => {
-        const arrayBuffer = fileReader.result
-        context.decodeAudioData(arrayBuffer, (audioBuffer) => {
-          resolve(audioBuffer)
-        })
-
+  const updateInDb = async () => {
+    const blob = new Blob(mediaChunks.current, { type: "audio/wav" });
+    setIsRecording(false)
+    if (mediaStream.current) {
+        const tracks = mediaStream.current.getTracks();
+        tracks.forEach((track) => track.stop());
       }
+    try {
+      const formData = new FormData()
+      formData.append("audio", blob)
+      formData.append("sentence_id", currentId)
+      formData.append("language_id", languageId)
+      formData.append("username", username)
+      const response = await fetch("http://localhost:3005/blobtesting", {
+        method: "PUT",
+        body: formData
+      })
 
-      fileReader.onerror = reject
-
-      fileReader.readAsArrayBuffer(blob)
-    })
+      const parseRes = await response.json()
+    } catch (error) {
+      console.error(error.message);
+    }
   }
 
-  const playSound = async () => {
-    const audioContext = new AudioContext()
-    const fileReader = new FileReader()
-    var audioBuffer = await convertBlobToAudioBuffer(newBlob, audioContext)
+  const playSentence = async (id = currentId) => {
+    if (!statusRecorder.recordedAndInDb.includes(id)) return
+    try {
+      const response = await fetch(`http://localhost:3005/blobtesting/sentence-audio/${id}/${username}/${languageId}`, {
+        method: "GET",
+        headers: {token : localStorage.token}
+      })
+      const parseRes = await response.json()
+      const blob = new Blob([Buffer.from(parseRes, "7bit")],{ type: "audio/wav" })
+      const audioContext = new AudioContext()
+      const fileReader = new FileReader()
+      var audioBuffer = await convertBlobToAudioBuffer(blob, audioContext)
 
-    const play = (buffer) => {
-      console.log(buffer);
-      let sourceNode = audioContext.createBufferSource();
-      sourceNode.buffer = buffer
-      sourceNode.connect(audioContext.destination)
-      sourceNode.start(0)
+      play(audioBuffer, audioContext)
+    } catch (error) {
+      console.error(error.message);
     }
-    play(audioBuffer)
-    }
+  }
 
 
     const handleClickNext = () => {
@@ -153,13 +145,22 @@ const Recorder = ({ setNext, currentId, languageId }) => {
   return (
     <div className="audioplayer">
       <h1>{isRecording ? 'Recording' : 'Not recording'}</h1>
-      <button type="button" onClick={startRecording}>Start</button>
-      <button type="button" onClick={onRecordingStop}>Stop</button>
-      <button type="button" onClick={saveToDb}>Save to db</button>
+      {
+        !statusRecorder.recordedAndInDb.includes(currentId)
+        ?
+        <>
+        <button type="button" onClick={startRecording}>Start</button>
+        <button type="button" onClick={onRecordingStop}>Stop</button>
+        <button type="button" onClick={saveToDb}>Save to db</button>
+        </>
+        :
+        <>
+        <button type="button" onClick={startRecording}>Rerecord</button>
+        <button type="button" onClick={updateInDb}>Stopito</button>
+        </>
+      }
       <button type="button" onClick={handleClickNext}>Next</button>
-      <input type="text" name="loadId" onChange={e => onChangeId(e)}/>
-      <button type="button" onClick={loadFromDb}>Load db</button>
-      <button type="button" onClick={playSound}>play sound</button>
+      <button type="button" onClick={() => playSentence(currentId)}>Play sentence</button>
     </div>
   )
 }

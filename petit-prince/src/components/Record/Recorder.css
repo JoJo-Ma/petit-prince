@@ -67,15 +67,15 @@
   height: 100px;
 }
 
-.current {
+#current {
   background-color: black;
   border: 3px solid black;
 }
 
-#recorded {
+.recorded {
   background-color: orange;
 }
 
-#recordedAndInDb {
+.recordedAndInDb {
   background-color: green;
 }
