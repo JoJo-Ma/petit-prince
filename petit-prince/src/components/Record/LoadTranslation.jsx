@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext, useRef } from 'react';
 import LanguageSelector from '../LanguageSelector/LanguageSelector';
 import {RecorderContext} from './Record'
 
-const LoadTranslation = ({ loadData, updateStatus }) => {
+const LoadTranslation = ({ loadData, updateStatus, statusRecorder }) => {
   const [languageOne, setLanguageOne] = useState(false)
   const {username} = useContext(RecorderContext)
   const isInitialMount = useRef(true);
@@ -12,6 +12,7 @@ const LoadTranslation = ({ loadData, updateStatus }) => {
   }
 
   useEffect(async () => {
+    loadData("")
     if (isInitialMount.current) {
       isInitialMount.current = false;
       return

@@ -5,14 +5,25 @@ import {RecorderContext} from './Record'
 
 import "./Recorder.css"
 
-const Recorder = ({ setNext, currentId, languageId, statusRecorder }) => {
+const NEW = 'POST'
+const UPDATE = 'PUT'
+
+const Recorder = ({ setNext, currentId, languageId, statusRecorder, updateStatus, setSentenceDuration }) => {
   const [audioToDb, setAudioToDb] = useState([])
   const [isRecording, setIsRecording] = useState(false)
   const mediaRecorder = useRef(null);
   const mediaChunks = useRef([])
   const mediaStream = useRef(null)
-  const [newBlob, setNewBlob] = useState(null)
   const {username} = useContext(RecorderContext)
+  const [typeOfRequest, setTypeOfRequest] = useState('')
+
+  useEffect(() => {
+    if (!statusRecorder.recordedAndInDb.includes(currentId)) {
+      setTypeOfRequest(NEW)
+    } else {
+      setTypeOfRequest(UPDATE)
+    }
+  }, [currentId])
 
   const startRecording = async (e) => {
     e.preventDefault()
@@ -45,74 +56,41 @@ const Recorder = ({ setNext, currentId, languageId, statusRecorder }) => {
     mediaChunks.current.push(data)
   };
 
-  //TODO refactor to handle both post and put :)
-  const onRecordingStop = () => {
-    const blob = new Blob(mediaChunks.current, { type: "audio/wav" });
-    setAudioToDb([...audioToDb, {
-      audioblob: blob,
-      sentenceId: currentId
-    }])
-    setIsRecording(false)
-    if (mediaStream.current) {
+  //TODO find a way to slice recording
+  const onRecordingStop = (e) => {
+      const blob =new Blob(mediaChunks.current, { type: "audio/wav" });
+      setAudioToDb([...audioToDb, {
+        audioblob: blob,
+        sentenceId: currentId,
+        type: typeOfRequest
+      }])
+      updateStatus([currentId], "AddRecorded")
+      setIsRecording(false)
+      if (mediaStream.current) {
         const tracks = mediaStream.current.getTracks();
         tracks.forEach((track) => track.stop());
       }
   };
 
-  const saveToDb = async (e) => {
+
+  const saveToDb = async (e, type) => {
     e.preventDefault()
     try {
       const formData = new FormData()
-      for (let el of audioToDb) {
+      for (let el of audioToDb.filter(audio => audio.type === type)) {
         formData.append("audio", el.audioblob)
         formData.append("sentence_id", el.sentenceId)
       }
       formData.append("language_id", languageId)
       formData.append("username", username)
       const response = await fetch("http://localhost:3005/blobtesting", {
-        method: "POST",
+        method: type,
         body: formData
       })
 
       const parseRes = await response.json()
-    } catch (error) {
-      console.error(error.message);
-    }
-  }
-
-  function readFileAsync(file) {
-    return new Promise((resolve, reject) => {
-      let reader = new FileReader();
-
-      reader.onload = () => {
-        resolve(reader.result);
-      };
-
-      reader.onerror = reject;
-
-      reader.readAsArrayBuffer(file);
-    })
-  }
-
-  const updateInDb = async () => {
-    const blob = new Blob(mediaChunks.current, { type: "audio/wav" });
-    setIsRecording(false)
-    if (mediaStream.current) {
-        const tracks = mediaStream.current.getTracks();
-        tracks.forEach((track) => track.stop());
-      }
-    try {
-      const formData = new FormData()
-      formData.append("audio", blob)
-      formData.append("sentence_id", currentId)
-      formData.append("language_id", languageId)
-      formData.append("username", username)
-      const response = await fetch("http://localhost:3005/blobtesting", {
-        method: "PUT",
-        body: formData
-      })
-
-      const parseRes = await response.json()
+      console.log(parseRes.map(el => { return el.sentence_id}));
+      updateStatus(parseRes.map(el => { return el.sentence_id}), 'AddRecordedAndInDb')
     } catch (error) {
       console.error(error.message);
     }
@@ -130,7 +108,9 @@ const Recorder = ({ setNext, currentId, languageId, statusRecorder }) => {
       const audioContext = new AudioContext()
       const fileReader = new FileReader()
       var audioBuffer = await convertBlobToAudioBuffer(blob, audioContext)
-
+      setSentenceDuration(audioBuffer.duration)
+      console.log(audioBuffer);
+      console.log(audioContext);
       play(audioBuffer, audioContext)
     } catch (error) {
       console.error(error.message);
@@ -150,18 +130,20 @@ const Recorder = ({ setNext, currentId, languageId, statusRecorder }) => {
         ?
         <>
         <button type="button" onClick={startRecording}>Start</button>
-        <button type="button" onClick={onRecordingStop}>Stop</button>
-        <button type="button" onClick={saveToDb}>Save to db</button>
+        <button type="button" onClick={(e) => {onRecordingStop(e,NEW)}}>Stop</button>
+        <button type="button" onClick={(e) => {saveToDb(e, NEW)}}>Save to db</button>
         </>
         :
         <>
         <button type="button" onClick={startRecording}>Rerecord</button>
-        <button type="button" onClick={updateInDb}>Stopito</button>
+        <button type="button" onClick={(e) => {onRecordingStop(e,UPDATE)}}>Stopito</button>
+        <button type="button" onClick={(e) => {saveToDb(e,UPDATE)}}>Save update to db</button>
         </>
       }
       <button type="button" onClick={handleClickNext}>Next</button>
-      <button type="button" onClick={() => playSentence(currentId)}>Play sentence</button>
+      <button type="button" onClick={() => {playSentence(currentId)}}>Play sentence</button>
     </div>
+
   )
 }
 

@@ -17,8 +17,10 @@ const Record = () => {
     recorded: [],
     recordedAndInDb: []
   })
+  const [duration, setDuration] = useState(0)
 
   const loadData = (input) => {
+    console.log(input);
     setData(input)
   }
 
@@ -30,31 +32,31 @@ const Record = () => {
     setCurrentId(id)
   }
 
-  const updateStatus = (arrayOfIds, statusType) => {
+  const updateStatus = (ids, statusType) => {
+    console.log(ids);
+    console.log(statusRecorder.recorded);
     switch (statusType) {
+      //used on loading data
+      case 'NewRecordedAndInDb':
+      setStatusRecorder({
+        recorded: [],
+        recordedAndInDb: [...ids]
+      })
+      break;
+      //used after POST is triggered
       case 'AddRecordedAndInDb':
         setStatusRecorder({
-          ...statusRecorder,
-          recordedAndInDb: [...statusRecorder.recordedAndInDb, ...arrayOfIds]
+          recorded: statusRecorder.recorded.filter(item => !ids.includes(item)),
+          recordedAndInDb: [...statusRecorder.recordedAndInDb, ...ids]
         })
         break;
-      case 'NewRecordedAndInDb':
-        setStatusRecorder({
-          ...statusRecorder,
-          recordedAndInDb: [...arrayOfIds]
-        })
-        break;
+      //used when recording stops
       case 'AddRecorded':
         setStatusRecorder({
           ...statusRecorder,
-          recorded: [...statusRecorder.recorded, ...arrayOfIds]
+          recorded: [...statusRecorder.recorded, ...ids]
         })
         break;
-      case 'NewRecorded':
-        setStatusRecorder({
-          ...statusRecorder,
-          recorded: [...arrayOfIds]
-        })
         break;
       default:
         setStatusRecorder({
@@ -64,17 +66,38 @@ const Record = () => {
     }
   }
 
+  const setSentenceDuration = (duration) => {
+    setDuration(duration)
+  }
+
   return (
     <>
       <Navbar />
       <h1>Record</h1>
       <p>Choose language to record</p>
       <RecorderContext.Provider value={{username}} >
-        <LoadTranslation loadData={loadData} updateStatus={updateStatus}/>
+        <LoadTranslation
+          loadData={loadData}
+          updateStatus={updateStatus}
+          statusRecorder={statusRecorder}
+        />
         <div className="translation-container">
-          <DisplayText data={data} currentId={currentId} changeCurrentId={changeCurrentId} statusRecorder={statusRecorder}/>
+          <DisplayText
+            data={data}
+            currentId={currentId}
+            changeCurrentId={changeCurrentId}
+            statusRecorder={statusRecorder}
+            duration={duration}
+          />
         </div>
-        <Recorder setNext={setNext} currentId={currentId} languageId={data.idLanguageOne} statusRecorder={statusRecorder}/>
+        <Recorder
+          setNext={setNext}
+          currentId={currentId}
+          languageId={data.idLanguageOne}
+          statusRecorder={statusRecorder}
+          updateStatus={updateStatus}
+          setSentenceDuration={setSentenceDuration}
+        />
       </RecorderContext.Provider>
     </>
   )

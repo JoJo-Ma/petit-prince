@@ -67,38 +67,12 @@ router.post('/', upload, async (req, res) => {
     const languageId = req.body.language_id
     const username = req.body.username
 
-
-    // expand(2) returns '($1, $2, $3, user_id_from_username), ($5, $6, $7, user_id_from_username)'
-    const expand = (rowCount, startAt=1, placeholder = '(SELECT id FROM sel)') => {
-      var index = startAt
-      return Array(rowCount).fill(0).map(v => `(${Array(4).fill(0).map(v => {
-        if (index % 4 === 0) {
-          index++
-          return `${placeholder}`
-        }
-        return `$${index++}`
-      }).join(", ")})`).join(", ")
-    }
-
-
-    //returns 4 parameters sent to the query for the first insertion then 3 afterwards
-    const formatInsert = (audio, sentenceId, languageId, username) => {
-      var arr = []
-      for (var i = 0; i < audio.length; i++) {
-        arr.push(parseInt(sentenceId[i]),audio[i], parseInt(languageId))
-        if (i == 0) {
-          arr.push(username)
-        }
-      }
-      return arr
-    }
-
     const newEntry = await pool.query(`WITH sel as (SELECT id FROM users WHERE username = $4 ) \
     INSERT INTO blobtest (sentence_id, data, trans_desc_id, username_id) VALUES ${expand(audio.length)} RETURNING sentence_id;`, formatInsert(audio, sentenceId, languageId, username))
 
-    console.log(newEntry.rows[0]);
+    console.log(newEntry.rows);
 
-    res.send(newEntry.rows[0])
+    res.send(newEntry.rows)
 
   } catch (error) {
     console.error(error.message);
@@ -118,12 +92,42 @@ router.put('/', upload, async (req,res) => {
     const updatedEntry = await pool.query(`WITH sel as (SELECT id FROM users WHERE username = $4 ) \
     UPDATE blobtest SET data = $1 WHERE sentence_id = $2 AND trans_desc_id = $3 and username_id = (SELECT id FROM sel) RETURNING sentence_id;`, [audio, sentenceId, languageId, username])
 
-    res.send(updatedEntry.rows[0])
+    res.send(updatedEntry.rows)
 
   } catch (error) {
     console.error(error.message);
     res.status(500).send('server error oops')
   }
 })
+
+//HELPER
+// expand(2) returns '($1, $2, $3, user_id_from_username), ($5, $6, $7, user_id_from_username)'
+const expand = (rowCount, startAt=1, placeholder = '(SELECT id FROM sel)') => {
+  var index = startAt
+  return Array(rowCount).fill(0).map(v => `(${Array(4).fill(0).map(v => {
+    if (index % 4 === 0) {
+      index++
+      return `${placeholder}`
+    }
+    return `$${index++}`
+  }).join(", ")})`).join(", ")
+}
+
+//HELPER
+//returns 4 parameters sent to the query for the first insertion then 3 afterwards
+const formatInsert = (audio, sentenceId, languageId, username) => {
+  if (audio.length === 1) {
+    return [parseInt(sentenceId), audio[0], parseInt(languageId), username]
+  }
+  var arr = []
+  for (var i = 0; i < audio.length; i++) {
+    arr.push(parseInt(sentenceId[i]),audio[i], parseInt(languageId))
+    if (i == 0) {
+      arr.push(username)
+    }
+  }
+  return arr
+}
+
 
 module.exports = router;
