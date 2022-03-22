@@ -100,6 +100,21 @@ router.put('/', upload, async (req,res) => {
   }
 })
 
+router.delete('/sentence-audio/:sentenceId/:username/:language_id', async (req, res) => {
+  try {
+    const { sentenceId, username, language_id } = req.params
+
+    const data = await pool.query("WITH sel as (SELECT id FROM users WHERE username = $2 )\
+    DELETE FROM blobtest WHERE sentence_id = $1 AND username_id = (SELECT id FROM sel) AND trans_desc_id = $3", [sentenceId, username, language_id])
+
+    res.json("success")
+
+  } catch (error) {
+    console.error(error.message);
+    res.status(500).json("server error")
+  }
+})
+
 //HELPER
 // expand(2) returns '($1, $2, $3, user_id_from_username), ($5, $6, $7, user_id_from_username)'
 const expand = (rowCount, startAt=1, placeholder = '(SELECT id FROM sel)') => {

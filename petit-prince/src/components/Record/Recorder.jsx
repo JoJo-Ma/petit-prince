@@ -70,6 +70,7 @@ const Recorder = ({ setNext, currentId, languageId, statusRecorder, updateStatus
         const tracks = mediaStream.current.getTracks();
         tracks.forEach((track) => track.stop());
       }
+      setNext()
   };
 
 
@@ -96,8 +97,28 @@ const Recorder = ({ setNext, currentId, languageId, statusRecorder, updateStatus
     }
   }
 
+  const deleteInDb = async (e, id=currentId) => {
+    e.preventDefault()
+    try {
+      const response = await fetch(`http://localhost:3005/blobtesting/sentence-audio/${id}/${username}/${languageId}`, {
+        method: "DELETE",
+        headers: {token : localStorage.token}
+      })
+      console.log('test');
+      updateStatus(statusRecorder.recordedAndInDb.filter(id => id != currentId),"DeleteRecordedAndInDb")
+    } catch (error) {
+
+    }
+  }
+
   const playSentence = async (id = currentId) => {
-    if (!statusRecorder.recordedAndInDb.includes(id)) return
+    const audioContext = new AudioContext()
+    if (statusRecorder.recorded.includes(id)) {
+      var audioBuffer = await convertBlobToAudioBuffer(audioToDb.filter(obj => obj.sentenceId === id)[0].audioblob, audioContext)
+      setSentenceDuration(audioBuffer.duration)
+      play(audioBuffer, audioContext)
+    return
+    }
     try {
       const response = await fetch(`http://localhost:3005/blobtesting/sentence-audio/${id}/${username}/${languageId}`, {
         method: "GET",
@@ -105,12 +126,8 @@ const Recorder = ({ setNext, currentId, languageId, statusRecorder, updateStatus
       })
       const parseRes = await response.json()
       const blob = new Blob([Buffer.from(parseRes, "7bit")],{ type: "audio/wav" })
-      const audioContext = new AudioContext()
-      const fileReader = new FileReader()
       var audioBuffer = await convertBlobToAudioBuffer(blob, audioContext)
       setSentenceDuration(audioBuffer.duration)
-      console.log(audioBuffer);
-      console.log(audioContext);
       play(audioBuffer, audioContext)
     } catch (error) {
       console.error(error.message);
@@ -129,19 +146,32 @@ const Recorder = ({ setNext, currentId, languageId, statusRecorder, updateStatus
         !statusRecorder.recordedAndInDb.includes(currentId)
         ?
         <>
-        <button type="button" onClick={startRecording}>Start</button>
-        <button type="button" onClick={(e) => {onRecordingStop(e,NEW)}}>Stop</button>
-        <button type="button" onClick={(e) => {saveToDb(e, NEW)}}>Save to db</button>
+        <button type="button"
+         disabled = { isRecording && true }
+         onClick={startRecording}>Start</button>
+        <button type="button"
+          disabled = { !isRecording && true }
+          onClick={(e) => {onRecordingStop(e,NEW)}}>Stop</button>
+        <button type="button"
+          disabled={!statusRecorder.recorded.includes(currentId)&& true }
+          onClick={(e) => {saveToDb(e, NEW)}}>Save to db</button>
         </>
         :
         <>
-        <button type="button" onClick={startRecording}>Rerecord</button>
-        <button type="button" onClick={(e) => {onRecordingStop(e,UPDATE)}}>Stopito</button>
-        <button type="button" onClick={(e) => {saveToDb(e,UPDATE)}}>Save update to db</button>
+        <button type="button" disabled = { isRecording && true } onClick={startRecording}>Rerecord</button>
+        <button type="button" disabled = { !isRecording && true } onClick={(e) => {onRecordingStop(e,UPDATE)}}>Stopito</button>
+        <button type="button"
+        disabled={!statusRecorder.recorded.includes(currentId)&& true }
+        onClick={(e) => {saveToDb(e,UPDATE)}}>Save update to db</button>
+        <button type="button" onClick={(e) => {deleteInDb(e,currentId)}}>Delete</button>
+
         </>
       }
       <button type="button" onClick={handleClickNext}>Next</button>
-      <button type="button" onClick={() => {playSentence(currentId)}}>Play sentence</button>
+      <button type="button"
+        disabled={!statusRecorder.recordedAndInDb.includes(currentId) &&
+                    !statusRecorder.recorded.includes(currentId) && true }
+        onClick={() => {playSentence(currentId)}}>Play sentence</button>
     </div>
 
   )
