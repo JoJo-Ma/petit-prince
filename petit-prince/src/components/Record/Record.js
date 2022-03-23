@@ -33,7 +33,6 @@ const Record = () => {
   }
 
   const updateStatus = (ids, statusType) => {
-    console.log(ids);
     switch (statusType) {
       //used on loading data
       case 'NewRecordedAndInDb':
@@ -53,6 +52,12 @@ const Record = () => {
         setStatusRecorder({
           ...statusRecorder,
           recordedAndInDb: [...ids]
+        })
+      break;
+      case 'DeleteRecorded':
+        setStatusRecorder({
+          ...statusRecorder,
+          recorded: [...ids]
         })
       break;
       //used when recording stops

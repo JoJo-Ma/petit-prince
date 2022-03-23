@@ -14,6 +14,7 @@ const Recorder = ({ setNext, currentId, languageId, statusRecorder, updateStatus
   const mediaRecorder = useRef(null);
   const mediaChunks = useRef([])
   const mediaStream = useRef(null)
+  const audioContext = useRef(null)
   const {username} = useContext(RecorderContext)
   const [typeOfRequest, setTypeOfRequest] = useState('')
 
@@ -24,6 +25,13 @@ const Recorder = ({ setNext, currentId, languageId, statusRecorder, updateStatus
       setTypeOfRequest(UPDATE)
     }
   }, [currentId])
+
+  const getAudioContext = () => {
+    if (audioContext.current != null) {
+
+    }
+    audioContext.current = new AudioContext()
+  }
 
   const startRecording = async (e) => {
     e.preventDefault()
@@ -97,26 +105,33 @@ const Recorder = ({ setNext, currentId, languageId, statusRecorder, updateStatus
     }
   }
 
-  const deleteInDb = async (e, id=currentId) => {
+  const deleteRecording = async (e, id=currentId) => {
     e.preventDefault()
+    if (statusRecorder.recorded.includes(id)) {
+      setAudioToDb(audioToDb.filter(audio => audio.sentenceId != id))
+      updateStatus(statusRecorder.recorded.filter(el => el != id),"DeleteRecorded")
+    return
+    }
     try {
       const response = await fetch(`http://localhost:3005/blobtesting/sentence-audio/${id}/${username}/${languageId}`, {
         method: "DELETE",
         headers: {token : localStorage.token}
       })
       console.log('test');
-      updateStatus(statusRecorder.recordedAndInDb.filter(id => id != currentId),"DeleteRecordedAndInDb")
+      updateStatus(statusRecorder.recordedAndInDb.filter(el => el != currentId),"DeleteRecordedAndInDb")
     } catch (error) {
 
     }
   }
 
   const playSentence = async (id = currentId) => {
-    const audioContext = new AudioContext()
+    // const audioContext = new AudioContext()
+    getAudioContext()
+    console.log(audioContext.current);
     if (statusRecorder.recorded.includes(id)) {
       var audioBuffer = await convertBlobToAudioBuffer(audioToDb.filter(obj => obj.sentenceId === id)[0].audioblob, audioContext)
       setSentenceDuration(audioBuffer.duration)
-      play(audioBuffer, audioContext)
+      play(audioBuffer, audioContext.current)
     return
     }
     try {
@@ -126,9 +141,9 @@ const Recorder = ({ setNext, currentId, languageId, statusRecorder, updateStatus
       })
       const parseRes = await response.json()
       const blob = new Blob([Buffer.from(parseRes, "7bit")],{ type: "audio/wav" })
-      var audioBuffer = await convertBlobToAudioBuffer(blob, audioContext)
+      var audioBuffer = await convertBlobToAudioBuffer(blob, audioContext.current)
       setSentenceDuration(audioBuffer.duration)
-      play(audioBuffer, audioContext)
+      play(audioBuffer, audioContext.current)
     } catch (error) {
       console.error(error.message);
     }
@@ -138,6 +153,11 @@ const Recorder = ({ setNext, currentId, languageId, statusRecorder, updateStatus
     const handleClickNext = () => {
       setNext()
     }
+
+    const disabledDeletePlay = !statusRecorder.recordedAndInDb.includes(currentId) &&
+                !statusRecorder.recorded.includes(currentId) && true
+
+    const disabledSave = !statusRecorder.recorded.includes(currentId)&& true
 
   return (
     <div className="audioplayer">
@@ -153,7 +173,7 @@ const Recorder = ({ setNext, currentId, languageId, statusRecorder, updateStatus
           disabled = { !isRecording && true }
           onClick={(e) => {onRecordingStop(e,NEW)}}>Stop</button>
         <button type="button"
-          disabled={!statusRecorder.recorded.includes(currentId)&& true }
+          disabled={ disabledSave }
           onClick={(e) => {saveToDb(e, NEW)}}>Save to db</button>
         </>
         :
@@ -161,16 +181,17 @@ const Recorder = ({ setNext, currentId, languageId, statusRecorder, updateStatus
         <button type="button" disabled = { isRecording && true } onClick={startRecording}>Rerecord</button>
         <button type="button" disabled = { !isRecording && true } onClick={(e) => {onRecordingStop(e,UPDATE)}}>Stopito</button>
         <button type="button"
-        disabled={!statusRecorder.recorded.includes(currentId)&& true }
+        disabled={ disabledSave }
         onClick={(e) => {saveToDb(e,UPDATE)}}>Save update to db</button>
-        <button type="button" onClick={(e) => {deleteInDb(e,currentId)}}>Delete</button>
 
         </>
       }
+      <button type="button"
+        disabled={ disabledDeletePlay }
+        onClick={(e) => {deleteRecording(e,currentId)}}>Delete</button>
       <button type="button" onClick={handleClickNext}>Next</button>
       <button type="button"
-        disabled={!statusRecorder.recordedAndInDb.includes(currentId) &&
-                    !statusRecorder.recorded.includes(currentId) && true }
+        disabled={ disabledDeletePlay }
         onClick={() => {playSentence(currentId)}}>Play sentence</button>
     </div>
 
