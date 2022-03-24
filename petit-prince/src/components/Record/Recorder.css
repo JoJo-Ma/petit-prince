@@ -3,13 +3,6 @@
   align-content: center;
 }
 
-.translation-container p {
-  float: none;
-  font-size: 20px;
-  padding: 10px 5px;
-  line-height: 55px;
-}
-
 .translation {
   /* border: 2px solid #c23f30; */
   margin: auto;
@@ -22,16 +15,27 @@
 
 .dialogue, .paragraph {
   display: inline;
+  font-size: 20px;
+
+
+}
+
+.dialogue, .paragraph, .dedication, .chapter {
+  position:relative;
+  float: none;
+  padding: 10px 5px;
+  line-height: 55px;
 }
 
 .dedication {
   text-align: center;
+  font-size: 20px;
 }
 
 .chapter {
   text-align: center;
   margin: 20px 0px;
-  font-size: 50px;
+  font-size: 40px;
 }
 
 .languageOne {
@@ -79,3 +83,33 @@
 .recordedAndInDb {
   background-color: green;
 }
+
+.audioplayer .progressbar {
+  position:absolute;
+  background-color: blue;
+  width: 0%;
+  left:0;
+  top:0;
+  height: 10px;
+  animation: progress 3s infinite linear
+}
+
+
+/* TODO implement in audio recorder */
+@keyframes progress{
+    0%{
+      width: 0%;
+    }
+    25%{
+        width: 25%;
+    }
+    50%{
+        width: 50%;
+    }
+    75%{
+        width: 75%;
+    }
+    100%{
+        width: 100%;
+    }
+};

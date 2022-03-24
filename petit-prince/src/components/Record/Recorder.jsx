@@ -27,8 +27,9 @@ const Recorder = ({ setNext, currentId, languageId, statusRecorder, updateStatus
   }, [currentId])
 
   const getAudioContext = () => {
+    //stop current recording playing to avoid duplicated sounds
     if (audioContext.current != null) {
-
+      audioContext.current.close()
     }
     audioContext.current = new AudioContext()
   }
@@ -36,6 +37,8 @@ const Recorder = ({ setNext, currentId, languageId, statusRecorder, updateStatus
   const startRecording = async (e) => {
     e.preventDefault()
     if (!mediaStream.curent) {
+      //reset chunks for the next recording
+      mediaChunks.current = []
       mediaStream.current = await setupMic()
     }
     if (mediaStream.current) {
@@ -43,6 +46,7 @@ const Recorder = ({ setNext, currentId, languageId, statusRecorder, updateStatus
         .getTracks()
         .some((track) => track.readyState === "ended");
       if (isStreamEnded) {
+        console.log('hey coco');
         mediaStream.current = await setupMic()
         }
         // User blocked the permissions (getMediaStream errored out)
@@ -53,6 +57,7 @@ const Recorder = ({ setNext, currentId, languageId, statusRecorder, updateStatus
             audioBitsPerSecond : 64000,
             mimeType: 'audio/webm;codecs=pcm',
         });
+
        mediaRecorder.current.ondataavailable = onRecordingActive;
        mediaRecorder.current.onstop = onRecordingStop;
        mediaRecorder.current.start();
@@ -125,11 +130,9 @@ const Recorder = ({ setNext, currentId, languageId, statusRecorder, updateStatus
   }
 
   const playSentence = async (id = currentId) => {
-    // const audioContext = new AudioContext()
     getAudioContext()
-    console.log(audioContext.current);
     if (statusRecorder.recorded.includes(id)) {
-      var audioBuffer = await convertBlobToAudioBuffer(audioToDb.filter(obj => obj.sentenceId === id)[0].audioblob, audioContext)
+      var audioBuffer = await convertBlobToAudioBuffer(audioToDb.filter(obj => obj.sentenceId === id)[0].audioblob, audioContext.current)
       setSentenceDuration(audioBuffer.duration)
       play(audioBuffer, audioContext.current)
     return

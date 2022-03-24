@@ -26,7 +26,7 @@ export function useOnScreen(ref) {
   return isOnScreen;
 }
 
-const DisplayText =  ({data, currentId, changeCurrentId, statusRecorder}) => {
+const DisplayText =  ({data, currentId, changeCurrentId, statusRecorder, duration}) => {
   const isInitialMount = useRef(true);
   const {username} = useContext(RecorderContext)
   const currentEl = useRef(null)
@@ -86,14 +86,14 @@ const DisplayText =  ({data, currentId, changeCurrentId, statusRecorder}) => {
           const addEnd = handleEnd(el.style)
           return ( <>
             {addBeginning}
-            <p key={el.id}
+            <div key={el.id}
               className={handleStyleSentences(el.style, el.id)}
               onClick={() => handleClick(el.id)}
               id={el.id === currentId ? 'current' : undefined}
               ref={el.id === currentId ? currentEl : undefined}
               >
               {addSpace + el.languageOne}
-            </p>
+            </div>
             {addEnd}
           </>)
         }) : <p>toto</p>

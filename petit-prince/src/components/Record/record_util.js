@@ -1,5 +1,6 @@
 const setupMic = async (constraints = { audio : true }) => {
     try {
+      console.log('setup');
       return await navigator.mediaDevices.getUserMedia(constraints);
     } catch(err) {
       console.error(err.message);
