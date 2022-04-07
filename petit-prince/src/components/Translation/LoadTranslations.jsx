@@ -15,6 +15,8 @@ const LoadTranslation = ({ loadData }) => {
     setLanguageTwo(lang)
   }
 
+
+
   const handleClick = async (e) => {
     e.preventDefault()
     try {
@@ -30,10 +32,17 @@ const LoadTranslation = ({ loadData }) => {
     }
   }
 
+  const swap = () => {
+    const one = languageOne
+    setLanguageOne(languageTwo)
+    setLanguageTwo(one)
+  }
+
   return (
     <>
-      <LanguageSelector selectLanguage={selectLanguageOne} />
-      <LanguageSelector selectLanguage={selectLanguageTwo} />
+      <LanguageSelector selectLanguage={selectLanguageOne} language={languageOne}/>
+      <button className="" onClick={swap}>Swap</button>
+      <LanguageSelector selectLanguage={selectLanguageTwo} language={languageTwo}/>
       <button type="button" disabled={!languageOne || !languageTwo && true } onClick={(e)=>handleClick(e)}>Load</button>
     </>
   )

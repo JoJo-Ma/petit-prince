@@ -1,0 +1,239 @@
+{
+  "mappingImages": [
+    {
+      "imageId": 1,
+      "textBeforeId": 13,
+      "link": "images/original_1.png"
+    },
+    {
+      "imageId": 2,
+      "textBeforeId": 17,
+      "link": "images/original_2.png"
+    },
+    {
+      "imageId": 3,
+      "textBeforeId": 24,
+      "link": "images/original_3.png"
+    },
+    {
+      "imageId": 4,
+      "textBeforeId": 84,
+      "link": "images/original_4.png"
+    },
+    {
+      "imageId": 5,
+      "textBeforeId": 87,
+      "link": "images/original_5.png"
+    },
+    {
+      "imageId": 6,
+      "textBeforeId": 90,
+      "link": "images/original_6.png"
+    },
+    {
+      "imageId": 7,
+      "textBeforeId": 93,
+      "link": "images/original_7.png"
+    },
+    {
+      "imageId": 8,
+      "textBeforeId": 103,
+      "link": "images/original_8.png"
+    },
+    {
+      "imageId": 9,
+      "textBeforeId": 127,
+      "link": "images/original_9.png"
+    },
+    {
+      "imageId": 10,
+      "textBeforeId": 143,
+      "link": "images/original_10.png"
+    },
+    {
+      "imageId": 11,
+      "textBeforeId": 152,
+      "link": "images/original_11.png"
+    },
+    {
+      "imageId": 12,
+      "textBeforeId": 155,
+      "link": "images/original_12.png"
+    },
+    {
+      "imageId": 13,
+      "textBeforeId": 158,
+      "link": "images/original_13.png"
+    },
+    {
+      "imageId": 14,
+      "textBeforeId": 225,
+      "link": "images/original_14.png"
+    },
+    {
+      "imageId": 15,
+      "textBeforeId": 244,
+      "link": "images/original_15.png"
+    },
+    {
+      "imageId": 16,
+      "textBeforeId": 265,
+      "link": "images/original_16.png"
+    },
+    {
+      "imageId": 17,
+      "textBeforeId": 287,
+      "link": "images/original_17.png"
+    },
+    {
+      "imageId": 18,
+      "textBeforeId": 346,
+      "link": "images/original_18.png"
+    },
+    {
+      "imageId": 19,
+      "textBeforeId": 366,
+      "link": "images/original_19.png"
+    },
+    {
+      "imageId": 20,
+      "textBeforeId": 369,
+      "link": "images/original_20.png"
+    },
+    {
+      "imageId": 21,
+      "textBeforeId": 372,
+      "link": "images/original_21.png"
+    },
+    {
+      "imageId": 22,
+      "textBeforeId": 385,
+      "link": "images/original_22.png"
+    },
+    {
+      "imageId": 23,
+      "textBeforeId": 390,
+      "link": "images/original_24.png"
+    },
+    {
+      "imageId": 24,
+      "textBeforeId": 391,
+      "link": "images/original_24.png"
+    },
+    {
+      "imageId": 25,
+      "textBeforeId": 402,
+      "link": "images/original_25.png"
+    },
+    {
+      "imageId": 26,
+      "textBeforeId": 402,
+      "link": "images/original_26.png"
+    },
+    {
+      "imageId": 27,
+      "textBeforeId": 499,
+      "link": "images/original_27.png"
+    },
+    {
+      "imageId": 28,
+      "textBeforeId": 524,
+      "link": "images/original_28.png"
+    },
+    {
+      "imageId": 29,
+      "textBeforeId": 537,
+      "link": "images/original_29.png"
+    },
+    {
+      "imageId": 30,
+      "textBeforeId": 595,
+      "link": "images/original_30.png"
+    },
+    {
+      "imageId": 31,
+      "textBeforeId": 640,
+      "link": "images/original_31.png"
+    },
+    {
+      "imageId": 32,
+      "textBeforeId": 729,
+      "link": "images/original_32.png"
+    },
+    {
+      "imageId": 33,
+      "textBeforeId": 743,
+      "link": "images/original_33.png"
+    },
+    {
+      "imageId": 34,
+      "textBeforeId": 757,
+      "link": "images/original_34.png"
+    },
+    {
+      "imageId": 35,
+      "textBeforeId": 770,
+      "link": "images/original_35.png"
+    },
+    {
+      "imageId": 36,
+      "textBeforeId": 783,
+      "link": "images/original_36.png"
+    },
+    {
+      "imageId": 37,
+      "textBeforeId": 791,
+      "link": "images/original_37.png"
+    },
+    {
+      "imageId": 38,
+      "textBeforeId": 797,
+      "link": "images/original_38.png"
+    },
+    {
+      "imageId": 39,
+      "textBeforeId": 821,
+      "link": "images/original_39.png"
+    },
+    {
+      "imageId": 40,
+      "textBeforeId": 840,
+      "link": "images/original_40.png"
+    },
+    {
+      "imageId": 41,
+      "textBeforeId": 892,
+      "link": "images/original_41.png"
+    },
+    {
+      "imageId": 42,
+      "textBeforeId": 959,
+      "link": "images/original_42.png"
+    },
+    {
+      "imageId": 43,
+      "textBeforeId": 1032,
+      "link": "images/original_43.png"
+    },
+    {
+      "imageId": 44,
+      "textBeforeId": 1105,
+      "link": "images/original_44.png"
+    },
+    {
+      "imageId": 45,
+      "textBeforeId": 1117,
+      "link": "images/original_45.png"
+    },
+    {
+      "imageId": 46,
+      "textBeforeId": 1130,
+      "link": "images/original_46.png"
+    },
+    {
+      "imageId": 47,
+      "textBeforeId": 1167,
+      "link": "images/original_47.png"
+    }
+  ]
+}

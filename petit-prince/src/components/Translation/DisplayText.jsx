@@ -1,11 +1,14 @@
 import React, {useState, useEffect, useRef} from 'react';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
-import "./Translation.css"
+import 'react-lazy-load-image-component/src/effects/opacity.css';
 
 
-const DisplayText =  ({data}) => {
+const DisplayText =  ({data, pictures}) => {
   const [isHidden, setIsHidden] = useState([])
   const isInitialMount = useRef(true);
+
+  console.log(pictures);
 
   useEffect(() => {
     if (isInitialMount.current) {
@@ -50,6 +53,7 @@ const DisplayText =  ({data}) => {
           const addSpace = handleWhiteSpace(el.style)
           const addBeginning = handleBeginning(el.style)
           const addEnd = handleEnd(el.style)
+          const imgUrl = pictures.find(picture => picture.text_before_id == el.id)
           return ( <>
             {addBeginning}
             { isHidden[el.id]
@@ -63,6 +67,12 @@ const DisplayText =  ({data}) => {
                 </p>
               }
               {addEnd}
+              {
+                imgUrl &&
+                <div className="img">
+                  <LazyLoadImage src={imgUrl.link} effect="opacity" />
+                </div>
+              }
           </>)
         }) : <p>toto</p>
       }

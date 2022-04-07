@@ -77,3 +77,10 @@ CREATE TABLE blobtest (
   FOREIGN KEY (username_id) REFERENCES users (id),
   UNIQUE(trans_desc_id, sentence_id, username_id)
 );
+
+CREATE TABLE pictures (
+  id serial primary key,
+  image_id integer,
+  text_before_id integer,
+  link varchar
+);

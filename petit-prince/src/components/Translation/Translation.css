@@ -1,6 +1,6 @@
 .translation-container {
   display: flex;
-  align-content: center;
+  align-content: flex-end;
 }
 
 .translation-container p {
@@ -12,10 +12,9 @@
 
 .translation {
   border: 2px solid #c23f30;
-  margin: auto;
+  margin:auto;
   max-width: 60%;
-  text-align: justify;
-  display:inline;
+  display: block;
   background-color: white;
   border-radius: 10px;
 }
@@ -72,4 +71,11 @@
   background: rgb(2,0,36);
   background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(194,63,48,1) 61%, rgba(194,119,48,1) 100%);
   height: 100px;
+}
+
+.img {
+  display: block;
+  position: relative;
+  text-align: center;
+  margin: 5px;
 }
