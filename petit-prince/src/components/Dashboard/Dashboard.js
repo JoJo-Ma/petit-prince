@@ -1,31 +1,29 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import Navbar from '../Navbar/Navbar'
 import { useStoreActions, useStoreState } from 'easy-peasy'
 
 const Dashboard = ({ setAuth }) => {
 
-  // const [name, setName] = useState("")
-
   const name = useStoreState((state) => state.naming.name)
   const setName = useStoreActions((actions) => actions.naming.setName)
 
-  const getName = async () => {
-    try {
-      const response = await fetch("http://localhost:3005/dashboard", {
-        method: "GET",
-        headers: { token: localStorage.token}
-      })
-
-      const parseRes = await response.json()
-
-      console.log(parseRes);
-      setName(parseRes.username)
-    } catch (error) {
-      console.error(error.message);
-    }
-  }
 
   useEffect(() => {
+    const getName = async () => {
+      try {
+        const response = await fetch("http://localhost:3005/dashboard", {
+          method: "GET",
+          headers: { token: localStorage.token}
+        })
+
+        const parseRes = await response.json()
+
+        console.log(parseRes);
+        setName(parseRes.username)
+      } catch (error) {
+        console.error(error.message);
+      }
+    }
     getName()
   }, [])
 

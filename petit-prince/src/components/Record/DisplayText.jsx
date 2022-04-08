@@ -1,7 +1,5 @@
 import React, {useState, useEffect, useRef, useContext} from 'react';
-import { setupMic, convertBlobToAudioBuffer, play } from './record_util'
 import {RecorderContext} from './Record'
-import {Buffer} from 'buffer'
 
 import "./Recorder.css"
 

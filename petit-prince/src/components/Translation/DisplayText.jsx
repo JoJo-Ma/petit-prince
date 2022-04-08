@@ -8,8 +8,6 @@ const DisplayText =  ({data, pictures}) => {
   const [isHidden, setIsHidden] = useState([])
   const isInitialMount = useRef(true);
 
-  console.log(pictures);
-
   useEffect(() => {
     if (isInitialMount.current) {
       isInitialMount.current = false;
@@ -34,13 +32,13 @@ const DisplayText =  ({data, pictures}) => {
 
   const handleBeginning = (style) => {
     if (style.includes('beginning')) {
-      return <div className="clear"></div>
+      return <div className="empty"></div>
     }
     return ''
   }
   const handleEnd = (style) => {
     if (style.includes('end')) {
-      return <div className="clear"></div>
+      return <div className="empty"></div>
     }
     return ''
   }
@@ -53,20 +51,20 @@ const DisplayText =  ({data, pictures}) => {
           const addSpace = handleWhiteSpace(el.style)
           const addBeginning = handleBeginning(el.style)
           const addEnd = handleEnd(el.style)
-          const imgUrl = pictures.find(picture => picture.text_before_id == el.id)
+          const imgUrl = pictures.find(picture => picture.text_before_id === el.id)
           return ( <>
             {addBeginning}
             { isHidden[el.id]
                 ?
-                <p key={el.id} className={el.style + " languageOne"} onClick={() => toggle(el.id)}>
+                <div key={el.id} className={el.style + " languageOne"} onClick={() => toggle(el.id)}>
                   {addSpace + el.languageOne}
-                </p>
+                </div>
                 :
-                <p key={el.id} className={el.style + " languageTwo"} onClick={() => toggle(el.id)}>
+                <div key={el.id} className={el.style + " languageTwo"} onClick={() => toggle(el.id)}>
                   {addSpace + el.languageTwo}
-                </p>
-              }
-              {addEnd}
+                </div>
+            }
+            {addEnd}
               {
                 imgUrl &&
                 <div className="img">

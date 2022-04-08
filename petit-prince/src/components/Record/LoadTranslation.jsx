@@ -11,13 +11,9 @@ const LoadTranslation = ({ loadData, updateStatus, statusRecorder }) => {
     setLanguageOne(lang)
   }
 
-  useEffect(async () => {
+  useEffect(() => {
     loadData("")
-    if (isInitialMount.current) {
-      isInitialMount.current = false;
-      return
-    }
-    try {
+    const fetchData = async () => {
       const response = await fetch(`http://localhost:3005/blobtesting/statusRecording/${username}/${languageOne}`, {
         method: "GET",
         headers: {token : localStorage.token}
@@ -25,6 +21,13 @@ const LoadTranslation = ({ loadData, updateStatus, statusRecorder }) => {
       const parseRes = await response.json()
       const data = parseRes.map(el => { return el.sentence_id})
       updateStatus(data, 'NewRecordedAndInDb')
+    }
+    if (isInitialMount.current) {
+      isInitialMount.current = false;
+      return
+    }
+    try {
+      fetchData()
     } catch (error) {
       console.error(error.message);
     }

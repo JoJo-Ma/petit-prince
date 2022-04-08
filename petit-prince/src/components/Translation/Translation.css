@@ -56,21 +56,27 @@
   border-radius: 10px;
 }
 
-.clear{
+
+.empty {
   clear: both;
   display: block;
   padding: 5px 0px;
-  content: "";
-  width: 100%;
+  content: '';
 }
 
-.audioplayer {
+.read-audioplayer {
   position: -webkit-sticky; /* Safari */
   position: sticky;
+  min-height: 5rem;
   bottom: 0;
   background: rgb(2,0,36);
   background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(194,63,48,1) 61%, rgba(194,119,48,1) 100%);
-  height: 100px;
+  transform: translateY(100%);
+  transition: transform 350ms ease-in;
+}
+
+.visible {
+  transform: translateY(0%);
 }
 
 .img {
@@ -78,4 +84,10 @@
   position: relative;
   text-align: center;
   margin: 5px;
+}
+
+.toggle-button {
+  position: absolute;
+  bottom: 5rem;
+  left: 90vw;
 }

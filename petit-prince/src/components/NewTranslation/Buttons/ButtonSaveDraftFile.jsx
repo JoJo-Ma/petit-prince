@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default ({data}) => {
+const ButtonSaveDraftFile = ({data}) => {
 
   const handleClickSaveJson = () => {
     const json = data
@@ -20,3 +20,5 @@ export default ({data}) => {
     <button type="button" onClick={handleClickSaveJson}>Save file</button>
   )
 }
+
+export default ButtonSaveDraftFile;

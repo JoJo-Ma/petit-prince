@@ -1,8 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
-export default ({setInputURL, urlInput, handleClickPdf}) => {
-
-  const [ input, setInput ] = useState("")
+const ButtonLoadPdf = ({setInputURL, urlInput, handleClickPdf}) => {
 
   const onChangeURL = (e) => {
     setInputURL(e.target.value)
@@ -36,3 +34,5 @@ export default ({setInputURL, urlInput, handleClickPdf}) => {
     </>
   )
 }
+
+export default ButtonLoadPdf;

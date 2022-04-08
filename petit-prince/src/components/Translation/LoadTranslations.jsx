@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import LanguageSelector from '../LanguageSelector/LanguageSelector';
 
 
-const LoadTranslation = ({ loadData }) => {
+const LoadTranslation = ({ loadData, selectLanguage }) => {
   const [languageOne, setLanguageOne] = useState(false)
   const [languageTwo, setLanguageTwo] = useState(false)
 
@@ -26,7 +26,7 @@ const LoadTranslation = ({ loadData }) => {
         headers: {token : localStorage.token}
       })
       const parseRes = await response.json()
-      loadData(parseRes)
+      loadData(parseRes, languageOne)
     } catch (error) {
       console.error(error.message);
     }
@@ -43,7 +43,7 @@ const LoadTranslation = ({ loadData }) => {
       <LanguageSelector selectLanguage={selectLanguageOne} language={languageOne}/>
       <button className="" onClick={swap}>Swap</button>
       <LanguageSelector selectLanguage={selectLanguageTwo} language={languageTwo}/>
-      <button type="button" disabled={!languageOne || !languageTwo && true } onClick={(e)=>handleClick(e)}>Load</button>
+      <button type="button" disabled={(!languageOne || !languageTwo) && true } onClick={(e)=>handleClick(e)}>Load</button>
     </>
   )
 

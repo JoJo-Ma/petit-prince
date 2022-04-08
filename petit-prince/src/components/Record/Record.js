@@ -1,4 +1,4 @@
-import React, { useState, useEffect, createContext } from 'react';
+import React, { useState, createContext } from 'react';
 import { useStoreState } from 'easy-peasy';
 import Navbar from '../Navbar/Navbar'
 import LoadTranslation from './LoadTranslation'
@@ -20,7 +20,6 @@ const Record = () => {
   const [duration, setDuration] = useState(0)
 
   const loadData = (input) => {
-    console.log(input);
     setData(input)
   }
 

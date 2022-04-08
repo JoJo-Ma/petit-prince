@@ -4,12 +4,15 @@ const useFetchLanguages = () => {
   const [ languages, setLanguages] = useState([])
 
 
-  useEffect( async () => {
-    const response = await fetch ("http://localhost:3005/languages")
+  useEffect( () => {
+    const fetchData = async () => {
+      const response = await fetch ("http://localhost:3005/languages")
 
-    const parseRes = await response.json()
+      const parseRes = await response.json()
 
-    setLanguages(parseRes)
+      setLanguages(parseRes)
+    }
+    fetchData()
   }, [])
 
   return { languages }

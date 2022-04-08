@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 
-export default ({loadData}) => {
+const ButtonLoadDraftFile = ({loadData}) => {
 
   useEffect(() => {
     document.getElementById('file-selector').addEventListener('change', (e) => {
@@ -23,7 +23,7 @@ export default ({loadData}) => {
         console.log(error.message);
       }
     })
-  }, [])
+  }, [loadData])
 
 
   return (
@@ -33,3 +33,5 @@ export default ({loadData}) => {
     </>
   )
 }
+
+export default ButtonLoadDraftFile;

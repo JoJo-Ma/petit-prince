@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useRef, useEffect } from 'react';
 import useFetchLanguages from './useFetchLanguages'
 
 const LanguageSelector = ({ selectLanguage, language }) => {
@@ -10,7 +10,6 @@ const LanguageSelector = ({ selectLanguage, language }) => {
   }
 
   useEffect(() => {
-    console.log(languageRef.current);
     languageRef.current.value = language
   }, [language])
 

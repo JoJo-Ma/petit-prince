@@ -113,8 +113,8 @@ const Recorder = ({ setNext, currentId, languageId, statusRecorder, updateStatus
   const deleteRecording = async (e, id=currentId) => {
     e.preventDefault()
     if (statusRecorder.recorded.includes(id)) {
-      setAudioToDb(audioToDb.filter(audio => audio.sentenceId != id))
-      updateStatus(statusRecorder.recorded.filter(el => el != id),"DeleteRecorded")
+      setAudioToDb(audioToDb.filter(audio => audio.sentenceId !== id))
+      updateStatus(statusRecorder.recorded.filter(el => el !== id),"DeleteRecorded")
     return
     }
     try {
@@ -123,7 +123,7 @@ const Recorder = ({ setNext, currentId, languageId, statusRecorder, updateStatus
         headers: {token : localStorage.token}
       })
       console.log('test');
-      updateStatus(statusRecorder.recordedAndInDb.filter(el => el != currentId),"DeleteRecordedAndInDb")
+      updateStatus(statusRecorder.recordedAndInDb.filter(el => el !== currentId),"DeleteRecordedAndInDb")
     } catch (error) {
 
     }
@@ -131,8 +131,9 @@ const Recorder = ({ setNext, currentId, languageId, statusRecorder, updateStatus
 
   const playSentence = async (id = currentId) => {
     getAudioContext()
+    var audioBuffer;
     if (statusRecorder.recorded.includes(id)) {
-      var audioBuffer = await convertBlobToAudioBuffer(audioToDb.filter(obj => obj.sentenceId === id)[0].audioblob, audioContext.current)
+      audioBuffer = await convertBlobToAudioBuffer(audioToDb.filter(obj => obj.sentenceId === id)[0].audioblob, audioContext.current)
       setSentenceDuration(audioBuffer.duration)
       play(audioBuffer, audioContext.current)
     return
@@ -144,7 +145,7 @@ const Recorder = ({ setNext, currentId, languageId, statusRecorder, updateStatus
       })
       const parseRes = await response.json()
       const blob = new Blob([Buffer.from(parseRes, "7bit")],{ type: "audio/wav" })
-      var audioBuffer = await convertBlobToAudioBuffer(blob, audioContext.current)
+      audioBuffer = await convertBlobToAudioBuffer(blob, audioContext.current)
       setSentenceDuration(audioBuffer.duration)
       play(audioBuffer, audioContext.current)
     } catch (error) {
