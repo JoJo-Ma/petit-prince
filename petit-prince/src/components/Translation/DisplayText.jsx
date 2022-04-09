@@ -4,9 +4,11 @@ import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/opacity.css';
 
 
-const DisplayText =  ({data, pictures}) => {
+const DisplayText =  ({data, pictures, currentId, changeCurrentId, statusRecorder, duration}) => {
   const [isHidden, setIsHidden] = useState([])
   const isInitialMount = useRef(true);
+  const currentEl = useRef(null)
+
 
   useEffect(() => {
     if (isInitialMount.current) {
@@ -16,7 +18,8 @@ const DisplayText =  ({data, pictures}) => {
     }
   }, [data])
 
-  const toggle = (id) => {
+  const handleClick = async (id) => {
+    changeCurrentId(id)
     setIsHidden(isHidden.map((el, index) => {
       return index === id ? !el : el
     }))
@@ -43,6 +46,16 @@ const DisplayText =  ({data, pictures}) => {
     return ''
   }
 
+  const handleStyleSentences = (style, id) => {
+    if (statusRecorder.recorded.includes(id)) {
+      return `${style} languageOne recorded`
+    }
+    if (statusRecorder.recordedAndInDb.includes(id)) {
+      return `${style} languageOne recordedAndInDb`
+    }
+    return `${style} languageOne`
+  }
+
   return (
     <div className="translation">
       {
@@ -56,11 +69,21 @@ const DisplayText =  ({data, pictures}) => {
             {addBeginning}
             { isHidden[el.id]
                 ?
-                <div key={el.id} className={el.style + " languageOne"} onClick={() => toggle(el.id)}>
+                <div key={el.id}
+                  className={handleStyleSentences(el.style, el.id) + ' languageOne'}
+                  onClick={() => handleClick(el.id)}
+                  id={el.id === currentId ? 'current' : undefined}
+                  ref={el.id === currentId ? currentEl : undefined}
+                  >
                   {addSpace + el.languageOne}
                 </div>
                 :
-                <div key={el.id} className={el.style + " languageTwo"} onClick={() => toggle(el.id)}>
+                <div key={el.id}
+                  className={handleStyleSentences(el.style, el.id) + ' languageTwo'}
+                  onClick={() => handleClick(el.id)}
+                  id={el.id === currentId ? 'current' : undefined}
+                  ref={el.id === currentId ? currentEl : undefined}
+                  >
                   {addSpace + el.languageTwo}
                 </div>
             }

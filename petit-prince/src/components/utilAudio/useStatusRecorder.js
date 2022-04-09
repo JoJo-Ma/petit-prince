@@ -52,4 +52,4 @@ const useStatusRecorder = () => {
 }
 
 
-export default {useStatusRecorder};
+export default useStatusRecorder;
