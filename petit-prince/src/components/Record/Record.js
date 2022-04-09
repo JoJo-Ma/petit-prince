@@ -6,6 +6,8 @@ import DisplayText from './DisplayText'
 
 
 import Recorder from './Recorder'
+import useStatusRecorder from '../utilAudio/useStatusRecorder'
+
 
 const RecorderContext = createContext()
 
@@ -13,11 +15,8 @@ const Record = () => {
   const username = useStoreState(state => state.naming.name)
   const [data, setData] = useState('')
   const [currentId, setCurrentId] = useState(0)
-  const [statusRecorder, setStatusRecorder] = useState({
-    recorded: [],
-    recordedAndInDb: []
-  })
   const [duration, setDuration] = useState(0)
+  const {statusRecorder, setStatusRecorder, updateStatus} = useStatusRecorder()
 
   const loadData = (input) => {
     setData(input)
@@ -29,49 +28,6 @@ const Record = () => {
 
   const changeCurrentId = (id) => {
     setCurrentId(id)
-  }
-
-  const updateStatus = (ids, statusType) => {
-    switch (statusType) {
-      //used on loading data
-      case 'NewRecordedAndInDb':
-      setStatusRecorder({
-        ...statusRecorder,
-        recordedAndInDb: [...ids]
-      })
-      break;
-      //used after POST is triggered
-      case 'AddRecordedAndInDb':
-        setStatusRecorder({
-          recorded: statusRecorder.recorded.filter(item => !ids.includes(item)),
-          recordedAndInDb: [...statusRecorder.recordedAndInDb, ...ids]
-        })
-        break;
-      case 'DeleteRecordedAndInDb':
-        setStatusRecorder({
-          ...statusRecorder,
-          recordedAndInDb: [...ids]
-        })
-      break;
-      case 'DeleteRecorded':
-        setStatusRecorder({
-          ...statusRecorder,
-          recorded: [...ids]
-        })
-      break;
-      //used when recording stops
-      case 'AddRecorded':
-        setStatusRecorder({
-          ...statusRecorder,
-          recorded: [...statusRecorder.recorded, ...ids]
-        })
-        break;
-      default:
-        setStatusRecorder({
-          recorded: [],
-          recordedAndInDb: []
-        })
-    }
   }
 
   const setSentenceDuration = (duration) => {
