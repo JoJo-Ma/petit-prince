@@ -53,14 +53,17 @@ const Translation = () => {
           duration={duration}
           />
       </div>
-      <AudioPlayer
-        language={language}
-        setNext={setNext}
-        currentId={currentId}
-        statusRecorder={statusRecorder}
-        updateStatus={updateStatus}
-        setSentenceDuration={setSentenceDuration}
-       />
+      {
+        data &&
+        <AudioPlayer
+          language={language}
+          setNext={setNext}
+          currentId={currentId}
+          statusRecorder={statusRecorder}
+          updateStatus={updateStatus}
+          setSentenceDuration={setSentenceDuration}
+          />
+      }
     </>
   )
 }

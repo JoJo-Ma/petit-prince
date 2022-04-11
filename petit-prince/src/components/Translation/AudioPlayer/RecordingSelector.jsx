@@ -2,7 +2,7 @@ import React from 'react';
 
 const RecordingSelector = ({language, usernames, selectUsername}) => {
 
-  
+
 
   const handleChange = (e) => {
     selectUsername(e.target.value)

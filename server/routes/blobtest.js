@@ -85,6 +85,9 @@ router.post('/', upload, async (req, res) => {
     const languageId = req.body.language_id
     const username = req.body.username
 
+    console.log(formatInsert(audio, sentenceId, languageId, username));
+    console.log(expand(audio.length));
+
     const newEntry = await pool.query(`WITH sel as (SELECT id FROM users WHERE username = $4 ) \
     INSERT INTO blobtest (sentence_id, data, trans_desc_id, username_id) VALUES ${expand(audio.length)} RETURNING sentence_id;`, formatInsert(audio, sentenceId, languageId, username))
 
@@ -136,13 +139,23 @@ router.delete('/sentence-audio/:sentenceId/:username/:language_id', async (req, 
 //HELPER
 // expand(2) returns '($1, $2, $3, user_id_from_username), ($5, $6, $7, user_id_from_username)'
 const expand = (rowCount, startAt=1, placeholder = '(SELECT id FROM sel)') => {
-  var index = startAt
+  // the index that is used in the query
+  var queryIndex = startAt
+  // the index that counts the true amount of elements in the query
+  var trueCountIndex = startAt
+  var incrementAfterFour = false
   return Array(rowCount).fill(0).map(v => `(${Array(4).fill(0).map(v => {
-    if (index % 4 === 0) {
-      index++
+    if (trueCountIndex === 4) {
+      trueCountIndex++
+      queryIndex++
       return `${placeholder}`
     }
-    return `$${index++}`
+    if (trueCountIndex % 4 === 0 ) {
+      trueCountIndex++
+      return `${placeholder}`
+    }
+    trueCountIndex++
+    return `$${queryIndex++}`
   }).join(", ")})`).join(", ")
 }
 
@@ -155,7 +168,7 @@ const formatInsert = (audio, sentenceId, languageId, username) => {
   var arr = []
   for (var i = 0; i < audio.length; i++) {
     arr.push(parseInt(sentenceId[i]),audio[i], parseInt(languageId))
-    if (i == 0) {
+    if (i === 0) {
       arr.push(username)
     }
   }

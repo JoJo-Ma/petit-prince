@@ -104,6 +104,7 @@ const Recorder = ({ setNext, currentId, languageId, statusRecorder, updateStatus
 
       const parseRes = await response.json()
       console.log(parseRes.map(el => { return el.sentence_id}));
+      setAudioToDb([])
       updateStatus(parseRes.map(el => { return el.sentence_id}), 'AddRecordedAndInDb')
     } catch (error) {
       console.error(error.message);

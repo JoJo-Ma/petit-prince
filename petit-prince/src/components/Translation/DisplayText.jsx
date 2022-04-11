@@ -3,6 +3,11 @@ import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 import 'react-lazy-load-image-component/src/effects/opacity.css';
 
+function ClearSelection() {
+    if (window.getSelection) window.getSelection().removeAllRanges();
+    else if (document.selection) document.selection.empty();
+}
+
 
 const DisplayText =  ({data, pictures, currentId, changeCurrentId, statusRecorder, duration}) => {
   const [isHidden, setIsHidden] = useState([])
@@ -18,11 +23,23 @@ const DisplayText =  ({data, pictures, currentId, changeCurrentId, statusRecorde
     }
   }, [data])
 
-  const handleClick = async (id) => {
-    changeCurrentId(id)
-    setIsHidden(isHidden.map((el, index) => {
-      return index === id ? !el : el
-    }))
+  const handleClick = async (e,id) => {
+    switch (e.detail) {
+      case 1:
+        changeCurrentId(id)
+        break;
+      case 2:
+        e.preventDefault();
+        setIsHidden(isHidden.map((el, index) => {
+        return index === id ? !el : el
+        }))
+        ClearSelection()
+        break;
+      default:
+      ClearSelection()
+      changeCurrentId(id)
+
+    }
   }
 
   const handleWhiteSpace = (style) => {
@@ -71,7 +88,7 @@ const DisplayText =  ({data, pictures, currentId, changeCurrentId, statusRecorde
                 ?
                 <div key={el.id}
                   className={handleStyleSentences(el.style, el.id) + ' languageOne'}
-                  onClick={() => handleClick(el.id)}
+                  onClick={(e) => handleClick(e, el.id)}
                   id={el.id === currentId ? 'current' : undefined}
                   ref={el.id === currentId ? currentEl : undefined}
                   >
@@ -80,7 +97,7 @@ const DisplayText =  ({data, pictures, currentId, changeCurrentId, statusRecorde
                 :
                 <div key={el.id}
                   className={handleStyleSentences(el.style, el.id) + ' languageTwo'}
-                  onClick={() => handleClick(el.id)}
+                  onClick={(e) => handleClick(e, el.id)}
                   id={el.id === currentId ? 'current' : undefined}
                   ref={el.id === currentId ? currentEl : undefined}
                   >
