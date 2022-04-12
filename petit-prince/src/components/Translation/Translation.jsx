@@ -8,7 +8,7 @@ import LoadTranslations from './LoadTranslations'
 import DisplayText from './DisplayText'
 import AudioPlayer from './AudioPlayer'
 
-import useStatusRecorder from '../utilAudio/useStatusRecorder'
+import useStatusRecorder from '../audioUtil/useStatusRecorder'
 
 
 const Translation = () => {
@@ -57,6 +57,7 @@ const Translation = () => {
         data &&
         <AudioPlayer
           language={language}
+          languageId={data.idLanguageOne}
           setNext={setNext}
           currentId={currentId}
           statusRecorder={statusRecorder}
@@ -64,6 +65,8 @@ const Translation = () => {
           setSentenceDuration={setSentenceDuration}
           />
       }
+
+
     </>
   )
 }

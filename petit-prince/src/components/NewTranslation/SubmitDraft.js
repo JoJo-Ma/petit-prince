@@ -9,7 +9,7 @@ const SubmitDraft = ({data}) => {
 
 
   const handleLanguageSelect = (lang) => {
-    setLanguage(lang)
+    setLanguage(lang.name)
   }
 
   const onChange = (e) => {

@@ -8,7 +8,7 @@ const LoadTranslation = ({ loadData, updateStatus, statusRecorder }) => {
   const isInitialMount = useRef(true);
 
   const selectLanguageOne = (lang) => {
-    setLanguageOne(lang)
+    setLanguageOne(lang.name)
   }
 
   useEffect(() => {

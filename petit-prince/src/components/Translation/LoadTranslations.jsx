@@ -20,8 +20,8 @@ const LoadTranslation = ({ loadData, selectLanguage }) => {
   const handleClick = async (e) => {
     e.preventDefault()
     try {
-      console.log(`http://localhost:3005/translations/${languageOne}/${languageTwo}`);
-      const response = await fetch (`http://localhost:3005/translations/${languageOne}/${languageTwo}`, {
+      console.log(`http://localhost:3005/translations/${languageOne.name}/${languageTwo.name}`);
+      const response = await fetch (`http://localhost:3005/translations/${languageOne.name}/${languageTwo.name}`, {
         method: "GET",
         headers: {token : localStorage.token}
       })

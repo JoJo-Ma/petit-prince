@@ -6,7 +6,7 @@ import DisplayText from './DisplayText'
 
 
 import Recorder from './Recorder'
-import useStatusRecorder from '../utilAudio/useStatusRecorder'
+import useStatusRecorder from '../audioUtil/useStatusRecorder'
 
 
 const RecorderContext = createContext()

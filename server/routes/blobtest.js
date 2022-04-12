@@ -40,15 +40,14 @@ router.get('/statusRecording/:username/:language', async (req, res) => {
 })
 
 // get list of recording available for given language (shows username)
-router.get('/statusRecording/:language', async (req, res) => {
+router.get('/statusRecording/:languageId', async (req, res) => {
   try {
-    const { language } = req.params
+    const { languageId } = req.params
 
     const data = await pool.query("SELECT DISTINCT users.username FROM users \
     LEFT JOIN blobtest ON users.id = blobtest.username_id \
     LEFT JOIN trans_desc ON blobtest.trans_desc_id = trans_desc.id \
-    LEFT JOIN languages ON trans_desc.language_id = languages.id \
-    WHERE languages.name = $1", [language])
+    WHERE trans_desc.language_id = $1", [parseInt(languageId)])
 
     res.json(data.rows)
   } catch (error) {

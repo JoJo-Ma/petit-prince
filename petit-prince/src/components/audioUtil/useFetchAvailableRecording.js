@@ -6,7 +6,7 @@ const useFetchAvailableRecording = (language) => {
 
   useEffect( () => {
     const fetchData = async () => {
-      const response = await fetch (`http://localhost:3005/blobtesting/StatusRecording/${language}`)
+      const response = await fetch (`http://localhost:3005/blobtesting/StatusRecording/${language.id}`)
 
       const parseRes = await response.json()
 

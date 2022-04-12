@@ -10,7 +10,7 @@ const RecordingSelector = ({language, usernames, selectUsername}) => {
 
   return (
     <>
-      <p>choose available recording for {language}</p>
+      <p>choose available recording for {language.name}</p>
       <select onChange={(e) => handleChange(e)}>
         <option value="" defaultValue hidden>Choose here</option>
         {usernames.map((username, index) => {

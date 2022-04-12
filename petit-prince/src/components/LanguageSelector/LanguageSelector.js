@@ -6,11 +6,11 @@ const LanguageSelector = ({ selectLanguage, language }) => {
   const languageRef = useRef()
 
   const handleChange = (e) => {
-    selectLanguage(e.target.value)
+    selectLanguage(languages.find(language => language.name === e.target.value))
   }
 
   useEffect(() => {
-    languageRef.current.value = language
+    if (language) languageRef.current.value = language.name
   }, [language])
 
   return (

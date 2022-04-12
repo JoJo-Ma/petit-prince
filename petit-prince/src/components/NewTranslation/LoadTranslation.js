@@ -7,7 +7,7 @@ const LoadTranslation = ({id}) => {
   const [language, setLanguage] = useState('')
 
   const handleLanguageSelect = (lang) => {
-    setLanguage(lang)
+    setLanguage(lang.name)
   }
 
   const handleClick = async (e) => {
