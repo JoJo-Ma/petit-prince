@@ -62,6 +62,7 @@ const Translation = () => {
           currentId={currentId}
           statusRecorder={statusRecorder}
           updateStatus={updateStatus}
+          duration={duration}
           setSentenceDuration={setSentenceDuration}
           />
       }

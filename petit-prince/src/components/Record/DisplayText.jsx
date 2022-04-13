@@ -1,28 +1,11 @@
 import React, {useState, useEffect, useRef, useContext} from 'react';
 import {RecorderContext} from './Record'
+import useOnScreen from '../Util/useOnScreen'
+
 
 import "./Recorder.css"
 
-export function useOnScreen(ref) {
-  const [isOnScreen, setIsOnScreen] = useState(false);
-  const observerRef = useRef(null);
 
-  useEffect(() => {
-    observerRef.current = new IntersectionObserver(([entry]) =>
-      setIsOnScreen(entry.isIntersecting)
-    , {rootMargin:'0px 0px -50% 0px'});
-  }, []);
-
-  useEffect(() => {
-    if (ref.current === null) return
-    observerRef.current.observe(ref.current);
-    return () => {
-      observerRef.current.disconnect();
-    };
-  }, [ref.current]);
-
-  return isOnScreen;
-}
 
 const DisplayText =  ({data, currentId, changeCurrentId, statusRecorder, duration}) => {
   const isInitialMount = useRef(true);

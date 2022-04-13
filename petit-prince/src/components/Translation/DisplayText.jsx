@@ -1,5 +1,6 @@
 import React, {useState, useEffect, useRef} from 'react';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
+import useOnScreen from '../Util/useOnScreen'
 
 import 'react-lazy-load-image-component/src/effects/opacity.css';
 
@@ -13,7 +14,7 @@ const DisplayText =  ({data, pictures, currentId, changeCurrentId, statusRecorde
   const [isHidden, setIsHidden] = useState([])
   const isInitialMount = useRef(true);
   const currentEl = useRef(null)
-
+  const isOnScreen = useOnScreen(currentEl)
 
   useEffect(() => {
     if (isInitialMount.current) {
@@ -72,6 +73,14 @@ const DisplayText =  ({data, pictures, currentId, changeCurrentId, statusRecorde
     }
     return `${style} languageOne`
   }
+
+  // keep the current sentence visible in window, at around 1/3 to 1/2
+  useEffect(() => {
+    if (!currentEl.current) return
+    if (!isOnScreen) {
+      window.scrollTo({top:currentEl.current.offsetTop - window.innerHeight / 3, behavior:'smooth'})
+    }
+  },[currentId])
 
   return (
     <div className="translation">
