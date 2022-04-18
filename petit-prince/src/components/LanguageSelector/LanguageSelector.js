@@ -1,25 +1,53 @@
 import React, { useRef, useEffect } from 'react';
+import Select from 'react-select'
 import useFetchLanguages from './useFetchLanguages'
 
-const LanguageSelector = ({ selectLanguage, language }) => {
+const LanguageSelector = ({ selectLanguage, language, setLanguageFocus, focus, swap, setSwap }) => {
   const { languages } = useFetchLanguages()
   const languageRef = useRef()
 
   const handleChange = (e) => {
-    selectLanguage(languages.find(language => language.name === e.target.value))
+    console.log(e);
+    selectLanguage(languages.find(language => language.name === e.value))
+    setLanguageFocus(true)
   }
 
   useEffect(() => {
-    if (language) languageRef.current.value = language.name
-  }, [language])
+    if (swap) {
+      console.log('here');
+      languageRef.current.setValue({value:language.name, label:language.name}, 'select-option')
+      setSwap(false)
+    }
+  }, [swap])
+
+  useEffect(() => {
+    if (focus) {
+      languageRef.current.focus()
+      setLanguageFocus(false)
+    }
+  }, [focus])
+
+  const options = languages.map((language) => { return {
+      value: language.name, label: language.name
+    }})
 
   return (
-    <select ref={languageRef} onChange={(e) => handleChange(e)}>
-      <option value="" defaultValue hidden>Choose here</option>
-      {languages.map((language) => {
-        return <option key={language.id} value={language.name}>{language.name}</option>
+    <Select className="react-select-container"
+      classNamePrefix="react-select"
+      ref={languageRef}
+      options={options}
+      onChange={(e) => handleChange(e)}
+      placeholder={'Select language...'}
+      theme={(theme) => ({
+        ...theme,
+        borderRadius:0,
+        colors: {
+          ...theme.colors,
+          primary: '#408CA2',
+          primary25: '#AFD8E5'
+        }
       })}
-    </select>
+       />
   )
 
 }

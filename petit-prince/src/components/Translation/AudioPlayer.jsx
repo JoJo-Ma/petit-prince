@@ -115,6 +115,10 @@ const AudioPlayer = ({statusRecorder, updateStatus, language, languageId, setNex
     audioContext.current = new AudioContext()
   }
 
+  const handleCheck = () => {
+    setIsAutoPlay(!isAutoPlay)
+  }
+
   return (
     <div className={classAudio + " read-audioplayer"}>
       <h3>Audioplayer</h3>
@@ -126,6 +130,8 @@ const AudioPlayer = ({statusRecorder, updateStatus, language, languageId, setNex
         <RecordingSelector language={language} usernames={usernames} selectUsername={selectUsername} />
         <button type="button"
           onClick={() =>{handlePlayStopClick()}}>{!isPlaying ? "Play" : "Stop"}</button>
+        <input className="checkbox" id="checkbox" type="checkbox" name="Autoplay" checked={isAutoPlay} onChange={handleCheck} value="Autoplay" />
+        <label for="checkbox">Autoplay</label>
         </>
         :
         <p>{"No recording for this language yet. :'("}</p>

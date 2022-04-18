@@ -28,6 +28,7 @@ const convertBlobToAudioBuffer = (blob, context) => {
 
 const play = (buffer, audioContext) => {
   let sourceNode = audioContext.createBufferSource();
+  sourceNode.playbackRate.value = 1
   sourceNode.buffer = buffer
   sourceNode.connect(audioContext.destination)
   sourceNode.start(0)

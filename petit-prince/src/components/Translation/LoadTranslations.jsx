@@ -5,7 +5,8 @@ import LanguageSelector from '../LanguageSelector/LanguageSelector';
 const LoadTranslation = ({ loadData, selectLanguage }) => {
   const [languageOne, setLanguageOne] = useState(false)
   const [languageTwo, setLanguageTwo] = useState(false)
-
+  const [focus, setFocus] = useState(false)
+  const [swap, setSwap] = useState(false)
 
   const selectLanguageOne = (lang) => {
     setLanguageOne(lang)
@@ -15,6 +16,9 @@ const LoadTranslation = ({ loadData, selectLanguage }) => {
     setLanguageTwo(lang)
   }
 
+  const setLanguageFocus = (bool) => {
+    setFocus(bool)
+  }
 
 
   const handleClick = async (e) => {
@@ -32,19 +36,20 @@ const LoadTranslation = ({ loadData, selectLanguage }) => {
     }
   }
 
-  const swap = () => {
+  const swapLanguages = () => {
     const one = languageOne
     setLanguageOne(languageTwo)
     setLanguageTwo(one)
+    setSwap(true)
   }
 
   return (
-    <>
-      <LanguageSelector selectLanguage={selectLanguageOne} language={languageOne}/>
-      <button className="" onClick={swap}>Swap</button>
-      <LanguageSelector selectLanguage={selectLanguageTwo} language={languageTwo}/>
-      <button type="button" disabled={(!languageOne || !languageTwo) && true } onClick={(e)=>handleClick(e)}>Load</button>
-    </>
+      <div className="load-translation-container">
+        <LanguageSelector selectLanguage={selectLanguageOne} language={languageOne} setLanguageFocus={setLanguageFocus} swap={swap} setSwap={setSwap}/>
+        <button className="" onClick={swapLanguages}>Swap</button>
+        <LanguageSelector selectLanguage={selectLanguageTwo} language={languageTwo} focus={focus} setLanguageFocus={setLanguageFocus} swap={swap} setSwap={setSwap}/>
+        <button type="button" disabled={(!languageOne || !languageTwo) && true } onClick={(e)=>handleClick(e)}>Load</button>
+      </div>
   )
 
 }

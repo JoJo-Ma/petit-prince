@@ -1,14 +1,15 @@
 .translation-container {
+  font-family: "DM Serif Display";
   display: flex;
   align-content: flex-end;
 }
 
-.translation-container p {
-  float: none;
-  font-size: 20px;
-  padding: 10px 5px;
-  line-height: 55px;
+.load-translation-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
 
 .translation {
   border: 2px solid #c23f30;

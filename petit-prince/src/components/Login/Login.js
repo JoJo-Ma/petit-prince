@@ -46,14 +46,14 @@ const Login = ({ setAuth }) => {
     <div className="login-wrapper">
       <h1>Please Log In</h1>
       <form onSubmit={onSubmitForm}>
-        <label>
-          <p>Email</p>
-          <input type="text" value={email} name="email" onChange={e => onChange(e)} />
-        </label>
-        <label>
-          <p>Password</p>
-          <input type="password" value={password} name="password" onChange={e => onChange(e)} />
-        </label>
+        <div className="form__group">
+          <input className="form__field" type="text" value={email} name="email" onChange={e => onChange(e)} placeholder="Email" />
+          <label for="email" className="form__label">Email</label>
+        </div>
+        <div className="form__group">
+          <input className="form__field" type="password" value={password} name="password" onChange={e => onChange(e)} placeholder="Password" />
+          <label for="password" className="form__label">Password</label>
+        </div>
         <div>
           <button>Submit</button>
         </div>

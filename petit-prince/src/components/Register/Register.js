@@ -41,32 +41,46 @@ const Register = ({ setAuth }) => {
   return (
     <>
       <Navbar />
-      <h1>Register</h1>
-      <form onSubmit={onSubmitForm}>
-        <input
-        type="email"
-        name="email"
-        placeholder="email"
-        value={email}
-        onChange={e => onChange(e)}
-        />
-        <input
-        type="password"
-        name="password"
-        placeholder="password"
-        value={password}
-        onChange={e => onChange(e)}
-        />
-        <input
-        type="text"
-        name="username"
-        placeholder="name"
-        value={username}
-        onChange={e => onChange(e)}
-        />
-        <button>Submit</button>
-      </form>
-      <Link to="/login">Login</Link>
+      <div className="login-wrapper">
+        <h1>Register</h1>
+        <form onSubmit={onSubmitForm}>
+          <div className="form__group">
+            <input
+              className="form__field"
+              type="email"
+              name="email"
+              placeholder="Email"
+              value={email}
+              onChange={e => onChange(e)}
+              />
+            <label for="email" className="form__label" >Email</label>
+          </div>
+          <div className="form__group">
+            <input
+              className="form__field"
+              type="password"
+              name="password"
+              placeholder="Password"
+              value={password}
+              onChange={e => onChange(e)}
+              />
+            <label for="password" className="form__label" >Password</label>
+          </div>
+          <div className="form__group">
+            <input
+              className="form__field"
+              type="text"
+              name="username"
+              placeholder="Name"
+              value={username}
+              onChange={e => onChange(e)}
+              />
+            <label for="username" className="form__label" >Name</label>
+          </div>
+          <button>Submit</button>
+        </form>
+        <Link to="/login">Login</Link>
+      </div>
     </>
   )
 }

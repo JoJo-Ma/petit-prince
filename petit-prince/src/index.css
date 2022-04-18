@@ -1,6 +1,28 @@
+@font-face {
+  font-family: "DM Serif Display";
+  src: url('../public/fonts/DMSerifDisplay-Regular.ttf');
+}
+@font-face {
+  font-family: "Bellefair";
+  src: url('../public/fonts/Bellefair-Regular.ttf');
+}
+@font-face {
+  font-family: "Rubik";
+  src: url('../public/fonts/Rubik-VariableFont_wght.ttf');
+}
+
+
+:root {
+  --powderblue : #AFD8E5;
+  --powderbluedarker : #6da2b3;
+  --cranberry: #DB4F7D;
+  --confetti: #E5D15D;
+  --steelblue: #408CA2;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: "Rubik",-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -10,4 +32,46 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/* CSS */
+button {
+  margin: 10px;
+  padding: 15px 30px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  border-radius: 10px;
+  border: 0px;
+  font-weight: 700;
+  box-shadow: 0px 0px 14px -7px #f09819;
+  background-image: linear-gradient(45deg, var(--powderblue) 0%, var(--powderblue)  51%, var(--powderbluedarker)  100%);
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+button:hover {
+  background-position: right center;
+  /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+.react-select-container {
+  width: 20rem;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px var(--powderblue) inset !important;
 }

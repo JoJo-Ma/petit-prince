@@ -1,6 +1,6 @@
 .navbar {
   list-style-type: none;
-  background-color: #c23f30;
+  background-color: var(--steelblue);
   overflow: hidden;
   margin: 0;
   padding: 0;
@@ -22,7 +22,7 @@ li {
 }
 
 .navbar-el {
-  color: white;
+  color: var(--confetti);
   display: block;
   text-align: center;
   padding: 14px 16px;
@@ -30,7 +30,7 @@ li {
 }
 
 .navbar-el-caption {
-  color: white;
+  color: var(--confetti);
   display: block;
   text-align: center;
   padding: 14px 16px;
@@ -38,7 +38,7 @@ li {
 }
 
 .navbar-el:hover {
-  background-color: white;
-  color: #c23f30;
+  background-color: var(--confetti);
+  color: var(--steelblue);
   transition: background-color 0.25s ease-in-out;
 }

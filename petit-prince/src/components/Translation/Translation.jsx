@@ -8,7 +8,7 @@ import LoadTranslations from './LoadTranslations'
 import DisplayText from './DisplayText'
 import AudioPlayer from './AudioPlayer'
 
-import useStatusRecorder from '../audioUtil/useStatusRecorder'
+import useStatusRecorder from '../Util/useStatusRecorder'
 
 
 const Translation = () => {
