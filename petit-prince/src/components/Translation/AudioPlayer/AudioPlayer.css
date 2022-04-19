@@ -1,0 +1,72 @@
+.cassette {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  margin: 1rem auto 3rem auto;
+  background: var(--confetti);
+  height: 2rem;
+  width: 20rem;
+  align-items: center;
+  justify-content: space-around;
+  overflow: hidden;
+  border: 5px solid black;
+  z-index: 990;
+}
+
+.cassette::after {
+    content: "";
+    background: linear-gradient(45deg, white 0%, grey 15%, white 50%, black 70%, grey 80%);
+    opacity: 0.35;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: 999;
+  }
+
+.cassette-left, .cassette-right {
+  width:2.5rem;
+  height:2.5rem;
+  background: var(--confetti);
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cassette-left {
+  border: 2rem solid #151414;
+  margin: 2rem;
+}
+
+.cassette-right {
+  border: 2rem solid #151414;
+  margin: 2rem;
+}
+
+.active svg {
+  animation:spin 4s linear infinite;
+}
+
+.cassette path {
+  fill: var(--cranberry);
+}
+
+@keyframes spin {
+  100% {
+    transform:rotate(360deg);
+  }
+}
+
+.recording-react-select-container {
+  width: 15rem;
+  font-family: 'Digital';
+  letter-spacing: 3px;
+}
+
+.icon-audio-player {
+  color: var(--cranberry);
+  height: 2rem;
+  padding: 0 0.5rem 0 1rem;
+}

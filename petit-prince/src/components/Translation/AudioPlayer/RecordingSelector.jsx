@@ -1,23 +1,40 @@
 import React from 'react';
+import Select from 'react-select';
+
 
 const RecordingSelector = ({language, usernames, selectUsername}) => {
 
 
 
   const handleChange = (e) => {
-    selectUsername(e.target.value)
+    selectUsername(e.value)
   }
 
+  const options = usernames.map((username) => { return {
+      value: username.username, label: username.username
+    }})
+
   return (
-    <>
-      <p>choose available recording for {language.name}</p>
-      <select onChange={(e) => handleChange(e)}>
-        <option value="" defaultValue hidden>Choose here</option>
-        {usernames.map((username, index) => {
-          return <option key={index} value={username.username}>{username.username}</option>
+    <div className="recording-selector">
+      <Select
+        className="recording-react-select-container"
+        classNamePrefix="recording-react-select"
+        onChange={(e) => handleChange(e)}
+        options={options}
+        placeholder={'Select recording...'}
+        theme={(theme) => ({
+          ...theme,
+          borderRadius:0,
+          fontFamily: 'Digital',
+          colors: {
+            ...theme.colors,
+            neutral0: '#d8d2d2',
+            primary: '#d8d2d2',
+            primary25: '#d8d2d2'
+          }
         })}
-      </select>
-    </>
+         />
+    </div>
   )
 }
 

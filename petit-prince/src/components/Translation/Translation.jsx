@@ -6,7 +6,7 @@ import useFetchPictures from './useFetchPictures'
 import Navbar from '../Navbar/Navbar'
 import LoadTranslations from './LoadTranslations'
 import DisplayText from './DisplayText'
-import AudioPlayer from './AudioPlayer'
+import AudioPlayer from './AudioPlayer/AudioPlayer'
 
 import useStatusRecorder from '../Util/useStatusRecorder'
 
@@ -64,6 +64,7 @@ const Translation = () => {
           updateStatus={updateStatus}
           duration={duration}
           setSentenceDuration={setSentenceDuration}
+          length = {data.data.length}
           />
       }
 

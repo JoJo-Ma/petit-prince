@@ -1,18 +1,24 @@
 import React, { useState, useRef, useEffect } from 'react';
-import "./Translation.css"
+import "../Translation.css"
+import "./AudioPlayer.css"
 
-import useFetchAvailableRecording from '../Util/useFetchAvailableRecording'
-import RecordingSelector from './AudioPlayer/RecordingSelector'
-import { convertBlobToAudioBuffer, play } from '../Util/audio_util'
+import useFetchAvailableRecording from '../../Util/useFetchAvailableRecording'
+import RecordingSelector from './RecordingSelector'
+import { convertBlobToAudioBuffer, play } from '../../Util/audio_util'
 import {Buffer} from 'buffer'
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPlay, faPause, faToggleOn, faToggleOff } from '@fortawesome/free-solid-svg-icons'
 
-const AudioPlayer = ({statusRecorder, updateStatus, language, languageId, setNext, currentId, setSentenceDuration, duration}) => {
+import { ReactComponent as CassetteKnob} from './cassetteknob.svg'
+
+const AudioPlayer = ({statusRecorder, updateStatus, language, languageId, setNext, currentId, setSentenceDuration, duration, length}) => {
   const [hidden, setHidden] = useState(false)
   const { usernames } = useFetchAvailableRecording(language)
   const [username, setUsername] = useState('')
   const [isPlaying, setIsPlaying] = useState(false)
   const [hasNext, setHasNext] = useState(false)
+  const [triggerSentence, setTriggerSentence] = useState(false)
   const [isAutoPlay, setIsAutoPlay] = useState(true)
   const isInitialMount = useRef(true);
   const audioContext = useRef(null)
@@ -90,21 +96,24 @@ const AudioPlayer = ({statusRecorder, updateStatus, language, languageId, setNex
   // change isPlaying effect back to false once the recording is done playing
   useEffect(() => {
     if (!isPlaying) return
-    const timer = setTimeout(() => {
-      setIsPlaying(false)
+    const timer = setTimeout( () => {
       setHasNext(statusRecorder.recordedAndInDb.includes(currentId+1))
+      setTriggerSentence(!triggerSentence)
     }, duration * 1000)
     return () => clearTimeout(timer)
   }, [duration, isPlaying])
 
   // will start next recording if the next one is available
   useEffect(() => {
+    console.log('check');
+    if(!isAutoPlay || !hasNext) {
+      setIsPlaying(false)
+    }
     if(hasNext && isAutoPlay) {
       playSentence(currentId+1)
       setNext()
-      setHasNext(false)
     }
-  }, [hasNext])
+  }, [triggerSentence])
 
 
   const getAudioContext = () => {
@@ -119,24 +128,52 @@ const AudioPlayer = ({statusRecorder, updateStatus, language, languageId, setNex
     setIsAutoPlay(!isAutoPlay)
   }
 
+  var cassetteLeftStyle = {
+    margin:  (currentId/length * 4).toString() + "rem",
+    borderWidth: ((1 - currentId/length) * 4).toString() + "rem"
+  }
+  var cassetteRightStyle = {
+    borderWidth:  (currentId/length * 4).toString() + "rem",
+    margin: ((1 - currentId/length) * 4).toString() + "rem"
+  }
+
+
   return (
     <div className={classAudio + " read-audioplayer"}>
       <h3>Audioplayer</h3>
-      <h5>{isPlaying ? "Playing" : "Not playing"}</h5>
       {
         usernames.length > 0
         ?
-        <>
+        <div className='audioplayer-container'>
         <RecordingSelector language={language} usernames={usernames} selectUsername={selectUsername} />
-        <button type="button"
-          onClick={() =>{handlePlayStopClick()}}>{!isPlaying ? "Play" : "Stop"}</button>
-        <input className="checkbox" id="checkbox" type="checkbox" name="Autoplay" checked={isAutoPlay} onChange={handleCheck} value="Autoplay" />
-        <label for="checkbox">Autoplay</label>
-        </>
+        {isPlaying ?
+          <FontAwesomeIcon className="icon-audio-player" icon={faPause} onClick={() =>{handlePlayStopClick()}} />
+          :
+          <FontAwesomeIcon className="icon-audio-player" icon={faPlay} onClick={() =>{handlePlayStopClick()}} />
+        }
+        {
+          isAutoPlay ?
+            <FontAwesomeIcon className="icon-audio-player" icon={faToggleOn} onClick={handleCheck} />
+          :
+            <FontAwesomeIcon className="icon-audio-player" icon={faToggleOff} onClick={handleCheck} />
+        }
+        <p for="checkbox">Autoplay</p>
+        </div>
         :
         <p>{"No recording for this language yet. :'("}</p>
       }
       <button className='toggle-button' type="button" onClick={()=>toggleHidden()}>{hidden ? 'open' : 'close'}</button>
+      <div className={isPlaying? "cassette active": "cassette"}>
+      <div className="cassette-left"
+      style={cassetteLeftStyle}>
+      <CassetteKnob />
+      </div>
+      <div className="cassette-right"
+      style={cassetteRightStyle}
+      >
+      <CassetteKnob />
+      </div>
+      </div>
     </div>
   )
 }

@@ -15,7 +15,7 @@ const LanguageSelector = ({ selectLanguage, language, setLanguageFocus, focus, s
   useEffect(() => {
     if (swap) {
       console.log('here');
-      languageRef.current.setValue({value:language.name, label:language.name}, 'select-option')
+      languageRef.current.setValue({value:language.name, label:language.name})
       setSwap(false)
     }
   }, [swap])
@@ -47,6 +47,7 @@ const LanguageSelector = ({ selectLanguage, language, setLanguageFocus, focus, s
           primary25: '#AFD8E5'
         }
       })}
+      openMenuOnFocus={true}
        />
   )
 
