@@ -2,6 +2,10 @@
   font-family: "DM Serif Display";
   display: flex;
   align-content: flex-end;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .load-translation-container {
@@ -10,21 +14,33 @@
   justify-content: center;
 }
 
+
+
 .translation {
-  border: 2px solid #c23f30;
-  margin:auto;
+  box-shadow: #fff 0px 13px 27px -5px, #fff 0px 8px 16px -8px;
+  margin: auto;
   max-width: 60%;
-  display: block;
-  background-color: white;
+  text-align: justify;
+  display:inline;
+  background-color: rgba(255, 255, 255, 0.5);
   border-radius: 10px;
 }
 
 .dialogue, .paragraph {
   display: inline;
+  font-size: 20px;
+}
+
+.dialogue, .paragraph, .dedication, .chapter {
+  position:relative;
+  float: none;
+  padding: 10px 5px;
+  line-height: 55px;
 }
 
 .dedication {
   text-align: center;
+  font-size: 20px;
 }
 
 .chapter {
@@ -34,26 +50,28 @@
 }
 
 .languageOne {
-  background-color: #c23f30;
-  color: white;
-  border: 2px solid white;
+  background-color: var(--steelblue);
+  color: var(--confetti);
 }
 .languageTwo {
-  background-color: white;
-  color:#c23f30;
-  border: 2px solid #c23f30;
+  background-color: var(--confetti);
+  color:var(--steelblue);
 }
 
 .languageOne:hover {
-  border: 2px solid #c23f30;
+  box-shadow: #fff 2px;
+}
+
+.recordedAndInDb {
+  border-top: 1px solid var(--cranberry);
 }
 
 .languageTwo:hover {
-  border: 2px solid white;
+  box-shadow: #fff;
 }
 
 .languageOne, .languageTwo {
-  border-radius: 10px;
+  border-radius: 0px;
 }
 
 
@@ -64,40 +82,14 @@
   content: '';
 }
 
-.audioplayer-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+#current {
+  background-color: var(--cranberry);
 }
 
-.read-audioplayer {
-  width: 40%;
-  left: 30%;
-  border-radius: 20px;
-  position: -webkit-sticky; /* Safari */
-  position: sticky;
-  min-height: 5rem;
-  bottom: 0;
-  background: rgb(2,0,36);
-  background: linear-gradient(180deg, var(--steelblue) 50%, var(--cranberry) 50%);
-  border: 0.25rem solid black;
-  transform: translateY(100%);
-  transition: transform 350ms ease-in;
-}
-
-.visible {
-  transform: translateY(0%);
-}
 
 .img {
   display: block;
   position: relative;
   text-align: center;
   margin: 5px;
-}
-
-.toggle-button {
-  position: absolute;
-  bottom: 8rem;
-  left: 90vw;
 }

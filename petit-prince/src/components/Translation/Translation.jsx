@@ -7,8 +7,11 @@ import Navbar from '../Navbar/Navbar'
 import LoadTranslations from './LoadTranslations'
 import DisplayText from './DisplayText'
 import AudioPlayer from './AudioPlayer/AudioPlayer'
-
+import LazyBackroundImage from '../Util/LazyBackroundImage'
 import useStatusRecorder from '../Util/useStatusRecorder'
+const background="/background/background.jpg"
+const placeholder="/background/background.jpg"
+const backgroundOptions = "linear-gradient( rgba(175,216,219,.2), rgba(175,216,219,.2) )"
 
 
 const Translation = () => {
@@ -41,9 +44,13 @@ const Translation = () => {
   return (
     <>
       <Navbar />
-      <h1>Translation</h1>
       <LoadTranslations loadData={loadData} />
-      <div className="translation-container">
+      <LazyBackroundImage
+        className="translation-container"
+        source={background}
+        placeholder={placeholder}
+        options={backgroundOptions}
+      >
         <DisplayText
           data={data}
           pictures={pictures}
@@ -52,7 +59,7 @@ const Translation = () => {
           statusRecorder={statusRecorder}
           duration={duration}
           />
-      </div>
+      </LazyBackroundImage>
       {
         data &&
         <AudioPlayer

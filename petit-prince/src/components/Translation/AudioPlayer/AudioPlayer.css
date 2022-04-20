@@ -1,9 +1,40 @@
+.audioplayer-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.read-audioplayer {
+  width: 40%;
+  left: 30%;
+  border-radius: 20px;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  min-height: 5rem;
+  bottom: 0;
+  background: rgb(2,0,36);
+  background: linear-gradient(180deg, var(--steelblue) 50%, var(--cranberry) 50%);
+  border: 0.25rem solid black;
+  transform: translateY(100%);
+  transition: transform 350ms ease-in;
+}
+
+.toggle-button {
+  position: absolute;
+  bottom: 8rem;
+  left: 90vw;
+}
+
+.visible {
+  transform: translateY(0%);
+}
+
 .cassette {
   position: relative;
   display: flex;
   flex-direction: row;
   margin: 1rem auto 3rem auto;
-  background: var(--confetti);
+  background: white;
   height: 2rem;
   width: 20rem;
   align-items: center;
@@ -49,14 +80,23 @@
   animation:spin 4s linear infinite;
 }
 
-.cassette path {
-  fill: var(--cranberry);
-}
-
 @keyframes spin {
   100% {
     transform:rotate(360deg);
   }
+}
+
+.cassette path {
+  fill: var(--cranberry);
+}
+
+.cassette-cover {
+  background: linear-gradient(45deg, white 0%, grey 15%, white 50%, black 70%, grey 80%);
+  opacity: 1;
+  width: 20rem;
+  margin: 0 auto 0 auto;
+  padding: 1rem 2.5rem 2rem 2.5rem;
+  border: 3px solid black;
 }
 
 .recording-react-select-container {
@@ -69,4 +109,9 @@
   color: var(--cranberry);
   height: 2rem;
   padding: 0 0.5rem 0 1rem;
+}
+
+.icon-audio-player:hover {
+  color: var(--confetti);
+  transition: ease-in-out 100ms;
 }

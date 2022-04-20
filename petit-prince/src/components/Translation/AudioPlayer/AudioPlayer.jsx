@@ -1,16 +1,17 @@
 import React, { useState, useRef, useEffect } from 'react';
-import "../Translation.css"
 import "./AudioPlayer.css"
 
 import useFetchAvailableRecording from '../../Util/useFetchAvailableRecording'
 import RecordingSelector from './RecordingSelector'
+import CassetteArt from './CassetteArt'
+
 import { convertBlobToAudioBuffer, play } from '../../Util/audio_util'
 import {Buffer} from 'buffer'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlay, faPause, faToggleOn, faToggleOff } from '@fortawesome/free-solid-svg-icons'
 
-import { ReactComponent as CassetteKnob} from './cassetteknob.svg'
+
 
 const AudioPlayer = ({statusRecorder, updateStatus, language, languageId, setNext, currentId, setSentenceDuration, duration, length}) => {
   const [hidden, setHidden] = useState(false)
@@ -128,14 +129,7 @@ const AudioPlayer = ({statusRecorder, updateStatus, language, languageId, setNex
     setIsAutoPlay(!isAutoPlay)
   }
 
-  var cassetteLeftStyle = {
-    margin:  (currentId/length * 4).toString() + "rem",
-    borderWidth: ((1 - currentId/length) * 4).toString() + "rem"
-  }
-  var cassetteRightStyle = {
-    borderWidth:  (currentId/length * 4).toString() + "rem",
-    margin: ((1 - currentId/length) * 4).toString() + "rem"
-  }
+
 
 
   return (
@@ -163,17 +157,7 @@ const AudioPlayer = ({statusRecorder, updateStatus, language, languageId, setNex
         <p>{"No recording for this language yet. :'("}</p>
       }
       <button className='toggle-button' type="button" onClick={()=>toggleHidden()}>{hidden ? 'open' : 'close'}</button>
-      <div className={isPlaying? "cassette active": "cassette"}>
-      <div className="cassette-left"
-      style={cassetteLeftStyle}>
-      <CassetteKnob />
-      </div>
-      <div className="cassette-right"
-      style={cassetteRightStyle}
-      >
-      <CassetteKnob />
-      </div>
-      </div>
+      <CassetteArt currentId={currentId} length={length} isPlaying={isPlaying} />
     </div>
   )
 }
