@@ -9,11 +9,11 @@ import { convertBlobToAudioBuffer, play } from '../../Util/audio_util'
 import {Buffer} from 'buffer'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPlay, faPause, faToggleOn, faToggleOff } from '@fortawesome/free-solid-svg-icons'
+import { faPlay, faPause, faToggleOn, faToggleOff, faTransgender } from '@fortawesome/free-solid-svg-icons'
 
 
 
-const AudioPlayer = ({statusRecorder, updateStatus, language, languageId, setNext, currentId, setSentenceDuration, duration, length}) => {
+const AudioPlayer = ({statusRecorder, updateStatus, language, languageId, setNext, currentId, setSentenceDuration, duration, length, hasCurrent}) => {
   const [hidden, setHidden] = useState(false)
   const { usernames } = useFetchAvailableRecording(language)
   const [username, setUsername] = useState('')
@@ -65,6 +65,7 @@ const AudioPlayer = ({statusRecorder, updateStatus, language, languageId, setNex
     'visible'
 
   const handlePlayStopClick = () => {
+    if (!hasCurrent) return
     if (isPlaying) {
       audioContext.current.close()
       audioContext.current = null
@@ -134,7 +135,6 @@ const AudioPlayer = ({statusRecorder, updateStatus, language, languageId, setNex
 
   return (
     <div className={classAudio + " read-audioplayer"}>
-      <h3>Audioplayer</h3>
       {
         usernames.length > 0
         ?
@@ -143,7 +143,11 @@ const AudioPlayer = ({statusRecorder, updateStatus, language, languageId, setNex
         {isPlaying ?
           <FontAwesomeIcon className="icon-audio-player" icon={faPause} onClick={() =>{handlePlayStopClick()}} />
           :
-          <FontAwesomeIcon className="icon-audio-player" icon={faPlay} onClick={() =>{handlePlayStopClick()}} />
+          <FontAwesomeIcon
+            className={hasCurrent ? "icon-audio-player audio-player-abled" : "icon-audio-player audio-player-disabled"}
+            icon={faPlay}
+            onClick={() =>{handlePlayStopClick()}}
+            title={hasCurrent ? "Play" : "No recording for this sentence"}/>
         }
         {
           isAutoPlay ?
@@ -156,7 +160,7 @@ const AudioPlayer = ({statusRecorder, updateStatus, language, languageId, setNex
         :
         <p>{"No recording for this language yet. :'("}</p>
       }
-      <button className='toggle-button' type="button" onClick={()=>toggleHidden()}>{hidden ? 'open' : 'close'}</button>
+      <FontAwesomeIcon className='toggle-button' icon={faTransgender} onClick={()=>toggleHidden()}/>
       <CassetteArt currentId={currentId} length={length} isPlaying={isPlaying} />
     </div>
   )

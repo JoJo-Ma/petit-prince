@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import "./Translation.css"
 import useFetchPictures from './useFetchPictures'
@@ -21,7 +21,11 @@ const Translation = () => {
   const [currentId, setCurrentId] = useState(0)
   const [duration, setDuration] = useState(0)
   const {statusRecorder, setStatusRecorder, updateStatus} = useStatusRecorder()
+  const [hasCurrent, setHasCurrent] = useState(false)
 
+  useEffect(() => {
+    setHasCurrent(statusRecorder.recordedAndInDb.includes(currentId))
+  }, [currentId, statusRecorder])
 
   const loadData = (input, lang) => {
     setData(input)
@@ -72,6 +76,7 @@ const Translation = () => {
           duration={duration}
           setSentenceDuration={setSentenceDuration}
           length = {data.data.length}
+          hasCurrent = {hasCurrent}
           />
       }
 
