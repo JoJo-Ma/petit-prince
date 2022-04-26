@@ -54,14 +54,17 @@ const Record = () => {
             duration={duration}
           />
         </div>
-        <Recorder
-          setNext={setNext}
-          currentId={currentId}
-          languageId={data.idLanguageOne}
-          statusRecorder={statusRecorder}
-          updateStatus={updateStatus}
-          setSentenceDuration={setSentenceDuration}
-        />
+        {
+          data &&
+          <Recorder
+            setNext={setNext}
+            currentId={currentId}
+            languageId={data.idLanguageOne}
+            statusRecorder={statusRecorder}
+            updateStatus={updateStatus}
+            setSentenceDuration={setSentenceDuration}
+            />
+        }
       </RecorderContext.Provider>
     </>
   )

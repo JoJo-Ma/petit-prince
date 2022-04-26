@@ -7,14 +7,12 @@ const LanguageSelector = ({ selectLanguage, language, setLanguageFocus, focus, s
   const languageRef = useRef()
 
   const handleChange = (e) => {
-    console.log(e);
     selectLanguage(languages.find(language => language.name === e.value))
-    setLanguageFocus(true)
+    if(setLanguageFocus) setLanguageFocus(true)
   }
 
   useEffect(() => {
     if (swap) {
-      console.log('here');
       languageRef.current.setValue({value:language.name, label:language.name})
       setSwap(false)
     }

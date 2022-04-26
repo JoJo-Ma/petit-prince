@@ -1,34 +1,52 @@
-.audioplayer-container {
+
+.audioplayer-settings {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+
 .read-audioplayer {
-  width: 35%;
-  left: 30%;
-  border-radius: 20px;
-  position: -webkit-sticky; /* Safari */
-  position: sticky;
-  min-height: 5rem;
-  bottom: 0;
-  background: rgb(2,0,36);
-  background: linear-gradient(135deg, var(--steelblue) 50%, var(--powderbluedarker));
-  border: 1px solid black;
+  position: -webkit-fixed; /* Safari */
+  position: fixed;
   transform: translateY(100%);
+  bottom: 0;
+  margin: 0 auto;
+  width: 35%;
+  left: calc(50% - 35%/2);
+  border-radius: 20px;
+  min-height: 5rem;
+  background: linear-gradient(135deg, var(--steelblue) 50%, var(--steelbluedarker));
+  border: 1px solid black;
   transition: transform 350ms ease-in;
   box-shadow:
     10px 10px 10px 0 rgba(0, 0, 0, 0.25),
     -2px -2px 4px 0 rgba(255, 255, 255, 0.3);
 }
 
-.toggle-button {
-  position: absolute;
-}
-
 .visible {
   transform: translateY(0%);
 }
+.toggle-button {
+  position: fixed;
+  top: 80%;
+  right: 6%;
+  z-index: 999;
+}
+
+.toggle-button svg {
+  min-width: 8.5rem;
+  height: 8rem;
+  fill: var(--steelblue);
+  transition: ease-in-out 100ms;
+  cursor: pointer;
+}
+
+.toggle-button:hover svg {
+  fill: var(--confetti)
+}
+
+
 
 .cassette {
   position: relative;
@@ -41,14 +59,15 @@
   align-items: center;
   justify-content: space-around;
   overflow: hidden;
-  border: 5px solid black;
+  border: 1px solid black;
   z-index: 990;
 }
 
 .cassette::after {
     content: "";
     background: linear-gradient(45deg, white 0%, grey 15%, white 50%, black 70%, grey 80%);
-    opacity: 0.35;
+    box-shadow: inset 0 0 5px #000000;
+    opacity: 0.45;
     top: 0;
     left: 0;
     bottom: 0;
@@ -108,17 +127,27 @@
   letter-spacing: 3px;
 }
 
+.recording-selector {
+  cursor: pointer;
+}
+
 .icon-audio-player {
   color: var(--cranberry);
   height: 2rem;
   padding: 0 0.5rem 0 1rem;
+  cursor: pointer;
 }
 
 .audio-player-disabled {
   opacity: 0.8;
+  cursor: default;
 }
 
 .audio-player-abled:hover {
+  color: var(--confetti);
+  transition: ease-in-out 100ms;
+}
+.toggle-auto-play:hover {
   color: var(--confetti);
   transition: ease-in-out 100ms;
 }

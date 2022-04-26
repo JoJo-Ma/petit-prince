@@ -7,6 +7,7 @@ import Navbar from '../Navbar/Navbar'
 import LoadTranslations from './LoadTranslations'
 import DisplayText from './DisplayText'
 import AudioPlayer from './AudioPlayer/AudioPlayer'
+import AudioPlayerToggle from './AudioPlayer/AudioPlayerToggle'
 import LazyBackroundImage from '../Util/LazyBackroundImage'
 import useStatusRecorder from '../Util/useStatusRecorder'
 const background="/background/background.jpg"
@@ -22,6 +23,7 @@ const Translation = () => {
   const [duration, setDuration] = useState(0)
   const {statusRecorder, setStatusRecorder, updateStatus} = useStatusRecorder()
   const [hasCurrent, setHasCurrent] = useState(false)
+  const [isAudioPlayerHidden, setIsAudioPlayerHidden] = useState(false)
 
   useEffect(() => {
     setHasCurrent(statusRecorder.recordedAndInDb.includes(currentId))
@@ -44,11 +46,16 @@ const Translation = () => {
     setDuration(duration)
   }
 
+  const setHidden = (bool) => {
+    setIsAudioPlayerHidden(bool)
+  }
+
 
   return (
     <>
       <Navbar />
       <LoadTranslations loadData={loadData} />
+      { data && <AudioPlayerToggle setHidden={setHidden} isAudioPlayerHidden={isAudioPlayerHidden}/> }
       <LazyBackroundImage
         className="translation-container"
         source={background}
@@ -77,6 +84,7 @@ const Translation = () => {
           setSentenceDuration={setSentenceDuration}
           length = {data.data.length}
           hasCurrent = {hasCurrent}
+          isAudioPlayerHidden={isAudioPlayerHidden}
           />
       }
 

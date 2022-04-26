@@ -48,10 +48,10 @@ const LoadTranslation = ({ loadData, updateStatus, statusRecorder }) => {
   }
 
   return (
-    <>
+    <div className="recorder-load-translation">
       <LanguageSelector selectLanguage={selectLanguageOne} />
       <button type="button" disabled={!languageOne && true } onClick={(e)=>handleClick(e)}>Load</button>
-    </>
+    </div>
   )
 
 }

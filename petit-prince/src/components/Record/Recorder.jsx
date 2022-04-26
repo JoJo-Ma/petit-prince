@@ -2,6 +2,11 @@ import React, { useState, useEffect, useRef, useContext } from 'react';
 import { setupMic, convertBlobToAudioBuffer, play } from './record_util'
 import {Buffer} from 'buffer'
 import {RecorderContext} from './Record'
+import ButtonRecorder from './ButtonRecorder'
+import { ReactComponent as RecordButton} from './record.svg'
+import { ReactComponent as StopButton} from './stop.svg'
+import { ReactComponent as SaveButton} from './save.svg'
+
 
 import "./Recorder.css"
 
@@ -36,6 +41,9 @@ const Recorder = ({ setNext, currentId, languageId, statusRecorder, updateStatus
 
   const startRecording = async (e) => {
     e.preventDefault()
+    if (isRecording) {
+      return
+    }
     if (!mediaStream.curent) {
       //reset chunks for the next recording
       mediaChunks.current = []
@@ -89,6 +97,8 @@ const Recorder = ({ setNext, currentId, languageId, statusRecorder, updateStatus
 
   const saveToDb = async (e, type) => {
     e.preventDefault()
+    console.log(e);
+    console.log(type);
     try {
       const formData = new FormData()
       for (let el of audioToDb.filter(audio => audio.type === type)) {
@@ -162,35 +172,34 @@ const Recorder = ({ setNext, currentId, languageId, statusRecorder, updateStatus
     const disabledDeletePlay = !statusRecorder.recordedAndInDb.includes(currentId) &&
                 !statusRecorder.recorded.includes(currentId) && true
 
-    const disabledSave = !statusRecorder.recorded.includes(currentId)&& true
+    const disabledSave = !statusRecorder.recorded.includes(currentId) && true
 
   return (
     <div className="audioplayer">
       <h1>{isRecording ? 'Recording' : 'Not recording'}</h1>
-      {
-        !statusRecorder.recordedAndInDb.includes(currentId)
-        ?
-        <>
-        <button type="button"
-         disabled = { isRecording && true }
-         onClick={startRecording}>Start</button>
-        <button type="button"
-          disabled = { !isRecording && true }
-          onClick={(e) => {onRecordingStop(e,NEW)}}>Stop</button>
-        <button type="button"
-          disabled={ disabledSave }
-          onClick={(e) => {saveToDb(e, NEW)}}>Save to db</button>
-        </>
+      <ButtonRecorder className={isRecording ? "button-recorder button-recorder--isrecording" : "button-recorder"} onClick={startRecording} disabled={isRecording} alt={"Start recording"}>
+        <RecordButton />
+      </ButtonRecorder>
+      <ButtonRecorder className={"button-recorder"}
+        onClick={!statusRecorder.recordedAndInDb.includes(currentId) ?
+          (e) => {onRecordingStop(e,NEW)}
         :
-        <>
-        <button type="button" disabled = { isRecording && true } onClick={startRecording}>Rerecord</button>
-        <button type="button" disabled = { !isRecording && true } onClick={(e) => {onRecordingStop(e,UPDATE)}}>Stopito</button>
-        <button type="button"
-        disabled={ disabledSave }
-        onClick={(e) => {saveToDb(e,UPDATE)}}>Save update to db</button>
-
-        </>
+          (e) => {onRecordingStop(e,UPDATE)}
       }
+        disabled={!isRecording}
+        alt={"Stop recording"}>
+        <StopButton />
+      </ButtonRecorder>
+      <ButtonRecorder className={"button-recorder"}
+        onClick={!statusRecorder.recordedAndInDb.includes(currentId) ?
+          (e) =>  {saveToDb(e, NEW)}
+          :
+          (e) => {saveToDb(e,UPDATE)}
+       }
+        disabled={disabledSave} alt={"Save to db"}>
+        <SaveButton />
+      </ButtonRecorder>
+
       <button type="button"
         disabled={ disabledDeletePlay }
         onClick={(e) => {deleteRecording(e,currentId)}}>Delete</button>

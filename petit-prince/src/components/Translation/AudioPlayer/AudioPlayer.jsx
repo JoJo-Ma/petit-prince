@@ -9,12 +9,11 @@ import { convertBlobToAudioBuffer, play } from '../../Util/audio_util'
 import {Buffer} from 'buffer'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPlay, faPause, faToggleOn, faToggleOff, faTransgender } from '@fortawesome/free-solid-svg-icons'
+import { faPlay, faPause, faToggleOn, faToggleOff } from '@fortawesome/free-solid-svg-icons'
 
 
 
-const AudioPlayer = ({statusRecorder, updateStatus, language, languageId, setNext, currentId, setSentenceDuration, duration, length, hasCurrent}) => {
-  const [hidden, setHidden] = useState(false)
+const AudioPlayer = ({statusRecorder, updateStatus, language, languageId, setNext, currentId, setSentenceDuration, duration, length, hasCurrent, isAudioPlayerHidden}) => {
   const { usernames } = useFetchAvailableRecording(language)
   const [username, setUsername] = useState('')
   const [isPlaying, setIsPlaying] = useState(false)
@@ -23,10 +22,6 @@ const AudioPlayer = ({statusRecorder, updateStatus, language, languageId, setNex
   const [isAutoPlay, setIsAutoPlay] = useState(true)
   const isInitialMount = useRef(true);
   const audioContext = useRef(null)
-
-  const toggleHidden = () => {
-    setHidden(!hidden)
-  }
 
   useEffect(() => {
     const fetchData = async () => {
@@ -58,7 +53,7 @@ const AudioPlayer = ({statusRecorder, updateStatus, language, languageId, setNex
   }
 
   const classAudio =
-    hidden
+    isAudioPlayerHidden
     ?
     'hidden'
     :
@@ -138,7 +133,7 @@ const AudioPlayer = ({statusRecorder, updateStatus, language, languageId, setNex
       {
         usernames.length > 0
         ?
-        <div className='audioplayer-container'>
+        <div className='audioplayer-settings'>
         <RecordingSelector language={language} usernames={usernames} selectUsername={selectUsername} />
         {isPlaying ?
           <FontAwesomeIcon className="icon-audio-player" icon={faPause} onClick={() =>{handlePlayStopClick()}} />
@@ -147,20 +142,19 @@ const AudioPlayer = ({statusRecorder, updateStatus, language, languageId, setNex
             className={hasCurrent ? "icon-audio-player audio-player-abled" : "icon-audio-player audio-player-disabled"}
             icon={faPlay}
             onClick={() =>{handlePlayStopClick()}}
-            title={hasCurrent ? "Play" : "No recording for this sentence"}/>
+            title={hasCurrent ? "Play" : "No recording for this sentence :("}/>
         }
         {
           isAutoPlay ?
-            <FontAwesomeIcon className="icon-audio-player" icon={faToggleOn} onClick={handleCheck} />
+            <FontAwesomeIcon className="icon-audio-player toggle-auto-play" icon={faToggleOn} onClick={handleCheck} />
           :
-            <FontAwesomeIcon className="icon-audio-player" icon={faToggleOff} onClick={handleCheck} />
+            <FontAwesomeIcon className="icon-audio-player toggle-auto-play" icon={faToggleOff} onClick={handleCheck} />
         }
         <p for="checkbox">Autoplay</p>
         </div>
         :
         <p>{"No recording for this language yet. :'("}</p>
       }
-      <FontAwesomeIcon className='toggle-button' icon={faTransgender} onClick={()=>toggleHidden()}/>
       <CassetteArt currentId={currentId} length={length} isPlaying={isPlaying} />
     </div>
   )
