@@ -1,5 +1,5 @@
 import React from 'react';
-import { ReactComponent as CassetteKnob} from './cassetteknob.svg'
+import { ReactComponent as CassetteKnob} from '../../svg/cassetteknob.svg'
 
 
 

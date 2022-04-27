@@ -43,7 +43,7 @@ const DisplayText =  ({data, currentId, changeCurrentId, statusRecorder, duratio
       return `${style} languageOne recorded`
     }
     if (statusRecorder.recordedAndInDb.includes(id)) {
-      return `${style} languageOne recordedAndInDb`
+      return `${style} languageOne recordedAndInDb-recorder`
     }
     return `${style} languageOne`
   }

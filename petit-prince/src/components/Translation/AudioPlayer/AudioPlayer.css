@@ -46,6 +46,17 @@
   fill: var(--confetti)
 }
 
+.toggle-button .tooltip {
+  bottom: 100%; /* custom tooltip positioning for this element */
+}
+
+.toggle-button:hover .tooltip {
+  animation: opacity-tooltip-transition 1s ;
+  visibility: visible;
+  opacity: 1;
+}
+
+
 
 
 .cassette {
@@ -132,18 +143,36 @@
 }
 
 .icon-audio-player {
-  color: var(--cranberry);
+  width: 2rem;
   height: 2rem;
   padding: 0 0.5rem 0 1rem;
   cursor: pointer;
+  position: relative;
 }
 
-.audio-player-disabled {
+.icon-audio-player svg {
+  width: inherit;
+  height: inherit;
+  fill: var(--cranberry);
+  transition: ease-in-out 100ms;
+}
+
+.audio-player-disabled svg {
   opacity: 0.8;
   cursor: default;
 }
 
-.audio-player-abled:hover {
+.icon-audio-player:hover svg {
+  fill: var(--confetti);
+}
+
+.icon-audio-player:hover .tooltip {
+  animation: opacity-tooltip-transition 1s ;
+  visibility: visible;
+  opacity: 1;
+}
+
+.audio-player-abled:hover svg {
   color: var(--confetti);
   transition: ease-in-out 100ms;
 }

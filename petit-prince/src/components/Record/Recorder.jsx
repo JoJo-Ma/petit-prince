@@ -2,10 +2,13 @@ import React, { useState, useEffect, useRef, useContext } from 'react';
 import { setupMic, convertBlobToAudioBuffer, play } from './record_util'
 import {Buffer} from 'buffer'
 import {RecorderContext} from './Record'
-import ButtonRecorder from './ButtonRecorder'
-import { ReactComponent as RecordButton} from './record.svg'
-import { ReactComponent as StopButton} from './stop.svg'
-import { ReactComponent as SaveButton} from './save.svg'
+import SvgButton from '../Util/SvgButton'
+import { ReactComponent as RecordButton} from '../svg/record.svg'
+import { ReactComponent as StopButton} from '../svg/stop.svg'
+import { ReactComponent as SaveButton} from '../svg/save.svg'
+import { ReactComponent as BinButton} from '../svg/bin.svg'
+import { ReactComponent as PlayButton} from '../svg/play.svg'
+import { ReactComponent as PlayForwardButton} from '../svg/playforward.svg'
 
 
 import "./Recorder.css"
@@ -175,38 +178,35 @@ const Recorder = ({ setNext, currentId, languageId, statusRecorder, updateStatus
     const disabledSave = !statusRecorder.recorded.includes(currentId) && true
 
   return (
-    <div className="audioplayer">
+    <div className="recorder">
       <h1>{isRecording ? 'Recording' : 'Not recording'}</h1>
-      <ButtonRecorder className={isRecording ? "button-recorder button-recorder--isrecording" : "button-recorder"} onClick={startRecording} disabled={isRecording} alt={"Start recording"}>
-        <RecordButton />
-      </ButtonRecorder>
-      <ButtonRecorder className={"button-recorder"}
-        onClick={!statusRecorder.recordedAndInDb.includes(currentId) ?
-          (e) => {onRecordingStop(e,NEW)}
-        :
-          (e) => {onRecordingStop(e,UPDATE)}
-      }
-        disabled={!isRecording}
-        alt={"Stop recording"}>
-        <StopButton />
-      </ButtonRecorder>
-      <ButtonRecorder className={"button-recorder"}
-        onClick={!statusRecorder.recordedAndInDb.includes(currentId) ?
-          (e) =>  {saveToDb(e, NEW)}
+      <div className="recorder-container">
+        <SvgButton className={isRecording ? "button-recorder button-recorder--isrecording" : "button-recorder"}
+          onClick={startRecording}
+          disabled={isRecording}
+          alt={"Start recording"}
+          button={<RecordButton />} />
+        <SvgButton className={"button-recorder"}
+          onClick={!statusRecorder.recordedAndInDb.includes(currentId) ?
+            (e) => {onRecordingStop(e,NEW)}
           :
-          (e) => {saveToDb(e,UPDATE)}
-       }
-        disabled={disabledSave} alt={"Save to db"}>
-        <SaveButton />
-      </ButtonRecorder>
+            (e) => {onRecordingStop(e,UPDATE)}
+        }
+          disabled={!isRecording}
+          alt={"Stop recording"}
+          button={<StopButton />} />
+        <SvgButton className={"button-recorder"}
+          onClick={!statusRecorder.recordedAndInDb.includes(currentId) ?
+            (e) =>  {saveToDb(e, NEW)}
+            :
+            (e) => {saveToDb(e,UPDATE)}
+         }
+          disabled={disabledSave} alt={"Save to db"} button={<SaveButton />} />
+        <SvgButton className={"button-recorder"} onClick={(e) => {deleteRecording(e,currentId)}} disabled={disabledDeletePlay} alt={"Delete"} button={<BinButton />} />
+        <SvgButton className={"button-recorder"} onClick={handleClickNext} alt={"Next"} button={<PlayForwardButton />} />
+        <SvgButton className={"button-recorder"} onClick={() => {playSentence(currentId)}} disabled={ disabledDeletePlay } alt={"Play"} button={<PlayButton />} />
+      </div>
 
-      <button type="button"
-        disabled={ disabledDeletePlay }
-        onClick={(e) => {deleteRecording(e,currentId)}}>Delete</button>
-      <button type="button" onClick={handleClickNext}>Next</button>
-      <button type="button"
-        disabled={ disabledDeletePlay }
-        onClick={() => {playSentence(currentId)}}>Play sentence</button>
     </div>
 
   )

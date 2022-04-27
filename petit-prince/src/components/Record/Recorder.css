@@ -13,7 +13,7 @@
 }
 
 
-.audioplayer {
+.recorder {
   position: -webkit-fixed; /* Safari */
   position: fixed;
   bottom: 0;
@@ -22,6 +22,12 @@
   background: linear-gradient(135deg, var(--steelblue) 50%, var(--steelbluedarker));
 }
 
+.recorder-container {
+  display: flex;
+  justify-content:center;
+  padding-bottom: 1rem;
+  user-select: none;
+}
 
 
 .recorded {
@@ -29,7 +35,7 @@
   color: gray;
 }
 
-.recordedAndInDb {
+.recordedAndInDb-recorder {
   background-color: green;
 }
 
@@ -37,6 +43,15 @@
   width: 2rem;
   height: 2rem;
   cursor: pointer;
+  padding: 0 1rem ;
+  position: relative;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.button-recorder:hover .tooltip {
+  animation: opacity-tooltip-transition 1s ;
+  visibility: visible;
+  opacity: 1;
 }
 
 .button-recorder svg {

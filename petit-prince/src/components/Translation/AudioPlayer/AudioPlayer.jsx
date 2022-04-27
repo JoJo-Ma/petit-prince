@@ -9,8 +9,11 @@ import { convertBlobToAudioBuffer, play } from '../../Util/audio_util'
 import {Buffer} from 'buffer'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPlay, faPause, faToggleOn, faToggleOff } from '@fortawesome/free-solid-svg-icons'
-
+import { ReactComponent as PlayButton} from '../../svg/play.svg'
+import { ReactComponent as PauseButton} from '../../svg/pause.svg'
+import { ReactComponent as ToggleOnButton} from '../../svg/toggleon.svg'
+import { ReactComponent as ToggleOffButton} from '../../svg/toggleoff.svg'
+import SvgButton from '../../Util/SvgButton'
 
 
 const AudioPlayer = ({statusRecorder, updateStatus, language, languageId, setNext, currentId, setSentenceDuration, duration, length, hasCurrent, isAudioPlayerHidden}) => {
@@ -136,20 +139,15 @@ const AudioPlayer = ({statusRecorder, updateStatus, language, languageId, setNex
         <div className='audioplayer-settings'>
         <RecordingSelector language={language} usernames={usernames} selectUsername={selectUsername} />
         {isPlaying ?
-          <FontAwesomeIcon className="icon-audio-player" icon={faPause} onClick={() =>{handlePlayStopClick()}} />
+          <SvgButton className="icon-audio-player" onClick={() =>{handlePlayStopClick()}} button={<PauseButton />} alt={"Pause"} />
           :
-          <FontAwesomeIcon
+          <SvgButton
             className={hasCurrent ? "icon-audio-player audio-player-abled" : "icon-audio-player audio-player-disabled"}
-            icon={faPlay}
             onClick={() =>{handlePlayStopClick()}}
-            title={hasCurrent ? "Play" : "No recording for this sentence :("}/>
+            alt= {hasCurrent ? "Play" : "No recording for this sentence :("}
+            button={<PlayButton />} />
         }
-        {
-          isAutoPlay ?
-            <FontAwesomeIcon className="icon-audio-player toggle-auto-play" icon={faToggleOn} onClick={handleCheck} />
-          :
-            <FontAwesomeIcon className="icon-audio-player toggle-auto-play" icon={faToggleOff} onClick={handleCheck} />
-        }
+        <SvgButton className="icon-audio-player toggle-auto-play" onClick={handleCheck} button={isAutoPlay ? <ToggleOnButton /> : <ToggleOffButton />} alt={'Activate Autoplay'}/>
         <p for="checkbox">Autoplay</p>
         </div>
         :
