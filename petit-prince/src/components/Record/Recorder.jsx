@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef, useContext } from 'react';
-import { setupMic, convertBlobToAudioBuffer, play } from './record_util'
+import { setupMic, convertBlobToAudioBuffer, play, convertWavToMp3 } from '../Util/audio_util'
 import {Buffer} from 'buffer'
 import {RecorderContext} from './Record'
 import SvgButton from '../Util/SvgButton'
@@ -16,6 +16,7 @@ import "./Recorder.css"
 const NEW = 'POST'
 const UPDATE = 'PUT'
 
+
 const Recorder = ({ setNext, currentId, languageId, statusRecorder, updateStatus, setSentenceDuration }) => {
   const [audioToDb, setAudioToDb] = useState([])
   const [isRecording, setIsRecording] = useState(false)
@@ -23,6 +24,7 @@ const Recorder = ({ setNext, currentId, languageId, statusRecorder, updateStatus
   const mediaChunks = useRef([])
   const mediaStream = useRef(null)
   const audioContext = useRef(null)
+  const mp3encoder = useRef(null)
   const {username} = useContext(RecorderContext)
   const [typeOfRequest, setTypeOfRequest] = useState('')
 
@@ -69,6 +71,8 @@ const Recorder = ({ setNext, currentId, languageId, statusRecorder, updateStatus
             mimeType: 'audio/webm;codecs=pcm',
         });
 
+
+
        mediaRecorder.current.ondataavailable = onRecordingActive;
        mediaRecorder.current.onstop = onRecordingStop;
        mediaRecorder.current.start();
@@ -82,12 +86,15 @@ const Recorder = ({ setNext, currentId, languageId, statusRecorder, updateStatus
 
   //TODO find a way to slice recording
   const onRecordingStop = (e) => {
-      const blob =new Blob(mediaChunks.current, { type: "audio/wav" });
-      setAudioToDb([...audioToDb, {
-        audioblob: blob,
-        sentenceId: currentId,
-        type: typeOfRequest
-      }])
+      getAudioContext()
+      convertWavToMp3(new Blob(mediaChunks.current, { type: "audio/wav" }), audioContext.current).then((blob) => {
+          setAudioToDb([...audioToDb, {
+            audioblob: blob,
+            sentenceId: currentId,
+            type: typeOfRequest
+          }])
+        }
+      )
       updateStatus([currentId], "AddRecorded")
       setIsRecording(false)
       if (mediaStream.current) {
@@ -97,6 +104,10 @@ const Recorder = ({ setNext, currentId, languageId, statusRecorder, updateStatus
       setNext()
   };
 
+  const convertustotalus = async (b) => {
+    const i = await convertBlobToAudioBuffer(b)
+    return i
+  }
 
   const saveToDb = async (e, type) => {
     e.preventDefault()
@@ -158,7 +169,7 @@ const Recorder = ({ setNext, currentId, languageId, statusRecorder, updateStatus
         headers: {token : localStorage.token}
       })
       const parseRes = await response.json()
-      const blob = new Blob([Buffer.from(parseRes, "7bit")],{ type: "audio/wav" })
+      const blob = new Blob([Buffer.from(parseRes, "7bit")],{ type: "audio/mp3" })
       audioBuffer = await convertBlobToAudioBuffer(blob, audioContext.current)
       setSentenceDuration(audioBuffer.duration)
       play(audioBuffer, audioContext.current)
