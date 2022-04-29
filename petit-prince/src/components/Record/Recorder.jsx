@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef, useContext } from 'react';
-import { setupMic, convertBlobToAudioBuffer, play, convertWavToMp3 } from '../Util/audio_util'
+import { setupMic, convertBlobToAudioBuffer, play, convertWavToMp3, SAMPLE_RATE } from '../Util/audio_util'
 import {Buffer} from 'buffer'
 import {RecorderContext} from './Record'
 import SvgButton from '../Util/SvgButton'
@@ -41,7 +41,9 @@ const Recorder = ({ setNext, currentId, languageId, statusRecorder, updateStatus
     if (audioContext.current != null) {
       audioContext.current.close()
     }
-    audioContext.current = new AudioContext()
+    audioContext.current = new AudioContext({
+      sampleRate: SAMPLE_RATE
+    })
   }
 
   const startRecording = async (e) => {
@@ -68,7 +70,7 @@ const Recorder = ({ setNext, currentId, languageId, statusRecorder, updateStatus
        }
        mediaRecorder.current = new MediaRecorder(mediaStream.current, {
             audioBitsPerSecond : 64000,
-            mimeType: 'audio/webm;codecs=pcm',
+            mimeType: 'audio/webm;codecs=opus',
         });
 
 
@@ -86,8 +88,10 @@ const Recorder = ({ setNext, currentId, languageId, statusRecorder, updateStatus
 
   //TODO find a way to slice recording
   const onRecordingStop = (e) => {
-      getAudioContext()
+      getAudioContext();
+      console.log(mediaChunks.current);
       convertWavToMp3(new Blob(mediaChunks.current, { type: "audio/wav" }), audioContext.current).then((blob) => {
+          console.log(blob);
           setAudioToDb([...audioToDb, {
             audioblob: blob,
             sentenceId: currentId,
@@ -170,6 +174,7 @@ const Recorder = ({ setNext, currentId, languageId, statusRecorder, updateStatus
       })
       const parseRes = await response.json()
       const blob = new Blob([Buffer.from(parseRes, "7bit")],{ type: "audio/mp3" })
+      console.log(blob);
       audioBuffer = await convertBlobToAudioBuffer(blob, audioContext.current)
       setSentenceDuration(audioBuffer.duration)
       play(audioBuffer, audioContext.current)

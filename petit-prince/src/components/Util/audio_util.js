@@ -25,12 +25,13 @@ const convertBlobToAudioBuffer = (blob, context) => {
       fileReader.readAsArrayBuffer(blob)
     })
   }
+const SAMPLE_RATE = 22050
 
 const convertWavToMp3 = async (blob, context) => {
   // channels 1 for mono
   const CHANNELS = 1
-  const SAMPLE_RATE = 48000
-  const KBPS = 128
+  // 64 bkps recommended for speech only audio https://www.makeuseof.com/tag/5-tips-optimizing-audio-file-sizes/
+  const KBPS = 64
   var mp3encoder = new lamejs.Mp3Encoder(CHANNELS, SAMPLE_RATE, KBPS);
   var mp3Data=[]
   var audioBuffer = await convertBlobToAudioBuffer(blob, context)
@@ -44,11 +45,21 @@ const convertWavToMp3 = async (blob, context) => {
 
 const play = (buffer, audioContext) => {
   let sourceNode = audioContext.createBufferSource();
+
+  let compressor = audioContext.createDynamicsCompressor();
+  compressor.threshold.setValueAtTime(-50, audioContext.currentTime);
+  compressor.knee.setValueAtTime(40, audioContext.currentTime);
+  compressor.ratio.setValueAtTime(12, audioContext.currentTime);
+  compressor.attack.setValueAtTime(0, audioContext.currentTime);
+  compressor.release.setValueAtTime(0.25, audioContext.currentTime);
+
+
   sourceNode.playbackRate.value = 1
   sourceNode.buffer = buffer
-  sourceNode.connect(audioContext.destination)
+  sourceNode.connect(compressor)
+  compressor.connect(audioContext.destination)
   sourceNode.start(0)
 }
 
 
-export {setupMic, convertBlobToAudioBuffer, play, convertWavToMp3};
+export {setupMic, convertBlobToAudioBuffer, play, convertWavToMp3, SAMPLE_RATE};
