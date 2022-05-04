@@ -14,6 +14,10 @@
   font-family: "Digital";
   src: url('../public/fonts/digital-7.ttf');
 }
+@font-face {
+  font-family: "Noto";
+  src: url('../public/fonts/NotoSansTC-Regular.otf');
+}
 
 
 :root {
@@ -33,7 +37,7 @@
 
 body {
   margin: 0;
-  font-family: "Rubik",-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: "Rubik","Noto",-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -46,7 +50,7 @@ code {
 }
 
 /* CSS */
-button {
+button, .file-selector {
   margin: 10px;
   padding: 15px 30px;
   text-align: center;
@@ -65,14 +69,14 @@ button {
   touch-action: manipulation;
 }
 
-button:hover {
+button:hover, .file-selector:hover {
   background-position: right center;
   /* change the direction of the change here */
   color: #fff;
   text-decoration: none;
 }
 
-button:active {
+button:active, .file-selector:active {
   transform: scale(0.95);
 }
 

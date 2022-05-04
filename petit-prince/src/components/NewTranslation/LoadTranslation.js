@@ -21,7 +21,7 @@ const LoadTranslation = ({id}) => {
   return (
     <div className="preview-compare" >
     <h3>Load translation</h3>
-    <div>
+    <div className="load-preview-compare">
       <LanguageSelector selectLanguage={handleLanguageSelect} />
       <button type="button" onClick={handleClick}>Load</button>
     </div>

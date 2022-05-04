@@ -37,10 +37,10 @@ const SubmitDraft = ({data}) => {
     <>
     <h4>Submit Draft</h4>
     <form onSubmit={onSubmitForm}>
-      <label>
-        <p>Draft name</p>
-        <input type="text" value={name} name="name" onChange={e => onChange(e)} />
-      </label>
+      <div className="form__group">
+        <input className="form__field" type="text" value={name} name="name" style={{width:"100%"}} onChange={e => onChange(e)} placeholder="Draft name" />
+        <label for="name"  className="form__label">Draft name</label>
+      </div>
       <label>
         <p>Language</p>
         <LanguageSelector selectLanguage={handleLanguageSelect}/>

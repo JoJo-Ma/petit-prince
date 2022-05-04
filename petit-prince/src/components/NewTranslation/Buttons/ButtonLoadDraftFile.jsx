@@ -29,7 +29,12 @@ const ButtonLoadDraftFile = ({loadData}) => {
   return (
     <>
       <p>Load file</p>
-      <input type="file" id="file-selector" accept=".json" />
+      <label for="file-selector" className="file-selector-label">
+      <div className="file-selector">
+          <span>Import file</span>
+      </div>
+      </label>
+      <input type="file" id="file-selector" accept=".json" title="" />
     </>
   )
 }

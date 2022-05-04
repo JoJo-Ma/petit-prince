@@ -17,6 +17,9 @@ import ButtonSaveDraftFile from './Buttons/ButtonSaveDraftFile'
 import ButtonLoadDraftFile from './Buttons/ButtonLoadDraftFile'
 import ButtonLoadPdf from './Buttons/ButtonLoadPdf'
 import ButtonEdit from './Buttons/ButtonEdit'
+import ModalTranslation from './ModalTranslation'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faClose } from '@fortawesome/free-solid-svg-icons'
 
 import "./NewTranslation.css"
 
@@ -66,28 +69,32 @@ const NewTranslation = () => {
     dispatch({ type:"load", payload:data})
   }
 
+
+
   return (
     <>
       <Navbar />
-      <div>
-        <h1>New Translation</h1>
-        <div className="result">
-          <ButtonLoadPdf setInputURL={setInputURL} handleClickPdf={handleClickPdf} urlInput={state.urlInput} />
-          <ButtonEdit
-          add={handleClickAdd}
-          addBlank={handleClickAddBlank}
-          discard={handleClickDiscard}
-          undo={handleClickUndo}
-          nextPunct={handleClickNextPunct}
-          selected={state.selected}
-          output={state.output}/>
-          <ButtonSaveDraftFile data={state} />
-          <ButtonLoadDraftFile loadData={ loadData } />
-        </div>
-      </div>
-      <SubmitDraft data={state}/>
-      <LoadDraft loadData={ loadData } />
-      <SubmitTranslation data={{newTranslationList : state.newTranslationList}} />
+      <h1>New Translation</h1>
+      <ButtonLoadPdf setInputURL={setInputURL} handleClickPdf={handleClickPdf} urlInput={state.urlInput} />
+      <ButtonEdit
+        add={handleClickAdd}
+        addBlank={handleClickAddBlank}
+        discard={handleClickDiscard}
+        undo={handleClickUndo}
+        nextPunct={handleClickNextPunct}
+        selected={state.selected}
+        output={state.output}/>
+      <ModalTranslation buttonText="Load Draft">
+        <ButtonLoadDraftFile loadData={ loadData } />
+        <LoadDraft loadData={ loadData } />
+      </ModalTranslation>
+      <ModalTranslation buttonText="Save Draft">
+        <ButtonSaveDraftFile data={state} />
+        <SubmitDraft data={state}/>
+      </ModalTranslation>
+      <ModalTranslation buttonText="Save Translation">
+        <SubmitTranslation data={{newTranslationList : state.newTranslationList}} />
+      </ModalTranslation>
       <LoadTranslation id={state.newTranslationListId} />
       <div className="preview-selected">{state.selected.text}</div>
       <div className="text-container">

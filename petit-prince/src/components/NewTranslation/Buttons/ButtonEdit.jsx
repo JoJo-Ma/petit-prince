@@ -80,12 +80,12 @@ const ButtonEdit = ({add, addBlank, discard, undo, nextPunct, selected, output }
   useEventListener("keydown", keyPressHandle)
 
   return (
-    <>
-    <button type="button" onClick={handleClickAdd}>Add Selection</button>
-    <button type="button" onClick={handleClickAddBlank}>Add blank</button>
-    <button type="button" onClick={handleClickUndo}>Undo</button>
-    <button type="button" onClick={handleClickNextPunct}>Next sentence</button>
-    </>
+    <div className="edit-buttons">
+      <button type="button" onClick={handleClickAdd}>Add Selection</button>
+      <button type="button" onClick={handleClickAddBlank}>Add blank</button>
+      <button type="button" onClick={handleClickUndo}>Undo</button>
+      <button type="button" onClick={handleClickNextPunct}>Next sentence</button>
+    </div>
   )
 }
 

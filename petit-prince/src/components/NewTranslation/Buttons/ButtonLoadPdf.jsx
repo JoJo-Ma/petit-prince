@@ -28,10 +28,10 @@ const ButtonLoadPdf = ({setInputURL, urlInput, handleClickPdf}) => {
   }
 
   return (
-    <>
-      <input type="text" name="url" placeholder="URL" onChange={e => onChangeURL(e)}/>
+    <div className="load-container">
+      <input type="text" name="url" className="form__field" placeholder="URL" onChange={e => onChangeURL(e)}/>
       <button type="button" onClick={handleClick}>Submit</button>
-    </>
+    </div>
   )
 }
 
