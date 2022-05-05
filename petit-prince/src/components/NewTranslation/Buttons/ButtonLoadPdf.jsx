@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ButtonLoadPdf = ({setInputURL, urlInput, handleClickPdf}) => {
+const ButtonLoadPdf = ({setInputURL, urlInput, handleClickPdf, closeModal, modalRef}) => {
 
   const onChangeURL = (e) => {
     setInputURL(e.target.value)
@@ -20,6 +20,7 @@ const ButtonLoadPdf = ({setInputURL, urlInput, handleClickPdf}) => {
       const parseRes = await response.text()
 
       handleClickPdf(parseRes.replace(/\s{2,}/g, ' ').trim())
+      closeModal(modalRef)
     } catch (error) {
       handleClickPdf(error.message)
       console.error(error.message);
@@ -29,7 +30,10 @@ const ButtonLoadPdf = ({setInputURL, urlInput, handleClickPdf}) => {
 
   return (
     <div className="load-container">
-      <input type="text" name="url" className="form__field" placeholder="URL" onChange={e => onChangeURL(e)}/>
+      <div className="form__group">
+        <input type="text" name="url" className="form__field" placeholder="URL" onChange={e => onChangeURL(e)}/>
+        <label for="url"  className="form__label">PDF's URL</label>
+      </div>
       <button type="button" onClick={handleClick}>Submit</button>
     </div>
   )

@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 
-const ButtonLoadDraftFile = ({loadData}) => {
+const ButtonLoadDraftFile = ({loadData, closeModal, modalRef}) => {
 
   useEffect(() => {
     document.getElementById('file-selector').addEventListener('change', (e) => {
@@ -12,19 +12,18 @@ const ButtonLoadDraftFile = ({loadData}) => {
         }
         const readFile = new FileReader();
         readFile.onload = (e) => {
-          const data = e.target.result
-          const json = JSON.parse(data)
-          console.log(json.urlInput);
-          loadData(json)
+        const data = e.target.result
+        const json = JSON.parse(data)
+        loadData(json)
         }
         readFile.readAsText(file)
         document.getElementById('file-selector').value = ""
       } catch (error) {
-        console.log(error.message);
+        console.error(error.message);
       }
     })
+    closeModal(modalRef)
   }, [loadData])
-
 
   return (
     <>

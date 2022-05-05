@@ -18,8 +18,6 @@ import ButtonLoadDraftFile from './Buttons/ButtonLoadDraftFile'
 import ButtonLoadPdf from './Buttons/ButtonLoadPdf'
 import ButtonEdit from './Buttons/ButtonEdit'
 import ModalTranslation from './ModalTranslation'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faClose } from '@fortawesome/free-solid-svg-icons'
 
 import "./NewTranslation.css"
 

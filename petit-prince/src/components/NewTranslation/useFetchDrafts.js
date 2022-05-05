@@ -14,9 +14,9 @@ const useFetchDraft = (username, draftName = "") => {
   useEffect(() => {
     const call = async () => {
       try {
-        setError(null)
-        setLoading(true)
-        const response = await fetch (`http://localhost:3005/translations/${username}/drafts/${draftName}`, {
+        //dirty fix because react select returns an object
+        const draft = draftName.length == "" ? draftName : draftName.name
+        const response = await fetch (`http://localhost:3005/translations/${username}/drafts/${draft}`, {
           method: "GET",
           headers: {token : localStorage.token}
         })

@@ -8,36 +8,42 @@ const Navbar = () => {
   const name = useStoreState(state => state.naming.name)
 
   return (
-    <ul className="navbar">
-      <li className="li-logo">LOGO</li>
-      <li>
-        <Link className="navbar-el" to="/">Home</Link>
-      </li>
-      {
-        name ?
-        (
-          <>
+    <ul className="navbar-container">
+      <div className="navbar-logo">
+        <li className="li-logo">LOGO</li>
+      </div>
+      <div className="navbar-elements">
+        {
+          name ?
+          (
+            <>
             <li>
-              <Link className="navbar-el" to="/newtranslation">New Translation</Link>
+              <p className="navbar-el-caption">Welcome, {name}!</p>
             </li>
             <li>
-              <Link className="navbar-el" to="/record">Record</Link>
+              <Link className="navbar-el" to="/">Home</Link>
             </li>
             <li>
               <Link className="navbar-el" to="/translation">Translation</Link>
             </li>
             <li>
-              <Link className="navbar-el" to="/dashboard">Dashboard</Link>
+              <Link className="navbar-el" to="/record">Record</Link>
             </li>
             <li>
-              <p className="navbar-el-caption">Welcome, {name}!</p>
+              <Link className="navbar-el" to="/newtranslation">New Translation</Link>
             </li>
-          </>
+            <li>
+              <Link className="navbar-el" to="/dashboard">Dashboard</Link>
+            </li>
+            </>
 
-      )
+        )
         :
         (
-        <>
+          <>
+          <li>
+            <Link className="navbar-el" to="/">Home</Link>
+          </li>
           <li>
             <Link className="navbar-el" to="/login">Log in</Link>
           </li>
@@ -45,13 +51,14 @@ const Navbar = () => {
             <Link className="navbar-el" to="/register">Sign up</Link>
           </li>
           <li>
-          <p className="navbar-el-caption">Please sign up or log in!</p>
+            <p className="navbar-el-caption">Please sign up or log in!</p>
           </li>
-        </>
+          </>
 
       )
 
-      }
+    }
+      </div>
     </ul>
   )
 }

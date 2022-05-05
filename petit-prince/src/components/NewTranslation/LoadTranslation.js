@@ -26,7 +26,7 @@ const LoadTranslation = ({id}) => {
       <button type="button" onClick={handleClick}>Load</button>
     </div>
     {
-      translation.length == 0 ? <p>Load the text in the language of your choice</p>
+      translation.length === 0 ? <p>Load the text in the language of your choice</p>
     : <p>{translation[id].text}</p>
     }
   </div>

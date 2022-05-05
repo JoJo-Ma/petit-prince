@@ -56,12 +56,7 @@ const Translation = () => {
       <Navbar />
       <LoadTranslations loadData={loadData} />
       { data && <AudioPlayerToggle setHidden={setHidden} isAudioPlayerHidden={isAudioPlayerHidden}/> }
-      <LazyBackroundImage
-        className="translation-container"
-        source={background}
-        placeholder={placeholder}
-        options={backgroundOptions}
-      >
+      <div className="translation-container">
         <DisplayText
           data={data}
           pictures={pictures}
@@ -70,7 +65,7 @@ const Translation = () => {
           statusRecorder={statusRecorder}
           duration={duration}
           />
-      </LazyBackroundImage>
+      </div>
       {
         data &&
         <AudioPlayer

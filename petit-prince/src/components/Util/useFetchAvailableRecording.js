@@ -12,6 +12,7 @@ const useFetchAvailableRecording = (language) => {
 
       setUsernames(parseRes)
     }
+    if(!language) return
     fetchData()
   }, [language])
 

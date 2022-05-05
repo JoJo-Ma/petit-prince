@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useStoreState } from 'easy-peasy';
 import useFetchDrafts from './useFetchDrafts'
+import Select from 'react-select'
 
 const LoadDraft = ({ loadData }) => {
   const username = useStoreState(state => state.naming.name)
@@ -11,7 +12,7 @@ const LoadDraft = ({ loadData }) => {
   const isInitialMount = useRef(true);
 
   const handleChange = (e) => {
-    setSelectedDraft(e.target.value)
+    setSelectedDraft(draftList.find(draft => draft.name === e.value))
   }
 
   useEffect(() => {
@@ -23,14 +24,32 @@ const LoadDraft = ({ loadData }) => {
     }
   }, [retrievedDraft])
 
+  const options = draftList.map((draft, index) => {
+    return {
+      value: draft.name,
+      label: draft.name
+    }
+  })
+
   return (
     <>
       <h3>Load Draft</h3>
-      <select onChange={(e) => handleChange(e)}>
-      {draftList.map((draft, index) => {
-        return <option key={index} value={draft.name}>{draft.name}</option>
-      })}
-      </select>
+      <Select className="react-select-container"
+          classNamePrefix="react-select"
+          options={options}
+          onChange={(e) => handleChange(e)}
+          placeholder={'Select draft...'}
+          theme={(theme) => ({
+            ...theme,
+            borderRadius:0,
+            colors: {
+              ...theme.colors,
+              primary: '#408CA2',
+              primary25: '#AFD8E5'
+            }
+          })}
+          openMenuOnFocus={true}
+           />
       { isDrafts ? <button onClick={doFetchDraft} disabled={!selectedDraft}>Load</button> : <p>No drafts saved yet</p>}
     </>
   )

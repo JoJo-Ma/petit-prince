@@ -1,43 +1,36 @@
-.navbar {
+.navbar-container {
   list-style-type: none;
   background-color: var(--steelblue);
-  overflow: hidden;
   margin: 0;
   padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 3rem;
 }
 
-li {
-  float: right;
-  padding: 0;
+.navbar-elements {
+  display: flex;
+  align-items: center;
   margin: 0;
-}
-
-.navbar p {
-  float: right;
-  margin:0;
-}
-
-.li-logo {
-  float:left;
 }
 
 .navbar-el {
   color: var(--confetti);
-  display: block;
-  text-align: center;
   padding: 14px 16px;
   text-decoration: none;
 }
 
 .navbar-el-caption {
   color: var(--confetti);
-  display: block;
+  /* display: block; */
   text-align: center;
-  padding: 14px 16px;
   text-decoration: none;
+  margin: 0 1rem;
 }
 
-.navbar-el:hover {
+.navbar-el:hover, .navbar-el:focus {
+  outline:none;
   background-color: var(--confetti);
   color: var(--steelblue);
   transition: background-color 0.25s ease-in-out;

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import LanguageSelector from '../LanguageSelector/LanguageSelector'
 import { useStoreState } from 'easy-peasy';
 

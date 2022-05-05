@@ -12,7 +12,6 @@
 
 .load-container {
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
 }
@@ -42,10 +41,13 @@
   align-items: center;
   flex-direction: column;
   background-color: var(--cranberry);
-  color: white;
   min-height: 80px;
-  font-weight: bold;
   font-size: 17px;
+}
+
+.preview-compare p, .preview-compare h3 {
+  font-weight: bold;
+  color: white;
 }
 
 .load-preview-compare {
