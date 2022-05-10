@@ -83,7 +83,7 @@ const NewTranslation = () => {
         selected={state.selected}
         output={state.output}/>
       <ModalTranslation buttonText="Load Draft">
-        <ButtonLoadDraftFile loadData={ loadData } />
+        <ButtonLoadDraftFile loadData={ loadData } data={state.output} /> 
         <LoadDraft loadData={ loadData } />
       </ModalTranslation>
       <ModalTranslation buttonText="Save Draft">

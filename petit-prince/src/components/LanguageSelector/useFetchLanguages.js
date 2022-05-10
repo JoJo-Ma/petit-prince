@@ -5,6 +5,7 @@ const useFetchLanguages = () => {
 
 
   useEffect( () => {
+    const abortController = new AbortController()
     const fetchData = async () => {
       const response = await fetch ("http://localhost:3005/languages")
 
@@ -13,6 +14,10 @@ const useFetchLanguages = () => {
       setLanguages(parseRes)
     }
     fetchData()
+
+    return function cleanup() {
+      abortController.abort()
+    }
   }, [])
 
   return { languages }

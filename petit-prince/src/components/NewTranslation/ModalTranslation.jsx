@@ -15,6 +15,7 @@ const ModalTranslation = ({buttonText, children}) => {
     modal.current.style.display = "block"
   }
   const closeModal = (modal) => {
+    if(!modal) return
     modal.current.style.display = "none"
   }
   const childrenWithProps = React.Children.map(children, child => {

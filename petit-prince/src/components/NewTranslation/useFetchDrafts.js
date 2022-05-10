@@ -12,6 +12,7 @@ const useFetchDraft = (username, draftName = "") => {
 
 
   useEffect(() => {
+    const abortController = new AbortController()
     const call = async () => {
       try {
         //dirty fix because react select returns an object
@@ -31,6 +32,9 @@ const useFetchDraft = (username, draftName = "") => {
     }
     if(draftName === false) return
     call()
+    return function cleanup() {
+      abortController.abort()
+    }
   }, [click])
   return [{loading, drafts, error}, handleClick]
 }

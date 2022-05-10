@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 
-const ButtonLoadDraftFile = ({loadData, closeModal, modalRef}) => {
+const ButtonLoadDraftFile = ({loadData, closeModal, modalRef, data}) => {
 
   useEffect(() => {
     document.getElementById('file-selector').addEventListener('change', (e) => {
@@ -22,8 +22,11 @@ const ButtonLoadDraftFile = ({loadData, closeModal, modalRef}) => {
         console.error(error.message);
       }
     })
-    closeModal(modalRef)
   }, [loadData])
+
+  useEffect(() => {
+    closeModal(modalRef)
+  }, [data])
 
   return (
     <>
