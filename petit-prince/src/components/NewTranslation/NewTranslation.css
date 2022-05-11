@@ -120,6 +120,44 @@ input[type="file"] {
   width: 100%;
 }
 
+.edit-container {
+  position:fixed;
+  display:flex;
+  background-color: var(--confetti);
+  color: var(--steelblue);
+  flex-direction: column;
+  align-items: baseline;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 2px solid var(--steelblue) ;
+  right: 5%;
+}
+
+.edit-button {
+  box-shadow: 0 0 #d9d9d9, 0 0 #d9d9d9, 0 1px #d9d9d9, 0 2px #d9d9d9, 0 3px #d9d9d9, 0 4px #d9d9d9, 0 5px #d9d9d9, 2px 2.5px 4px #adb5bd, 0 -1px 2.5px #adb5bd;
+  transform: translateZ(5px);
+  transform-style: preserve-3d;
+  transition: all .25s cubic-bezier(.2,1,.2,1);
+  border: 1px solid #e6e6e6;
+}
+
+.edit-button:after {
+      border-radius: 0.5rem;
+      border-width: 0.125rem;
+      bottom: -10px;
+      left: -0.3125rem;
+      right: -0.3125rem;
+      top: 0;
+      transform: translateZ(-5px);
+}
+.edit-button:active:after {
+    transform: translate3d(0,-5px,0);
+}
+
+.edit-button:active {
+    transform: scale(1) translateZ(5px) translate3d(0,5px,0);
+}
+
 @keyframes animatetop {
   from {top: -300px; opacity: 0}
   to {top: 50%; opacity: 1}

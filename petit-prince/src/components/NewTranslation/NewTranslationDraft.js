@@ -8,7 +8,7 @@ const NewTranslationDraft = ({data}) => {
     <div className="pdf-to-text no-select" >
     {
       data.map((dataItem) => {
-        return (<div key={dataItem.id}>{dataItem.text}</div> )
+        return (<div key={dataItem.id}>{dataItem.text === "" ? "(blank)" : dataItem.text}</div> )
       })
     }
   </div>
