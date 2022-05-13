@@ -26,6 +26,17 @@ const Record = () => {
     setCurrentId(currentId + 1)
   }
 
+  const setNextNonRecorded = () => {
+    const concatArray = statusRecorder.recorded.concat(statusRecorder.recordedAndInDb).sort((a, b) => {
+        return a - b
+    })
+    const nextNonRecordedId = data.data.filter(item => !concatArray.includes(item.id))[0].id
+    if (nextNonRecordedId) {
+      setCurrentId(nextNonRecordedId)
+    }
+    return
+  }
+
   const changeCurrentId = (id) => {
     setCurrentId(id)
   }
@@ -58,6 +69,7 @@ const Record = () => {
           data &&
           <Recorder
             setNext={setNext}
+            setNextNonRecorded={setNextNonRecorded}
             currentId={currentId}
             languageId={data.idLanguageOne}
             statusRecorder={statusRecorder}

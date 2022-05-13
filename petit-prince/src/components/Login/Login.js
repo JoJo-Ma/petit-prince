@@ -1,11 +1,14 @@
 import React, { useState } from 'react'
 import { Link } from "react-router-dom"
 import Navbar from '../Navbar/Navbar'
-
+import { useStoreActions, useStoreState } from 'easy-peasy'
 import './Login.css'
-
+import { useLocation } from "react-router-dom";
 
 const Login = ({ setAuth }) => {
+
+  const setLoggedIn = useStoreActions((actions) => actions.login.setLoggedIn)
+  const location = useLocation();
 
   const [inputs, setInputs] = useState({
     email: "",
@@ -33,7 +36,7 @@ const Login = ({ setAuth }) => {
       localStorage.setItem('token', parseRes.token)
 
       setAuth(true);
-
+      setLoggedIn(true)
 
     } catch (error) {
       console.error(error.message);

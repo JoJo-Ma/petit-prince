@@ -9,6 +9,7 @@ import { ReactComponent as SaveButton} from '../svg/save.svg'
 import { ReactComponent as BinButton} from '../svg/bin.svg'
 import { ReactComponent as PlayButton} from '../svg/play.svg'
 import { ReactComponent as PlayForwardButton} from '../svg/playforward.svg'
+import { ReactComponent as PlayForwardNextButton} from '../svg/playforwardnext.svg'
 
 
 import "./Recorder.css"
@@ -17,7 +18,7 @@ const NEW = 'POST'
 const UPDATE = 'PUT'
 
 
-const Recorder = ({ setNext, currentId, languageId, statusRecorder, updateStatus, setSentenceDuration }) => {
+const Recorder = ({ setNext, setNextNonRecorded, currentId, languageId, statusRecorder, updateStatus, setSentenceDuration }) => {
   const [audioToDb, setAudioToDb] = useState([])
   const [isRecording, setIsRecording] = useState(false)
   const mediaRecorder = useRef(null);
@@ -188,6 +189,10 @@ const Recorder = ({ setNext, currentId, languageId, statusRecorder, updateStatus
       setNext()
     }
 
+    const handleClickNextNonRecorded = () => {
+      setNextNonRecorded()
+    }
+
     const disabledDeletePlay = !statusRecorder.recordedAndInDb.includes(currentId) &&
                 !statusRecorder.recorded.includes(currentId) && true
 
@@ -220,6 +225,7 @@ const Recorder = ({ setNext, currentId, languageId, statusRecorder, updateStatus
           disabled={disabledSave} alt={"Save to db"} button={<SaveButton />} />
         <SvgButton className={"button-recorder"} onClick={(e) => {deleteRecording(e,currentId)}} disabled={disabledDeletePlay} alt={"Delete"} button={<BinButton />} />
         <SvgButton className={"button-recorder"} onClick={handleClickNext} alt={"Next"} button={<PlayForwardButton />} />
+        <SvgButton className={"button-recorder"} onClick={handleClickNextNonRecorded} alt={"Next non recorded"} button={<PlayForwardNextButton />} />
         <SvgButton className={"button-recorder"} onClick={() => {playSentence(currentId)}} disabled={ disabledDeletePlay } alt={"Play"} button={<PlayButton />} />
       </div>
 

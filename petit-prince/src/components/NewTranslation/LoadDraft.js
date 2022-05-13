@@ -9,7 +9,8 @@ const LoadDraft = ({ loadData }) => {
   const [ selectedDraft, setSelectedDraft ] = useState(false)
   const [{loading : loadingRetrievedDraft, drafts : retrievedDraft, errorRetrievedDRaft}, doFetchDraft] = useFetchDrafts(username, selectedDraft)
   const isDrafts = draftList.length > 0 ? true : false
-  const isInitialMount = useRef(true);
+  const isInitialMount = useRef(true)
+  const [options, setOptions] = useState(null)
 
   const handleChange = (e) => {
     setSelectedDraft(draftList.find(draft => draft.name === e.value))
@@ -21,15 +22,14 @@ const LoadDraft = ({ loadData }) => {
       isInitialMount.current = false;
     } else {
         loadData(retrievedDraft)
+        setOptions(draftList.map((draft, index) => {
+          return {
+            value: draft.name,
+            label: draft.name
+          }
+        }) )
     }
   }, [retrievedDraft])
-
-  const options = draftList.map((draft, index) => {
-    return {
-      value: draft.name,
-      label: draft.name
-    }
-  })
 
   return (
     <>

@@ -7,7 +7,7 @@ function useOnScreen(ref) {
   useEffect(() => {
     observerRef.current = new IntersectionObserver(([entry]) =>
       setIsOnScreen(entry.isIntersecting)
-    , {rootMargin:'0px 0px -50% 0px'});
+    , {rootMargin:'50% 0px -50% 0px'});
   }, []);
 
   useEffect(() => {

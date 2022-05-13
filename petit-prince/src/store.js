@@ -3,8 +3,8 @@ import { createStore, action } from 'easy-peasy'
 const store = createStore({
   login: {
     loggedIn: false,
-    setLoggedIn: action((state) => {
-      state.loggedIn = true
+    setLoggedIn: action((state, payload = true) => {
+      state.loggedIn = payload
     })
   },
   naming: {

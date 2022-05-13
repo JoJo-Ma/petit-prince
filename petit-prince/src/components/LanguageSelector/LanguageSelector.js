@@ -1,10 +1,11 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import Select from 'react-select'
 import useFetchLanguages from './useFetchLanguages'
 
 const LanguageSelector = ({ selectLanguage, language, setLanguageFocus, focus, swap, setSwap }) => {
   const { languages } = useFetchLanguages()
   const languageRef = useRef()
+  const [options, setOptions] = useState(null)
 
   const handleChange = (e) => {
     selectLanguage(languages.find(language => language.name === e.value))
@@ -25,9 +26,11 @@ const LanguageSelector = ({ selectLanguage, language, setLanguageFocus, focus, s
     }
   }, [focus])
 
-  const options = languages.map((language) => { return {
-      value: language.name, label: language.name
-    }})
+
+  useEffect(() => {
+    setOptions(languages.map((language) => { return {
+        value: language.name, label: language.name}}))
+  }, [languages])
 
   return (
     <Select className="react-select-container"

@@ -20,13 +20,13 @@ List recorded audio, in which language and for how many sentences
 
 ## Fine tuning
 
-### Record
+<s>### Record
 
 Jump to next non recorded sentence
 
 ### New translation
 
-Change add/undo/next sentence with keyboard looking buttons, make them float to top right in absolute position
+Change add/undo/next sentence with keyboard looking buttons, make them float to top right in absolute position</s>
 
 ## Admin page
 

@@ -6,6 +6,7 @@ import './Navbar.css'
 
 const Navbar = () => {
   const name = useStoreState(state => state.naming.name)
+  const loggedIn = useStoreState(state => state.login.loggedIn)
 
   return (
     <ul className="navbar-container">
@@ -14,7 +15,7 @@ const Navbar = () => {
       </div>
       <div className="navbar-elements">
         {
-          name ?
+          loggedIn ?
           (
             <>
             <li>

@@ -32,9 +32,11 @@ const ModalTranslation = ({buttonText, children}) => {
     <div ref={modalRef} className="load-modal modal-new-translation">
       <div className="modal-new-translation-icon" ><FontAwesomeIcon icon={faClose} className="icon" onClick={() => closeModal(modalRef)}/></div>
       <div className="modal-new-translation-content">
-        <div className="modal-new-translation-buttons">
-          {childrenWithProps}
-        </div>
+
+          <div className="modal-new-translation-buttons">
+            {childrenWithProps}
+          </div>
+
       </div>
     </div>
     </>

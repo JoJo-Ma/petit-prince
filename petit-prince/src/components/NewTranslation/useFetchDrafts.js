@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 
 const useFetchDraft = (username, draftName = "") => {
-  const [ loading, setLoading] = useState(false)
+  const [ loading, setLoading] = useState(true)
   const [ drafts, setDrafts ] = useState([])
   const [ error, setError] = useState(false)
   const [ click, setClick ] = useState(true)
@@ -25,6 +25,7 @@ const useFetchDraft = (username, draftName = "") => {
         setDrafts(parseRes)
       } catch (error) {
         console.error(error.message);
+        setDrafts([])
         setError(error)
       } finally {
         setLoading(false)

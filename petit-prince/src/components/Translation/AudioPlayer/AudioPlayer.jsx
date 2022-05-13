@@ -105,7 +105,6 @@ const AudioPlayer = ({statusRecorder, updateStatus, language, languageId, setNex
 
   // will start next recording if the next one is available
   useEffect(() => {
-    console.log('check');
     if(!isAutoPlay || !hasNext) {
       setIsPlaying(false)
     }
