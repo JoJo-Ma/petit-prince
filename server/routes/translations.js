@@ -1,6 +1,7 @@
 const router = require("express").Router();
 const db = require("../db/index")
 const authorization = require('../middleware/authorization')
+const userCheck = require('../middleware/usercheck')
 
 router.post('/drafts', authorization, async (req, res) => {
   try {
@@ -19,12 +20,15 @@ router.post('/drafts', authorization, async (req, res) => {
   }
 })
 
-router.get('/:username/drafts', authorization, async (req, res) => {
-
+router.get('/:username/drafts', authorization, userCheck, async (req, res) => {
+  console.log(req.user);
   try {
     const params = req.params
 
-    const drafts = await db.query("SELECT drafts.name FROM drafts INNER JOIN users ON users.id = drafts.username_id WHERE users.username = $1;", [params.username])
+    const drafts = await db.query("SELECT drafts.name, languages.name as language FROM drafts \
+     INNER JOIN users ON users.id = drafts.username_id \
+     INNER JOIN languages ON drafts.language_id = languages.id \
+     WHERE users.username = $1;", [params.username])
 
     res.json(drafts.rows)
   } catch (error) {
@@ -36,7 +40,7 @@ router.get('/:username/drafts', authorization, async (req, res) => {
 
 })
 
-router.get('/:username/drafts/:draftname', authorization, async (req , res) => {
+router.get('/:username/drafts/:draftname', authorization, userCheck, async (req , res) => {
   try {
     const params = req.params
 

@@ -1,6 +1,13 @@
 import React, { useEffect } from 'react';
 import Navbar from '../Navbar/Navbar'
+import ListOfDrafts from './ListOfDrafts'
+import ListOfRecordings from './ListOfRecordings'
+
+
 import { useStoreActions, useStoreState } from 'easy-peasy'
+
+
+
 
 const Dashboard = ({ setAuth}) => {
 
@@ -10,24 +17,6 @@ const Dashboard = ({ setAuth}) => {
   const setLoggedIn = useStoreActions((actions) => actions.login.setLoggedIn)
 
 
-  useEffect(() => {
-    const getName = async () => {
-      try {
-        const response = await fetch("http://localhost:3005/dashboard", {
-          method: "GET",
-          headers: { token: localStorage.token}
-        })
-
-        const parseRes = await response.json()
-
-        console.log(parseRes);
-        setName(parseRes.username)
-      } catch (error) {
-        console.error(error.message);
-      }
-    }
-    getName()
-  }, [])
 
 
   const logout = (e) => {
@@ -43,6 +32,8 @@ const Dashboard = ({ setAuth}) => {
       <Navbar />
       <h1>Dashboard</h1>
       <h2>Hello {name}</h2>
+      <ListOfDrafts username={name} />
+      <ListOfRecordings />
       <button onClick={e => logout(e)}>Log out</button>
     </>
   )

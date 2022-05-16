@@ -12,6 +12,7 @@ const useFetchDraft = (username, draftName = "") => {
 
 
   useEffect(() => {
+    if (!username) return
     const abortController = new AbortController()
     const call = async () => {
       try {
@@ -36,7 +37,7 @@ const useFetchDraft = (username, draftName = "") => {
     return function cleanup() {
       abortController.abort()
     }
-  }, [click])
+  }, [click, username])
   return [{loading, drafts, error}, handleClick]
 }
 

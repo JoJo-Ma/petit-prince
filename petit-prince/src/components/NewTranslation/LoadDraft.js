@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useStoreState } from 'easy-peasy';
-import useFetchDrafts from './useFetchDrafts'
+import useFetchDrafts from '../Util/useFetchDrafts'
 import Select from 'react-select'
 
 const LoadDraft = ({ loadData }) => {
@@ -22,14 +22,17 @@ const LoadDraft = ({ loadData }) => {
       isInitialMount.current = false;
     } else {
         loadData(retrievedDraft)
-        setOptions(draftList.map((draft, index) => {
-          return {
-            value: draft.name,
-            label: draft.name
-          }
-        }) )
     }
   }, [retrievedDraft])
+
+  useEffect(() => {
+    setOptions(draftList.map((draft, index) => {
+      return {
+        value: draft.name,
+        label: draft.name
+      }
+    }) )
+  }, [draftList])
 
   return (
     <>

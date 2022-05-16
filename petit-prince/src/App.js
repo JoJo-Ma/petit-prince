@@ -25,6 +25,8 @@ function PrivateRoute({ isLoggedIn}) {
 
 function App() {
 
+  const name = useStoreState((state) => state.naming.name)
+  const setName = useStoreActions((actions) => actions.naming.setName)
   const loggedIn = useStoreState((state) => state.login.loggedIn)
   const setLoggedIn = useStoreActions((actions) => actions.login.setLoggedIn)
 
@@ -49,6 +51,27 @@ function App() {
       console.error(error.message);
     }
   }
+
+  useEffect(() => {
+    if (!isLoggedIn) return
+    const getName = async () => {
+      try {
+        const response = await fetch("http://localhost:3005/dashboard", {
+          method: "GET",
+          headers: { token: localStorage.token}
+        })
+
+        const parseRes = await response.json()
+
+        console.log(parseRes);
+        setName(parseRes.username)
+      } catch (error) {
+        console.error(error.message);
+      }
+    }
+    getName()
+  }, [isLoggedIn])
+
 
   useEffect(() => {
     isAuth()

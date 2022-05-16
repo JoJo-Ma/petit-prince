@@ -7,6 +7,12 @@ CREATE TABLE users (
   last_login timestamp
 );
 
+
+CREATE TABLE user_rights (
+  user_id uuid primary key unique not null,
+  rights_id integer NOT NULL
+);
+
 --manual entry
 INSERT INTO users (username, password, email, created_on) VALUES ('Jonathan','jojo','jojo@gmail.com',NOW());
 
