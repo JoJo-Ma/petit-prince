@@ -96,7 +96,7 @@
 }
 
 .modal-new-translation-icon {
-  position:absolute;
+  position:fixed;
   top: 5%;
   right: 5%;
   font-size: 2rem;

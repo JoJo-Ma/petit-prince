@@ -11,8 +11,13 @@ module.exports = async (req, res, next) => {
 
     const user = await db.query("SELECT users.username as username, user_rights.rights_id from users INNER JOIN user_rights ON user_rights.user_id = users.id WHERE users.id = $1;", [req.user])
 
+    console.log(user.rows[0].rights_id);
+
     // user right 0 is non admin right, anything else above is
-    if (user.rows[0].username !== params.username || user.rows[0].rights_id > 0 ) {
+    if (user.rows[0].username === params.username || user.rows[0].rights_id > 0 ) {
+      console.log('usercheck ok');
+      next()
+    } else {
       return res.status(403).json('Not Authorized')
     }
 
@@ -21,5 +26,4 @@ module.exports = async (req, res, next) => {
     return res.status(403).json('Not Authorized')
   }
 
-  next()
 }

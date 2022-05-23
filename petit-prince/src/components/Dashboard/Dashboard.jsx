@@ -7,7 +7,7 @@ import ListOfRecordings from './ListOfRecordings'
 import { useStoreActions, useStoreState } from 'easy-peasy'
 
 
-
+import './Dashboard.css'
 
 const Dashboard = ({ setAuth}) => {
 
@@ -30,11 +30,18 @@ const Dashboard = ({ setAuth}) => {
   return (
     <>
       <Navbar />
-      <h1>Dashboard</h1>
-      <h2>Hello {name}</h2>
-      <ListOfDrafts username={name} />
-      <ListOfRecordings />
-      <button onClick={e => logout(e)}>Log out</button>
+      <div className="dashboard-container">
+        <h1>Dashboard</h1>
+        <h3>Drafts</h3>
+        <div className="dashboard-el">
+          <ListOfDrafts username={name} />
+        </div>
+        <h3>Recordings</h3>
+        <div className="dashboard-el">
+          <ListOfRecordings username={name} />
+        </div>
+        <button onClick={e => logout(e)}>Log out</button>
+      </div>
     </>
   )
 }

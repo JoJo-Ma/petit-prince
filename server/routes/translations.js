@@ -53,7 +53,22 @@ router.get('/:username/drafts/:draftname', authorization, userCheck, async (req 
   }
 
 })
-module.exports = router;
+
+router.delete('/:username/drafts/:draftname', authorization, userCheck, async (req, res) => {
+  try {
+    const {username, draftname} = req.params
+    console.log(username, draftname);
+
+    // req.user is retrieved in authorization middleware
+    const query = await db.query("DELETE FROM drafts WHERE name = $1 AND username_id = $2", [draftname, req.user])
+
+    res.status(204).json("success")
+  } catch (error) {
+    console.error(error.message);
+    res.status(500).send("server error oops")
+  }
+})
+
 
 router.post('/', async (req, res) => {
   try {
@@ -141,3 +156,5 @@ router.get('/:language1/:language2', async (req, res) => {
     console.error(error.message);
   }
 })
+
+module.exports = router;

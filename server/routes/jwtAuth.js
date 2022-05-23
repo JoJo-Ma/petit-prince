@@ -34,7 +34,7 @@ router.post('/login', validInfo, async (req, res) => {
   try {
 
     const { email, password } = req.body;
-    const user = await db.query("SELECT * FROM users WHERE email = $1", [email])
+    const user = await db.query("SELECT * FROM users INNER JOIN user_rights ON user_rights.user_id = users.id WHERE email = $1", [email])
 
     if (user.rows.length === 0) {
       return res.status(401).json("Password or Email is incorrect")
@@ -47,7 +47,7 @@ router.post('/login', validInfo, async (req, res) => {
       return res.status(401).json("Password or Email is incorrect")
     }
 
-    const token = jwtGenerator(user.rows[0].id)
+    const token = jwtGenerator(user.rows[0].id, user.rows[0].rights_id)
 
     res.json({ token })
 
@@ -66,5 +66,13 @@ router.get("/isverified", authorization, async (req, res) => {
   }
 })
 
+router.get("/isadmin", authorization, async (req, res) => {
+  try {
+    res.json({admin:req.admin})
+  } catch (error) {
+    console.error(err.message);
+    res.status(500).send("Server error")
+  }
+})
 
 module.exports = router

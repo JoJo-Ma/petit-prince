@@ -1,4 +1,6 @@
 const router = require("express").Router();
+const authorization = require('../middleware/authorization')
+const userCheck = require('../middleware/usercheck')
 const pool = require("../db")
 let multer = require('multer')
 let upload = multer().fields([
@@ -39,7 +41,7 @@ router.get('/statusRecording/:username/:language', async (req, res) => {
   }
 })
 
-// get list of recording available for given language (shows username)
+// // get list of recording available for given language (shows username)
 router.get('/statusRecording/:languageId', async (req, res) => {
   try {
     const { languageId } = req.params
@@ -53,6 +55,24 @@ router.get('/statusRecording/:languageId', async (req, res) => {
   } catch (error) {
     console.error(error.message);
     res.status(500).json('server error')
+  }
+})
+
+// get list of recording made for a given username, per language
+router.get('/statusRecordingSummary/:username', authorization, userCheck, async (req, res) => {
+  try {
+    const data = await pool.query("SELECT languages.name, COUNT(*) FROM blobtest \
+    LEFT JOIN users ON users.id = blobtest.username_id \
+    LEFT JOIN trans_desc ON blobtest.trans_desc_id = trans_desc.id \
+    LEFT JOIN languages ON trans_desc.language_id = languages.id \
+    WHERE users.username = $1 GROUP BY languages.name", [req.params.username])
+
+    res.json(data.rows)
+
+  } catch (error) {
+    console.error(error.message);
+    res.status(500).json('server error')
+
   }
 })
 
@@ -75,7 +95,7 @@ router.get('/sentence-audio/:sentenceId/:username/:language_id', async (req, res
   }
 })
 
-router.post('/', upload, async (req, res) => {
+router.post('/', authorization, userCheck, upload, async (req, res) => {
   try {
 
 
@@ -100,7 +120,7 @@ router.post('/', upload, async (req, res) => {
   }
 })
 
-router.put('/', upload, async (req,res) => {
+router.put('/', authorization, userCheck, upload, async (req,res) => {
   try {
     const audio = req.files.audio[0].buffer
     const sentenceId = req.body.sentence_id
@@ -120,14 +140,14 @@ router.put('/', upload, async (req,res) => {
   }
 })
 
-router.delete('/sentence-audio/:sentenceId/:username/:language_id', async (req, res) => {
+router.delete('/sentence-audio/:sentenceId/:username/:language_id', authorization, userCheck, async (req, res) => {
   try {
     const { sentenceId, username, language_id } = req.params
 
     const data = await pool.query("WITH sel as (SELECT id FROM users WHERE username = $2 )\
     DELETE FROM blobtest WHERE sentence_id = $1 AND username_id = (SELECT id FROM sel) AND trans_desc_id = $3", [sentenceId, username, language_id])
 
-    res.json("success")
+    res.status(204).json("success")
 
   } catch (error) {
     console.error(error.message);

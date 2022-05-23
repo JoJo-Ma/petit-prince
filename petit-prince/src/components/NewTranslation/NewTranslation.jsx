@@ -1,7 +1,7 @@
 // will handle importing pdfs to temporary state, then trimming, breaking down into
 // individual strings and saving to db
 
-import React, { useReducer} from 'react';
+import React, { useReducer, useState} from 'react';
 import {initialState, reducer} from './reducerTranslation'
 
 import Navbar from '../Navbar/Navbar'
@@ -24,6 +24,7 @@ import "./NewTranslation.css"
 const NewTranslation = () => {
 
   const [state, dispatch] = useReducer(reducer, initialState)
+  const [updateDraft, setUpdateDraft] = useState(0)
 
   const setInputURL = (data) => {
     dispatch({type:'setUrlInput', payload: data})
@@ -67,7 +68,9 @@ const NewTranslation = () => {
     dispatch({ type:"load", payload:data})
   }
 
-
+  const onSubmittedDraft = () => {
+    setUpdateDraft(prev => prev + 1)
+  }
 
   return (
     <>
@@ -84,11 +87,11 @@ const NewTranslation = () => {
         output={state.output}/>
       <ModalTranslation buttonText="Load Draft">
         <ButtonLoadDraftFile loadData={ loadData } data={state.output} />
-        <LoadDraft loadData={ loadData } />
+        <LoadDraft loadData={ loadData } updateDraft={updateDraft} />
       </ModalTranslation>
       <ModalTranslation buttonText="Save Draft">
         <ButtonSaveDraftFile data={state} />
-        <SubmitDraft data={state}/>
+        <SubmitDraft data={state} onSubmittedDraft={onSubmittedDraft}/>
       </ModalTranslation>
       <ModalTranslation buttonText="Save Translation">
         <SubmitTranslation data={{newTranslationList : state.newTranslationList}} />

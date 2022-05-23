@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import LanguageSelector from '../LanguageSelector/LanguageSelector'
 import { useStoreState } from 'easy-peasy';
 
-const SubmitDraft = ({data}) => {
+const SubmitDraft = ({data, onSubmittedDraft}) => {
   const [ language, setLanguage] = useState("")
   const [ name, setName ] = useState("")
   const username = useStoreState(state => state.naming.name)
@@ -27,7 +27,7 @@ const SubmitDraft = ({data}) => {
         body: JSON.stringify(body)
       })
 
-
+      onSubmittedDraft()
     } catch (error) {
       console.error(error.message);
     }

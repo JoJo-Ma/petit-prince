@@ -1,8 +1,53 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { Link } from "react-router-dom";
 
-const ListOfRecordings = () => {
+
+const ListOfRecordings = ({username}) => {
+
+  const [listOfRecordings, setListOfRecordings] = useState([])
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await fetch(`http://localhost:3005/blobtesting/statusRecordingSummary/${username}`, {
+        method: "GET",
+        headers: {token : localStorage.token}
+      })
+      const parseRes = await response.json()
+      const data = parseRes.map(el => {
+        return {
+          language: el.name,
+          count: el.count,
+          ratio: (el.count / 1168 * 100).toFixed()
+        }
+      })
+      setListOfRecordings(data)
+    }
+    // if (isInitialMount.current) {
+    //   isInitialMount.current = false;
+    //   return
+    // }
+    try {
+      fetchData()
+    } catch (error) {
+      console.error(error.message);
+    }
+  }, [username])
+
+
     return (
-      <div>test list of recordings</div>
+      <div className="">
+        {
+          listOfRecordings.length > 0 ?
+          <div>
+            {listOfRecordings.map((recording, index) => {
+                return <p>You have recorded <b>{recording.count}</b> sentences in <b>{recording.language}</b>. (<b>{recording.ratio}%</b> completion)</p>
+              })}
+            Go to the <Link to="/record">record</Link> section
+          </div>
+          :
+          <div>Lolz</div>
+        }
+      </div>
     )
 }
 

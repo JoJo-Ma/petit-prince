@@ -1,0 +1,31 @@
+.dashboard-container {
+  display:flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.dashboard-container h1 {
+  margin : auto;
+}
+
+.dashboard-el {
+  width:100%;
+  background-color: var(--powderblue);
+  display: flex;
+  text-align: left;
+}
+
+.dashboard-container a {
+  color: var(--steelbluedarker);
+  font-weight: bolder;
+}
+
+
+.dashboard-container a:visited {
+  color: var(--cranberry);
+}
+
+.dashboard-container a:hover {
+  color: var(--confetti);
+}

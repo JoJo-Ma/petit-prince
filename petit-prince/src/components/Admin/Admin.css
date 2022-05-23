@@ -1,0 +1,19 @@
+.admin-navbar {
+  background-color: var(--powderblue);
+}
+
+.admin-navbar .navbar-el {
+  color: var(--cranberry);
+}
+
+.admin-navbar .navbar-el:hover, .navbar-el:focus {
+  outline:none;
+  background-color: var(--cranberry);
+  color: var(--powderblue);
+  transition: background-color 0.25s ease-in-out;
+}
+
+.admin-navbar-form {
+  width: 25%;
+  margin: auto;
+}

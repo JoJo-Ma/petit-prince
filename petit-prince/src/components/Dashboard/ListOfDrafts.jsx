@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import { Link } from "react-router-dom";
 import useFetchDrafts from '../Util/useFetchDrafts'
 
 import { listOfStringsInArray } from '../Util/text_util'
@@ -12,13 +13,12 @@ const ListOfDrafts = ({username}) => {
 
 
     useEffect(() => {
-      console.log(draftList);
       if(draftList.length > 0) {
         setListOfDrafts({
           length: draftList.length,
-          languages: draftList.map((draft) => {
+          languages: [...new Set(draftList.map((draft) => {
             return draft.language
-          })
+          }))]
         })
       }
     }, [draftList])
@@ -27,7 +27,8 @@ const ListOfDrafts = ({username}) => {
       <div className="">
         {
           listOfDrafts.length > 0 ?
-          <div>You have {listOfDrafts.length} drafts pending in {listOfStringsInArray(listOfDrafts.languages)}.</div>
+          <div>You have <b>{listOfDrafts.length}</b> {listOfDrafts.length > 1 ? 'drafts' : 'draft'} pending in <b>{listOfStringsInArray(listOfDrafts.languages)}</b>.
+            Go to <Link to="/newtranslation">new translation</Link></div>
           :
           <div>You have no draft saved yet.</div>
         }

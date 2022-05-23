@@ -7,7 +7,9 @@ import Dashboard from './components/Dashboard/Dashboard'
 import NewTranslation from './components/NewTranslation/NewTranslation'
 import Translation from './components/Translation/Translation'
 import Record from './components/Record/Record'
+import Admin from './components/Admin/Admin'
 import { useStoreActions, useStoreState } from 'easy-peasy'
+import useFetchAdmin from './components/Util/useFetchAdmin'
 
 import {
   BrowserRouter as Router,
@@ -18,7 +20,7 @@ import {
   Outlet
 } from "react-router-dom";
 
-function PrivateRoute({ isLoggedIn}) {
+function PrivateRoute({ isLoggedIn }) {
   return isLoggedIn ? <Outlet /> : <Navigate to="/login" />;
 }
 
@@ -32,13 +34,13 @@ function App() {
 
   const [isLoggedIn, setIsLoggedIn] = useState(null)
   const location = useLocation()
+  const { adminStatus } = useFetchAdmin([location])
 
   const setAuth = (boolean) => {
     setIsLoggedIn(boolean)
   }
 
   const isAuth = async () => {
-    console.log('checking auth');
     try {
       const response = await fetch("http://localhost:3005/auth/isverified", {
         method: "GET",
@@ -80,6 +82,7 @@ function App() {
   }, [location])
 
 
+
   return (
         <div className="App">
           <div className="container">
@@ -88,6 +91,7 @@ function App() {
               <Route path="/login" element={ !isLoggedIn ? <Login setAuth={setAuth}/> : <Navigate to="/dashboard" />}/>
               <Route path="/register" element={ !isLoggedIn ? <Register setAuth={setAuth} /> : <Navigate to="/login" />}/>
               <Route path="/dashboard" element={ isLoggedIn ? <Dashboard  setAuth={setAuth} /> : <Navigate to="/login" />}/>
+              <Route path="/admin/*" element={ isLoggedIn && (adminStatus > 0) ? <Admin  setAuth={setAuth} /> : <Navigate to="/login" />}/>
               <Route path='/newtranslation' element={<PrivateRoute isLoggedIn={isLoggedIn}/>}>
                 <Route path='/newtranslation' element={<NewTranslation/>}/>
               </Route>

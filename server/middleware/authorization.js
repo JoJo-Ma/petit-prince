@@ -3,7 +3,7 @@ require("dotenv").config
 
 module.exports = async (req, res, next) => {
   try {
-
+    console.log('authorization');
     const jwtToken = req.header("token")
 
     if(!jwtToken) {
@@ -14,6 +14,8 @@ module.exports = async (req, res, next) => {
     const payload = jwt.verify(jwtToken, process.env.JWTSECRET)
     console.log(payload);
     req.user = payload.user
+    req.admin = payload.admin
+    console.log('authorization ok');
 
   } catch (error) {
     console.error(error.message)

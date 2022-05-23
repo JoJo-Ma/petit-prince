@@ -1,14 +1,20 @@
 import { useState, useEffect } from 'react'
 
-const useFetchDraft = (username, draftName = "") => {
+const useFetchDraft = (username, draftName = "", reload=false) => {
   const [ loading, setLoading] = useState(true)
   const [ drafts, setDrafts ] = useState([])
-  const [ error, setError] = useState(false)
+  const [ error, setError] = useState(true)
   const [ click, setClick ] = useState(true)
+  const [ clickDelete, setClickDelete] = useState(true)
+
 
   const handleClick = async () => {
     setClick(prev => !prev)
   }
+  const handleClickDelete = async () => {
+    setClickDelete(prev => !prev)
+  }
+
 
 
   useEffect(() => {
@@ -16,6 +22,8 @@ const useFetchDraft = (username, draftName = "") => {
     const abortController = new AbortController()
     const call = async () => {
       try {
+        setLoading(true)
+        console.log('fetching drafts');
         //dirty fix because react select returns an object
         const draft = draftName.length == "" ? draftName : draftName.name
         const response = await fetch (`http://localhost:3005/translations/${username}/drafts/${draft}`, {
@@ -23,11 +31,13 @@ const useFetchDraft = (username, draftName = "") => {
           headers: {token : localStorage.token}
         })
         const parseRes = await response.json()
+        if (typeof parseRes !== 'object') throw `error ${parseRes}`
         setDrafts(parseRes)
+        setError(false)
       } catch (error) {
         console.error(error.message);
         setDrafts([])
-        setError(error)
+        setError(true)
       } finally {
         setLoading(false)
       }
@@ -38,7 +48,30 @@ const useFetchDraft = (username, draftName = "") => {
       abortController.abort()
     }
   }, [click, username])
-  return [{loading, drafts, error}, handleClick]
+
+  useEffect(() => {
+    if (draftName === false) return
+    const call = async () => {
+      try {
+        const draft = draftName.name
+        const response = await fetch (`http://localhost:3005/translations/${username}/drafts/${draft}`, {
+          method: "DELETE",
+          headers: {token : localStorage.token}
+        })
+        const parseRes = await response.text()
+        console.log(parseRes);
+        setError(false)
+      } catch (error) {
+        console.error(error.message);
+        setDrafts([])
+        setError(true)
+      } finally {
+        setLoading(true)
+      }
+    }
+    call()
+  }, [clickDelete])
+  return [{loading, drafts, error}, handleClick, handleClickDelete]
 }
 
 export default useFetchDraft;

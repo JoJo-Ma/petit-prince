@@ -128,7 +128,8 @@ const Recorder = ({ setNext, setNextNonRecorded, currentId, languageId, statusRe
       formData.append("username", username)
       const response = await fetch("http://localhost:3005/blobtesting", {
         method: type,
-        body: formData
+        body: formData,
+        headers: {token : localStorage.token}
       })
 
       const parseRes = await response.json()

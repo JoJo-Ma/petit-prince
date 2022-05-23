@@ -1,12 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from "react-router-dom";
 import { useStoreState } from 'easy-peasy';
+import useFetchAdmin from '../Util/useFetchAdmin'
 
 import './Navbar.css'
 
 const Navbar = () => {
   const name = useStoreState(state => state.naming.name)
   const loggedIn = useStoreState(state => state.login.loggedIn)
+  const { adminStatus } = useFetchAdmin([])
+
 
   return (
     <ul className="navbar-container">
@@ -58,6 +61,12 @@ const Navbar = () => {
 
       )
 
+    }
+    {
+      adminStatus > 0 &&
+        <li>
+          <Link className="navbar-el" to="/admin">Admin</Link>
+        </li>
     }
       </div>
     </ul>
