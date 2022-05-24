@@ -9,11 +9,13 @@
 .admin-navbar .navbar-el:hover, .navbar-el:focus {
   outline:none;
   background-color: var(--cranberry);
-  color: var(--powderblue);
+  color: var(--confetti);
   transition: background-color 0.25s ease-in-out;
 }
 
-.admin-navbar-form {
+.admin-language-container {
+  display: flex;
+  flex-direction: column;
   width: 25%;
   margin: auto;
 }

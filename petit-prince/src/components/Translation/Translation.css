@@ -87,6 +87,43 @@
 }
 
 
+.report-issue-button {
+  position: fixed;
+  top : 70%;
+  right: 5%;
+}
+
+.report-issue-comment {
+  width: 20rem;
+  border-color: hsl(0, 0%, 80%);
+  border-width: 1px;
+  border-radius: 0;
+  margin: auto;
+}
+
+.report-issue-comment:focus {
+  outline: none !important;
+  border-width: 2px;
+  border-color: var(--steelblue);
+}
+
+.report-issue-container p {
+  text-align: left;
+}
+.report-issue-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.report-issue-container button {
+  width: 10rem;
+  margin: auto;
+}
+
+.report-issue-container .react-select-container {
+  margin:auto;
+}
+
 .img {
   display: block;
   position: relative;

@@ -10,6 +10,7 @@ import AudioPlayer from './AudioPlayer/AudioPlayer'
 import AudioPlayerToggle from './AudioPlayer/AudioPlayerToggle'
 import LazyBackroundImage from '../Util/LazyBackroundImage'
 import useStatusRecorder from '../Util/useStatusRecorder'
+import ReportIssue from './ReportIssue/ReportIssue'
 const background="/background/background.jpg"
 const placeholder="/background/background.jpg"
 const backgroundOptions = "linear-gradient( rgba(175,216,219,.2), rgba(175,216,219,.2) )"
@@ -24,6 +25,7 @@ const Translation = () => {
   const {statusRecorder, setStatusRecorder, updateStatus} = useStatusRecorder()
   const [hasCurrent, setHasCurrent] = useState(false)
   const [isAudioPlayerHidden, setIsAudioPlayerHidden] = useState(false)
+  const [recordingUser, setRecordingUser] = useState(null)
 
   useEffect(() => {
     setHasCurrent(statusRecorder.recordedAndInDb.includes(currentId))
@@ -50,6 +52,9 @@ const Translation = () => {
     setIsAudioPlayerHidden(bool)
   }
 
+  const selectRecordingUser = (user) => {
+    setRecordingUser(user)
+  }
 
   return (
     <>
@@ -68,6 +73,7 @@ const Translation = () => {
       </div>
       {
         data &&
+        <>
         <AudioPlayer
           language={language}
           languageId={data.idLanguageOne}
@@ -80,9 +86,17 @@ const Translation = () => {
           length = {data.data.length}
           hasCurrent = {hasCurrent}
           isAudioPlayerHidden={isAudioPlayerHidden}
+          selectRecordingUser={selectRecordingUser}
           />
+        <ReportIssue
+          selectedSentence={{
+            ...data.data.find(sentence => sentence.id === currentId),
+          languageOneText:data.languageOne,
+          languageTwoText:data.languageTwo}}
+          recordingUser={recordingUser}
+        />
+        </>
       }
-
 
     </>
   )

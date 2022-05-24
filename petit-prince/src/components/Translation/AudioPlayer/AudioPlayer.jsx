@@ -16,7 +16,7 @@ import { ReactComponent as ToggleOffButton} from '../../svg/toggleoff.svg'
 import SvgButton from '../../Util/SvgButton'
 
 
-const AudioPlayer = ({statusRecorder, updateStatus, language, languageId, setNext, currentId, setSentenceDuration, duration, length, hasCurrent, isAudioPlayerHidden}) => {
+const AudioPlayer = ({statusRecorder, updateStatus, language, languageId, setNext, currentId, setSentenceDuration, duration, length, hasCurrent, isAudioPlayerHidden, selectRecordingUser}) => {
   const { usernames } = useFetchAvailableRecording(language)
   const [username, setUsername] = useState('')
   const [isPlaying, setIsPlaying] = useState(false)
@@ -49,6 +49,7 @@ const AudioPlayer = ({statusRecorder, updateStatus, language, languageId, setNex
 
   const selectUsername = (name) => {
     setUsername(name)
+    selectRecordingUser(name)
   }
 
   const handleClickNext = () => {

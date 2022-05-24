@@ -33,15 +33,15 @@ const AdminLanguages = () => {
   }
 
   return (
-    <>
-    <h1>Languages</h1>
-    <div>
+    <div className="admin-language-container">
+    <h3>Languages</h3>
+    <ul className="admin-language-list">
       {
         languages.map((language,index) => {
-          return <p key={index}>{language.name}</p>
+          return <li key={index}>{language.name}</li>
         }
       )}
-    </div>
+    </ul>
     <div className="admin-navbar-form">
       <form onSubmit={onSubmitForm}>
         <div className="form__group">
@@ -53,7 +53,7 @@ const AdminLanguages = () => {
         </div>
       </form>
     </div>
-    </>
+  </div>
   )
 }
 

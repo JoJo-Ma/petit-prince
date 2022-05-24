@@ -17,7 +17,7 @@ import ButtonSaveDraftFile from './Buttons/ButtonSaveDraftFile'
 import ButtonLoadDraftFile from './Buttons/ButtonLoadDraftFile'
 import ButtonLoadPdf from './Buttons/ButtonLoadPdf'
 import ButtonEdit from './Buttons/ButtonEdit'
-import ModalTranslation from './ModalTranslation'
+import ModalTranslation from '../Util/ModalTranslation'
 
 import "./NewTranslation.css"
 

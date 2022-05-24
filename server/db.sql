@@ -90,3 +90,22 @@ CREATE TABLE pictures (
   text_before_id integer,
   link varchar
 );
+
+CREATE TABLE issue_log (
+  id serial primary key,
+  username_id uuid NOT NULL,
+  created_on timestamp not null,
+  status varchar,
+  type varchar,
+  subtype varchar,
+  comment varchar,
+  trans_desc_id integer,
+  sentence_id integer,
+  audio_username_id uuid,
+  CONSTRAINT uk_issue_log CHECK
+  (
+    type <> 'AUDIO'  OR audio_username_id IS NULL
+  ),
+  FOREIGN KEY (trans_desc_id) REFERENCES trans_desc (id),
+  FOREIGN KEY (username_id) REFERENCES users (id)
+);
