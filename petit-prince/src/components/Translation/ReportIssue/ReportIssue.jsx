@@ -3,6 +3,7 @@ import ModalTranslation from '../../Util/ModalTranslation'
 import Select from 'react-select'
 import {issueTypes, audioIssueTypes, textIssueTypes} from './issueTypes'
 
+
 const ReportIssue = ({recordingUser, selectedSentence}) => {
 
     const [languageOptions, setLanguageOptions] = useState()
@@ -55,6 +56,7 @@ const ReportIssue = ({recordingUser, selectedSentence}) => {
           body: JSON.stringify(body)
         })
 
+        if(response.status !== 200) throw new Error('Error while sending the issue. :(')
         setAlertMessage('Issue sent successfully!')
       } catch (error) {
         console.error(error.message);

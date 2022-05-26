@@ -104,7 +104,7 @@ CREATE TABLE issue_log (
   audio_username_id uuid,
   CONSTRAINT uk_issue_log CHECK
   (
-    type <> 'AUDIO'  OR audio_username_id IS NULL
+    type <> 'AUDIO'  OR audio_username_id IS NOT NULL
   ),
   FOREIGN KEY (trans_desc_id) REFERENCES trans_desc (id),
   FOREIGN KEY (username_id) REFERENCES users (id)

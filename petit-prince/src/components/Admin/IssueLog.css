@@ -1,0 +1,46 @@
+.issue-log-table {
+  padding: 2rem;
+  width: 90%;
+  margin:auto;
+}
+
+.issue-log-item-header {
+  background-color: var(--cranberry);
+  color: var(--confetti);
+}
+
+.issue-log-item {
+ background-color: var(--steelblue);
+ color: white;
+}
+.issue-log-item:nth-child(even) {
+ background-color: white;
+ color: var(--steelblue);
+}
+
+.issue-log-link {
+  color: var(--cranberry);
+  font-size: larger;
+}
+.issue-log-link a:visited {
+  color: var(--cranberry);
+}
+.issue-log-link:hover {
+  color: var(--confetti);
+}
+
+.issue-container {
+  display:flex;
+  flex-direction: column;
+}
+
+.issue-header, .issue-details {
+  display: inherit;
+  flex-direction: row;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.issue-header p, .issue-details p {
+  padding: 0 2rem;
+}

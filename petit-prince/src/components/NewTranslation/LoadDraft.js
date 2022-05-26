@@ -41,11 +41,7 @@ const LoadDraft = ({ loadData, updateDraft }) => {
   }, [updateDraft])
 
   useEffect(() => {
-    console.log(loadingDraftList);
-    console.log(errorDraftList);
     if (loadingDraftList) return
-    console.log('setting options');
-    console.log(draftList);
     if (!errorDraftList) {
       setOptions(draftList.map((draft, index) => {
         return {
