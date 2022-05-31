@@ -12,6 +12,7 @@ const IssueLogDashboard = () => {
     <>
       <table className="issue-log-table">
       <tr className="issue-log-item-header">
+      <th>ID</th>
       <th>Requester</th>
       <th>Created on</th>
       <th>Type</th>
@@ -27,6 +28,7 @@ const IssueLogDashboard = () => {
         issueLog.map((issue,index) => {
           const {id, req_name, created_on, status, type, subtype, comment, ad_name, language, sentence_id, trans_desc_id} = issue
           return <tr key={index} className="issue-log-item">
+          <td>{id}</td>
           <td>{req_name}</td>
           <td>{new Date(created_on).toLocaleDateString("en-UK")}</td>
           <td>{type}</td>

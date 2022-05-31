@@ -78,16 +78,38 @@ router.get('/statusRecordingSummary/:username', authorization, userCheck, async 
 
 
 //get specific recording for a sentence on a username-language pair
-router.get('/sentence-audio/:sentenceId/:username/:language_id', async (req, res) => {
+router.get('/sentence-audio/:sentenceId/:username/:trans_desc_id', async (req, res) => {
   try {
-    const { sentenceId, username, language_id } = req.params
+    const { sentenceId, username, trans_desc_id } = req.params
 
     const data = await pool.query("SELECT blobtest.data FROM blobtest \
     LEFT JOIN users ON users.id = blobtest.username_id \
-    WHERE blobtest.sentence_id = $1 AND users.username = $2 AND blobtest.trans_desc_id = $3", [sentenceId, username, language_id])
+    WHERE blobtest.sentence_id = $1 AND users.username = $2 AND blobtest.trans_desc_id = $3", [sentenceId, username, trans_desc_id])
 
-    console.log(data.rows[0].data);
-    res.json(data.rows[0].data)
+    if (data) {
+      res.json(data.rows[0].data)
+    } else {
+      res.json([])
+    }
+
+  } catch (error) {
+    console.error(error.message);
+    res.status(500).json("server error")
+  }
+})
+router.get('/sentence-audio/discard/:sentenceId/:username/:trans_desc_id', authorization, userCheck, async (req, res) => {
+  try {
+    const { sentenceId, username, trans_desc_id } = req.params
+
+    const data = await pool.query("SELECT discarded_audio.data FROM discarded_audio \
+    LEFT JOIN users ON users.id = discarded_audio.username_id \
+    WHERE discarded_audio.sentence_id = $1 AND users.username = $2 AND discarded_audio.trans_desc_id = $3", [sentenceId, username, trans_desc_id])
+
+    if (data.rowCount > 0) {
+      res.json(data.rows[0].data)
+    } else {
+      res.json([])
+    }
 
   } catch (error) {
     console.error(error.message);
@@ -152,6 +174,51 @@ router.delete('/sentence-audio/:sentenceId/:username/:language_id', authorizatio
   } catch (error) {
     console.error(error.message);
     res.status(500).json("server error")
+  }
+})
+
+router.put('/sentence-audio/discard/:sentenceId/:username/:trans_desc_id', authorization, userCheck, async (req, res) => {
+  const { sentenceId, username, trans_desc_id } = req.params
+  const client = await pool.connect()
+  const queryArray = [sentenceId, username, trans_desc_id]
+  try {
+    await client.query('BEGIN')
+    const sel = "WITH sel as (SELECT id FROM users WHERE username = $2)"
+    const insert = "INSERT INTO discarded_audio (sentence_id, data, trans_desc_id, username_id)\
+    (SELECT sentence_id, data, trans_desc_id, username_id FROM blobtest WHERE sentence_id = $1 AND username_id = (SELECT id FROM sel) AND trans_desc_id = $3);"
+    const res = await client.query(sel + " " + insert, queryArray)
+    const del = "DELETE FROM blobtest WHERE sentence_id = $1 AND username_id = (SELECT id FROM sel) AND trans_desc_id = $3;"
+    await client.query(sel+" "+ del, queryArray)
+    await client.query('COMMIT')
+  } catch (error) {
+    console.error(error.message);
+    await client.query('ROLLBACK')
+    res.status(500).json("server error")
+  } finally {
+    client.release()
+    res.status(204).json('DONE')
+  }
+})
+router.put('/sentence-audio/restore/:sentenceId/:username/:trans_desc_id', authorization, userCheck, async (req, res) => {
+  const { sentenceId, username, trans_desc_id } = req.params
+  const client = await pool.connect()
+  const queryArray = [sentenceId, username, trans_desc_id]
+  try {
+    await client.query('BEGIN')
+    const sel = "WITH sel as (SELECT id FROM users WHERE username = $2)"
+    const insert = "INSERT INTO blobtest (sentence_id, data, trans_desc_id, username_id)\
+    (SELECT sentence_id, data, trans_desc_id, username_id FROM discarded_audio WHERE sentence_id = $1 AND username_id = (SELECT id FROM sel) AND trans_desc_id = $3);"
+    const res = await client.query(sel + " " + insert, queryArray)
+    const del = "DELETE FROM discarded_audio WHERE sentence_id = $1 AND username_id = (SELECT id FROM sel) AND trans_desc_id = $3;"
+    await client.query(sel+" "+ del, queryArray)
+    await client.query('COMMIT')
+  } catch (error) {
+    console.error(error.message);
+    await client.query('ROLLBACK')
+    res.status(500).json("server error")
+  } finally {
+    client.release()
+    res.status(204).json('DONE')
   }
 })
 

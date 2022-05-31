@@ -13,5 +13,6 @@ const pool = new Pool(credentials);
 
 
 module.exports = {
+  connect: () => pool.connect(), 
   query: (text,params) => pool.query(text, params),
 };

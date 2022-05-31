@@ -2,8 +2,8 @@ import React from 'react';
 import Navbar from '../Navbar/Navbar'
 import AdminNavbar from './AdminNavbar'
 import AdminLanguages from './AdminLanguages'
-import IssueLogDashboard from './IssueLogDashboard'
-import Issue from './Issue'
+import IssueLogDashboard from './Issues/IssueLogDashboard'
+import Issue from './Issues/Issue'
 
 import {
   BrowserRouter as Router,

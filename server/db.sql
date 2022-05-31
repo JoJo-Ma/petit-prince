@@ -84,6 +84,17 @@ CREATE TABLE blobtest (
   UNIQUE(trans_desc_id, sentence_id, username_id)
 );
 
+CREATE TABLE discarded_audio (
+  id serial primary key,
+  sentence_id integer,
+  data bytea,
+  trans_desc_id integer,
+  username_id uuid NOT NULL,
+  FOREIGN KEY (trans_desc_id) REFERENCES trans_desc (id),
+  FOREIGN KEY (username_id) REFERENCES users (id),
+  UNIQUE(trans_desc_id, sentence_id, username_id)
+);
+
 CREATE TABLE pictures (
   id serial primary key,
   image_id integer,
@@ -109,3 +120,14 @@ CREATE TABLE issue_log (
   FOREIGN KEY (trans_desc_id) REFERENCES trans_desc (id),
   FOREIGN KEY (username_id) REFERENCES users (id)
 );
+
+CREATE TABLE notifications (
+  id serial primary key,
+  username_id uuid NOT NULL,
+  created_on timestamp not null,
+  type VARCHAR,
+  subtype VARCHAR,
+  message VARCHAR,
+  viewed BOOLEAN,
+  FOREIGN KEY (username_id) REFERENCES users (id)
+)

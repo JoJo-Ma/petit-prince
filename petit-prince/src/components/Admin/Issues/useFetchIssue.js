@@ -2,7 +2,11 @@ import { useEffect, useState } from 'react';
 
 const useFetchIssue = (id="") => {
   const [ issueLog, setIssueLog] = useState([])
+  const [click, setClick] = useState(false)
 
+  const triggerReloadClick = () => {
+    setClick(prev => !prev)
+  }
 
   useEffect( () => {
     const abortController = new AbortController()
@@ -24,9 +28,9 @@ const useFetchIssue = (id="") => {
     return function cleanup() {
       abortController.abort()
     }
-  }, [])
+  }, [click])
 
-  return { issueLog }
+  return { issueLog, triggerReloadClick }
 }
 
 export default useFetchIssue;
