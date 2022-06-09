@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import {useParams, useLocation, Link} from "react-router-dom";
 import AudioIssue from './AudioIssue'
+import TextIssue from './TextIssue'
 import IssueSummary from './IssueSummary'
 import OpenCloseIssue from './OpenCloseIssue'
 
@@ -58,7 +59,7 @@ const Issue = () => {
             language={language}
         />
       }
-      { (ad_name && status === "OPEN") &&
+      { (type == "AUDIO" && status === "OPEN") &&
         <AudioIssue audiodata={audiodata}
         ad_name={ad_name}
         sentence_id={sentence_id}
@@ -67,7 +68,21 @@ const Issue = () => {
         sentence={sentence}
         type={type}
         subtype={subtype}
+        id={id}
         />
+      }
+      {
+        (type === "TEXT" && status === "OPEN") &&
+        <TextIssue
+          sentenceId={sentence_id}
+          transDescId={trans_desc_id}
+          language={language}
+          sentence={sentence}
+          type={type}
+          subtype={subtype}
+          id={id}
+          triggerReloadClick={triggerReloadClick}
+          />
       }
       <OpenCloseIssue status={status} id={id} triggerReloadClick={triggerReloadClick}/>
       <br />

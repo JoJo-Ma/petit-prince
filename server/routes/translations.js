@@ -157,4 +157,39 @@ router.get('/:language1/:language2', async (req, res) => {
   }
 })
 
+router.put('/:transDescId/:sentenceId', authorization, userCheck, async (req, res) => {
+  try {
+    const { transDescId, sentenceId } = req.params
+    const { newSentence } = req.body
+    console.log(sentenceId);
+
+    const translation = await db.query("SELECT trans_text.data as data, trans_text.trans_desc_id as trans_id FROM trans_text \
+    where trans_text.trans_desc_id = $1;", [transDescId])
+
+    const { trans_id, data} = translation.rows[0]
+    // res.json(data)
+    console.log(data.newTranslationList[0]);
+    const newData = {
+        newTranslationList : data.newTranslationList.map(el => {
+          if (el.id == sentenceId)
+          {
+            console.log('ici');
+            return { ...el, text:newSentence}
+          }
+          return el
+          }
+          )
+        }
+
+    const query = await db.query("UPDATE trans_text \
+    SET data = $1 WHERE trans_desc_id = $2", [newData, trans_id])
+
+    res.send('Updated in db')
+  } catch (error) {
+    console.error(error.message);
+    res.status(500).send("server error oops")
+  }
+
+})
+
 module.exports = router;

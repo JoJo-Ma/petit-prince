@@ -1,11 +1,22 @@
 import React, { useEffect } from 'react';
 import Navbar from '../Navbar/Navbar'
-import ListOfDrafts from './ListOfDrafts'
-import ListOfRecordings from './ListOfRecordings'
 
+import DashboardNavbar from './DashboardNavbar'
+import DashboardSummary from './DashboardSummary'
+import DashboardNotifications from './DashboardNotifications'
+import DashboardChangePwd from './DashboardChangePwd'
+import useFetchNotifications from '../Util/useFetchNotifications'
 
 import { useStoreActions, useStoreState } from 'easy-peasy'
 
+import {
+  BrowserRouter as Router,
+  Switch,
+  Routes,
+  Route,
+  Link,
+  useParams
+} from "react-router-dom";
 
 import './Dashboard.css'
 
@@ -16,32 +27,20 @@ const Dashboard = ({ setAuth}) => {
   const loggedIn = useStoreState((state) => state.login.loggedIn)
   const setLoggedIn = useStoreActions((actions) => actions.login.setLoggedIn)
 
+  const { notifications, triggerReloadNotifications } = useFetchNotifications(name)
 
-
-
-  const logout = (e) => {
-    e.preventDefault()
-    localStorage.removeItem("token")
-    setName(null)
-    setLoggedIn(false)
-    setAuth(false)
-  }
 
   return (
     <>
       <Navbar />
-      <div className="dashboard-container">
-        <h1>Dashboard</h1>
-        <h3>Drafts</h3>
-        <div className="dashboard-el">
-          <ListOfDrafts username={name} />
-        </div>
-        <h3>Recordings</h3>
-        <div className="dashboard-el">
-          <ListOfRecordings username={name} />
-        </div>
-        <button onClick={e => logout(e)}>Log out</button>
-      </div>
+      <DashboardNavbar name={name} notifications={notifications} />
+
+        <Routes>
+          <Route path="" element={<DashboardSummary setAuth={setAuth} setName={setName} setLoggedIn={setLoggedIn} name={name} />} />
+          <Route path="changepwd" element={<DashboardChangePwd setAuth={setAuth} setName={setName} setLoggedIn={setLoggedIn} name={name} />} />
+          <Route path="notifications" element={<DashboardNotifications name={name} notifications={notifications} triggerReloadNotifications={triggerReloadNotifications} />} />
+        </Routes>
+
     </>
   )
 }

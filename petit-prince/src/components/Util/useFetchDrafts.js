@@ -50,7 +50,7 @@ const useFetchDraft = (username, draftName = "", reload=false) => {
   }, [click, username])
 
   useEffect(() => {
-    if (draftName === false) return
+
     const call = async () => {
       try {
         const draft = draftName.name
@@ -68,6 +68,9 @@ const useFetchDraft = (username, draftName = "", reload=false) => {
       } finally {
         setLoading(true)
       }
+    }
+    if (draftName === false || draftName === undefined || draftName==='') {
+      return
     }
     call()
   }, [clickDelete])

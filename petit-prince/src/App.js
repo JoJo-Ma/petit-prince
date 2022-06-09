@@ -90,7 +90,7 @@ function App() {
               <Route path="/" element={<Home />}/>
               <Route path="/login" element={ !isLoggedIn ? <Login setAuth={setAuth}/> : <Navigate to="/dashboard" />}/>
               <Route path="/register" element={ !isLoggedIn ? <Register setAuth={setAuth} /> : <Navigate to="/login" />}/>
-              <Route path="/dashboard" element={ isLoggedIn ? <Dashboard  setAuth={setAuth} /> : <Navigate to="/login" />}/>
+              <Route path="/dashboard/*" element={ isLoggedIn ? <Dashboard  setAuth={setAuth} /> : <Navigate to="/login" />}/>
               <Route path="/admin/*" element={ isLoggedIn && (adminStatus > 0) ? <Admin  setAuth={setAuth} /> : <Navigate to="/login" />}/>
               <Route path='/newtranslation' element={<PrivateRoute isLoggedIn={isLoggedIn}/>}>
                 <Route path='/newtranslation' element={<NewTranslation/>}/>

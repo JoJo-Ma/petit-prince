@@ -75,4 +75,36 @@ router.get("/isadmin", authorization, async (req, res) => {
   }
 })
 
+router.put('/updatepwd', authorization, async (req, res) => {
+  try {
+
+    const { currentPwd, newPwd} = req.body
+    const user = await db.query("SELECT * FROM users WHERE id = $1;", [req.user])
+
+    console.log(user.rows[0]);
+    const validPassword = await bcrypt.compare(currentPwd, user.rows[0].password)
+    console.log('valid password', validPassword);
+    if (!validPassword) {
+      return res.status(401).json({
+        updated:false,
+        message:"Password is incorrect"
+      })
+    }
+
+    const saltRound = 10;
+    const salt = await bcrypt.genSalt(saltRound);
+    const bcryptPwd = await bcrypt.hash(newPwd, salt);
+
+    const newUser = await db.query("UPDATE users SET password = $1 WHERE id= $2", [bcryptPwd, req.user])
+
+    const token = jwtGenerator(req.user)
+
+    res.json({ updated:true,
+      token:token })
+  } catch (error) {
+    console.error(error.message)
+    res.status(500).send("server error")
+  }
+})
+
 module.exports = router

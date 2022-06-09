@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import "./NewTranslation.css"
 
 
-const NewTranslationResult = ({data, selection, handleSelection}) => {
+const NewTranslationResult = ({data, handleSelection}) => {
 
   // retrieves selected text from the imported pdf text along with useEffect right below
   const highlightSelection = () => {
@@ -10,7 +10,6 @@ const NewTranslationResult = ({data, selection, handleSelection}) => {
     const selection = {
       text: text,
       length: text.length
-
     }
     if (text === data.slice(0, selection.length)) {
       handleSelection(selection)

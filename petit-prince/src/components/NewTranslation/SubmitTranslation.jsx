@@ -19,7 +19,7 @@ export default ({data}) => {
   const onSubmitForm = async (e) => {
     e.preventDefault()
     try {
-      const body = { username, language, data, name }
+      const body = { username, language: language.name, data, name }
       const response = await fetch("http://localhost:3005/translations/", {
         method: "POST",
         headers: { "Content-Type": "application/json",

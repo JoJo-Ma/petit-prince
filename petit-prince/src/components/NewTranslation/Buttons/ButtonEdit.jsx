@@ -27,7 +27,7 @@ const ButtonEdit = ({add, addBlank, discard, undo, nextPunct, selected, output }
 
   const handleClickAdd = () => {
     if (selected.length === 0) return
-
+    console.log(selected);
     add()
   }
 

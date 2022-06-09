@@ -29,3 +29,33 @@
 .dashboard-container a:hover {
   color: var(--confetti);
 }
+
+.dashboard-notifications-item {
+  text-align: left;
+}
+
+.dashboard-notifications-header {
+  background-color: var(--cranberry);
+  color: var(--confetti);
+}
+
+.dashboard-notifications-unseen {
+  background-color: var(--steelblue);
+  color: var(--white);
+}
+
+.dashboard-notifications-seen {
+  background-color: #dce4f1;
+  color: var(--steelblue);
+}
+
+.input-form {
+  width: 50%;
+  margin: auto;
+}
+
+.changepwd-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
