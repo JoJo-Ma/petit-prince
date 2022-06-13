@@ -24,7 +24,7 @@ const DashboardNavbar = ({ name, notifications }) => {
                   :
                   `Notifications (${notificationsAmount})`
                   }</Link>
-                <Link className="navbar-el" to="changepwd">Change password</Link>
+                <Link className="navbar-el" to="settings">Settings </Link>
             </li>
             </>
       </div>

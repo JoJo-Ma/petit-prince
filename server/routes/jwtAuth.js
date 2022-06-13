@@ -34,7 +34,12 @@ router.post('/login', validInfo, async (req, res) => {
   try {
 
     const { email, password } = req.body;
-    const user = await db.query("SELECT * FROM users INNER JOIN user_rights ON user_rights.user_id = users.id WHERE email = $1", [email])
+    const user = await db.query("SELECT \
+    users.*, user_rights.*, email_verification.is_verified as is_verified \
+     FROM users \
+    INNER JOIN user_rights ON user_rights.user_id = users.id \
+    INNER JOIN email_verification ON email_verification.username_id = users.id \
+    WHERE email = $1", [email])
 
     if (user.rows.length === 0) {
       return res.status(401).json("Password or Email is incorrect")
@@ -46,10 +51,12 @@ router.post('/login', validInfo, async (req, res) => {
     if (!validPassword) {
       return res.status(401).json("Password or Email is incorrect")
     }
-
+    console.log(user.rows[0]);
     const token = jwtGenerator(user.rows[0].id, user.rows[0].rights_id)
 
-    res.json({ token })
+    res.json({ token,
+      is_verified:user.rows[0].is_verified,
+      username: user.rows[0].username})
 
   } catch (error) {
     console.log(error.message);

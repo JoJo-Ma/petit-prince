@@ -131,3 +131,10 @@ CREATE TABLE notifications (
   viewed BOOLEAN,
   FOREIGN KEY (username_id) REFERENCES users (id)
 )
+
+CREATE TABLE email_verification (
+  id serial primary key,
+  username_id uuid NOT NULL,
+  is_verified BOOLEAN,
+  FOREIGN KEY (username_id) REFERENCES users (id)
+);

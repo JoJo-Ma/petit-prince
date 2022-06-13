@@ -4,7 +4,7 @@ const authorization = require('../middleware/authorization')
 const userCheck = require('../middleware/usercheck')
 
 
-router.post('/audio', authorization, userCheck,  async (req, res) => {
+router.post('/', authorization, userCheck,  async (req, res) => {
   try {
     console.log(req.body);
     const { type, subtype, message, username, id} = req.body
@@ -28,7 +28,6 @@ router.get('/:username', authorization, userCheck, async (req, res) => {
     const { username } = req.params
     const response = await db.query("WITH sel as (SELECT id FROM users WHERE username = $1)\
     SELECT * FROM notifications WHERE username_id = (SELECT id FROM sel);", [username])
-    console.log(response.rows);
     res.json(response.rows)
   } catch (error) {
     console.error(error.message);
@@ -41,7 +40,6 @@ router.put('/:username/:id', authorization, userCheck, async (req, res) => {
     const { username, id } = req.params
     const response = await db.query("WITH sel as (SELECT id FROM users WHERE username = $1)\
     UPDATE notifications SET viewed = True  WHERE username_id = (SELECT id FROM sel) and id=$2;", [username, id])
-    console.log(response.rows);
     res.json(response.rows)
   } catch (error) {
     console.error(error.message);

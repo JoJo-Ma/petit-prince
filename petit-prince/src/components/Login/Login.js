@@ -5,10 +5,12 @@ import { useStoreActions, useStoreState } from 'easy-peasy'
 import './Login.css'
 import { useLocation } from "react-router-dom";
 
+
 const Login = ({ setAuth }) => {
 
   const setLoggedIn = useStoreActions((actions) => actions.login.setLoggedIn)
   const location = useLocation();
+
 
   const [inputs, setInputs] = useState({
     email: "",
@@ -37,7 +39,34 @@ const Login = ({ setAuth }) => {
 
       setAuth(true);
       setLoggedIn(true)
+      checkVerifiedEmail(parseRes.is_verified, parseRes.username)
+    } catch (error) {
+      console.error(error.message);
+    }
+  }
 
+  const checkVerifiedEmail = async (isVerified, username) => {
+    if(isVerified) return
+    try {
+      const body = {
+        type:"ALERT",
+        subtype:"Unverified email adress",
+        message: "Your email adress is not verified. Consider doing it to receive updates!",
+        username: username,
+        id: 0
+      }
+      console.log(JSON.stringify(body));
+      const response = await fetch("http://localhost:3005/notifications/",{
+        method: "POST",
+        headers:{
+        "Content-Type": "application/json",
+        token : localStorage.token
+        },
+        body: JSON.stringify(body)
+      })
+      console.log(response);
+      const parseRes = await response.json()
+      console.log(parseRes)
     } catch (error) {
       console.error(error.message);
     }

@@ -14,8 +14,6 @@ List currently available languages
 List translation draft and language saved in database
 List recorded audio, in which language and for how many sentences
 
-## Email verification feature
-
 ## Change password feature
 
 ## Fine tuning
@@ -43,3 +41,8 @@ Spelling
 Translation does not match
 
 ### Something is wrong with the audio
+
+## To be done when the website is online
+
+### set up email sending
+### add email verification, password reset

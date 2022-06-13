@@ -86,7 +86,7 @@ const AudioIssue = ({audiodata, ad_name, language, sentence, sentence_id, trans_
         id: id
       }
       console.log(JSON.stringify(body));
-      const response = await fetch("http://localhost:3005/notifications/audio",{
+      const response = await fetch("http://localhost:3005/notifications/",{
         method: "POST",
         headers:{
         "Content-Type": "application/json",
