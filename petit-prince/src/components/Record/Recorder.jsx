@@ -109,11 +109,6 @@ const Recorder = ({ setNext, setNextNonRecorded, currentId, languageId, statusRe
       setNext()
   };
 
-  const convertustotalus = async (b) => {
-    const i = await convertBlobToAudioBuffer(b)
-    return i
-  }
-
   const saveToDb = async (e, type) => {
     e.preventDefault()
     console.log(e);
