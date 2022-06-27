@@ -18,6 +18,10 @@
   font-family: "Noto";
   src: url('../public/fonts/NotoSansTC-Regular.otf');
 }
+@font-face {
+  font-family: "NotoBold";
+  src: url('../public/fonts/NotoSansTC-Bold.otf');
+}
 
 
 :root {

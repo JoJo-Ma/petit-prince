@@ -117,7 +117,7 @@ router.get('/sentence-audio/discard/:sentenceId/:username/:trans_desc_id', autho
   }
 })
 
-router.post('/', authorization, userCheck, upload, async (req, res) => {
+router.post('/', authorization, upload, userCheck, async (req, res) => {
   try {
 
 

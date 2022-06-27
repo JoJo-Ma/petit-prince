@@ -27,7 +27,23 @@ const LoadTranslation = ({id}) => {
     </div>
     {
       translation.length === 0 ? <p>Load the text in the language of your choice</p>
-    : <p>{translation[id].text}</p>
+      : 
+      <>
+        {
+          id > 0 && 
+          <p style={{opacity:"50%"}}>{translation[id-1].text}</p>
+        }
+        {
+          id < translation.length ?
+        <p>{translation[id].text}</p>
+          :
+        <p>End of text. Click on 'Save translation' button to submit!</p>
+        }
+        {
+          id + 1 < translation.length && 
+          <p style={{opacity:"50%"}}>{translation[id+1].text}</p>
+        }
+      </>
     }
   </div>
 

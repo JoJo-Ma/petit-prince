@@ -161,3 +161,13 @@ input[type="file"] {
   from {top: -300px; opacity: 0}
   to {top: 50%; opacity: 1}
 }
+
+.transcription-tooltip {
+  position:fixed;
+  z-index: 999;
+  background-color: var(--confetti);
+  color:var(--steelblue);
+  padding: 0.5rem;
+  border: 2px  solid var(--steelblue);
+  border-radius: 5px;
+}

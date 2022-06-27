@@ -11,7 +11,7 @@ router.post('/', authorization, userCheck,  async (req, res) => {
     const { language, type, subtype, comment, audio_username, currentId } = req.body
     const userId = req.user
     const newEntry = await db.query("WITH record_user as (SELECT id from users where username = $7), \
-    tr_desc_id as (SELECT trans_desc.id from trans_desc INNER JOIN languages on languages.id = trans_desc.language_id where languages.name = $5)\
+    tr_desc_id as (SELECT trans_desc.id from trans_desc INNER JOIN languages on languages.id = trans_desc.language_id where languages.name = $5 AND trans_desc.is_main_trans = true)\
     INSERT INTO issue_log (username_id, created_on, status, type, subtype, comment, trans_desc_id, sentence_id, audio_username_id, language) \
     VALUES ($1, NOW(), 'OPEN', $2, $3, $4, (select * from tr_desc_id), $6, (select * from record_user),$5) \
     RETURNING type;", [userId, type, subtype, comment,language, currentId, audio_username])

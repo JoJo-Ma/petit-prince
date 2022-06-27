@@ -41,12 +41,13 @@ router.post('/login', validInfo, async (req, res) => {
     INNER JOIN email_verification ON email_verification.username_id = users.id \
     WHERE email = $1", [email])
 
+    console.log(user.rows);
+
     if (user.rows.length === 0) {
       return res.status(401).json("Password or Email is incorrect")
     }
 
     const validPassword = await bcrypt.compare(password, user.rows[0].password)
-
 
     if (!validPassword) {
       return res.status(401).json("Password or Email is incorrect")

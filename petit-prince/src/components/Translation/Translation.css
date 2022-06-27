@@ -1,5 +1,5 @@
 .translation-container {
-  font-family: "DM Serif Display";
+  font-family: "DM Serif Display", "NotoBold";
   display: flex;
   align-content: flex-end;
   background-attachment: fixed;

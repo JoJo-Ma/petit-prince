@@ -29,6 +29,7 @@ app.use("/pictures", require('./routes/pictures'))
 app.use("/issuelog", require('./routes/issuelog'))
 app.use("/notifications", require('./routes/notifications'))
 app.use("/email", require('./routes/email'))
+app.use("/transcustom", require('./routes/translationscustom'))
 
 app.listen(port, () =>{
   console.log(`server is up and listening on port ${port}`)

@@ -8,16 +8,18 @@ module.exports = async (req, res, next) => {
     console.log('checking user');
 
     const params = req.params
+    const body = req.body
+
 
     const user = await db.query("SELECT users.username as username, user_rights.rights_id from users INNER JOIN user_rights ON user_rights.user_id = users.id WHERE users.id = $1;", [req.user])
 
-    console.log(user.rows[0].rights_id);
-
+    console.log(user.rows[0].username, params.username);
     // user right 0 is non admin right, anything else above is
-    if (user.rows[0].username === params.username || user.rows[0].rights_id > 0 ) {
+    if (user.rows[0].username === params.username || user.rows[0].username === body.username || user.rows[0].rights_id > 0 ) {
       console.log('usercheck ok');
       next()
     } else {
+      console.log('user not authorized');
       return res.status(403).json('Not Authorized')
     }
 

@@ -1,7 +1,7 @@
 import React, {useState, useEffect, useRef} from 'react';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import useOnScreen from '../Util/useOnScreen'
-
+import useFetchTransCustom from '../Util/useFetchTransCustom'
 import 'react-lazy-load-image-component/src/effects/opacity.css';
 
 function ClearSelection() {
@@ -15,6 +15,7 @@ const DisplayText =  ({data, pictures, currentId, changeCurrentId, statusRecorde
   const isInitialMount = useRef(true);
   const currentEl = useRef(null)
   const isOnScreen = useOnScreen(currentEl)
+  const {transcription, mouse} = useFetchTransCustom()
 
   useEffect(() => {
     if (isInitialMount.current) {
@@ -82,6 +83,7 @@ const DisplayText =  ({data, pictures, currentId, changeCurrentId, statusRecorde
     }
   },[currentId])
 
+
   return (
     <div className="translation">
       {
@@ -100,6 +102,7 @@ const DisplayText =  ({data, pictures, currentId, changeCurrentId, statusRecorde
                   onClick={(e) => handleClick(e, el.id)}
                   id={el.id === currentId ? 'current' : undefined}
                   ref={el.id === currentId ? currentEl : undefined}
+                  lang={data.languageOne}
                   >
                   {addSpace + el.languageOne}
                 </div>
@@ -109,6 +112,7 @@ const DisplayText =  ({data, pictures, currentId, changeCurrentId, statusRecorde
                   onClick={(e) => handleClick(e, el.id)}
                   id={el.id === currentId ? 'current' : undefined}
                   ref={el.id === currentId ? currentEl : undefined}
+                  lang={data.languageTwo}
                   >
                   {addSpace + el.languageTwo}
                 </div>
@@ -121,7 +125,20 @@ const DisplayText =  ({data, pictures, currentId, changeCurrentId, statusRecorde
                 </div>
               }
           </>)
-        }) : <p>toto</p>
+
+        }) : 
+        <div className='instructions'>
+          <h4>How to use</h4>
+          <p><b>First</b>, select the <b>language you want to study</b>. The text will be paired with audio recordings of the book from other members.</p>
+          <p>For <b>the second language</b>, select one you understand well to translate the sentences you are struggling with!</p>
+        </div>
+      }
+      {
+        transcription &&
+        <span className='transcription-tooltip' style={{
+          top:`${mouse.y - 10}px`,
+          left:`${mouse.x + 5}px`
+        }}>{transcription}</span>
       }
     </div>
   )

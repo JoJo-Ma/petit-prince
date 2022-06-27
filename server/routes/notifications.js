@@ -23,7 +23,7 @@ router.post('/', authorization, userCheck,  async (req, res) => {
   }
 })
 
-router.get('/:username', authorization, userCheck, async (req, res) => {
+router.get('/:username', authorization, async (req, res) => {
   try {
     const { username } = req.params
     const response = await db.query("WITH sel as (SELECT id FROM users WHERE username = $1)\
