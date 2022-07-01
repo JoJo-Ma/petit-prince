@@ -72,3 +72,18 @@
 .button-recorder--isrecording:hover svg {
   fill:red;
 }
+
+@media only screen and (max-width: 600px) {
+  .recorder {
+    left:0;
+    width:100%
+  }
+
+  .button-recorder {
+    width: 1.5rem;
+    height: 1.5rem;
+    cursor: pointer;
+    padding: 0 0.5rem ;
+    position: relative;
+  }
+}

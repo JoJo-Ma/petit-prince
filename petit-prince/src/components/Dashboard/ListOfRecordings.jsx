@@ -45,7 +45,7 @@ const ListOfRecordings = ({username}) => {
             Go to the <Link to="/record">record</Link> section
           </div>
           :
-          <div>Lolz</div>
+          <div>You haven't recorded any sentence yet.</div>
         }
       </div>
     )

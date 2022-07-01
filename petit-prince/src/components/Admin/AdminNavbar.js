@@ -13,6 +13,8 @@ const AdminNavbar = () => {
             <>
             <li>
               <Link className="navbar-el" to="languages">Languages</Link>
+            </li>
+            <li>
               <Link className="navbar-el" to="issuelog">Issue Log</Link>
             </li>
             </>

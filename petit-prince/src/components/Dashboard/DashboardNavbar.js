@@ -18,12 +18,16 @@ const DashboardNavbar = ({ name, notifications }) => {
             <>
             <li>
               <Link className="navbar-el" to="">Dashboard</Link>
+            </li>
+            <li>
               <Link className="navbar-el" to="notifications">{
                   notificationsAmount === 0 ?
                   "Notifications"
                   :
                   `Notifications (${notificationsAmount})`
                   }</Link>
+            </li>
+            <li>
                 <Link className="navbar-el" to="settings">Settings </Link>
             </li>
             </>

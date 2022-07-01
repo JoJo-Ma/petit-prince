@@ -78,3 +78,19 @@
 .settings-child {
   margin: 0px auto;
 }
+
+
+@media only screen and (max-width: 600px) {
+  .admin-navbar {
+    flex-direction: column;
+  }
+
+  .admin-navbar li:hover, .admin-navbar li:hover a  {
+    outline:none;
+    background-color: var(--cranberry);
+    color: var(--confetti);
+    transition: background-color 0.25s ease-in-out;
+  }
+
+
+}

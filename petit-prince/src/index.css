@@ -53,6 +53,9 @@ b {
   color: var(--cranberry);
 }
 
+blockquote {
+  text-align: justify ;
+}
 
 
 code {

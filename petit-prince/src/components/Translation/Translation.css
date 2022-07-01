@@ -130,3 +130,24 @@
   text-align: center;
   margin: 5px;
 }
+
+@media only screen and (max-width: 600px) {
+  .translation {
+    max-width:99%
+  }
+
+  .load-translation-container {
+    flex-direction: column;
+    padding-top: 1rem;
+  }
+
+  .report-issue-button {
+    top : 50%;
+    right: -20%;
+    transform: rotate(90deg);
+  }
+
+  .img img {
+    width: 90vw;
+  }
+}

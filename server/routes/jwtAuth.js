@@ -1,16 +1,19 @@
 const router = require("express").Router()
 const db = require("../db/index")
 const bcrypt = require("bcrypt")
+const pool = require("../db")
 const jwtGenerator = require("../utils/jwtGenerator")
 const validInfo = require("../middleware/validInfo")
 const authorization = require("../middleware/authorization")
 
 router.post("/register", validInfo, async (req, res) => {
-  try {
-
+    
+  
+    const client = await pool.connect()
     const { username, email, password} = req.body
     const user = await db.query("SELECT * FROM users WHERE email = $1;", [email])
-
+    let token
+    try {
     if (user.rows.length !==0) {
       return res.status(401).send("User already exists")
     }
@@ -19,16 +22,28 @@ router.post("/register", validInfo, async (req, res) => {
     const salt = await bcrypt.genSalt(saltRound);
     const bcryptPwd = await bcrypt.hash(password, salt);
 
-    const newUser = await db.query("INSERT INTO users (username, password, email, created_on, last_login) VALUES ($1, $2, $3, NOW(), NOW()) RETURNING *", [username, bcryptPwd, email])
+    await client.query('BEGIN')
+    const insert = "INSERT INTO users (username, password, email, created_on, last_login) VALUES ($1, $2, $3, NOW(), NOW()) RETURNING *"
+    const newUser = await client.query(insert, [username, bcryptPwd, email])
+    const rightsInsert = "INSERT INTO user_rights (user_id, rights_id) VALUES ($1, 0)"
+    await client.query(rightsInsert, [newUser.rows[0].id])
+    const emailVerificationInsert = "INSERT INTO email_verification (username_id, is_verified) VALUES ($1,false)"
+    await client.query(emailVerificationInsert, [newUser.rows[0].id])
+    await client.query('COMMIT')
+    token = jwtGenerator(newUser.rows[0].id)
 
-    const token = jwtGenerator(newUser.rows[0].id)
-
-    res.json({ token })
   } catch (error) {
     console.error(error.message)
+    await client.query('ROLLBACK')
     res.status(500).send("server error")
+  }  finally {
+    client.release()
+    res.json({ token })
   }
 })
+
+
+
 
 router.post('/login', validInfo, async (req, res) => {
   try {

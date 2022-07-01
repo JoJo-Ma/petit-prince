@@ -3,7 +3,7 @@ import { LazyLoadImage } from 'react-lazy-load-image-component';
 import useOnScreen from '../Util/useOnScreen'
 import useFetchTransCustom from '../Util/useFetchTransCustom'
 import 'react-lazy-load-image-component/src/effects/opacity.css';
-
+import Instructions from './Instructions';
 function ClearSelection() {
     if (window.getSelection) window.getSelection().removeAllRanges();
     else if (document.selection) document.selection.empty();
@@ -16,6 +16,7 @@ const DisplayText =  ({data, pictures, currentId, changeCurrentId, statusRecorde
   const currentEl = useRef(null)
   const isOnScreen = useOnScreen(currentEl)
   const {transcription, mouse} = useFetchTransCustom()
+  const [timestampTouch, setTimestampTouch] = useState(0)
 
   useEffect(() => {
     if (isInitialMount.current) {
@@ -42,6 +43,17 @@ const DisplayText =  ({data, pictures, currentId, changeCurrentId, statusRecorde
       changeCurrentId(id)
 
     }
+  }
+  const handleTouch = async (e,id) => {
+    const newTimestamp = e.timeStamp
+    setTimestampTouch(newTimestamp)
+    if (newTimestamp - timestampTouch < 300) {
+      setIsHidden(isHidden.map((el, index) => {
+      return index === id ? !el : el
+      }))
+      ClearSelection()
+    } 
+    return
   }
 
   const handleWhiteSpace = (style) => {
@@ -100,6 +112,7 @@ const DisplayText =  ({data, pictures, currentId, changeCurrentId, statusRecorde
                 <div key={el.id}
                   className={handleStyleSentences(el.style, el.id) + ' languageOne'}
                   onClick={(e) => handleClick(e, el.id)}
+                  onTouchStart={(e) => handleTouch(e, el.id)}
                   id={el.id === currentId ? 'current' : undefined}
                   ref={el.id === currentId ? currentEl : undefined}
                   lang={data.languageOne}
@@ -110,6 +123,7 @@ const DisplayText =  ({data, pictures, currentId, changeCurrentId, statusRecorde
                 <div key={el.id}
                   className={handleStyleSentences(el.style, el.id) + ' languageTwo'}
                   onClick={(e) => handleClick(e, el.id)}
+                  onTouchStart={(e) => handleTouch(e, el.id)}
                   id={el.id === currentId ? 'current' : undefined}
                   ref={el.id === currentId ? currentEl : undefined}
                   lang={data.languageTwo}
@@ -127,11 +141,7 @@ const DisplayText =  ({data, pictures, currentId, changeCurrentId, statusRecorde
           </>)
 
         }) : 
-        <div className='instructions'>
-          <h4>How to use</h4>
-          <p><b>First</b>, select the <b>language you want to study</b>. The text will be paired with audio recordings of the book from other members.</p>
-          <p>For <b>the second language</b>, select one you understand well to translate the sentences you are struggling with!</p>
-        </div>
+        <Instructions />
       }
       {
         transcription &&

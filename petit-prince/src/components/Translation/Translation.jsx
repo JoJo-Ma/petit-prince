@@ -8,13 +8,8 @@ import LoadTranslations from './LoadTranslations'
 import DisplayText from './DisplayText'
 import AudioPlayer from './AudioPlayer/AudioPlayer'
 import AudioPlayerToggle from './AudioPlayer/AudioPlayerToggle'
-import LazyBackroundImage from '../Util/LazyBackroundImage'
 import useStatusRecorder from '../Util/useStatusRecorder'
 import ReportIssue from './ReportIssue/ReportIssue'
-const background="/background/background.jpg"
-const placeholder="/background/background.jpg"
-const backgroundOptions = "linear-gradient( rgba(175,216,219,.2), rgba(175,216,219,.2) )"
-
 
 const Translation = () => {
   const [data, setData] = useState(null)

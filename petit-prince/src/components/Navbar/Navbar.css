@@ -6,7 +6,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 3rem;
+  min-height: 3rem;
 }
 
 .navbar-elements {
@@ -34,4 +34,28 @@
   background-color: var(--confetti);
   color: var(--steelblue);
   transition: background-color 0.25s ease-in-out;
+}
+
+@media only screen and (max-width: 600px) {
+  .navbar-container, .navbar-elements {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .navbar-elements li {
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+
+  .navbar-el {
+    padding: 0;
+  }
+
+  .navbar-elements li:hover, .navbar-elements li:hover a {
+    outline:none;
+    background-color: var(--confetti);
+    color: var(--steelblue);
+    transition: background-color 0.25s ease-in-out;
+  }
+  
 }

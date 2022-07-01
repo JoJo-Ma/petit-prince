@@ -4,6 +4,7 @@ import useOnScreen from '../Util/useOnScreen'
 
 
 import "./Recorder.css"
+import Instructions from './Instructions';
 
 
 
@@ -77,7 +78,7 @@ const DisplayText =  ({data, currentId, changeCurrentId, statusRecorder, duratio
             </div>
             {addEnd}
           </>)
-        }) : <p>toto</p>
+        }) : <Instructions />
       }
     </div>
   )

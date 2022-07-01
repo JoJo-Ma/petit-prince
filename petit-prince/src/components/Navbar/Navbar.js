@@ -14,7 +14,7 @@ const Navbar = () => {
   return (
     <ul className="navbar-container">
       <div className="navbar-logo">
-        <li className="li-logo">LOGO</li>
+        <li className="li-logo"></li>
       </div>
       <div className="navbar-elements">
         {

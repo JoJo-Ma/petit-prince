@@ -138,17 +138,19 @@ const AudioPlayer = ({statusRecorder, updateStatus, language, languageId, setNex
         ?
         <div className='audioplayer-settings'>
         <RecordingSelector language={language} usernames={usernames} selectUsername={selectUsername} />
-        {isPlaying ?
-          <SvgButton className="icon-audio-player" onClick={() =>{handlePlayStopClick()}} button={<PauseButton />} alt={"Pause"} />
-          :
-          <SvgButton
-            className={hasCurrent ? "icon-audio-player audio-player-abled" : "icon-audio-player audio-player-disabled"}
-            onClick={() =>{handlePlayStopClick()}}
-            alt= {hasCurrent ? "Play" : "No recording for this sentence :("}
-            button={<PlayButton />} />
-        }
-        <SvgButton className="icon-audio-player toggle-auto-play" onClick={handleCheck} button={isAutoPlay ? <ToggleOnButton /> : <ToggleOffButton />} alt={'Activate Autoplay'}/>
-        <p for="checkbox">Autoplay</p>
+        <div className="audioplayer-settings-icons">
+          {isPlaying ?
+            <SvgButton className="icon-audio-player" onClick={() =>{handlePlayStopClick()}} button={<PauseButton />} alt={"Pause"} />
+            :
+            <SvgButton
+              className={hasCurrent ? "icon-audio-player audio-player-abled" : "icon-audio-player audio-player-disabled"}
+              onClick={() =>{handlePlayStopClick()}}
+              alt= {hasCurrent ? "Play" : "No recording for this sentence :("}
+              button={<PlayButton />} />
+          }
+          <SvgButton className="icon-audio-player toggle-auto-play" onClick={handleCheck} button={isAutoPlay ? <ToggleOnButton /> : <ToggleOffButton />} alt={'Activate Autoplay'}/>
+          <p for="checkbox">Autoplay</p>
+          </div>
         </div>
         :
         <p>{"No recording for this language yet. :'("}</p>
