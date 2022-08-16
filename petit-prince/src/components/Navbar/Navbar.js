@@ -49,6 +49,9 @@ const Navbar = () => {
             <Link className="navbar-el" to="/">Home</Link>
           </li>
           <li>
+              <Link className="navbar-el" to="/translation">Translation</Link>
+            </li>
+          <li>
             <Link className="navbar-el" to="/login">Log in</Link>
           </li>
           <li>

@@ -5,7 +5,7 @@ const userCheck = require('../middleware/usercheck')
 
 
 //todo
-router.post('/', authorization, userCheck,  async (req, res) => {
+router.post('/', authorization,  async (req, res) => {
   try {
     console.log(req.body);
     const { language, type, subtype, comment, audio_username, currentId } = req.body

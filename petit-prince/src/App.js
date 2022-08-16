@@ -95,7 +95,7 @@ function App() {
               <Route path='/newtranslation' element={<PrivateRoute isLoggedIn={isLoggedIn}/>}>
                 <Route path='/newtranslation' element={<NewTranslation/>}/>
               </Route>
-              <Route path="/translation" element={ isLoggedIn ? <Translation /> : <Navigate to="/login" />} />
+              <Route path="/translation" element={<Translation />} />
               <Route path="/record" element={ isLoggedIn ? <Record /> : <Navigate to="/login" />} />
             </Routes>
         </div>
