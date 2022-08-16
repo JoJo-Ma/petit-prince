@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { baseUrl } from '../../Util/apiUrl';
 
 const TextIssue = ({ sentenceId,
           transDescId,
@@ -23,7 +24,7 @@ const TextIssue = ({ sentenceId,
     e.preventDefault()
     try {
       const body= {newSentence:newSentence}
-      const response = await fetch(`http://localhost:3005/translations/${transDescId}/${sentenceId}`, {
+      const response = await fetch(`${baseUrl}/translations/${transDescId}/${sentenceId}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json",
         token : localStorage.token },

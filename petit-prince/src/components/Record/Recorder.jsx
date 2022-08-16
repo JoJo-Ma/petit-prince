@@ -13,6 +13,7 @@ import { ReactComponent as PlayForwardNextButton} from '../svg/playforwardnext.s
 
 
 import "./Recorder.css"
+import { baseUrl } from '../Util/apiUrl';
 
 const NEW = 'POST'
 const UPDATE = 'PUT'
@@ -121,7 +122,7 @@ const Recorder = ({ setNext, setNextNonRecorded, currentId, languageId, statusRe
       }
       formData.append("language_id", languageId)
       formData.append("username", username)
-      const response = await fetch("http://localhost:3005/blobtesting", {
+      const response = await fetch(`${baseUrl}/blobtesting`, {
         method: type,
         body: formData,
         headers: {token : localStorage.token}
@@ -144,7 +145,7 @@ const Recorder = ({ setNext, setNextNonRecorded, currentId, languageId, statusRe
     return
     }
     try {
-      const response = await fetch(`http://localhost:3005/blobtesting/sentence-audio/${id}/${username}/${languageId}`, {
+      const response = await fetch(`${baseUrl}/blobtesting/sentence-audio/${id}/${username}/${languageId}`, {
         method: "DELETE",
         headers: {token : localStorage.token}
       })
@@ -165,7 +166,7 @@ const Recorder = ({ setNext, setNextNonRecorded, currentId, languageId, statusRe
     return
     }
     try {
-      const response = await fetch(`http://localhost:3005/blobtesting/sentence-audio/${id}/${username}/${languageId}`, {
+      const response = await fetch(`${baseUrl}/blobtesting/sentence-audio/${id}/${username}/${languageId}`, {
         method: "GET",
         headers: {token : localStorage.token}
       })

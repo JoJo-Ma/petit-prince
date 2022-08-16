@@ -4,7 +4,7 @@ import Navbar from '../Navbar/Navbar'
 import { useStoreActions, useStoreState } from 'easy-peasy'
 import './Login.css'
 import { useLocation } from "react-router-dom";
-
+import { baseUrl } from '../Util/apiUrl'
 
 const Login = ({ setAuth }) => {
 
@@ -27,7 +27,7 @@ const Login = ({ setAuth }) => {
     e.preventDefault()
     try {
       const body = { email, password}
-      const response = await fetch("http://localhost:3005/auth/login", {
+      const response = await fetch(`${baseUrl}/auth/login`, {
         method: "POST",
         headers: { "Content-Type": "application/json"},
         body: JSON.stringify(body)
@@ -56,7 +56,7 @@ const Login = ({ setAuth }) => {
         id: 0
       }
       console.log(JSON.stringify(body));
-      const response = await fetch("http://localhost:3005/notifications/",{
+      const response = await fetch(`${baseUrl}/notifications/`,{
         method: "POST",
         headers:{
         "Content-Type": "application/json",

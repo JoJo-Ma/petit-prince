@@ -3,6 +3,7 @@ import React, {useState, useEffect, useRef} from 'react';
 import { setupMic, convertBlobToAudioBuffer, play, convertWavToMp3, SAMPLE_RATE } from '../../Util/audio_util'
 import {Buffer} from 'buffer'
 import useFetchDiscardedAudio from './useFetchDiscardedAudio'
+import { baseUrl } from '../../Util/apiUrl';
 
 const AudioIssue = ({audiodata, ad_name, language, sentence, sentence_id, trans_desc_id, subtype, type, id}) => {
   const [message, setMessage] = useState('')
@@ -48,7 +49,7 @@ const AudioIssue = ({audiodata, ad_name, language, sentence, sentence_id, trans_
 
   const discardAudio = async () => {
     try {
-      const response = await fetch(`http://localhost:3005/blobtesting/sentence-audio/discard/${sentence_id}/${ad_name}/${trans_desc_id}/`, {
+      const response = await fetch(`${baseUrl}/blobtesting/sentence-audio/discard/${sentence_id}/${ad_name}/${trans_desc_id}/`, {
         method: "PUT",
         headers: { "Content-Type": "application/json",
         token : localStorage.token }
@@ -61,7 +62,7 @@ const AudioIssue = ({audiodata, ad_name, language, sentence, sentence_id, trans_
 
   const restoreAudio = async () => {
     try {
-      const response = await fetch(`http://localhost:3005/blobtesting/sentence-audio/restore/${sentence_id}/${ad_name}/${trans_desc_id}/`, {
+      const response = await fetch(`${baseUrl}/blobtesting/sentence-audio/restore/${sentence_id}/${ad_name}/${trans_desc_id}/`, {
         method: "PUT",
         headers: { "Content-Type": "application/json",
         token : localStorage.token }
@@ -86,7 +87,7 @@ const AudioIssue = ({audiodata, ad_name, language, sentence, sentence_id, trans_
         id: id
       }
       console.log(JSON.stringify(body));
-      const response = await fetch("http://localhost:3005/notifications/",{
+      const response = await fetch(`${baseUrl}/notifications/`,{
         method: "POST",
         headers:{
         "Content-Type": "application/json",
@@ -106,7 +107,7 @@ const AudioIssue = ({audiodata, ad_name, language, sentence, sentence_id, trans_
     <div className="">
       <p>Audio by <b>{ad_name}</b></p>
       <form onSubmit={onSubmitForm}>
-        <div className="form__group" className="input-form">
+        <div className="form__group input-form">
           <input className="form__field" type="text" value={message} name="name" style={{width:"100%"}} onChange={e => onMessageChange(e)} placeholder="Draft name" />
           <label for="name"  className="form__label">Message</label>
           <input type="checkbox" checked={hasToRecord} onChange={handleCheckbox} name="checkbox" />

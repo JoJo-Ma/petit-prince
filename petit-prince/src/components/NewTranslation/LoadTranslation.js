@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import LanguageSelector from '../LanguageSelector/LanguageSelector'
+import { baseUrl } from '../Util/apiUrl';
 import "./NewTranslation.css"
 
 const LoadTranslation = ({id}) => {
@@ -12,7 +13,7 @@ const LoadTranslation = ({id}) => {
 
   const handleClick = async (e) => {
     e.preventDefault()
-    const response = await fetch(`http://localhost:3005/translations/${language}`)
+    const response = await fetch(`${baseUrl}/translations/${language}`)
     const parseRes = await response.json()
 
     setTranslation(parseRes)

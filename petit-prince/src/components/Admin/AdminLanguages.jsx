@@ -3,7 +3,7 @@ import Navbar from '../Navbar/Navbar'
 import AdminNavbar from './AdminNavbar'
 
 import useFetchLanguages from '../LanguageSelector/useFetchLanguages'
-
+import { baseUrl } from '../Util/apiUrl';
 
 const AdminLanguages = () => {
 
@@ -20,7 +20,7 @@ const AdminLanguages = () => {
     try {
       const body = { newLanguage }
       console.log(body);
-      const response = await fetch("http://localhost:3005/languages/", {
+      const response = await fetch(`${baseUrl}/languages/`, {
         method: "POST",
         headers: { "Content-Type": "application/json",
         token : localStorage.token },

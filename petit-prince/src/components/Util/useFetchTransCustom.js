@@ -1,4 +1,6 @@
 import { useEffect, useState } from 'react';
+import { baseUrl } from './apiUrl';
+
 
 const useFetchTransCustom = () => {
     const [language, setLanguage] = useState()
@@ -47,7 +49,7 @@ const useFetchTransCustom = () => {
 
     useEffect(() => {
         const fetchPinYin = async () => {
-            const response = await fetch (`http://localhost:3005/transcustom/mandarin/${words}`, {
+            const response = await fetch (`${baseUrl}/transcustom/mandarin/${words}`, {
               method: "GET",
               headers: {token : localStorage.token}
             })

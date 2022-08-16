@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
+import { baseUrl } from '../Util/apiUrl';
 
 
 const ListOfRecordings = ({username}) => {
@@ -8,7 +9,7 @@ const ListOfRecordings = ({username}) => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch(`http://localhost:3005/blobtesting/statusRecordingSummary/${username}`, {
+      const response = await fetch(`${baseUrl}/blobtesting/statusRecordingSummary/${username}`, {
         method: "GET",
         headers: {token : localStorage.token}
       })

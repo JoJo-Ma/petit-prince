@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import LanguageSelector from '../LanguageSelector/LanguageSelector'
 import { useStoreState } from 'easy-peasy';
+import { baseUrl } from '../Util/apiUrl';
 
 const SubmitDraft = ({data, onSubmittedDraft}) => {
   const [ language, setLanguage] = useState("")
@@ -20,7 +21,7 @@ const SubmitDraft = ({data, onSubmittedDraft}) => {
     e.preventDefault()
     try {
       const body = { username, language, data, name }
-      const response = await fetch("http://localhost:3005/translations/drafts", {
+      const response = await fetch(`${baseUrl}/translations/drafts`, {
         method: "POST",
         headers: {
         "Content-Type": "application/json",

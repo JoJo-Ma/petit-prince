@@ -14,7 +14,7 @@ import { ReactComponent as PauseButton} from '../../svg/pause.svg'
 import { ReactComponent as ToggleOnButton} from '../../svg/toggleon.svg'
 import { ReactComponent as ToggleOffButton} from '../../svg/toggleoff.svg'
 import SvgButton from '../../Util/SvgButton'
-
+import { baseUrl } from '../../Util/apiUrl';
 
 const AudioPlayer = ({statusRecorder, updateStatus, language, languageId, setNext, currentId, setSentenceDuration, duration, length, hasCurrent, isAudioPlayerHidden, selectRecordingUser}) => {
   const { usernames } = useFetchAvailableRecording(language)
@@ -28,7 +28,7 @@ const AudioPlayer = ({statusRecorder, updateStatus, language, languageId, setNex
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch(`http://localhost:3005/blobtesting/statusRecording/${username}/${language.name}`, {
+      const response = await fetch(`${baseUrl}/blobtesting/statusRecording/${username}/${language.name}`, {
         method: "GET",
         headers: {token : localStorage.token}
       })
@@ -78,7 +78,7 @@ const AudioPlayer = ({statusRecorder, updateStatus, language, languageId, setNex
     getAudioContext()
     var audioBuffer;
     try {
-      const response = await fetch(`http://localhost:3005/blobtesting/sentence-audio/${id}/${username}/${languageId}`, {
+      const response = await fetch(`${baseUrl}/blobtesting/sentence-audio/${id}/${username}/${languageId}`, {
         method: "GET",
         headers: {token : localStorage.token}
       })

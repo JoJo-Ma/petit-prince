@@ -75,7 +75,7 @@ router.post('/login', validInfo, async (req, res) => {
       username: user.rows[0].username})
 
   } catch (error) {
-    console.log(error.message);
+    console.log("login error", error.message);
     res.status(500).send("server error")
   }
 })

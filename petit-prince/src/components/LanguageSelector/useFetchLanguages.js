@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { baseUrl } from '../Util/apiUrl';
 
 const useFetchLanguages = () => {
   const [ languages, setLanguages] = useState([])
@@ -7,7 +8,7 @@ const useFetchLanguages = () => {
   useEffect( () => {
     const abortController = new AbortController()
     const fetchData = async () => {
-      const response = await fetch ("http://localhost:3005/languages")
+      const response = await fetch (`${baseUrl}/languages`)
 
       const parseRes = await response.json()
 

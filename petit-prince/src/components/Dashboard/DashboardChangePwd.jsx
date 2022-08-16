@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { baseUrl } from '../Util/apiUrl';
 import useAlert from '../Util/useAlert'
 
 const DashboardChangePwd = ({setAuth}) => {
@@ -34,7 +35,7 @@ const DashboardChangePwd = ({setAuth}) => {
     }
     try {
       const body = { newPwd, currentPwd}
-      const response = await fetch(`http://localhost:3005/auth/updatepwd`, {
+      const response = await fetch(`${baseUrl}/auth/updatepwd`, {
         method: "PUT",
         headers: { "Content-Type": "application/json",
         token : localStorage.token },

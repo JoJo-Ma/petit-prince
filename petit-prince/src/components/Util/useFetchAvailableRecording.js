@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { baseUrl } from './apiUrl';
 
 const useFetchAvailableRecording = (language) => {
   const [ usernames, setUsernames] = useState([])
@@ -6,7 +7,7 @@ const useFetchAvailableRecording = (language) => {
 
   useEffect( () => {
     const fetchData = async () => {
-      const response = await fetch (`http://localhost:3005/blobtesting/StatusRecording/${language.id}`)
+      const response = await fetch (`${baseUrl}/blobtesting/StatusRecording/${language.id}`)
 
       const parseRes = await response.json()
 

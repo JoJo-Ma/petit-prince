@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import ModalTranslation from '../../Util/ModalTranslation'
 import Select from 'react-select'
 import {issueTypes, audioIssueTypes, textIssueTypes} from './issueTypes'
+import { baseUrl } from '../../Util/apiUrl';
 
 
 const ReportIssue = ({recordingUser, selectedSentence}) => {
@@ -49,7 +50,7 @@ const ReportIssue = ({recordingUser, selectedSentence}) => {
           audio_username,
           currentId:selectedSentence.id
         }
-        const response = await fetch("http://localhost:3005/issuelog/", {
+        const response = await fetch(`${baseUrl}/issuelog/`, {
           method: "POST",
           headers: { "Content-Type": "application/json",
           token : localStorage.token },

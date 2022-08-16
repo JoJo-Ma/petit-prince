@@ -1,4 +1,5 @@
 import React from 'react';
+import { baseUrl } from '../../Util/apiUrl';
 
 const ButtonLoadPdf = ({setInputURL, urlInput, handleClickPdf}) => {
 
@@ -11,7 +12,7 @@ const ButtonLoadPdf = ({setInputURL, urlInput, handleClickPdf}) => {
     handleClickPdf('Loading...')
     try {
       const body = { url: urlInput }
-      const response = await fetch("http://localhost:3005/pdfparser", {
+      const response = await fetch(`${baseUrl}/pdfparser`, {
         method: "POST",
         headers: { "Content-Type": "application/json"},
         body: JSON.stringify(body)

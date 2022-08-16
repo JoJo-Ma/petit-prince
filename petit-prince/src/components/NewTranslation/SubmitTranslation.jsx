@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import LanguageSelector from '../LanguageSelector/LanguageSelector'
 import { useStoreState } from 'easy-peasy';
+import { baseUrl } from '../Util/apiUrl';
 
 
 export default ({data}) => {
@@ -20,7 +21,7 @@ export default ({data}) => {
     e.preventDefault()
     try {
       const body = { username, language: language.name, data, name }
-      const response = await fetch("http://localhost:3005/translations/", {
+      const response = await fetch(`${baseUrl}/translations/`, {
         method: "POST",
         headers: { "Content-Type": "application/json",
         token : localStorage.token },

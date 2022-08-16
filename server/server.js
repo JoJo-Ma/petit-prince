@@ -15,21 +15,21 @@ app.use(express.json({limit: '50mb'}));
 app.use(morgan('tiny'))
 
 
-app.use("/auth", require("./routes/jwtAuth"))
+app.use("/api/auth", require("./routes/jwtAuth"))
 
-app.use("/dashboard", require("./routes/dashboard"))
+app.use("/api/dashboard", require("./routes/dashboard"))
 
-app.use("/pdfparser", require("./routes/pdfparser"))
+app.use("/api/pdfparser", require("./routes/pdfparser"))
 
-app.use("/languages", require("./routes/languages"))
-app.use("/translations", require("./routes/translations"))
+app.use("/api/languages", require("./routes/languages"))
+app.use("/api/translations", require("./routes/translations"))
 
-app.use("/blobtesting", require('./routes/blobtest'))
-app.use("/pictures", require('./routes/pictures'))
-app.use("/issuelog", require('./routes/issuelog'))
-app.use("/notifications", require('./routes/notifications'))
-app.use("/email", require('./routes/email'))
-app.use("/transcustom", require('./routes/translationscustom'))
+app.use("/api/blobtesting", require('./routes/blobtest'))
+app.use("/api/pictures", require('./routes/pictures'))
+app.use("/api/issuelog", require('./routes/issuelog'))
+app.use("/api/notifications", require('./routes/notifications'))
+app.use("/api/email", require('./routes/email'))
+app.use("/api/transcustom", require('./routes/translationscustom'))
 
 app.listen(port, () =>{
   console.log(`server is up and listening on port ${port}`)

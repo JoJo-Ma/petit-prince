@@ -19,6 +19,7 @@ import {
   useLocation,
   Outlet
 } from "react-router-dom";
+import { baseUrl } from './components/Util/apiUrl';
 
 function PrivateRoute({ isLoggedIn }) {
   return isLoggedIn ? <Outlet /> : <Navigate to="/login" />;
@@ -42,7 +43,7 @@ function App() {
 
   const isAuth = async () => {
     try {
-      const response = await fetch("http://localhost:3005/auth/isverified", {
+      const response = await fetch(`${baseUrl}/auth/isverified`, {
         method: "GET",
         headers: {token : localStorage.token}
       })
@@ -58,7 +59,7 @@ function App() {
     if (!isLoggedIn) return
     const getName = async () => {
       try {
-        const response = await fetch("http://localhost:3005/dashboard", {
+        const response = await fetch(`${baseUrl}/dashboard`, {
           method: "GET",
           headers: { token: localStorage.token}
         })

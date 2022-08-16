@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { baseUrl } from '../Util/apiUrl';
 
 const useFetchPictures = () => {
   const [ pictures, setPictures] = useState([])
@@ -6,7 +7,7 @@ const useFetchPictures = () => {
 
   useEffect( () => {
     const fetchData = async () => {
-      const response = await fetch ("http://localhost:3005/pictures", {
+      const response = await fetch (`${baseUrl}/pictures`, {
         method: "GET",
         headers: {token : localStorage.token}
       })

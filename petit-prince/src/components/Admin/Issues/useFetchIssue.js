@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { baseUrl } from '../../Util/apiUrl';
 
 const useFetchIssue = (id="") => {
   const [ issueLog, setIssueLog] = useState([])
@@ -11,7 +12,7 @@ const useFetchIssue = (id="") => {
   useEffect( () => {
     const abortController = new AbortController()
     const fetchData = async () => {
-      const response = await fetch (`http://localhost:3005/issuelog/${id}`, {
+      const response = await fetch (`${baseUrl}/issuelog/${id}`, {
         method: "GET",
         headers: {token : localStorage.token}
       })

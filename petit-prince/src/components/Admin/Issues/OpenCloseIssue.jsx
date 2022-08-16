@@ -1,11 +1,12 @@
 import React from 'react';
+import { baseUrl } from '../../Util/apiUrl';
 
 const OpenCloseIssue = ({id, status, triggerReloadClick}) => {
 
   const handleClick = async () => {
     try {
       const statusApiRequest = status == "OPEN" ? "CLOSED" : "OPEN"
-      const response = await fetch(`http://localhost:3005/issuelog/${id}/${statusApiRequest}`, {
+      const response = await fetch(`${baseUrl}/issuelog/${id}/${statusApiRequest}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json",
         token : localStorage.token }

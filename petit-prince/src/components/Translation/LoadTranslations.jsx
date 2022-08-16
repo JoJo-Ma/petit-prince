@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import LanguageSelector from '../LanguageSelector/LanguageSelector';
 import { ReactComponent as ArrowRightLeftButton} from '../svg/arrowrightleft.svg'
+import { baseUrl } from '../Util/apiUrl';
 import SvgButton from '../Util/SvgButton'
 
 const LoadTranslation = ({ loadData, selectLanguage }) => {
@@ -25,7 +26,7 @@ const LoadTranslation = ({ loadData, selectLanguage }) => {
   const handleClick = async (e) => {
     e.preventDefault()
     try {
-      const response = await fetch (`http://localhost:3005/translations/${languageOne.name}/${languageTwo.name}`, {
+      const response = await fetch (`${baseUrl}/translations/${languageOne.name}/${languageTwo.name}`, {
         method: "GET",
         headers: {token : localStorage.token}
       })

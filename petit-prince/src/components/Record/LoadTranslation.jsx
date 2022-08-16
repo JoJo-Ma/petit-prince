@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useContext, useRef } from 'react';
 import LanguageSelector from '../LanguageSelector/LanguageSelector';
+import { baseUrl } from '../Util/apiUrl';
 import {RecorderContext} from './Record'
 
 const LoadTranslation = ({ loadData, updateStatus, statusRecorder }) => {
@@ -14,7 +15,7 @@ const LoadTranslation = ({ loadData, updateStatus, statusRecorder }) => {
   useEffect(() => {
     loadData("")
     const fetchData = async () => {
-      const response = await fetch(`http://localhost:3005/blobtesting/statusRecording/${username}/${languageOne}`, {
+      const response = await fetch(`${baseUrl}/blobtesting/statusRecording/${username}/${languageOne}`, {
         method: "GET",
         headers: {token : localStorage.token}
       })
@@ -36,7 +37,7 @@ const LoadTranslation = ({ loadData, updateStatus, statusRecorder }) => {
   const handleClick = async (e) => {
     e.preventDefault()
     try {
-      const response = await fetch (`http://localhost:3005/translations/${languageOne}/${languageOne}`, {
+      const response = await fetch (`${baseUrl}/translations/${languageOne}/${languageOne}`, {
         method: "GET",
         headers: {token : localStorage.token}
       })

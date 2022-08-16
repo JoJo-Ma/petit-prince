@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { baseUrl } from './apiUrl'
 
 const useFetchDraft = (username, draftName = "", reload=false) => {
   const [ loading, setLoading] = useState(true)
@@ -26,7 +27,7 @@ const useFetchDraft = (username, draftName = "", reload=false) => {
         console.log('fetching drafts');
         //dirty fix because react select returns an object
         const draft = draftName.length == "" ? draftName : draftName.name
-        const response = await fetch (`http://localhost:3005/translations/${username}/drafts/${draft}`, {
+        const response = await fetch (`${baseUrl}/translations/${username}/drafts/${draft}`, {
           method: "GET",
           headers: {token : localStorage.token}
         })
@@ -54,7 +55,7 @@ const useFetchDraft = (username, draftName = "", reload=false) => {
     const call = async () => {
       try {
         const draft = draftName.name
-        const response = await fetch (`http://localhost:3005/translations/${username}/drafts/${draft}`, {
+        const response = await fetch (`${baseUrl}/translations/${username}/drafts/${draft}`, {
           method: "DELETE",
           headers: {token : localStorage.token}
         })

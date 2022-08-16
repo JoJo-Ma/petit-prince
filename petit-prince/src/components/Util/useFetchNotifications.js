@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { baseUrl } from './apiUrl';
 
 const useFetchNotifications = (username) => {
   const [ notifications, setNotifications] = useState([])
@@ -10,7 +11,7 @@ const useFetchNotifications = (username) => {
 
   useEffect( () => {
     const fetchData = async () => {
-      const response = await fetch (`http://localhost:3005/notifications/${username}`, {
+      const response = await fetch (`${baseUrl}/notifications/${username}`, {
         method: "GET",
         headers: {token : localStorage.token}
       })

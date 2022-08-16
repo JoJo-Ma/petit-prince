@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom";
+import { baseUrl } from '../Util/apiUrl';
 import useFetchNotifications from '../Util/useFetchNotifications'
 
 import './Dashboard.css'
@@ -13,7 +14,7 @@ const DashboardNotifications = ({name, notifications, triggerReloadNotifications
     console.log(id);
     console.log(viewed);
     try {
-      const response = await fetch(`http://localhost:3005/notifications/${name}/${id}`, {
+      const response = await fetch(`${baseUrl}/notifications/${name}/${id}`, {
         method: "PUT",
         headers: {token : localStorage.token}
       })
@@ -25,7 +26,7 @@ const DashboardNotifications = ({name, notifications, triggerReloadNotifications
 
   const removeItem = async (e, id) => {
     try {
-      const response = await fetch(`http://localhost:3005/notifications/display/${name}/${id}`, {
+      const response = await fetch(`${baseUrl}/notifications/display/${name}/${id}`, {
         method: "PUT",
         headers: {token : localStorage.token}
       })
