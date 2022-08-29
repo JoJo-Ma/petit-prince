@@ -1,6 +1,7 @@
 # dependencies
 /node_modules
 /petit-prince/node_modules
+/petit-prince/.env
 /server/node_modules
 
 #local files
